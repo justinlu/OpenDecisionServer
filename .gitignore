@@ -1,0 +1,7 @@
+models/julia-1/*
+!models/julia-1/.gitkeep
+bin/
+dist/
+lib/
+*.test
+:memory:.ses

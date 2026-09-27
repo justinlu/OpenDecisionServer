@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  linux-amd64:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27'
+          cache: true
+      - name: Download pinned model and ORT
+        run: |
+          ./scripts/download-model.sh
+          ./scripts/download-ort.sh linux amd64
+      - name: Unit and race tests
+        run: |
+          go test ./...
+          go test -race ./...
+          go vet ./...
+      - name: Official Julia ONNX parity
+        run: ODS_PARITY=1 go test ./internal/engine/julia -run TestOfficialONNXParity -v -count=1
+      - name: Build Linux container
+        run: docker build --platform linux/amd64 -t ods-ci .
+      - name: Container HTTP smoke test
+        run: |
+          docker run -d --name ods-ci -p 18080:8080 ods-ci
+          for i in $(seq 1 90); do
+            if curl -fsS http://127.0.0.1:18080/health/ready; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:18080/health/ready
+          go run ./cmd/odsbench -url http://127.0.0.1:18080/v1/systemone -clients 64 -duration 30s
+          docker logs ods-ci
+      - name: Stop container
+        if: always()
+        run: docker rm -f ods-ci || true
