@@ -1,6 +1,6 @@
 # Open Decision Server
 
-Open Decision Server serves typed probabilistic decisions through a Jev-compatible System One HTTP API. The first engine runs Julia-1 ONNX on ONNX Runtime CPU. Request encoding and tokenization are implemented in Go; there is no Rust build or runtime dependency.
+Open Decision Server serves typed probabilistic decisions through a Jev-compatible System One HTTP API. The first engine runs Julia-1 ONNX on ONNX Runtime CPU. Request encoding and tokenization are implemented in Go.
 
 ## Supported platforms
 
