@@ -1,0 +1,227 @@
+{
+  "model": "chinese-decision-2b",
+  "engine": {
+    "backend": "gguf",
+    "device": "metal",
+    "threads": 4,
+    "token_budget": 16384,
+    "max_batch": 1,
+    "max_wait_ms": 0
+  },
+  "stats": {
+    "requests": 1530,
+    "decisions": 3060,
+    "input_tokens": 647700,
+    "forward_passes": 3060,
+    "errors": 0,
+    "uptime_s": 553.9,
+    "latency_p50_ms": 251.53,
+    "latency_p95_ms": 1539.17,
+    "latency_p99_ms": 1546.41,
+    "avg_forward_batch": 1.0,
+    "forward_p50_ms": 128.57,
+    "compile_p50_ms": 0.95,
+    "recent_forwards": [
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 129.49
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.16
+      },
+      {
+        "items": 1,
+        "padded_len": 359,
+        "ms": 128.93
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.32
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.57
+      },
+      {
+        "items": 1,
+        "padded_len": 360,
+        "ms": 129.29
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.99
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.26
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 128.2
+      },
+      {
+        "items": 1,
+        "padded_len": 357,
+        "ms": 129.65
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 128.17
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 127.04
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.3
+      },
+      {
+        "items": 1,
+        "padded_len": 359,
+        "ms": 128.52
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 127.01
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 127.64
+      },
+      {
+        "items": 1,
+        "padded_len": 360,
+        "ms": 129.74
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 127.8
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 127.96
+      },
+      {
+        "items": 1,
+        "padded_len": 360,
+        "ms": 129.59
+      },
+      {
+        "items": 1,
+        "padded_len": 357,
+        "ms": 129.07
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 128.05
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 127.28
+      },
+      {
+        "items": 1,
+        "padded_len": 357,
+        "ms": 129.46
+      },
+      {
+        "items": 1,
+        "padded_len": 359,
+        "ms": 130.09
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 129.69
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.47
+      },
+      {
+        "items": 1,
+        "padded_len": 359,
+        "ms": 129.71
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.97
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.61
+      },
+      {
+        "items": 1,
+        "padded_len": 360,
+        "ms": 129.32
+      },
+      {
+        "items": 1,
+        "padded_len": 356,
+        "ms": 128.38
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 127.63
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 127.69
+      },
+      {
+        "items": 1,
+        "padded_len": 357,
+        "ms": 128.45
+      },
+      {
+        "items": 1,
+        "padded_len": 353,
+        "ms": 128.44
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.82
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.4
+      },
+      {
+        "items": 1,
+        "padded_len": 359,
+        "ms": 129.45
+      },
+      {
+        "items": 1,
+        "padded_len": 355,
+        "ms": 128.75
+      }
+    ]
+  }
+}

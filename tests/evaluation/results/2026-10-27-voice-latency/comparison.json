@@ -1,0 +1,122 @@
+[
+  {
+    "history_pairs": 0,
+    "questions": 1,
+    "clients": 1,
+    "julia_p95_ms": 12.867624999999938,
+    "candidate_p95_ms": 47.042459000000036,
+    "extra_p95_ms": 34.1748340000001,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": true
+  },
+  {
+    "history_pairs": 0,
+    "questions": 1,
+    "clients": 4,
+    "julia_p95_ms": 31.137833000000057,
+    "candidate_p95_ms": 181.86024999999972,
+    "extra_p95_ms": 150.72241699999967,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 0,
+    "questions": 3,
+    "clients": 1,
+    "julia_p95_ms": 26.450042000000007,
+    "candidate_p95_ms": 138.67349999999945,
+    "extra_p95_ms": 112.22345799999944,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 0,
+    "questions": 3,
+    "clients": 4,
+    "julia_p95_ms": 71.46633300000005,
+    "candidate_p95_ms": 554.7362080000014,
+    "extra_p95_ms": 483.2698750000013,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 4,
+    "questions": 1,
+    "clients": 1,
+    "julia_p95_ms": 23.448957999999465,
+    "candidate_p95_ms": 86.25462500000225,
+    "extra_p95_ms": 62.805667000002785,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": true
+  },
+  {
+    "history_pairs": 4,
+    "questions": 1,
+    "clients": 4,
+    "julia_p95_ms": 61.907374999998765,
+    "candidate_p95_ms": 340.910166999997,
+    "extra_p95_ms": 279.00279199999824,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 4,
+    "questions": 3,
+    "clients": 1,
+    "julia_p95_ms": 73.17141699999752,
+    "candidate_p95_ms": 254.3734170000107,
+    "extra_p95_ms": 181.2020000000132,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 4,
+    "questions": 3,
+    "clients": 4,
+    "julia_p95_ms": 178.9474999999996,
+    "candidate_p95_ms": 1002.5639999999925,
+    "extra_p95_ms": 823.6164999999928,
+    "julia_meets_100ms": false,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 12,
+    "questions": 1,
+    "clients": 1,
+    "julia_p95_ms": 50.18049999999974,
+    "candidate_p95_ms": 131.57799999999042,
+    "extra_p95_ms": 81.39749999999069,
+    "julia_meets_100ms": true,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 12,
+    "questions": 1,
+    "clients": 4,
+    "julia_p95_ms": 140.4410000000027,
+    "candidate_p95_ms": 520.5417919999888,
+    "extra_p95_ms": 380.10079199998614,
+    "julia_meets_100ms": false,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 12,
+    "questions": 3,
+    "clients": 1,
+    "julia_p95_ms": 153.4524999999931,
+    "candidate_p95_ms": 395.91237499999465,
+    "extra_p95_ms": 242.45987500000155,
+    "julia_meets_100ms": false,
+    "candidate_meets_100ms": false
+  },
+  {
+    "history_pairs": 12,
+    "questions": 3,
+    "clients": 4,
+    "julia_p95_ms": 468.6282079999984,
+    "candidate_p95_ms": 1557.2059589999867,
+    "extra_p95_ms": 1088.5777509999884,
+    "julia_meets_100ms": false,
+    "candidate_meets_100ms": false
+  }
+]

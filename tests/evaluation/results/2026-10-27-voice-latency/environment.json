@@ -1,0 +1,35 @@
+{
+  "host_platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "gpu": "Apple M6 (Metal loader reports 25/25 layers offloaded)",
+  "budget_ms": 100,
+  "samples_per_group": 120,
+  "warmup_per_group": 6,
+  "clients": [
+    1,
+    4
+  ],
+  "load": "closed loop; fixed number of outstanding requests; not a measured production arrival distribution",
+  "latency_scope": "HTTP request to full response read plus client JSON decoding/validation; worker first requests include connection setup",
+  "julia": {
+    "backend": "ONNX Runtime CPU",
+    "ort_threads": 4,
+    "max_runs": 4,
+    "executable_sha256": "2458b67a228aa818b3af3c7ab4768ac17fe5ceb7257bcfbc9f7d099b037772d9"
+  },
+  "candidate": {
+    "model": "Chinese Decision 2B Q8_0",
+    "backend": "llama-cpp-python 0.3.36 Metal",
+    "threads": 4,
+    "context_size": 16384,
+    "server": "official source 9bf28a803b7e3474c52f030bc72618656c054726 plus previously recorded Metal patch"
+  },
+  "fixtures_sha256": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32",
+  "benchmark_sha256": "01ca67a8306b0725c43b52505fa19706a5d52824eb0e2a6839327fb3e79ac9f3",
+  "models_loaded_together": true,
+  "models_measured_concurrently": false,
+  "asr_tts_running_for_test": false,
+  "note": "Generated performance fixtures have no gold labels and are not additional accuracy evidence.",
+  "hw.memsize": 17179869184,
+  "hw.ncpu": 12
+}

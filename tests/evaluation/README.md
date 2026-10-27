@@ -50,3 +50,5 @@ python3 -m venv /tmp/ods-data-import
 研究来源与未选择的数据集见 [研究记录](../../docs/research/chinese-decision-datasets.md)。本机首次运行结果见 `results/2026-10-27/README.md`。
 
 Chinese Decision 2B Q8_0 的同集 GPU 实测及与 Julia 的逐条比较见 [候选模型评测](results/2026-10-27-chinese-decision-2b/README.md)。
+
+语音助手在 Apple Silicon、p95≤100ms 预算下的单问／多问／历史长度／并发比较见 [语音延迟评测](results/2026-10-27-voice-latency/README.md)，可用 `benchmark_latency.py` 复现。该性能集不作为新的准确率测试集。

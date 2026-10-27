@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-10-27T07:53:31.276287+00:00",
+  "url": "http://127.0.0.1:18081/v1/systemone",
+  "model": "julia-1",
+  "samples_per_group": 120,
+  "clients": [
+    1,
+    4
+  ],
+  "warmup": 6,
+  "timeout": 30.0,
+  "budget_ms": 100.0,
+  "quantiles": "nearest rank of successful requests",
+  "workload": "closed loop; one persistent HTTP connection per worker; not open-loop production traffic",
+  "fixtures_sha256": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32",
+  "script_sha256": "01ca67a8306b0725c43b52505fa19706a5d52824eb0e2a6839327fb3e79ac9f3"
+}

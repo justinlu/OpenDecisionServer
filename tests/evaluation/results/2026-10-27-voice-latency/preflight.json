@@ -1,0 +1,239 @@
+{
+  "julia-1": {
+    "health": {
+      "status": "ready"
+    },
+    "fixtures": [
+      {
+        "case_id": "h0-q1-u0",
+        "latency_ms": 22.203917000000004,
+        "input_tokens": 65,
+        "error": null
+      },
+      {
+        "case_id": "h0-q1-u1",
+        "latency_ms": 13.447709000000009,
+        "input_tokens": 69,
+        "error": null
+      },
+      {
+        "case_id": "h0-q1-u2",
+        "latency_ms": 13.589124999999994,
+        "input_tokens": 65,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u0",
+        "latency_ms": 28.371000000000006,
+        "input_tokens": 178,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u1",
+        "latency_ms": 26.073666999999993,
+        "input_tokens": 190,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u2",
+        "latency_ms": 24.7125,
+        "input_tokens": 178,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u0",
+        "latency_ms": 24.402333,
+        "input_tokens": 167,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u1",
+        "latency_ms": 22.404792000000008,
+        "input_tokens": 171,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u2",
+        "latency_ms": 21.66633400000001,
+        "input_tokens": 167,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u0",
+        "latency_ms": 56.95083299999998,
+        "input_tokens": 484,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u1",
+        "latency_ms": 58.166374999999995,
+        "input_tokens": 496,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u2",
+        "latency_ms": 55.004834,
+        "input_tokens": 484,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u0",
+        "latency_ms": 46.75954199999999,
+        "input_tokens": 361,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u1",
+        "latency_ms": 46.387542,
+        "input_tokens": 365,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u2",
+        "latency_ms": 46.299749999999975,
+        "input_tokens": 361,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u0",
+        "latency_ms": 147.86645799999997,
+        "input_tokens": 1066,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u1",
+        "latency_ms": 144.52762500000006,
+        "input_tokens": 1078,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u2",
+        "latency_ms": 143.36466599999997,
+        "input_tokens": 1066,
+        "error": null
+      }
+    ]
+  },
+  "chinese-decision-2b": {
+    "health": {
+      "status": "ok",
+      "model": "chinese-decision-2b",
+      "temperature": 1.074872374534607,
+      "calibrated": true,
+      "backend": "gguf",
+      "device": "metal",
+      "max_length": 16384,
+      "step": 4994
+    },
+    "fixtures": [
+      {
+        "case_id": "h0-q1-u0",
+        "latency_ms": 76.81516599999993,
+        "input_tokens": 94,
+        "error": null
+      },
+      {
+        "case_id": "h0-q1-u1",
+        "latency_ms": 47.77108299999999,
+        "input_tokens": 98,
+        "error": null
+      },
+      {
+        "case_id": "h0-q1-u2",
+        "latency_ms": 46.89125000000005,
+        "input_tokens": 94,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u0",
+        "latency_ms": 136.62837499999992,
+        "input_tokens": 278,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u1",
+        "latency_ms": 137.84204100000008,
+        "input_tokens": 290,
+        "error": null
+      },
+      {
+        "case_id": "h0-q3-u2",
+        "latency_ms": 135.80649999999994,
+        "input_tokens": 278,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u0",
+        "latency_ms": 79.2866670000001,
+        "input_tokens": 184,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u1",
+        "latency_ms": 79.1490829999999,
+        "input_tokens": 188,
+        "error": null
+      },
+      {
+        "case_id": "h4-q1-u2",
+        "latency_ms": 78.61070900000011,
+        "input_tokens": 184,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u0",
+        "latency_ms": 231.84033299999984,
+        "input_tokens": 548,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u1",
+        "latency_ms": 234.44025000000002,
+        "input_tokens": 560,
+        "error": null
+      },
+      {
+        "case_id": "h4-q3-u2",
+        "latency_ms": 233.5946670000002,
+        "input_tokens": 548,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u0",
+        "latency_ms": 120.87358399999992,
+        "input_tokens": 356,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u1",
+        "latency_ms": 121.01616700000007,
+        "input_tokens": 360,
+        "error": null
+      },
+      {
+        "case_id": "h12-q1-u2",
+        "latency_ms": 120.11875000000005,
+        "input_tokens": 356,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u0",
+        "latency_ms": 357.52991599999984,
+        "input_tokens": 1064,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u1",
+        "latency_ms": 361.16283299999986,
+        "input_tokens": 1076,
+        "error": null
+      },
+      {
+        "case_id": "h12-q3-u2",
+        "latency_ms": 357.2733339999998,
+        "input_tokens": 1064,
+        "error": null
+      }
+    ]
+  }
+}

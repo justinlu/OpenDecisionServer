@@ -86,6 +86,8 @@ macOS ARM64 acceptance on a 10-logical-CPU, 16 GB Mac (`-max-runs 4 -ort-threads
 
 The [Chinese, English, numeric and pinyin evaluation suite](tests/evaluation/README.md) includes fixed context-grounded diagnostics and a pinned external TokSuite robustness dataset. It reports accuracy and errors separately by source, input form, prompt language, task and domain, and retains per-case predictions. It is an accuracy evaluation, separate from the throughput benchmark above.
 
+For voice assistants, the [Apple Silicon latency comparison](tests/evaluation/results/2026-10-27-voice-latency/README.md) measures Julia CPU and Chinese Decision 2B Metal against a 100 ms p95 budget across history lengths, question counts and concurrency.
+
 ## Configuration
 
 `ods -h` lists all flags. The main options are `-http`, `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-questions`, `-max-length`, `-head-length`, and `-log-requests`. Structured request logging omits state, instructions, and criteria.
