@@ -1,0 +1,42 @@
+{
+  "parity_pass": false,
+  "serial_parity_pass": true,
+  "batch_parity_pass": false,
+  "finite_logits_checked": true,
+  "exact_row_coverage": 1045,
+  "observed_batch_sizes": {
+    "2": 232,
+    "3": 348,
+    "4": 464,
+    "1": 1
+  },
+  "latency_samples": 1440,
+  "grades": {
+    "serial/custom": {
+      "total": 504,
+      "correct": 435,
+      "winner_mismatches": 0
+    },
+    "batch/custom": {
+      "total": 504,
+      "correct": 435,
+      "winner_mismatches": 0
+    },
+    "serial/toksuite": {
+      "total": 485,
+      "correct": 366,
+      "winner_mismatches": 0
+    },
+    "batch/toksuite": {
+      "total": 485,
+      "correct": 366,
+      "winner_mismatches": 0
+    }
+  },
+  "recomputed_differences": {
+    "batch_max_probability_delta": 0.0005171589129558951,
+    "batch_winner_mismatches": 0,
+    "python_max_probability_delta": 2.220446049250313e-16,
+    "python_winner_mismatches": 0
+  }
+}

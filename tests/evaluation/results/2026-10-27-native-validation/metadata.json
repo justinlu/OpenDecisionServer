@@ -1,0 +1,182 @@
+{
+  "host": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "gpu": "Apple M6",
+  "ram_gib": 16,
+  "logical_cpus": 12,
+  "native_runtime": "llama-cpp-python 0.3.36 bundled llama.cpp dylib; header from the same PyPI source package",
+  "model_manifest": "../2026-10-27-chinese-decision-2b/model-manifest.json",
+  "base_commit": "6b27380d88f71e878309225171a2007de14f714e",
+  "actual_gpu_offload": "25/25 layers; native.log",
+  "temperature": 1.074872374534607,
+  "gpu_layers": -1,
+  "threads": 4,
+  "flash_attention": "disabled",
+  "offload_kqv": true,
+  "serial_context": {
+    "n_ctx": 16384,
+    "n_seq_max": 1,
+    "n_batch": 512,
+    "n_ubatch": 512
+  },
+  "batch_context": {
+    "n_batch": 8192,
+    "n_ctx": 65536,
+    "n_ctx_seq": 16384,
+    "n_seq_max": 4,
+    "n_ubatch": 512
+  },
+  "measurement_started_utc": "2026-10-27T08:43:36.253187+00:00",
+  "measurement_finished_utc": "2026-10-27T08:49:56.764344+00:00",
+  "timing": "Single caller, prepared prompt/tokens; timer includes native memory clear, decode, synchronized logits copy and softmax; excludes HTTP, tokenization, scheduling, model load",
+  "method": "120 measured observations and 6 warmups per group, nearest-rank p95; serial groups first, batch groups second; no ASR/TTS or open-loop load",
+  "source_note": "measurement.go.txt is the source used by the measured binary. main.go subsequently adds explicit finite-logit checking and includes A/B/A in the aggregate gate; inference math and timing are unchanged. audit.py independently checks all persisted logits, probabilities, grades, coverage and p95. It includes the measurement summary values for A/B/A and repeated inputs in the gate; their repeated output arrays were not persisted for independent recomputation.",
+  "artifacts": {
+    "dist/llama_cpp_python-0.3.36.tar.gz": {
+      "bytes": 76589250,
+      "sha256": "832db0699007f1be95a7e41ef12e88926b02ba836461e36a36372db2760c1a2e"
+    },
+    "dist/llama-cpp-python-cpu/vendor/llama.cpp/include/llama.h": {
+      "bytes": 89978,
+      "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+    },
+    "dist/native-validation/reference.json": {
+      "bytes": 1405981,
+      "sha256": "91664eacc44b5dcb26a0d774471f2bca0c53e44848cbf250c0e9a4b985388b80"
+    },
+    "dist/native-validation/probe": {
+      "bytes": 4071538,
+      "sha256": "ee5e30b1208d3a105a985ed7b340c6f0e71237c551d8f49bc883f5c894156b41"
+    },
+    "tests/evaluation/native_probe/prepare.py": {
+      "bytes": 4398,
+      "sha256": "a2cb8f2665dc9f8f600211340dc17bffe8d8af13e2a41cea9a74d42ad1b3f396"
+    },
+    "tests/evaluation/native_probe/main.go": {
+      "bytes": 14886,
+      "sha256": "e16b2f306d13c4f47fc1a54912e1ad6c61c4d7e22197c9ff4e7bd5d346099fd9"
+    },
+    "tests/evaluation/native_probe/audit.py": {
+      "bytes": 5126,
+      "sha256": "740e84df06bba2843a51159e238eefa7d913a533418b5ab24972403015bb205f"
+    },
+    "tests/evaluation/results/2026-10-27-native-validation/measurement.go.txt": {
+      "bytes": 14723,
+      "sha256": "56616853edd8d536ee6c864ea78e7527f0a69cfe21cd629fc7333c15da8b04da"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-base.0.25.3.dylib": {
+      "bytes": 657992,
+      "sha256": "e6fdbbbbf56266d3358520edcac378631bfc5bed65b287e7355bb66f7ad1a96c"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-base.0.dylib": {
+      "bytes": 657992,
+      "sha256": "e6fdbbbbf56266d3358520edcac378631bfc5bed65b287e7355bb66f7ad1a96c"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-base.dylib": {
+      "bytes": 657992,
+      "sha256": "e6fdbbbbf56266d3358520edcac378631bfc5bed65b287e7355bb66f7ad1a96c"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-blas.0.25.3.dylib": {
+      "bytes": 54936,
+      "sha256": "1d2f6405c08c779bcabb9264259817e747e7ac07f29cf8fee05bb9f0988788b3"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-blas.0.dylib": {
+      "bytes": 54936,
+      "sha256": "1d2f6405c08c779bcabb9264259817e747e7ac07f29cf8fee05bb9f0988788b3"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-blas.dylib": {
+      "bytes": 54936,
+      "sha256": "1d2f6405c08c779bcabb9264259817e747e7ac07f29cf8fee05bb9f0988788b3"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-cpu.0.25.3.dylib": {
+      "bytes": 967640,
+      "sha256": "c7ebf780aa7c0863cc07f051697f99a13479f111da414dcd12868c24da81c9d4"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-cpu.0.dylib": {
+      "bytes": 967640,
+      "sha256": "c7ebf780aa7c0863cc07f051697f99a13479f111da414dcd12868c24da81c9d4"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-cpu.dylib": {
+      "bytes": 967640,
+      "sha256": "c7ebf780aa7c0863cc07f051697f99a13479f111da414dcd12868c24da81c9d4"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-metal.0.25.3.dylib": {
+      "bytes": 5266120,
+      "sha256": "1c4a24ffec11174c27a59e18cb926c1d7949e232e8424654d9b1d87dbf37d306"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-metal.0.dylib": {
+      "bytes": 5266120,
+      "sha256": "1c4a24ffec11174c27a59e18cb926c1d7949e232e8424654d9b1d87dbf37d306"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml-metal.dylib": {
+      "bytes": 5266120,
+      "sha256": "1c4a24ffec11174c27a59e18cb926c1d7949e232e8424654d9b1d87dbf37d306"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml.0.25.3.dylib": {
+      "bytes": 56808,
+      "sha256": "368c44a940b358d94dffadbaa83955813cea0fe9b2a786e775cf554ee8a2372a"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml.0.dylib": {
+      "bytes": 56808,
+      "sha256": "368c44a940b358d94dffadbaa83955813cea0fe9b2a786e775cf554ee8a2372a"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libggml.dylib": {
+      "bytes": 56808,
+      "sha256": "368c44a940b358d94dffadbaa83955813cea0fe9b2a786e775cf554ee8a2372a"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libllama.0.5.0.dylib": {
+      "bytes": 2843800,
+      "sha256": "012f285e144fa34aa4d15390c1013d88d7de5cbb048b5aacb82265169efcbbc8"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libllama.0.dylib": {
+      "bytes": 2843800,
+      "sha256": "012f285e144fa34aa4d15390c1013d88d7de5cbb048b5aacb82265169efcbbc8"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libllama.dylib": {
+      "bytes": 2843800,
+      "sha256": "012f285e144fa34aa4d15390c1013d88d7de5cbb048b5aacb82265169efcbbc8"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libmtmd.0.5.0.dylib": {
+      "bytes": 1239792,
+      "sha256": "c55c5f23b9c7ba7d1f02b9341a695bff6dc513d8eaf156fd62ec3dd6bc63a30c"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libmtmd.0.dylib": {
+      "bytes": 1239792,
+      "sha256": "c55c5f23b9c7ba7d1f02b9341a695bff6dc513d8eaf156fd62ec3dd6bc63a30c"
+    },
+    "dist/chinese-decision-venv/lib/python3.13/site-packages/llama_cpp/lib/libmtmd.dylib": {
+      "bytes": 1239792,
+      "sha256": "c55c5f23b9c7ba7d1f02b9341a695bff6dc513d8eaf156fd62ec3dd6bc63a30c"
+    }
+  },
+  "outputs": {
+    "parity.jsonl": {
+      "bytes": 465353,
+      "sha256": "b0dfd5aa1ec313c6cd79eb0b496cd50ba817babe4921a682b0127972cd6b1d57"
+    },
+    "summary.json": {
+      "bytes": 2458,
+      "sha256": "2338f77449644b7519955b0080dba652b645059b4e043fe298278fc96283e248"
+    },
+    "audit.json": {
+      "bytes": 907,
+      "sha256": "37a1f88965d97a3a4eb84dfdcf947375d551e7474ef0fc08a14ae1dffb3440f1"
+    },
+    "latency.jsonl": {
+      "bytes": 149203,
+      "sha256": "65f1ca8ed7d229bef298ec08fb054d0522633c29ddc89f97269f426de3868501"
+    },
+    "measurement.log": {
+      "bytes": 3153,
+      "sha256": "a9688db6cf8e7c7d76d587950a210b2f92e58e9bcba5afac8548e52af33b024a"
+    },
+    "native.log": {
+      "bytes": 151492,
+      "sha256": "5bc9b250abadf4096350606e5e8bcb4dfb1557ee8b8b0a14b0919e33841f99ab"
+    },
+    "measurement.go.txt": {
+      "bytes": 14723,
+      "sha256": "56616853edd8d536ee6c864ea78e7527f0a69cfe21cd629fc7333c15da8b04da"
+    }
+  }
+}
