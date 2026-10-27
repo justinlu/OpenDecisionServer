@@ -60,6 +60,7 @@ func (a *Admission) Active() int64  { return a.active.Load() }
 func (a *Admission) Waiting() int64 { return a.waiting.Load() }
 
 type Service struct {
+	Model     Model
 	Engine    Engine
 	Admission *Admission
 }
@@ -75,14 +76,17 @@ type Response struct {
 
 func (s *Service) Decide(ctx context.Context, req Request) (Response, error) {
 	var response Response
-	if req.Model != "julia-1" && req.Model != "jev-latest" && req.Model != "jev-1.13.0" && req.Model != "typesafe/jev-1.13" {
+	model := s.ModelInfo()
+	if !model.Accepts(req.Model) {
 		return response, ErrUnknownModel
 	}
-	release, err := s.Admission.Acquire(ctx)
-	if err != nil {
-		return response, err
+	if s.Admission != nil {
+		release, err := s.Admission.Acquire(ctx)
+		if err != nil {
+			return response, err
+		}
+		defer release()
 	}
-	defer release()
 	results, err := s.Engine.Decide(ctx, req.Questions)
 	if err != nil {
 		return response, err
@@ -90,7 +94,7 @@ func (s *Service) Decide(ctx context.Context, req Request) (Response, error) {
 	if len(results) != len(req.Questions) {
 		return response, fmt.Errorf("engine result count mismatch")
 	}
-	response.Model = "julia-1"
+	response.Model = model.ID
 	response.Answers = make(map[string]any, len(results))
 	for i, row := range req.Questions {
 		result := results[i]
@@ -101,6 +105,9 @@ func (s *Service) Decide(ctx context.Context, req Request) (Response, error) {
 		switch row.Type {
 		case Noul:
 			response.Answers[row.ID] = map[string]any{"type": "noul", "noul": result.Probabilities[1]}
+			if model.Chinese {
+				response.Answers[row.ID] = map[string]any{"type": "noul", "noul": result.Probabilities[1], "probabilities": map[string]float64{"false": result.Probabilities[0], "true": result.Probabilities[1]}, "confidence": confidence(result.Probabilities)}
+			}
 		case Choice:
 			probs := make(map[string]float64, len(row.Options))
 			for j, option := range row.Options {

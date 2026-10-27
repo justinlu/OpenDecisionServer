@@ -20,11 +20,12 @@ type Option struct {
 }
 
 type Input struct {
-	ID       string
-	Type     QuestionType
-	State    json.RawMessage
-	Question string
-	Options  []Option
+	ID           string
+	Type         QuestionType
+	State        json.RawMessage
+	Question     string
+	Instructions json.RawMessage
+	Options      []Option
 }
 
 type Result struct {

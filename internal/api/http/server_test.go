@@ -106,3 +106,25 @@ func TestHTTPStatusContract(t *testing.T) {
 		})
 	}
 }
+
+func TestChineseModelPolicyAndResponse(t *testing.T) {
+	api := &Server{Service: &decision.Service{Model: decision.ChineseModel(), Engine: fixedEngine{}}, MaxQuestions: 64}
+	api.SetReady(true)
+	handler := api.Handler()
+	models := httptest.NewRecorder()
+	handler.ServeHTTP(models, httptest.NewRequest("GET", "/v1/models", nil))
+	if !bytes.Contains(models.Body.Bytes(), []byte("chinese-decision-2b")) || bytes.Contains(models.Body.Bytes(), []byte("julia-1")) {
+		t.Fatal(models.Body.String())
+	}
+	w := httptest.NewRecorder()
+	handler.ServeHTTP(w, httptest.NewRequest("POST", "/v1/systemone", bytes.NewBufferString(`{"model":"chinese-decision-2b","state":null,"questions":{"q":{"type":"noul","instructions":"是否？"}}}`)))
+	if w.Code != 200 || !bytes.Contains(w.Body.Bytes(), []byte(`"probabilities":{"false":0.5,"true":0.5}`)) {
+		t.Fatalf("%d %s", w.Code, w.Body.String())
+	}
+	api.SetReady(false)
+	models = httptest.NewRecorder()
+	handler.ServeHTTP(models, httptest.NewRequest("GET", "/v1/models", nil))
+	if bytes.Contains(models.Body.Bytes(), []byte("chinese-decision-2b")) {
+		t.Fatal("unavailable model advertised")
+	}
+}

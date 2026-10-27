@@ -25,23 +25,35 @@ type Server struct {
 
 func (s *Server) SetReady(value bool) { s.ready.Store(value) }
 
+func (s *Server) isReady() bool {
+	if !s.ready.Load() || s.Service == nil {
+		return false
+	}
+	if engine, ok := s.Service.Engine.(interface{ Healthy() bool }); ok {
+		return engine.Healthy()
+	}
+	return true
+}
+
 func (s *Server) Handler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /health/live", func(w http.ResponseWriter, r *http.Request) { writeJSON(w, 200, map[string]string{"status": "live"}) })
 	mux.HandleFunc("GET /health/ready", func(w http.ResponseWriter, r *http.Request) {
-		if !s.ready.Load() {
+		if !s.isReady() {
 			writeJSON(w, 503, map[string]string{"status": "loading"})
 			return
 		}
 		writeJSON(w, 200, map[string]string{"status": "ready"})
 	})
 	mux.HandleFunc("GET /v1/models", func(w http.ResponseWriter, r *http.Request) {
-		writeJSON(w, 200, map[string]any{"models": []map[string]string{
-			{"name": "julia-1", "description": "Local Julia-1 ONNX CPU decision model", "release_date": "2026-09-25"},
-			{"name": "jev-latest", "description": "Local alias for Julia-1", "release_date": "2026-09-25"},
-			{"name": "jev-1.13.0", "description": "Local alias for Julia-1", "release_date": "2026-09-25"},
-			{"name": "typesafe/jev-1.13", "description": "Local alias for Julia-1", "release_date": "2026-09-25"},
-		}})
+		models := []map[string]string{}
+		if s.isReady() {
+			model := s.Service.ModelInfo()
+			for _, name := range append([]string{model.ID}, model.Aliases...) {
+				models = append(models, map[string]string{"name": name, "description": "Local " + model.ID + " decision model"})
+			}
+		}
+		writeJSON(w, 200, map[string]any{"models": models})
 	})
 	mux.HandleFunc("GET /metrics", s.metrics)
 	mux.HandleFunc("POST /v1/systemone", s.systemOne)
@@ -51,9 +63,11 @@ func (s *Server) Handler() http.Handler {
 func (s *Server) metrics(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "text/plain; version=0.0.4")
 	var active, waiting, runs, maxRuns int64
-	if s.ready.Load() && s.Service != nil {
-		active = s.Service.Admission.Active()
-		waiting = s.Service.Admission.Waiting()
+	if s.isReady() {
+		if s.Service.Admission != nil {
+			active = s.Service.Admission.Active()
+			waiting = s.Service.Admission.Waiting()
+		}
 		if engine, ok := s.Service.Engine.(interface {
 			RunCount() int64
 			ActiveRuns() int64
@@ -65,6 +79,11 @@ func (s *Server) metrics(w http.ResponseWriter, _ *http.Request) {
 		}
 	}
 	fmt.Fprintf(w, "ods_active_runs %d\nods_waiting_requests %d\nods_inference_runs_total %d\nods_max_concurrent_run_calls %d\n", active, waiting, runs, maxRuns)
+	if s.isReady() {
+		if engine, ok := s.Service.Engine.(interface{ Metrics() string }); ok {
+			fmt.Fprint(w, engine.Metrics())
+		}
+	}
 }
 
 func (s *Server) systemOne(w http.ResponseWriter, r *http.Request) {
@@ -76,7 +95,7 @@ func (s *Server) systemOne(w http.ResponseWriter, r *http.Request) {
 			s.Logger.Info("request", "status", status, "questions", questions, "duration_ms", time.Since(started).Milliseconds())
 		}
 	}()
-	if !s.ready.Load() {
+	if !s.isReady() {
 		status = 503
 		writeJSON(w, status, map[string]any{"detail": "model unavailable"})
 		return
@@ -101,7 +120,7 @@ func (s *Server) systemOne(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, status, map[string]any{"detail": "malformed JSON"})
 		return
 	}
-	req, err := decision.ParseRequest(body, s.MaxQuestions)
+	req, err := decision.ParseForModel(body, s.MaxQuestions, s.Service.ModelInfo())
 	if err != nil {
 		status = 422
 		writeJSON(w, status, validation(err))
