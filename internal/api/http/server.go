@@ -143,6 +143,9 @@ func (s *Server) systemOne(w http.ResponseWriter, r *http.Request) {
 		case errors.Is(err, context.Canceled), errors.Is(err, context.DeadlineExceeded):
 			status = 503
 			writeJSON(w, status, map[string]any{"detail": "request canceled"})
+		case errors.Is(err, decision.ErrUnavailable):
+			status = 503
+			writeJSON(w, status, map[string]any{"detail": "model unavailable"})
 		default:
 			status = 500
 			if s.Logger != nil {

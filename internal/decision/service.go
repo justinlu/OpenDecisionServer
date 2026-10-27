@@ -10,6 +10,7 @@ import (
 
 var ErrOverloaded = errors.New("decision server overloaded")
 var ErrUnknownModel = errors.New("model not found")
+var ErrUnavailable = errors.New("decision engine unavailable")
 
 type Admission struct {
 	slots      chan struct{}
