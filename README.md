@@ -82,6 +82,10 @@ The pure-Go encoder has a fixed official token-ID golden test. `make parity` run
 
 macOS ARM64 acceptance on a 10-logical-CPU, 16 GB Mac (`-max-runs 4 -ort-threads 4`): 64 clients for 10 minutes, 72,328 successful requests, zero completed-request errors, 120.5 QPS, p50 493 ms, p95 732 ms, p99 893 ms. The process RSS stabilized near 2.69 GB during the run. A later 30-second run with concurrency metrics recorded four overlapping calls to the same `Session.Run`. These are baseline measurements for the included short/medium request mix, not latency guarantees.
 
+## Language decision evaluation
+
+The [Chinese, English, numeric and pinyin evaluation suite](tests/evaluation/README.md) includes fixed context-grounded diagnostics and a pinned external TokSuite robustness dataset. It reports accuracy and errors separately by source, input form, prompt language, task and domain, and retains per-case predictions. It is an accuracy evaluation, separate from the throughput benchmark above.
+
 ## Configuration
 
 `ods -h` lists all flags. The main options are `-http`, `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-questions`, `-max-length`, `-head-length`, and `-log-requests`. Structured request logging omits state, instructions, and criteria.

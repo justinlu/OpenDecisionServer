@@ -1,0 +1,76 @@
+{
+  "dataset": "toksuite/toksuite_chinese",
+  "revision": "f3b76350c0bb4f94d008746f7ab1f3a04642958e",
+  "license": "MIT",
+  "license_source": "https://huggingface.co/datasets/toksuite/toksuite_chinese/resolve/f3b76350c0bb4f94d008746f7ab1f3a04642958e/README.md",
+  "files": [
+    {
+      "path": "toksuite_chinese_canonical/test-00000-of-00001.parquet",
+      "sha256": "1c0dc74d94ea86cbbf59a750c893fd7e6c2fed25396cbb5ca7eb6788d69b7381",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_code_language_script_switching/test-00000-of-00001.parquet",
+      "sha256": "b69eb395b37dffec1636090db655369cd4386c63df5e5326058fdbbf1c07f7cf",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_colloquial/test-00000-of-00001.parquet",
+      "sha256": "1972b481ee7b7970b6476bb9b041d36144e7d368cc86a01b31c7aae757bfbf0c",
+      "rows": 39
+    },
+    {
+      "path": "toksuite_chinese_equivalent_expressions/test-00000-of-00001.parquet",
+      "sha256": "6cf163f25f90a2b243e9e79289ef5f9f353fb24e492507a0469edf321e707d89",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_keyboard_proximity_errors/test-00000-of-00001.parquet",
+      "sha256": "153a570894c13712e37f043a502a54c881c82a6b956561989209b12cc0b62b34",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_ocr_errors/test-00000-of-00001.parquet",
+      "sha256": "e498920b69c5631dd74105826f7a898c80b9910747620aaaf69e080749491763",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_optional_diacritics/test-00000-of-00001.parquet",
+      "sha256": "2eab77450fcc36a4e27e12fa5c2534d4ca1fd1eecdb7a81065c17a417d0bc77b",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_partially_romanized/test-00000-of-00001.parquet",
+      "sha256": "6a81f1265c26575ef88dbce521016549a3a3b3cac3e0eccb1c7fdec68127b3aa",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_romanization/test-00000-of-00001.parquet",
+      "sha256": "7a72794087f4be9e29a65052ab57bb0d475268bf4876d9c11b619b894c5cf2a2",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_space_removal/test-00000-of-00001.parquet",
+      "sha256": "646c17f3419161e49be7b2bae9cbdcd5a12e20403e4b2fb30a4b90a63f1f7fcd",
+      "rows": 40
+    },
+    {
+      "path": "toksuite_chinese_spelled_out/test-00000-of-00001.parquet",
+      "sha256": "5f35d0da736c9933c9945b0dad68149f62fad1a38e68b0afc5d83f37cd7e4dcf",
+      "rows": 13
+    },
+    {
+      "path": "toksuite_chinese_traditional/test-00000-of-00001.parquet",
+      "sha256": "8d0be728f948add45be46564e2fa2b977d09230b9994c2e053fed31f9bccf240",
+      "rows": 33
+    },
+    {
+      "path": "toksuite_chinese_word_spacing_zero-width_characters_extra_space/test-00000-of-00001.parquet",
+      "sha256": "50dcc67af0996e63aa2c9256524306e51a4295e897a21354f45005a6a05e8cfa",
+      "rows": 40
+    }
+  ],
+  "source_card_sha256": "78b11d1f4fa7fef70d350cc651ea08bb310b06053b9d328ba6fbe7026a5b542c",
+  "converted_sha256": "4347d2b4607dedbc906936f7dbf525116507994957c0c43cd5053aa9d4b86f50",
+  "converted_rows": 485
+}

@@ -1,0 +1,1214 @@
+{
+  "overall": {
+    "total": 485,
+    "correct": 238,
+    "errors": 0,
+    "accuracy": 0.49072164948453606,
+    "uniform_random_baseline": 0.25,
+    "macro_f1": 0.49038016826330233,
+    "macro_f1_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "confusion_matrix": {
+      "A": {
+        "A": 67,
+        "B": 16,
+        "C": 18,
+        "D": 17
+      },
+      "B": {
+        "B": 62,
+        "C": 25,
+        "A": 29,
+        "D": 9
+      },
+      "C": {
+        "C": 58,
+        "B": 23,
+        "A": 27,
+        "D": 19
+      },
+      "D": {
+        "D": 51,
+        "B": 19,
+        "A": 31,
+        "C": 14
+      }
+    }
+  },
+  "breakdowns": {
+    "suite": {
+      "toksuite": {
+        "total": 485,
+        "correct": 238,
+        "errors": 0,
+        "accuracy": 0.49072164948453606,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.49038016826330233,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 67,
+            "B": 16,
+            "C": 18,
+            "D": 17
+          },
+          "B": {
+            "B": 62,
+            "C": 25,
+            "A": 29,
+            "D": 9
+          },
+          "C": {
+            "C": 58,
+            "B": 23,
+            "A": 27,
+            "D": 19
+          },
+          "D": {
+            "D": 51,
+            "B": 19,
+            "A": 31,
+            "C": 14
+          }
+        }
+      }
+    },
+    "suite+form": {
+      "toksuite/canonical": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5249766573295985,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 4,
+            "B": 1,
+            "C": 1,
+            "D": 1
+          },
+          "B": {
+            "B": 10,
+            "C": 1,
+            "A": 1
+          },
+          "C": {
+            "C": 4,
+            "B": 3,
+            "A": 2,
+            "D": 1
+          },
+          "D": {
+            "D": 4,
+            "B": 2,
+            "A": 4,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/code_language_script_switching": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5427865612648222,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 3,
+            "B": 3,
+            "A": 5,
+            "D": 1
+          },
+          "B": {
+            "B": 3,
+            "D": 2,
+            "A": 1,
+            "C": 1
+          },
+          "C": {
+            "C": 7,
+            "B": 1,
+            "A": 1
+          },
+          "D": {
+            "D": 7,
+            "B": 1,
+            "A": 4
+          }
+        }
+      },
+      "toksuite/colloquial": {
+        "total": 39,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.46153846153846156,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.42109823727470785,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "B": 2,
+            "A": 1
+          },
+          "B": {
+            "C": 2,
+            "B": 8,
+            "A": 4
+          },
+          "C": {
+            "C": 5,
+            "D": 4,
+            "B": 2,
+            "A": 2
+          },
+          "D": {
+            "A": 2,
+            "D": 4,
+            "C": 2,
+            "B": 1
+          }
+        }
+      },
+      "toksuite/equivalent_expressions": {
+        "total": 40,
+        "correct": 24,
+        "errors": 0,
+        "accuracy": 0.6,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5893606298354582,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "D": 3,
+            "B": 1
+          },
+          "B": {
+            "B": 7,
+            "A": 3,
+            "C": 1,
+            "D": 1
+          },
+          "C": {
+            "C": 7,
+            "B": 2,
+            "A": 1,
+            "D": 1
+          },
+          "D": {
+            "B": 1,
+            "A": 2,
+            "D": 3
+          }
+        }
+      },
+      "toksuite/keyboard_proximity_errors": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5504423113118765,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 2,
+            "A": 7,
+            "B": 1,
+            "D": 2
+          },
+          "B": {
+            "C": 1,
+            "B": 4,
+            "D": 1
+          },
+          "C": {
+            "C": 5,
+            "D": 2,
+            "A": 4
+          },
+          "D": {
+            "D": 6,
+            "B": 3,
+            "C": 2
+          }
+        }
+      },
+      "toksuite/ocr_errors": {
+        "total": 40,
+        "correct": 21,
+        "errors": 0,
+        "accuracy": 0.525,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.46123581011351905,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 12,
+            "B": 1,
+            "C": 3,
+            "D": 1
+          },
+          "B": {
+            "C": 2,
+            "B": 5,
+            "A": 1,
+            "D": 1
+          },
+          "C": {
+            "C": 2,
+            "B": 2,
+            "D": 3,
+            "A": 2
+          },
+          "D": {
+            "B": 2,
+            "D": 2,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/optional_diacritics": {
+        "total": 40,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.45,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.4509170653907496,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 2,
+            "A": 5,
+            "D": 1,
+            "B": 1
+          },
+          "B": {
+            "C": 4,
+            "D": 1,
+            "B": 3,
+            "A": 3
+          },
+          "C": {
+            "B": 2,
+            "C": 6,
+            "A": 3,
+            "D": 1
+          },
+          "D": {
+            "B": 2,
+            "D": 4,
+            "A": 2
+          }
+        }
+      },
+      "toksuite/partially_romanized": {
+        "total": 40,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.45,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.44305555555555554,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "C": 1,
+            "D": 3
+          },
+          "B": {
+            "B": 5,
+            "C": 5,
+            "A": 1
+          },
+          "C": {
+            "A": 3,
+            "C": 3,
+            "D": 2
+          },
+          "D": {
+            "D": 3,
+            "B": 2,
+            "C": 3,
+            "A": 2
+          }
+        }
+      },
+      "toksuite/romanization": {
+        "total": 40,
+        "correct": 16,
+        "errors": 0,
+        "accuracy": 0.4,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.39804390655783844,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 3,
+            "B": 3,
+            "C": 2,
+            "D": 1
+          },
+          "B": {
+            "B": 6,
+            "C": 2,
+            "D": 1,
+            "A": 2
+          },
+          "C": {
+            "B": 2,
+            "C": 3,
+            "D": 1,
+            "A": 2
+          },
+          "D": {
+            "D": 4,
+            "C": 2,
+            "A": 6
+          }
+        }
+      },
+      "toksuite/space_removal": {
+        "total": 40,
+        "correct": 13,
+        "errors": 0,
+        "accuracy": 0.325,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.32273412861648154,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 3,
+            "C": 2,
+            "B": 1
+          },
+          "B": {
+            "B": 4,
+            "C": 3,
+            "A": 2
+          },
+          "C": {
+            "B": 5,
+            "D": 4,
+            "C": 4,
+            "A": 3
+          },
+          "D": {
+            "B": 3,
+            "A": 3,
+            "D": 2,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/spelled_out": {
+        "total": 13,
+        "correct": 5,
+        "errors": 0,
+        "accuracy": 0.38461538461538464,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.3857142857142857,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "B": 1,
+            "A": 1,
+            "C": 1
+          },
+          "B": {
+            "A": 3,
+            "D": 1
+          },
+          "C": {
+            "B": 2,
+            "C": 1
+          },
+          "D": {
+            "D": 3
+          }
+        }
+      },
+      "toksuite/traditional": {
+        "total": 33,
+        "correct": 17,
+        "errors": 0,
+        "accuracy": 0.5151515151515151,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5216841981547864,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 5,
+            "B": 1,
+            "D": 2
+          },
+          "B": {
+            "B": 3,
+            "A": 4,
+            "D": 1
+          },
+          "C": {
+            "B": 2,
+            "C": 4,
+            "A": 2
+          },
+          "D": {
+            "D": 5,
+            "A": 3,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/word_spacing_zero-width_characters_extra_space": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5439291101055806,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "C": 1,
+            "D": 2
+          },
+          "B": {
+            "C": 3,
+            "B": 4,
+            "A": 4
+          },
+          "C": {
+            "C": 7,
+            "A": 2
+          },
+          "D": {
+            "B": 2,
+            "A": 3,
+            "D": 4,
+            "C": 1
+          }
+        }
+      }
+    },
+    "suite+prompt_language": {
+      "toksuite/zh": {
+        "total": 485,
+        "correct": 238,
+        "errors": 0,
+        "accuracy": 0.49072164948453606,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.49038016826330233,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 67,
+            "B": 16,
+            "C": 18,
+            "D": 17
+          },
+          "B": {
+            "B": 62,
+            "C": 25,
+            "A": 29,
+            "D": 9
+          },
+          "C": {
+            "C": 58,
+            "B": 23,
+            "A": 27,
+            "D": 19
+          },
+          "D": {
+            "D": 51,
+            "B": 19,
+            "A": 31,
+            "C": 14
+          }
+        }
+      }
+    },
+    "suite+type": {
+      "toksuite/choice": {
+        "total": 485,
+        "correct": 238,
+        "errors": 0,
+        "accuracy": 0.49072164948453606,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.49038016826330233,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 67,
+            "B": 16,
+            "C": 18,
+            "D": 17
+          },
+          "B": {
+            "B": 62,
+            "C": 25,
+            "A": 29,
+            "D": 9
+          },
+          "C": {
+            "C": 58,
+            "B": 23,
+            "A": 27,
+            "D": 19
+          },
+          "D": {
+            "D": 51,
+            "B": 19,
+            "A": 31,
+            "C": 14
+          }
+        }
+      }
+    },
+    "suite+domain": {
+      "toksuite/knowledge_and_completion": {
+        "total": 485,
+        "correct": 238,
+        "errors": 0,
+        "accuracy": 0.49072164948453606,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.49038016826330233,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 67,
+            "B": 16,
+            "C": 18,
+            "D": 17
+          },
+          "B": {
+            "B": 62,
+            "C": 25,
+            "A": 29,
+            "D": 9
+          },
+          "C": {
+            "C": 58,
+            "B": 23,
+            "A": 27,
+            "D": 19
+          },
+          "D": {
+            "D": 51,
+            "B": 19,
+            "A": 31,
+            "C": 14
+          }
+        }
+      }
+    },
+    "suite+form+prompt_language": {
+      "toksuite/canonical/zh": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5249766573295985,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 4,
+            "B": 1,
+            "C": 1,
+            "D": 1
+          },
+          "B": {
+            "B": 10,
+            "C": 1,
+            "A": 1
+          },
+          "C": {
+            "C": 4,
+            "B": 3,
+            "A": 2,
+            "D": 1
+          },
+          "D": {
+            "D": 4,
+            "B": 2,
+            "A": 4,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/code_language_script_switching/zh": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5427865612648222,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 3,
+            "B": 3,
+            "A": 5,
+            "D": 1
+          },
+          "B": {
+            "B": 3,
+            "D": 2,
+            "A": 1,
+            "C": 1
+          },
+          "C": {
+            "C": 7,
+            "B": 1,
+            "A": 1
+          },
+          "D": {
+            "D": 7,
+            "B": 1,
+            "A": 4
+          }
+        }
+      },
+      "toksuite/colloquial/zh": {
+        "total": 39,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.46153846153846156,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.42109823727470785,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "B": 2,
+            "A": 1
+          },
+          "B": {
+            "C": 2,
+            "B": 8,
+            "A": 4
+          },
+          "C": {
+            "C": 5,
+            "D": 4,
+            "B": 2,
+            "A": 2
+          },
+          "D": {
+            "A": 2,
+            "D": 4,
+            "C": 2,
+            "B": 1
+          }
+        }
+      },
+      "toksuite/equivalent_expressions/zh": {
+        "total": 40,
+        "correct": 24,
+        "errors": 0,
+        "accuracy": 0.6,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5893606298354582,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "D": 3,
+            "B": 1
+          },
+          "B": {
+            "B": 7,
+            "A": 3,
+            "C": 1,
+            "D": 1
+          },
+          "C": {
+            "C": 7,
+            "B": 2,
+            "A": 1,
+            "D": 1
+          },
+          "D": {
+            "B": 1,
+            "A": 2,
+            "D": 3
+          }
+        }
+      },
+      "toksuite/keyboard_proximity_errors/zh": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5504423113118765,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 2,
+            "A": 7,
+            "B": 1,
+            "D": 2
+          },
+          "B": {
+            "C": 1,
+            "B": 4,
+            "D": 1
+          },
+          "C": {
+            "C": 5,
+            "D": 2,
+            "A": 4
+          },
+          "D": {
+            "D": 6,
+            "B": 3,
+            "C": 2
+          }
+        }
+      },
+      "toksuite/ocr_errors/zh": {
+        "total": 40,
+        "correct": 21,
+        "errors": 0,
+        "accuracy": 0.525,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.46123581011351905,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 12,
+            "B": 1,
+            "C": 3,
+            "D": 1
+          },
+          "B": {
+            "C": 2,
+            "B": 5,
+            "A": 1,
+            "D": 1
+          },
+          "C": {
+            "C": 2,
+            "B": 2,
+            "D": 3,
+            "A": 2
+          },
+          "D": {
+            "B": 2,
+            "D": 2,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/optional_diacritics/zh": {
+        "total": 40,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.45,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.4509170653907496,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "C": 2,
+            "A": 5,
+            "D": 1,
+            "B": 1
+          },
+          "B": {
+            "C": 4,
+            "D": 1,
+            "B": 3,
+            "A": 3
+          },
+          "C": {
+            "B": 2,
+            "C": 6,
+            "A": 3,
+            "D": 1
+          },
+          "D": {
+            "B": 2,
+            "D": 4,
+            "A": 2
+          }
+        }
+      },
+      "toksuite/partially_romanized/zh": {
+        "total": 40,
+        "correct": 18,
+        "errors": 0,
+        "accuracy": 0.45,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.44305555555555554,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "C": 1,
+            "D": 3
+          },
+          "B": {
+            "B": 5,
+            "C": 5,
+            "A": 1
+          },
+          "C": {
+            "A": 3,
+            "C": 3,
+            "D": 2
+          },
+          "D": {
+            "D": 3,
+            "B": 2,
+            "C": 3,
+            "A": 2
+          }
+        }
+      },
+      "toksuite/romanization/zh": {
+        "total": 40,
+        "correct": 16,
+        "errors": 0,
+        "accuracy": 0.4,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.39804390655783844,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 3,
+            "B": 3,
+            "C": 2,
+            "D": 1
+          },
+          "B": {
+            "B": 6,
+            "C": 2,
+            "D": 1,
+            "A": 2
+          },
+          "C": {
+            "B": 2,
+            "C": 3,
+            "D": 1,
+            "A": 2
+          },
+          "D": {
+            "D": 4,
+            "C": 2,
+            "A": 6
+          }
+        }
+      },
+      "toksuite/space_removal/zh": {
+        "total": 40,
+        "correct": 13,
+        "errors": 0,
+        "accuracy": 0.325,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.32273412861648154,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 3,
+            "C": 2,
+            "B": 1
+          },
+          "B": {
+            "B": 4,
+            "C": 3,
+            "A": 2
+          },
+          "C": {
+            "B": 5,
+            "D": 4,
+            "C": 4,
+            "A": 3
+          },
+          "D": {
+            "B": 3,
+            "A": 3,
+            "D": 2,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/spelled_out/zh": {
+        "total": 13,
+        "correct": 5,
+        "errors": 0,
+        "accuracy": 0.38461538461538464,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.3857142857142857,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "B": 1,
+            "A": 1,
+            "C": 1
+          },
+          "B": {
+            "A": 3,
+            "D": 1
+          },
+          "C": {
+            "B": 2,
+            "C": 1
+          },
+          "D": {
+            "D": 3
+          }
+        }
+      },
+      "toksuite/traditional/zh": {
+        "total": 33,
+        "correct": 17,
+        "errors": 0,
+        "accuracy": 0.5151515151515151,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5216841981547864,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 5,
+            "B": 1,
+            "D": 2
+          },
+          "B": {
+            "B": 3,
+            "A": 4,
+            "D": 1
+          },
+          "C": {
+            "B": 2,
+            "C": 4,
+            "A": 2
+          },
+          "D": {
+            "D": 5,
+            "A": 3,
+            "C": 1
+          }
+        }
+      },
+      "toksuite/word_spacing_zero-width_characters_extra_space/zh": {
+        "total": 40,
+        "correct": 22,
+        "errors": 0,
+        "accuracy": 0.55,
+        "uniform_random_baseline": 0.25,
+        "macro_f1": 0.5439291101055806,
+        "macro_f1_labels": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "confusion_matrix": {
+          "A": {
+            "A": 7,
+            "C": 1,
+            "D": 2
+          },
+          "B": {
+            "C": 3,
+            "B": 4,
+            "A": 4
+          },
+          "C": {
+            "C": 7,
+            "A": 2
+          },
+          "D": {
+            "B": 2,
+            "A": 3,
+            "D": 4,
+            "C": 1
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "families_observed": 0,
+    "families_complete": 0,
+    "families_all_correct": 0,
+    "families_prediction_consistent": 0
+  },
+  "paired_vs_chinese": {},
+  "majority_label_baselines": {
+    "toksuite/choice": {
+      "label": "C",
+      "accuracy": 0.2618556701030928
+    }
+  },
+  "metadata": {
+    "started_at": "2026-10-27T06:26:41.803695+00:00",
+    "url": "http://127.0.0.1:18081/v1/systemone",
+    "requested_model": "julia-1",
+    "datasets": {
+      "tests/evaluation/toksuite.jsonl": "4347d2b4607dedbc906936f7dbf525116507994957c0c43cd5053aa9d4b86f50"
+    },
+    "scoring": "argmax probabilities; noul >0.5; errors count as incorrect",
+    "warning": "Variants are correlated; overall pooling is descriptive only. Interpret source-specific results."
+  },
+  "returned_models": [
+    "julia-1"
+  ],
+  "scorer_sha256": "8393cd505209f0a10aa1d2d6bb431f93177f3776ea8ae4549185aac006dd279a",
+  "note": "Summary recomputed from unchanged saved predictions after scorer validation fixes; labels unchanged."
+}

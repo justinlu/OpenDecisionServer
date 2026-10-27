@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-10-27T06:22:28.489756+00:00",
+  "url": "http://127.0.0.1:18081/v1/systemone",
+  "requested_model": "julia-1",
+  "datasets": {
+    "tests/evaluation/custom.jsonl": "be5a6ef1f8b83b973dbeb9bd9a8e4da349e3bb62d35aaaa05a7f3d81b82beac4"
+  },
+  "scoring": "argmax probabilities; noul >0.5; errors count as incorrect",
+  "warning": "Variants are correlated; overall pooling is descriptive only. Interpret source-specific results."
+}

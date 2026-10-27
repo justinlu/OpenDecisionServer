@@ -5,3 +5,6 @@ dist/
 lib/
 *.test
 :memory:.ses
+
+# Python evaluation helpers
+__pycache__/
