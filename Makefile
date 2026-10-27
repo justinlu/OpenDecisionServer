@@ -1,6 +1,11 @@
 GO ?= go
 
-.PHONY: deps build test parity race bench
+.PHONY: deps build test parity race bench llama-deps llama-build
+llama-deps:
+	bash ./scripts/prepare-llama.sh
+
+llama-build:
+	bash ./scripts/build-llama.sh
 deps:
 	./scripts/download-model.sh
 	./scripts/download-ort.sh

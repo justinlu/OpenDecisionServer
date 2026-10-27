@@ -2,6 +2,8 @@
 
 Open Decision Server serves typed probabilistic decisions through a Jev-compatible System One HTTP API. The first engine runs Julia-1 ONNX on ONNX Runtime CPU. Request encoding and tokenization are implemented in Go.
 
+Chinese Decision 2B Q8_0 is also available on Apple Silicon through an optional cgo/llama.cpp Metal build. It runs in the ODS process with a standalone native SDK and separate model files; Python is only used to export reference tests, never by the running service.
+
 ## Supported platforms
 
 - macOS ARM64: native development and primary acceptance platform.
@@ -41,7 +43,30 @@ with TypeSafeClient(api_key="local", base_url="http://127.0.0.1:8080") as client
     print(response.nouls["refund"].noul)
 ```
 
-## Linux container
+## Chinese Decision on Apple Silicon
+
+Install Go, a C/C++ compiler, CMake and curl, then build the pinned Metal SDK and fetch the pinned model:
+
+```sh
+bash scripts/prepare-llama.sh
+bash scripts/download-chinese-model.sh
+bash scripts/build-llama.sh
+./bin/ods-metal -engine chinese-decision -http 127.0.0.1:18082
+```
+
+The SDK is built directly from the native source bundled with llama-cpp-python 0.3.36 (verified SHA-256); no Python installation is required. Dynamic-library dependencies resolve relative to their own directory. Distribute `bin/ods-metal`, the SDK `lib/` directory, its adjacent `source.sha256` marker, `SHA256SUMS`, native licenses and model/config files together. `LLAMA_SDK` selects another SDK build/install directory; pass its `lib/libllama.dylib` through `-llama-lib` at runtime.
+
+Use `-llama-model`, `-llama-config` and `-llama-lib` for files outside the default directories. Startup verifies model/config hashes, the SDK source marker and library manifest, candidate token IDs, Metal availability and warmup. A wrong model, missing library or unavailable GPU fails startup; there is no CPU fallback. Ordinary `make build` still defaults to Julia and does not require native SDK headers.
+
+Requests select `"model":"chinese-decision-2b"`. Its choice/score limit is 2–26 candidates, and full prompts may contain at most 16,384 tokens. It preserves ordered structured JSON, large integers, finite Python-style floats, null and empty candidate descriptions. Missing/null instructions are rejected; noul descriptions default to “否/是”. All three answer types include calibrated probabilities and confidence. Score legends preserve original criteria JSON. Duplicate JSON keys and invalid Unicode are rejected.
+
+One worker owns one native context, processing independent questions serially. Multiple requests rotate one question at a time; GPU batching is disabled after the [batch experiment](tests/evaluation/results/2026-10-27-native-validation/README.md). Defaults are 32 waiting requests and 65,536 reserved compiled tokens, including in-flight requests. Change `-llama-max-waiting`, `-llama-max-tokens` and `-llama-threads`; the Julia `-max-runs` setting does not add native workers. A full budget returns 429; prompts are never silently truncated.
+
+Canceling active Metal work stops the caller's wait; the worker retains the context until the GPU finishes. Shutdown stops admission and drains native work before freeing resources, even if HTTP shutdown times out. The process may therefore outlive that HTTP deadline while draining.
+
+`/metrics` includes native queue depth, reserved tokens, runs, rejects, cancellations, errors, compilation/queue/inference seconds, HTTP handler duration, process peak RSS and Metal device memory. The device free/total counters describe the recommended Metal working-set allowance and its unused portion, rather than physical RAM; startup logs include the native library SHA-256. Text content is excluded from default logs. These metrics and the [end-to-end acceptance report](tests/evaluation/results/2026-10-27-ods-native/README.md) describe measured behavior; the 100ms voice target is not met for every history/question/concurrency combination.
+
+## Linux container (Julia)
 
 Download the model before building the image:
 

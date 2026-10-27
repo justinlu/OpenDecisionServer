@@ -15,12 +15,13 @@ import (
 )
 
 type Server struct {
-	Service         *decision.Service
-	MaxRequestBytes int64
-	MaxQuestions    int
-	ready           atomic.Bool
-	Logger          *slog.Logger
-	LogRequests     bool
+	Service                            *decision.Service
+	MaxRequestBytes                    int64
+	MaxQuestions                       int
+	ready                              atomic.Bool
+	Logger                             *slog.Logger
+	LogRequests                        bool
+	requests, requestNS, requestErrors atomic.Int64
 }
 
 func (s *Server) SetReady(value bool) { s.ready.Store(value) }
@@ -49,9 +50,7 @@ func (s *Server) Handler() http.Handler {
 		models := []map[string]string{}
 		if s.isReady() {
 			model := s.Service.ModelInfo()
-			for _, name := range append([]string{model.ID}, model.Aliases...) {
-				models = append(models, map[string]string{"name": name, "description": "Local " + model.ID + " decision model"})
-			}
+			models = model.Listings()
 		}
 		writeJSON(w, 200, map[string]any{"models": models})
 	})
@@ -77,8 +76,13 @@ func (s *Server) metrics(w http.ResponseWriter, _ *http.Request) {
 			runs = engine.RunCount()
 			maxRuns = engine.MaxActiveRuns()
 		}
+		if engine, ok := s.Service.Engine.(interface{ Waiting() int }); ok {
+			waiting = int64(engine.Waiting())
+		}
 	}
 	fmt.Fprintf(w, "ods_active_runs %d\nods_waiting_requests %d\nods_inference_runs_total %d\nods_max_concurrent_run_calls %d\n", active, waiting, runs, maxRuns)
+	fmt.Fprintf(w, "ods_http_requests_total %d\nods_http_errors_total %d\nods_http_duration_seconds_total %.9f\n", s.requests.Load(), s.requestErrors.Load(), float64(s.requestNS.Load())/1e9)
+	fmt.Fprint(w, processMetrics())
 	if s.isReady() {
 		if engine, ok := s.Service.Engine.(interface{ Metrics() string }); ok {
 			fmt.Fprint(w, engine.Metrics())
@@ -91,6 +95,11 @@ func (s *Server) systemOne(w http.ResponseWriter, r *http.Request) {
 	status := 200
 	questions := 0
 	defer func() {
+		s.requests.Add(1)
+		s.requestNS.Add(time.Since(started).Nanoseconds())
+		if status >= 400 {
+			s.requestErrors.Add(1)
+		}
 		if s.Logger != nil && (s.LogRequests || status >= 500) {
 			s.Logger.Info("request", "status", status, "questions", questions, "duration_ms", time.Since(started).Milliseconds())
 		}

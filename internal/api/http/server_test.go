@@ -128,3 +128,33 @@ func TestChineseModelPolicyAndResponse(t *testing.T) {
 		t.Fatal("unavailable model advertised")
 	}
 }
+
+func TestJuliaModelMetadataRemainsCompatible(t *testing.T) {
+	api := &Server{Service: &decision.Service{Engine: fixedEngine{}, Admission: decision.NewAdmission(1, 0)}, MaxQuestions: 64}
+	api.SetReady(true)
+	w := httptest.NewRecorder()
+	api.Handler().ServeHTTP(w, httptest.NewRequest("GET", "/v1/models", nil))
+	if !bytes.Contains(w.Body.Bytes(), []byte(`"release_date":"2026-09-25"`)) || !bytes.Contains(w.Body.Bytes(), []byte("Local Julia-1 ONNX CPU decision model")) {
+		t.Fatal(w.Body.String())
+	}
+}
+
+func TestChineseTiesPreserveCandidateWireOrder(t *testing.T) {
+	api := &Server{Service: &decision.Service{Model: decision.ChineseModel(), Engine: fixedEngine{}}, MaxQuestions: 64}
+	api.SetReady(true)
+	w := httptest.NewRecorder()
+	api.Handler().ServeHTTP(w, httptest.NewRequest("POST", "/v1/systemone", bytes.NewBufferString(`{"model":"chinese-decision-2b","state":"x","questions":{"q":{"type":"choice","instructions":"选择","criteria":{"z":"first","a":"second"}}}}`)))
+	var response struct {
+		Answers map[string]struct {
+			Choice        string
+			Probabilities json.RawMessage
+		}
+	}
+	if err := json.Unmarshal(w.Body.Bytes(), &response); err != nil {
+		t.Fatal(err)
+	}
+	q := response.Answers["q"]
+	if q.Choice != "z" || string(q.Probabilities) != `{"z":0.5,"a":0.5}` {
+		t.Fatalf("choice %s, probabilities %s", q.Choice, q.Probabilities)
+	}
+}

@@ -150,7 +150,6 @@ func (e *Engine) Decide(ctx context.Context, rows []decision.Input) ([]decision.
 		e.mu.Lock()
 		if !j.finished {
 			j.canceled = true
-			e.canceled.Add(1)
 			if !j.running {
 				for i, queued := range e.queue {
 					if queued == j {
@@ -171,6 +170,9 @@ func (e *Engine) finish(j *job, err error) {
 		return
 	}
 	j.finished = true
+	if errors.Is(err, context.Canceled) || errors.Is(err, context.DeadlineExceeded) {
+		e.canceled.Add(1)
+	}
 	e.reserved -= j.tokens
 	var results []decision.Result
 	if err == nil {
@@ -188,9 +190,23 @@ func (e *Engine) Stop() {
 	e.queue = nil
 	e.signal()
 }
-func (e *Engine) Close() error { e.Stop(); <-e.done; return e.closeErr }
+func (e *Engine) Close() error          { e.Stop(); <-e.done; return e.closeErr }
+func (e *Engine) Done() <-chan struct{} { return e.done }
+func (e *Engine) RuntimeInfo() map[string]any {
+	e.mu.Lock()
+	defer e.mu.Unlock()
+	out := map[string]any{"model": "chinese-decision-2b", "model_sha256": ModelSHA256, "artifacts": pinned, "temperature": e.temperature, "max_waiting": e.maxWaiting, "max_reserved_tokens": e.maxTokens}
+	if !e.stopped {
+		if n, ok := e.native.(interface{ NativeInfo() map[string]any }); ok {
+			for k, v := range n.NativeInfo() {
+				out[k] = v
+			}
+		}
+	}
+	return out
+}
 func (e *Engine) loop() {
-	defer func() { e.closeErr = e.native.Close(); close(e.done) }()
+	defer func() { e.closeErr = errors.Join(e.failed, e.native.Close()); close(e.done) }()
 	for {
 		e.mu.Lock()
 		if len(e.queue) == 0 {
@@ -303,6 +319,12 @@ func (e *Engine) Warmup(ctx context.Context) error {
 func (e *Engine) Metrics() string {
 	e.mu.Lock()
 	tokens, waiting := e.reserved, len(e.queue)
+	device := ""
+	if !e.stopped {
+		if n, ok := e.native.(interface{ NativeMetrics() string }); ok {
+			device = n.NativeMetrics()
+		}
+	}
 	e.mu.Unlock()
-	return fmt.Sprintf("ods_native_waiting_requests %d\nods_native_reserved_tokens %d\nods_native_rejections_total %d\nods_native_cancellations_total %d\nods_native_errors_total %d\nods_native_compile_seconds_total %.9f\nods_native_queue_seconds_total %.9f\nods_native_inference_seconds_total %.9f\n", waiting, tokens, e.rejected.Load(), e.canceled.Load(), e.failures.Load(), float64(e.compileNS.Load())/1e9, float64(e.waitNS.Load())/1e9, float64(e.inferenceNS.Load())/1e9)
+	return fmt.Sprintf("ods_native_waiting_requests %d\nods_native_reserved_tokens %d\nods_native_rejections_total %d\nods_native_cancellations_total %d\nods_native_errors_total %d\nods_native_compile_seconds_total %.9f\nods_native_queue_seconds_total %.9f\nods_native_inference_seconds_total %.9f\n", waiting, tokens, e.rejected.Load(), e.canceled.Load(), e.failures.Load(), float64(e.compileNS.Load())/1e9, float64(e.waitNS.Load())/1e9, float64(e.inferenceNS.Load())/1e9) + device
 }

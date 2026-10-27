@@ -130,6 +130,9 @@ func (s *Service) Decide(ctx context.Context, req Request) (Response, error) {
 			response.Answers[row.ID] = map[string]any{"type": "score", "score": score,
 				"probabilities": probs, "legend": legend, "confidence": confidence(result.Probabilities)}
 		}
+		if model.Chinese {
+			response.Answers[row.ID].(map[string]any)["probabilities"] = probabilityObject{row.Options, result.Probabilities}
+		}
 	}
 	return response, nil
 }

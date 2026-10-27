@@ -3,6 +3,7 @@ models/julia-1/*
 bin/
 dist/
 lib/
+models/chinese-decision-2b/
 *.test
 :memory:.ses
 

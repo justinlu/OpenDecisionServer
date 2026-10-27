@@ -2,7 +2,9 @@ package decision
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -56,6 +58,24 @@ func TestChineseRejectsAmbiguousOrInvalidContent(t *testing.T) {
 	for _, q := range []string{`{"type":"noul"}`, `{"type":"noul","instructions":null}`} {
 		if _, err := ParseForModel([]byte(`{"model":"chinese-decision-2b","state":"x","questions":{"q":`+q+`}}`), 64, ChineseModel()); err == nil {
 			t.Fatalf("accepted %s", q)
+		}
+	}
+}
+
+func TestChineseCandidateLimits(t *testing.T) {
+	for _, size := range []int{2, 26, 27} {
+		var options []string
+		for i := 0; i < size; i++ {
+			options = append(options, fmt.Sprintf(`"k%d":""`, i))
+		}
+		body := `{"model":"chinese-decision-2b","state":true,"questions":{"q":{"type":"choice","instructions":"选择","criteria":{` + strings.Join(options, ",") + `}}}}`
+		req, err := ParseForModel([]byte(body), 64, ChineseModel())
+		if size <= 26 {
+			if err != nil || len(req.Questions[0].Options) != size {
+				t.Fatalf("%d: %v", size, err)
+			}
+		} else if err == nil {
+			t.Fatal("27 candidates accepted")
 		}
 	}
 }

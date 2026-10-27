@@ -53,8 +53,33 @@ func (f *fakeNative) Close() error {
 	if f.active.Load() != 0 {
 		panic("freed active native")
 	}
-	f.closed.Store(true)
+	if !f.closed.CompareAndSwap(false, true) {
+		panic("native closed twice")
+	}
 	return nil
+}
+
+type sizedNative struct {
+	fakeNative
+	tokens int
+}
+
+func (n *sizedNative) Tokenize(string) ([]int32, error) { return make([]int32, n.tokens), nil }
+func TestContextBoundaryNeverTruncates(t *testing.T) {
+	n := &sizedNative{tokens: 16384}
+	e := newEngine(n, 1, 1, 65536)
+	defer e.Close()
+	out, err := e.Decide(context.Background(), []decision.Input{input("edge")})
+	if err != nil || out[0].InputTokens != 16384 {
+		t.Fatalf("limit changed: %+v %v", out, err)
+	}
+	n.tokens = 16385
+	if _, err := e.Decide(context.Background(), []decision.Input{input("over")}); err == nil {
+		t.Fatal("overlength input accepted")
+	}
+	if n.calls.Load() != 1 {
+		t.Fatal("overlength prompt partially executed")
+	}
 }
 func input(id string) decision.Input {
 	return decision.Input{ID: id, Type: decision.Noul, State: []byte(`"中文"`), Question: "是否？", Options: []decision.Option{{Key: "false", Text: "否"}, {Key: "true", Text: "是"}}}
