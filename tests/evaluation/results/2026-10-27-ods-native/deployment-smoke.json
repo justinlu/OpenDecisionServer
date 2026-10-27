@@ -1,0 +1,25 @@
+{
+  "relocated_sdk_and_default_model_paths": true,
+  "python_library_loaded": false,
+  "ordinary_binary_native_exit": 1,
+  "ordinary_binary_message": "{\"time\":\"2026-10-27T17:56:01.622191+08:00\",\"level\":\"ERROR\",\"msg\":\"server failed\",\"error\":\"Chinese Decision requires the darwin/arm64 cgo build: run scripts/build-llama.sh\"}",
+  "official_checker_cases": 24,
+  "response": {
+    "model": "chinese-decision-2b",
+    "answers": {
+      "route": {
+        "choice": "login",
+        "confidence": 0.9095345272886997,
+        "probabilities": {
+          "payments": 0.045232736355650206,
+          "login": 0.9547672636443498
+        },
+        "type": "choice"
+      }
+    },
+    "usage": {
+      "input_tokens": 69,
+      "output_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-27",
+  "source_commit": "247fa46d2efe4ad90c2bbffa9423ef8fa4c4ef98",
+  "build_info": "bin/ods-metal: go1.27.3\n\tpath\tgithub.com/opendecisionserver/ods/cmd/ods\n\tmod\tgithub.com/opendecisionserver/ods\tv0.0.0-20261027094130-247fa46d2efe+dirty\t\n\tdep\tgithub.com/microsoft/onnxruntime/go\tv0.0.0-20260915212525-84d758f8cf95\th1:ikejlr9o8aUsDKqrTG7peBPqpNSh52xsQCbiBlpRsso=\n\tdep\tgithub.com/tggo/goSentencePiece\tv1.1.0\th1:h13/8iLtIUXR03DLZ7BTa4dQhs7fWfpsHTzNF/Q/OwI=\n\tdep\tgoogle.golang.org/protobuf\tv1.36.11\th1:fV6ZwhNocDyBLK0dj+fg8ektcVegBBuEolpbTQyBNVE=\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\t-tags=llama\n\tbuild\tDefaultGODEBUG=tracebacklabels=0,x509sslcertoverrideplatform=0\n\tbuild\tCGO_ENABLED=1\n\tbuild\tCGO_CFLAGS=\"-I/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/include \"\n\tbuild\tCGO_CPPFLAGS=\n\tbuild\tCGO_CXXFLAGS=\n\tbuild\tCGO_LDFLAGS=\n\tbuild\tGOARCH=arm64\n\tbuild\tGOOS=darwin\n\tbuild\tGOARM64=v8.0\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=247fa46d2efe4ad90c2bbffa9423ef8fa4c4ef98\n\tbuild\tvcs.time=2026-10-27T09:41:30Z\n\tbuild\tvcs.modified=true\n",
+  "build_dirty_note": "Only untracked acceptance output files existed during build; tracked runtime source exactly matches source_commit. Subsequent changes are the audit/report artifacts.",
+  "host": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "gpu": "Apple M6",
+    "ram_gib": 16,
+    "logical_cpus": 12
+  },
+  "runtime": {
+    "backend": "standalone llama.cpp built directly from pinned llama-cpp-python 0.3.36 source",
+    "source_sha256": "832db0699007f1be95a7e41ef12e88926b02ba836461e36a36372db2760c1a2e",
+    "python_required": false,
+    "metal_layers": "25/25",
+    "cpu_threads": 4,
+    "n_ctx": 16384,
+    "n_seq_max": 1,
+    "n_batch": 512,
+    "n_ubatch": 512,
+    "flash_attention": false,
+    "temperature": 1.074872374534607,
+    "max_waiting": 32,
+    "max_reserved_tokens": 65536
+  },
+  "model_manifest": "../2026-10-27-chinese-decision-2b/model-manifest.json",
+  "command": "./bin/ods-metal -engine chinese-decision -http 127.0.0.1:18083 -llama-model /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/chinese-decision-2b-q8/chinese-decision-2b-Q8_0.gguf -llama-config /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/chinese-decision-2b-q8 -llama-lib /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libllama.dylib",
+  "verification": [
+    "go test -race ./...",
+    "go vet ./...",
+    "Julia official parity 100/100",
+    "Metal structured/long goldens 24/24 and corpus prompt/token parity 989/989",
+    "HTTP accuracy 989, structured contract 24, latency 1440 observations; audit_ods_native.py PASS",
+    "Relocated SDK/default-model deployment smoke, ordinary build rejects native with exit 1; official Python checker 24/24"
+  ],
+  "timing": "Closed loop, full HTTP body read and client validation; nearest-rank; 120 observations and 6 warmups/group. Serial groups and client counts scanned in order; no ASR/TTS contention or open-loop traffic.",
+  "artifacts": {
+    "bin/ods-metal": {
+      "bytes": 15082866,
+      "sha256": "760ea420b4eb3c00376eb4e9a2744d9cf3bfa3dc285ac391dd324a025a3e34dd"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/source.sha256": {
+      "bytes": 65,
+      "sha256": "8daf3102bc1798e2dfdf14d7a2ef98d076894364fd1b252ce10f98862906097e"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/include/llama.h": {
+      "bytes": 89978,
+      "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+    },
+    "internal/engine/chinese/testdata/prompt-goldens.json": {
+      "bytes": 116777,
+      "sha256": "ee4aa0c88582b654e215c68393aa058b8555276d22d3ce4060379a62fee55f56"
+    },
+    "internal/decision/testdata/chinese-golden.json": {
+      "bytes": 82621,
+      "sha256": "6aa5cd4e03c072d8dc3a01630ca6bc7d34352fdb1b3b98793e68a4bae3dbe72d"
+    },
+    "tests/evaluation/voice-performance.jsonl": {
+      "bytes": 22725,
+      "sha256": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32"
+    },
+    "tests/evaluation/check_chinese_contract.py": {
+      "bytes": 2569,
+      "sha256": "8c5df4200df627e2930e05ad156cb1840167548c110051b7701584b42709e76f"
+    },
+    "tests/evaluation/audit_ods_native.py": {
+      "bytes": 3908,
+      "sha256": "192f3ed8d9cebf05e439147e8f9dcdb18a760de15f39550e44ee7286fb187700"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libggml-base.0.25.3.dylib": {
+      "bytes": 736408,
+      "sha256": "30ef02b6ca3edf5554f4ec7fedd62d5571aee2690ca274a1afb11ed9de895f89"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libggml-blas.0.25.3.dylib": {
+      "bytes": 58776,
+      "sha256": "a94a678102d117a2e00b937803dbb429a768cd065e2099d3b4dda9a59bbbb208"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libggml-cpu.0.25.3.dylib": {
+      "bytes": 1007200,
+      "sha256": "1181bb989582a589c605b0350c6a63549aa12a23fb90f6d7005313213b48fb1e"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libggml-metal.0.25.3.dylib": {
+      "bytes": 5289464,
+      "sha256": "b5b24204f80942d3ca04397736ddc0609b73ae4002c3801d528e393baa7167ab"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libggml.0.25.3.dylib": {
+      "bytes": 60224,
+      "sha256": "edc02c0a9703b45be768f09cfa6e6307b06e277bd87fc3ccbc7cf339c1fa75b5"
+    },
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/dist/llama-sdk/lib/libllama.0.5.0.dylib": {
+      "bytes": 3332944,
+      "sha256": "a3d0f830e3db79be2799fefe381c27a08ec217df7c7a8a522f48918be03018bb"
+    }
+  },
+  "result_files": {
+    "models.json": {
+      "bytes": 112,
+      "sha256": "0249ecda02734ffbc50b8b5518ad465046beaa5dbae69f7f268c208532201346"
+    },
+    "acceptance.json": {
+      "bytes": 447,
+      "sha256": "13ed59fe7bbdd4d38b62710cb3f9a3d88d7af9e83c09fa2e8218b809353f74c6"
+    },
+    "deployment-smoke.json": {
+      "bytes": 767,
+      "sha256": "2a89b448206d81695348f248d86869534098a699f93f86b5a60bc794fac9cf8a"
+    },
+    "julia-parity.log": {
+      "bytes": 208,
+      "sha256": "56639e274c5f2e0e1605235cf4f233c1808975f3dbfb5a7618f9a7bb26117fbd"
+    },
+    "python-comparison.json": {
+      "bytes": 135,
+      "sha256": "b3e2da52b043abd786021da531072b1c255bd2755e45eeaf39c1504c7bab5ecc"
+    },
+    "native-parity.log": {
+      "bytes": 101533,
+      "sha256": "f6d921d090b650f6134223ee61e960f1c1a49041606a64d6c0da1502021480d5"
+    },
+    "metrics-before.txt": {
+      "bytes": 609,
+      "sha256": "49fb679633f90d68369b0db2b84dd80e7c3a3be0c2e604c89dd19d881167cb2e"
+    },
+    "metrics-after.txt": {
+      "bytes": 621,
+      "sha256": "f1daca2dae0900aa6ebcd1abf556b47cda364fd0768ad253c78ced336764b3ad"
+    },
+    "runtime.log": {
+      "bytes": 102408,
+      "sha256": "ac545e02b17dffb5dc043a08dabd0bc1ae9fd58ecce6243383e2fcb635f34388"
+    },
+    "structured-contract.json": {
+      "bytes": 20860,
+      "sha256": "9344077f086484073345a92818551fdb45215b15b576eef851ceeefdba7fd77e"
+    },
+    "ready.json": {
+      "bytes": 19,
+      "sha256": "682c055ddf7d0afe32b7b2646e1635ab3c83f65884a37aecdc8549e7031a3417"
+    },
+    "latency-comparison.json": {
+      "bytes": 1986,
+      "sha256": "14a651dd474db30082e8ac0aaea938fedf0bf9f363a75a86eec52e291733a6e1"
+    },
+    "latency/summary.json": {
+      "bytes": 5012,
+      "sha256": "22346bf4c29eb73b749b1128a9a9afb5e62c8e2b0d9266a698312be892311c03"
+    },
+    "latency/samples.jsonl": {
+      "bytes": 207242,
+      "sha256": "8e796e0b9b315f6f6d3e3a4c272d86c1c8604afa0ac9f4c8fb3baf27b66cfdc9"
+    },
+    "accuracy/summary.json": {
+      "bytes": 70746,
+      "sha256": "27258cc050d91f67e676a58a9ed832beba5fe1ff9471ce71842e578f0be7173e"
+    },
+    "accuracy/predictions.jsonl": {
+      "bytes": 1136295,
+      "sha256": "84dff147793909beada02c9a1c4ca2407ec403da71862eaa08413087f61d095e"
+    }
+  }
+}

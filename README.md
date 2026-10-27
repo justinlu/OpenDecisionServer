@@ -115,7 +115,7 @@ For voice assistants, the [Apple Silicon latency comparison](tests/evaluation/re
 
 ## Configuration
 
-`ods -h` lists all flags. The main options are `-http`, `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-questions`, `-max-length`, `-head-length`, and `-log-requests`. Structured request logging omits state, instructions, and criteria.
+`ods -h` lists all flags. Select `-engine julia|chinese-decision`; the default is Julia. Julia options include `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-length` and `-head-length`. Native options are described above. Shared options include `-http`, `-max-questions` and `-log-requests`. Structured request logging omits state, instructions, and criteria.
 
 ## Upstream references
 

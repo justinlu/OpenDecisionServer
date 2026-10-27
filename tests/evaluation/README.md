@@ -54,3 +54,5 @@ Chinese Decision 2B Q8_0 的同集 GPU 实测及与 Julia 的逐条比较见 [�
 语音助手在 Apple Silicon、p95≤100ms 预算下的单问／多问／历史长度／并发比较见 [语音延迟评测](results/2026-10-27-voice-latency/README.md)，可用 `benchmark_latency.py` 复现。该性能集不作为新的准确率测试集。
 
 Go/cgo 直接调用 llama.cpp 的一致性与真正多序列批推理验证见 [原生接入验证](results/2026-10-27-native-validation/README.md)，接入方案见 [设计](../../docs/superpowers/specs/2026-10-27-llama-backend-design.md)。串行结果复现 Python；本次批处理没有提速，且未过概率一致性门槛。
+
+ODS 正式串行后端的 989 条 HTTP 准确率、24 条结构化契约、1,440 条延迟观测和部署方式见 [原生后端验收](results/2026-10-27-ods-native/README.md)。

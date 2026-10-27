@@ -1,0 +1,18 @@
+{
+  "accuracy_parity": {
+    "rows": 989,
+    "winner_mismatches": 0,
+    "max_probability_delta": 2.220446049250313e-16,
+    "tolerance": 0.0001,
+    "passed": true
+  },
+  "structured_cases": 24,
+  "latency_observations": 1440,
+  "latency_groups": 12,
+  "latency_errors": 0,
+  "checked_http_requests": 2525,
+  "checked_native_runs": 4038,
+  "native_concurrency": 1,
+  "idle_queue_and_reserved_tokens_zero": true,
+  "peak_rss_bytes": 2413264896
+}

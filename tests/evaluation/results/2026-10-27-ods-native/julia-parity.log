@@ -1,0 +1,5 @@
+=== RUN   TestOfficialONNXParity
+    parity_test.go:98: matched 100/100; Session.Run calls 25
+--- PASS: TestOfficialONNXParity (3.73s)
+PASS
+ok  	github.com/opendecisionserver/ods/internal/engine/julia	4.273s

@@ -1,0 +1,98 @@
+[
+  {
+    "history_pairs": 0,
+    "questions": 1,
+    "clients": 1,
+    "ods_p95_ms": 48.480000000000075,
+    "python_p95_ms": 47.042459000000036,
+    "errors": 0
+  },
+  {
+    "history_pairs": 0,
+    "questions": 1,
+    "clients": 4,
+    "ods_p95_ms": 187.93708300000046,
+    "python_p95_ms": 181.86024999999972,
+    "errors": 0
+  },
+  {
+    "history_pairs": 0,
+    "questions": 3,
+    "clients": 1,
+    "ods_p95_ms": 141.8512079999985,
+    "python_p95_ms": 138.67349999999945,
+    "errors": 0
+  },
+  {
+    "history_pairs": 0,
+    "questions": 3,
+    "clients": 4,
+    "ods_p95_ms": 566.6641250000026,
+    "python_p95_ms": 554.7362080000014,
+    "errors": 0
+  },
+  {
+    "history_pairs": 4,
+    "questions": 1,
+    "clients": 1,
+    "ods_p95_ms": 85.2774580000002,
+    "python_p95_ms": 86.25462500000225,
+    "errors": 0
+  },
+  {
+    "history_pairs": 4,
+    "questions": 1,
+    "clients": 4,
+    "ods_p95_ms": 335.00520799999833,
+    "python_p95_ms": 340.910166999997,
+    "errors": 0
+  },
+  {
+    "history_pairs": 4,
+    "questions": 3,
+    "clients": 1,
+    "ods_p95_ms": 252.95670899998868,
+    "python_p95_ms": 254.3734170000107,
+    "errors": 0
+  },
+  {
+    "history_pairs": 4,
+    "questions": 3,
+    "clients": 4,
+    "ods_p95_ms": 995.0547919999906,
+    "python_p95_ms": 1002.5639999999925,
+    "errors": 0
+  },
+  {
+    "history_pairs": 12,
+    "questions": 1,
+    "clients": 1,
+    "ods_p95_ms": 130.60529099999485,
+    "python_p95_ms": 131.57799999999042,
+    "errors": 0
+  },
+  {
+    "history_pairs": 12,
+    "questions": 1,
+    "clients": 4,
+    "ods_p95_ms": 516.8372500000089,
+    "python_p95_ms": 520.5417919999888,
+    "errors": 0
+  },
+  {
+    "history_pairs": 12,
+    "questions": 3,
+    "clients": 1,
+    "ods_p95_ms": 387.80274999999165,
+    "python_p95_ms": 395.91237499999465,
+    "errors": 0
+  },
+  {
+    "history_pairs": 12,
+    "questions": 3,
+    "clients": 4,
+    "ods_p95_ms": 1566.258750000003,
+    "python_p95_ms": 1557.2059589999867,
+    "errors": 0
+  }
+]
