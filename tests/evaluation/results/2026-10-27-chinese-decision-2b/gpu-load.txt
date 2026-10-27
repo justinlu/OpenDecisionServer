@@ -1,0 +1,8 @@
+ggml_metal_device_init: GPU name:   MTL0 (Apple M6)
+load_tensors: offloaded 25/25 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =   515.31 MiB
+load_tensors:  MTL0_Mapped model buffer size =  1908.35 MiB
+llama_kv_cache:       MTL0 KV buffer size =   192.00 MiB
+llama_memory_recurrent:       MTL0 RS buffer size =    19.27 MiB
+sched_reserve:       MTL0 compute buffer size =   493.00 MiB
+sched_reserve:        CPU compute buffer size =    42.02 MiB

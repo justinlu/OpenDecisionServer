@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "model": "chinese-decision-2b",
+  "temperature": 1.074872374534607,
+  "calibrated": true,
+  "backend": "gguf",
+  "device": "metal",
+  "max_length": 16384,
+  "step": 4994
+}

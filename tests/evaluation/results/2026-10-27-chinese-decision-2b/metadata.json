@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-10-27T07:36:05.788209+00:00",
+  "url": "http://127.0.0.1:18082/v1/systemone",
+  "requested_model": "chinese-decision-2b",
+  "datasets": {
+    "tests/evaluation/custom.jsonl": "be5a6ef1f8b83b973dbeb9bd9a8e4da349e3bb62d35aaaa05a7f3d81b82beac4",
+    "tests/evaluation/toksuite.jsonl": "4347d2b4607dedbc906936f7dbf525116507994957c0c43cd5053aa9d4b86f50"
+  },
+  "scoring": "argmax probabilities; noul >0.5; errors count as incorrect",
+  "warning": "Variants are correlated; overall pooling is descriptive only. Interpret source-specific results."
+}

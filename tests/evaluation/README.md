@@ -48,3 +48,5 @@ python3 -m venv /tmp/ods-data-import
 - 没有证明公共测试集未进入预训练数据。自建集针对本服务契约而设计，尚不构成经过盲测验证的通用排行榜。
 
 研究来源与未选择的数据集见 [研究记录](../../docs/research/chinese-decision-datasets.md)。本机首次运行结果见 `results/2026-10-27/README.md`。
+
+Chinese Decision 2B Q8_0 的同集 GPU 实测及与 Julia 的逐条比较见 [候选模型评测](results/2026-10-27-chinese-decision-2b/README.md)。

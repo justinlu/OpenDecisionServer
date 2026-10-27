@@ -1,0 +1,105 @@
+{
+  "repeat_A_max_probability_delta": 0.0,
+  "responses": [
+    {
+      "case_id": "routing-choice/zh/zh",
+      "response": {
+        "model": "chinese-decision-2b",
+        "answers": {
+          "decision": {
+            "type": "choice",
+            "probabilities": {
+              "c0": 0.04888751436975546,
+              "c1": 0.9456450411124669,
+              "c2": 0.00546744451777769
+            },
+            "confidence": 0.9184675616687004,
+            "choice": "c1"
+          }
+        },
+        "usage": {
+          "input_tokens": 80,
+          "output_tokens": 0
+        },
+        "latency_ms": 417.06033299851697
+      },
+      "elapsed_seconds": 0.418931459
+    },
+    {
+      "case_id": "routing-noul/zh/zh",
+      "response": {
+        "model": "chinese-decision-2b",
+        "answers": {
+          "decision": {
+            "type": "noul",
+            "probabilities": {
+              "false": 0.7593247949046424,
+              "true": 0.2406752050953575
+            },
+            "confidence": 0.5186495898092849,
+            "noul": 0.2406752050953575
+          }
+        },
+        "usage": {
+          "input_tokens": 76,
+          "output_tokens": 0
+        },
+        "latency_ms": 43.94754099484999
+      },
+      "elapsed_seconds": 0.04520337499999999
+    },
+    {
+      "case_id": "routing-choice/zh/zh",
+      "response": {
+        "model": "chinese-decision-2b",
+        "answers": {
+          "decision": {
+            "type": "choice",
+            "probabilities": {
+              "c0": 0.04888751436975546,
+              "c1": 0.9456450411124669,
+              "c2": 0.00546744451777769
+            },
+            "confidence": 0.9184675616687004,
+            "choice": "c1"
+          }
+        },
+        "usage": {
+          "input_tokens": 80,
+          "output_tokens": 0
+        },
+        "latency_ms": 42.95187500247266
+      },
+      "elapsed_seconds": 0.044084082999999996
+    },
+    {
+      "case_id": "routing-score/zh/zh",
+      "response": {
+        "model": "chinese-decision-2b",
+        "answers": {
+          "decision": {
+            "type": "score",
+            "probabilities": {
+              "0": 0.0018561189583944941,
+              "1": 0.011381429084578043,
+              "2": 0.9867624519570274
+            },
+            "confidence": 0.980143677935541,
+            "score": 1.9849063329986327,
+            "legend": {
+              "0": "正常使用，仅咨询",
+              "1": "部分功能受影响，仍可使用",
+              "2": "所有用户完全无法使用"
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        },
+        "latency_ms": 46.228457998950034
+      },
+      "elapsed_seconds": 0.04741237499999995
+    }
+  ]
+}

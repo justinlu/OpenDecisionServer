@@ -1,0 +1,11 @@
+--- a/decision/serving/backends.py
++++ b/decision/serving/backends.py
+@@ -55 +55 @@
+-    device = "cpu"
++    device = "metal"
+@@ -67 +67 @@
+-        self.llm = Llama(model_path=str(gguf), n_gpu_layers=0, offload_kqv=False, n_ctx=context_size,
++        self.llm = Llama(model_path=str(gguf), n_gpu_layers=-1, offload_kqv=True, n_ctx=context_size,
+@@ -69 +69 @@
+-                         logits_all=False, embedding=False, verbose=False)
++                         logits_all=False, embedding=False, verbose=True)
