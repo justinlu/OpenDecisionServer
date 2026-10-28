@@ -35,17 +35,17 @@ def metrics(records, elapsed, budget):
                 meets_budget=errors == 0 and p95 is not None and p95 <= budget)
 
 
-def validate_response(body, response, model):
+def validate_response(body, response, model, score_readout='mean'):
     if response.get('model') != model or set(response['answers']) != set(body['questions']):
         raise ValueError('Response model/questions mismatch')
     if response['usage']['input_tokens'] < 1:
         raise ValueError('No encoded input tokens')
     for key, question in body['questions'].items():
         grade({'request': {'questions': {'decision': question}}, 'expected': ''},
-              {'model': model, 'answers': {'decision': response['answers'][key]}})
+              {'model': model, 'answers': {'decision': response['answers'][key]}}, score_readout)
 
 
-def run_group(url, model, cases, samples, clients, timeout, warmup):
+def run_group(url, model, cases, samples, clients, timeout, warmup, score_readout='mean'):
     target = urlsplit(url)
     if target.scheme not in ('http', 'https') or not target.hostname:
         raise ValueError('Use an HTTP(S) endpoint')
@@ -67,21 +67,26 @@ def run_group(url, model, cases, samples, clients, timeout, warmup):
                 connections.append(local.connection)
         started = time.perf_counter()
         error, tokens = None, None
+        raw, status = b'', None
         try:
             local.connection.request('POST', path, body=data, headers={'Content-Type': 'application/json'})
             response = local.connection.getresponse()
+            status = response.status
             raw = response.read()
             if response.status != 200:
                 raise ValueError('HTTP '+str(response.status)+': '+raw.decode(errors='replace')[:200])
             payload = json.loads(raw)
-            validate_response(body, payload, model)
+            validate_response(body, payload, model, score_readout)
             tokens = payload['usage']['input_tokens']
         except (OSError, http.client.HTTPException, ValueError, KeyError, TypeError, AttributeError) as exc:
+            if isinstance(exc, http.client.IncompleteRead):
+                raw = exc.partial
             error = type(exc).__name__+': '+str(exc)
             local.connection.close()
             local.connection = None
         return dict(case_id=case['id'], latency_ms=(time.perf_counter()-started)*1000,
-                    input_tokens=tokens, error=error)
+                    input_tokens=tokens, error=error, http_status=status,
+                    response_body=raw.decode('utf-8', errors='replace'))
 
     try:
         for i in range(warmup):
@@ -102,6 +107,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--url', required=True)
     parser.add_argument('--model', required=True)
+    parser.add_argument('--score-readout', choices=['mean', 'median'], default='mean')
     parser.add_argument('--fixtures', type=Path, default=ROOT/'voice-performance.jsonl')
     parser.add_argument('--clients', nargs='+', type=int, default=[1, 4])
     parser.add_argument('--samples', type=int, default=120, help='Requests per history/question/client group')
@@ -122,6 +128,7 @@ def main():
     metadata = dict(started_at=datetime.now(timezone.utc).isoformat(), url=args.url, model=args.model,
                     samples_per_group=args.samples, clients=args.clients, warmup=args.warmup,
                     timeout=args.timeout, budget_ms=args.budget_ms, quantiles='nearest rank of successful requests',
+                    score_readout=args.score_readout,
                     workload='closed loop; one persistent HTTP connection per worker; not open-loop production traffic',
                     fixtures_sha256=hashlib.sha256(args.fixtures.read_bytes()).hexdigest(),
                     script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
@@ -130,7 +137,7 @@ def main():
     with (args.output/'samples.jsonl').open('w') as stream:
         for (history, questions), selected in sorted(groups.items()):
             for clients in args.clients:
-                records, elapsed = run_group(args.url, args.model, selected, args.samples, clients, args.timeout, args.warmup)
+                records, elapsed = run_group(args.url, args.model, selected, args.samples, clients, args.timeout, args.warmup, args.score_readout)
                 key = dict(history_pairs=history, questions=questions, clients=clients)
                 for record in records:
                     stream.write(json.dumps(dict(key, **record), ensure_ascii=False)+'\n')

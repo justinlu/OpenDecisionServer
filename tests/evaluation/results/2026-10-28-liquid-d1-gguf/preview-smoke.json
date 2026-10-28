@@ -1,0 +1,1 @@
+{"model":"d1-omni-2b","answers":{"intent":{"type":"choice","choice":"shipping","probabilities":{"billing":0.0052856918148826305,"shipping":0.9903676662107349,"technical":0.004346641974382495},"confidence":0.9903676662107349}},"usage":{"input_tokens":61,"output_tokens":0}}

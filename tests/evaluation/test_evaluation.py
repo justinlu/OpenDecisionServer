@@ -2,6 +2,8 @@ import math
 import json
 import hashlib
 import http.client
+import io
+import urllib.error
 from pathlib import Path
 import tempfile
 from unittest.mock import patch
@@ -69,11 +71,57 @@ class ScoringTests(unittest.TestCase):
     def case(self, kind='score'):
         return next(r for r in build_cases() if r['type'] == kind)
 
+    def test_truncated_http_error_body_keeps_partial_body_and_continues(self):
+        class TruncatedBody(io.BytesIO):
+            def read(self, *args):
+                raise http.client.IncompleteRead(b'partial error', 10)
+        with tempfile.TemporaryDirectory() as directory:
+            dataset = Path(directory)/'cases.jsonl'
+            dataset.write_text(''.join(json.dumps(row)+'\n' for row in build_cases()[:2]))
+            output = Path(directory)/'results'
+            def failure(*args, **kwargs):
+                raise urllib.error.HTTPError('http://localhost', 503, 'Unavailable', {}, TruncatedBody())
+            with patch('sys.argv', ['evaluate.py', '--dataset', str(dataset), '--output', str(output)]), \
+                    patch('urllib.request.urlopen', side_effect=failure):
+                try:
+                    main()
+                except SystemExit as error:
+                    self.assertEqual(error.code, 1)
+                except http.client.HTTPException as error:
+                    self.fail('Truncated error body aborted evaluation: '+str(error))
+            records = [json.loads(line) for line in (output/'predictions.jsonl').read_text().splitlines()]
+            self.assertEqual(len(records), 2)
+            self.assertTrue(all(r['http_status'] == 503 and r['response_body'] == 'partial error' for r in records))
+
     def test_score_uses_argmax_not_rounded_expected_index(self):
         row = self.case()
         response = {'model': 'julia-1', 'answers': {'decision': {
             'type': 'score', 'score': 0.9, 'probabilities': {'0': .55, '1': 0., '2': .45}}}}
         self.assertEqual(grade(row, response)['predicted'], '0')
+
+    def test_native_median_score_is_validated_without_changing_argmax_grading(self):
+        row = self.case()
+        response = {'model': 'd1-omni-2b', 'answers': {'decision': {
+            'type': 'score', 'score': 1., 'probabilities': {'0': .45, '1': .4, '2': .15}}}}
+        try:
+            result = grade(row, response, score_readout='median')
+        except (TypeError, ValueError) as error:
+            self.fail('Native median readout must be supported: '+str(error))
+        self.assertEqual(result['predicted'], '0')
+        with self.assertRaises(ValueError):
+            grade(row, response)
+        response['answers']['decision']['score'] = 0.
+        with self.assertRaises(ValueError):
+            grade(row, response, score_readout='median')
+
+    def test_median_score_tie_uses_first_level_reaching_half(self):
+        row = self.case()
+        response = {'model': 'd1-2b', 'answers': {'decision': {
+            'type': 'score', 'score': 0., 'probabilities': {'0': .5, '1': .3, '2': .2}}}}
+        try:
+            self.assertEqual(grade(row, response, score_readout='median')['predicted'], '0')
+        except TypeError as error:
+            self.fail(str(error))
 
     def test_null_answer_is_a_validation_error(self):
         row = self.case('choice')
@@ -121,6 +169,8 @@ class ScoringTests(unittest.TestCase):
             self.assertEqual(summary['overall']['total'], 2)
             self.assertEqual(summary['overall']['errors'], 2)
             self.assertEqual(len((output/'predictions.jsonl').read_text().splitlines()), 2)
+            first = json.loads((output/'predictions.jsonl').read_text().splitlines()[0])
+            self.assertEqual(first.get('response_body'), '{"model":"julia-1","answers":{"decision":null}}')
 
     def test_truncated_http_response_is_counted_as_an_error(self):
         row = self.case('choice')
@@ -133,6 +183,8 @@ class ScoringTests(unittest.TestCase):
                     main()
                 self.assertEqual(exit_result.exception.code, 1)
             self.assertEqual(json.loads((output/'summary.json').read_text())['overall']['errors'], 1)
+            record = json.loads((output/'predictions.jsonl').read_text())
+            self.assertEqual(record.get('response_body'), '')
 
     def test_errors_stay_in_denominator_and_pairing_is_not_success(self):
         rows = [r for r in build_cases() if r['family'] == 'routing-choice'][:2]

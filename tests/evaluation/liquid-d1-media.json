@@ -1,0 +1,424 @@
+[
+  {
+    "id": "refund-zh-text",
+    "group": "speech-zh-text",
+    "transcript": "我的银行卡被重复扣款了，请退还多收的钱。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": null,
+    "request": {
+      "state": "我的银行卡被重复扣款了，请退还多收的钱。",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "billing"
+    }
+  },
+  {
+    "id": "refund-zh-audio",
+    "group": "speech-zh-audio",
+    "transcript": "我的银行卡被重复扣款了，请退还多收的钱。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": "refund-zh.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "billing"
+    }
+  },
+  {
+    "id": "shipping-zh-text",
+    "group": "speech-zh-text",
+    "transcript": "我不是要退款，我只想查询包裹到哪里了。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": null,
+    "request": {
+      "state": "我不是要退款，我只想查询包裹到哪里了。",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "shipping"
+    }
+  },
+  {
+    "id": "shipping-zh-audio",
+    "group": "speech-zh-audio",
+    "transcript": "我不是要退款，我只想查询包裹到哪里了。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": "shipping-zh.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "shipping"
+    }
+  },
+  {
+    "id": "technical-zh-text",
+    "group": "speech-zh-text",
+    "transcript": "钱没有问题，但是应用程序打不开，一启动就闪退。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": null,
+    "request": {
+      "state": "钱没有问题，但是应用程序打不开，一启动就闪退。",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "technical"
+    }
+  },
+  {
+    "id": "technical-zh-audio",
+    "group": "speech-zh-audio",
+    "transcript": "钱没有问题，但是应用程序打不开，一启动就闪退。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "audio": "technical-zh.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "technical"
+    }
+  },
+  {
+    "id": "refund-en-text",
+    "group": "speech-en-text",
+    "transcript": "My card was charged twice. Please refund the extra charge.",
+    "voice": "Samantha (English (US))",
+    "audio": null,
+    "request": {
+      "state": "My card was charged twice. Please refund the extra charge.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "billing"
+    }
+  },
+  {
+    "id": "refund-en-audio",
+    "group": "speech-en-audio",
+    "transcript": "My card was charged twice. Please refund the extra charge.",
+    "voice": "Samantha (English (US))",
+    "audio": "refund-en.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "billing"
+    }
+  },
+  {
+    "id": "shipping-en-text",
+    "group": "speech-en-text",
+    "transcript": "I do not want a refund. I just want to know where my parcel is.",
+    "voice": "Samantha (English (US))",
+    "audio": null,
+    "request": {
+      "state": "I do not want a refund. I just want to know where my parcel is.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "shipping"
+    }
+  },
+  {
+    "id": "shipping-en-audio",
+    "group": "speech-en-audio",
+    "transcript": "I do not want a refund. I just want to know where my parcel is.",
+    "voice": "Samantha (English (US))",
+    "audio": "shipping-en.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "shipping"
+    }
+  },
+  {
+    "id": "technical-en-text",
+    "group": "speech-en-text",
+    "transcript": "The payment is fine, but the app crashes every time I open it.",
+    "voice": "Samantha (English (US))",
+    "audio": null,
+    "request": {
+      "state": "The payment is fine, but the app crashes every time I open it.",
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "technical"
+    }
+  },
+  {
+    "id": "technical-en-audio",
+    "group": "speech-en-audio",
+    "transcript": "The payment is fine, but the app crashes every time I open it.",
+    "voice": "Samantha (English (US))",
+    "audio": "technical-en.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "route": {
+          "type": "choice",
+          "instructions": "Which team should handle this request?",
+          "criteria": {
+            "billing": "Payments, charges and refunds",
+            "shipping": "Parcel tracking and delivery",
+            "technical": "App and website faults"
+          }
+        }
+      }
+    },
+    "expected": {
+      "route": "technical"
+    }
+  },
+  {
+    "id": "cats-image",
+    "group": "image",
+    "image": "cats.jpg",
+    "request": {
+      "state": null,
+      "questions": {
+        "animals": {
+          "type": "choice",
+          "instructions": "Which animals are visible in the picture?",
+          "criteria": {
+            "cats": "Cats",
+            "dogs": "Dogs",
+            "birds": "Birds"
+          }
+        },
+        "sofa": {
+          "type": "noul",
+          "instructions": "Are the animals on a sofa?"
+        },
+        "dog": {
+          "type": "noul",
+          "instructions": "Is there a dog in the picture?"
+        }
+      }
+    },
+    "expected": {
+      "animals": "cats",
+      "sofa": "true",
+      "dog": "false"
+    }
+  },
+  {
+    "id": "red-zh-audio-image",
+    "group": "audio-image",
+    "audio": "red-zh.wav",
+    "transcript": "如果照片里是猫，请选红色；如果是狗，请选蓝色。",
+    "voice": "Tingting (Chinese (China mainland))",
+    "image": "cats.jpg",
+    "request": {
+      "state": null,
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "Follow the spoken rule using the picture. Which color should be selected?",
+          "criteria": {
+            "red": "Red",
+            "blue": "Blue"
+          }
+        }
+      }
+    },
+    "expected": {
+      "decision": "red"
+    }
+  },
+  {
+    "id": "blue-en-audio-image",
+    "group": "audio-image",
+    "audio": "blue-en.wav",
+    "transcript": "If the picture shows cats, choose blue. If it shows dogs, choose red.",
+    "voice": "Samantha (English (US))",
+    "image": "cats.jpg",
+    "request": {
+      "state": null,
+      "questions": {
+        "decision": {
+          "type": "choice",
+          "instructions": "Follow the spoken rule using the picture. Which color should be selected?",
+          "criteria": {
+            "red": "Red",
+            "blue": "Blue"
+          }
+        }
+      }
+    },
+    "expected": {
+      "decision": "blue"
+    }
+  },
+  {
+    "id": "spoken-question",
+    "group": "spoken-question-image",
+    "spoken": "spoken-question.wav",
+    "transcript": "Are the animals in the picture cats?",
+    "voice": "Samantha (English (US))",
+    "image": "cats.jpg",
+    "request": {
+      "state": null,
+      "questions": {
+        "cats": {
+          "type": "noul",
+          "instructions": null
+        }
+      }
+    },
+    "expected": {
+      "cats": "true"
+    }
+  },
+  {
+    "id": "silence",
+    "group": "sound",
+    "audio": "silence.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "tone": {
+          "type": "noul",
+          "instructions": "Is there an audible beep or tone in this recording?"
+        }
+      }
+    },
+    "expected": {
+      "tone": "false"
+    }
+  },
+  {
+    "id": "tone",
+    "group": "sound",
+    "audio": "tone.wav",
+    "request": {
+      "state": null,
+      "questions": {
+        "tone": {
+          "type": "noul",
+          "instructions": "Is there an audible beep or tone in this recording?"
+        }
+      }
+    },
+    "expected": {
+      "tone": "true"
+    }
+  }
+]
