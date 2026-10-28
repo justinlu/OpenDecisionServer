@@ -1,0 +1,433 @@
+"""Frozen banking intent audio evaluation. Python 3.9+; macOS TTS for preparation only."""
+import argparse
+import array
+import base64
+from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor
+import copy
+import hashlib
+import http.client
+import json
+import math
+from pathlib import Path
+import platform
+import random
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+import urllib.error
+import urllib.request
+import wave
+
+from evaluate import grade
+
+ROOT = Path(__file__).resolve().parent/'datasets/banking-audio-v1'
+CONTROLS = ['silence', 'tone', 'noise', 'clicks']
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(path, value):
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2)+'\n')
+
+
+def validate_dataset(root):
+    task = json.loads((root/'task.json').read_text())
+    cases = [json.loads(line) for line in (root/'cases.jsonl').read_text().splitlines() if line.strip()]
+    ids = [c['id'] for c in cases]
+    if len(set(ids)) != len(ids) or not cases:
+        raise ValueError('Duplicate or empty cases')
+    for case in cases:
+        if not case['transcript'].strip() or not case['rationale']:
+            raise ValueError('Missing transcript or rationale')
+        for key in ['mode', 'function']:
+            if case['expected'][key] not in task['questions'][key]['criteria']:
+                raise ValueError('Unknown gold label: '+case['id'])
+        if any(h['role'] not in ['assistant', 'user'] or not h['content'] for h in case['history']):
+            raise ValueError('Invalid history')
+    return cases, task
+
+
+def control_case(name):
+    return dict(id='control-'+name, family='control-'+name, pair=None, history=[],
+                transcript=None, tags=['non_speech'], expected={'mode': 'clarify', 'function': 'unknown'})
+
+
+def build_request(case, task, modality, wav=None, reverse=False):
+    questions = copy.deepcopy(task['questions'])
+    if reverse:
+        for question in questions.values():
+            question['criteria'] = dict(reversed(list(question['criteria'].items())))
+    history = '\n'.join(h['role']+'：'+h['content'] for h in case['history'])
+    state = ('已有对话（仅背景）：\n'+history+'\n\n') if history else ''
+    if modality == 'text':
+        state += ('最新用户：' if history else '')+case['transcript']
+        return dict(model=task['model'], state=state, questions=questions)
+    if modality != 'audio' or wav is None:
+        raise ValueError('Audio path or known modality required')
+    state = state+'最新用户诉求只在随附音频中。' if history else None
+    data = base64.b64encode(wav.read_bytes()).decode('ascii')
+    return dict(model=task['model'], state=state, questions=questions,
+                files=['data:audio/wav;base64,'+data])
+
+
+def read_pcm(path):
+    with wave.open(str(path), 'rb') as stream:
+        if (stream.getnchannels(), stream.getsampwidth(), stream.getframerate()) != (1, 2, 16000):
+            raise ValueError('Expected mono PCM16 16kHz WAV')
+        values = array.array('h', stream.readframes(stream.getnframes()))
+    if sys.byteorder != 'little':
+        values.byteswap()
+    return values
+
+
+def write_pcm(path, values):
+    values = array.array('h', (max(-32768, min(32767, round(x))) for x in values))
+    if sys.byteorder != 'little':
+        values.byteswap()
+    with wave.open(str(path), 'wb') as stream:
+        stream.setparams((1, 2, 16000, 0, 'NONE', 'not compressed'))
+        stream.writeframes(values.tobytes())
+
+
+def noisy_pcm(samples, snr_db, seed):
+    rng = random.Random(seed)
+    noise = [rng.gauss(0, 1)+.25*math.sin(2*math.pi*100*i/16000) for i in range(len(samples))]
+    signal_rms = math.sqrt(sum(x*x for x in samples)/len(samples))
+    noise_rms = math.sqrt(sum(x*x for x in noise)/len(noise))
+    gain = signal_rms/(10**(snr_db/20)*noise_rms)
+    mixed = [sample+gain*n for sample, n in zip(samples, noise)]
+    # Common gain prevents clipping without changing the signal/noise ratio.
+    scale = min(1., 30000/max(max(abs(x) for x in mixed), 1))
+    return [x*scale for x in mixed]
+
+
+def noise_cases(cases, task):
+    rng = random.Random(task['seed'])
+    pairs = defaultdict(list)
+    for case in cases:
+        if case['pair'] and set(case['tags']) & {'modal_policy', 'negation', 'self_correction'}:
+            pairs[case['expected']['function']].append(case['pair'])
+    selected = set()
+    for topic in sorted(pairs):
+        selected.add(rng.choice(sorted(set(pairs[topic]))))
+    remaining = sorted(set(p for values in pairs.values() for p in values)-selected)
+    selected.update(rng.sample(remaining, task['noise']['case_count']//2-len(selected)))
+    return {c['id'] for c in cases if c['pair'] in selected}
+
+
+def verify_media(root):
+    manifest = json.loads((root/'manifest.json').read_text())
+    for name, expected in manifest['inputs'].items():
+        if sha(root/name) != expected:
+            raise ValueError('Frozen corpus input changed: '+name)
+    if sha(root/'generation-source.py.txt') != manifest['generator_sha256']:
+        raise ValueError('Audio generator snapshot changed')
+    for entry in manifest['audio']:
+        path = root/entry['file']
+        if sha(path) != entry['sha256']:
+            raise ValueError('Frozen audio changed: '+str(path))
+        values = read_pcm(path)
+        if len(values)/16000 != entry['seconds']:
+            raise ValueError('Audio duration mismatch')
+    return manifest
+
+
+def prepare(root):
+    source_bytes = Path(__file__).read_bytes()
+    cases, task = validate_dataset(root)
+    if (root/'manifest.json').exists():
+        verify_media(root)
+        print('Verified frozen audio; not regenerating.')
+        return
+    if (root/'audio').exists():
+        raise ValueError('Unfrozen audio directory exists; refusing to overwrite')
+    entries = []
+    selected = noise_cases(cases, task)
+    with tempfile.TemporaryDirectory(prefix='banking-audio-') as directory:
+        temp = Path(directory)
+        audio = temp/'audio'
+        audio.mkdir()
+        def record(path, case, voice, condition, **extra):
+            pcm = read_pcm(path)
+            entries.append(dict(file='audio/'+path.name, case_id=case['id'], voice=voice,
+                condition=condition, sha256=sha(path), seconds=len(pcm)/16000, **extra))
+        def render_voice(voice):
+            for index, case in enumerate(cases):
+                stem = case['id']+'--'+voice['id']
+                aiff = temp/(voice['id']+'.aiff')
+                wav = audio/(stem+'--clean.wav')
+                subprocess.run(['say', '-v', voice['name'], '-r', str(voice['rate']), '-o', str(aiff),
+                                case['transcript']], check=True)
+                subprocess.run(['afconvert', '-f', 'WAVE', '-d', 'LEI16@16000', '-c', '1',
+                                str(aiff), str(wav)], check=True)
+                record(wav, case, voice['id'], 'clean')
+                if case['id'] in selected:
+                    noisy = audio/(stem+'--noise15.wav')
+                    seed = int(hashlib.sha256((str(task['noise']['seed'])+stem).encode()).hexdigest()[:16], 16)
+                    write_pcm(noisy, noisy_pcm(read_pcm(wav), task['noise']['snr_db'], seed))
+                    record(noisy, case, voice['id'], 'noise15', seed=seed, snr_db=task['noise']['snr_db'])
+                if index % 32 == 0:
+                    print('synthesized', voice['id'], index+1, '/', len(cases), flush=True)
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            list(pool.map(render_voice, task['voices']))
+        for name in CONTROLS:
+            rng = random.Random(task['seed'])
+            values = [0. for _ in range(32000)]
+            if name == 'tone':
+                values = [3000*math.sin(2*math.pi*880*i/16000) for i in range(32000)]
+            elif name == 'noise':
+                values = [rng.gauss(0, 1500) for _ in values]
+            elif name == 'clicks':
+                values = [4500*math.exp(-(i % 3200)/35) if i % 3200 < 300 else 0 for i in range(32000)]
+            wav = audio/('control-'+name+'.wav')
+            write_pcm(wav, values)
+            record(wav, control_case(name), 'none', 'control')
+        shutil.copytree(audio, root/'audio')
+    entries.sort(key=lambda entry:entry['file'])
+    (root/'generation-source.py.txt').write_bytes(source_bytes)
+    manifest = dict(version=task['version'], inputs={n:sha(root/n) for n in ['cases.jsonl', 'task.json']},
+        platform=platform.platform(), voices=task['voices'], sample_rate=16000, channels=1, bits=16,
+        generator_sha256=hashlib.sha256(source_bytes).hexdigest(),
+        warning='Synthetic TTS and synthetic noise; no real-speaker or real-ATM accuracy claim.', audio=entries)
+    write_json(root/'manifest.json', manifest)
+    print('Frozen', len(entries), 'audio files', flush=True)
+
+
+def classification(rows, key):
+    matrix = defaultdict(Counter)
+    labels = sorted({r['expected'][key] for r in rows})
+    for row in rows:
+        matrix[row['expected'][key]][row['predicted'].get(key) or '__error__'] += 1
+    per_class = {}
+    for label in labels:
+        tp = matrix[label][label]
+        actual = sum(matrix[label].values())
+        predicted = sum(counts[label] for counts in matrix.values())
+        precision, recall = tp/predicted if predicted else 0., tp/actual
+        per_class[label] = dict(support=actual, precision=precision, recall=recall,
+            f1=2*precision*recall/(precision+recall) if precision+recall else 0.)
+    return dict(correct=sum(r['predicted'].get(key) == r['expected'][key] for r in rows),
+        accuracy=sum(r['predicted'].get(key) == r['expected'][key] for r in rows)/len(rows),
+        macro_f1=sum(x['f1'] for x in per_class.values())/len(labels),
+        confusion={k:dict(v) for k,v in matrix.items()}, per_class=per_class)
+
+
+def summarize(rows):
+    if not rows:
+        raise ValueError('Empty evaluation group')
+    def rate(selected, predicate):
+        count = sum(predicate(r) for r in selected)
+        return dict(count=count, denominator=len(selected), rate=count/len(selected) if selected else None)
+    latency = sorted(r['latency_ms'] for r in rows)
+    pairs = defaultdict(list)
+    for row in rows:
+        if row.get('pair'):
+            pairs[row['pair']].append(row)
+    pairs = [p for p in pairs.values() if len({r['case_id'] for r in p}) == 2]
+    joint = sum(r['predicted'] == r['expected'] for r in rows)
+    return dict(requests=len(rows), unique_semantic_cases=len({r['case_id'] for r in rows}),
+        request_errors=sum(r['error'] is not None for r in rows), joint_correct=joint, joint_accuracy=joint/len(rows),
+        mode=classification(rows, 'mode'), function=classification(rows, 'function'),
+        inquiry_to_navigation=rate([r for r in rows if r['expected']['mode']=='inquire'],
+                                  lambda r:r['predicted'].get('mode')=='navigate'),
+        non_navigation_open=rate([r for r in rows if r['expected']['mode']!='navigate'],
+                                lambda r:r['predicted'].get('mode')=='navigate'),
+        missed_navigation=rate([r for r in rows if r['expected']['mode']=='navigate'],
+                               lambda r:r['predicted'].get('mode')!='navigate'),
+        paired_mode_all_correct=dict(pairs=len(pairs), correct=sum(all(
+            r['predicted'].get('mode')==r['expected']['mode'] for r in p) for p in pairs)),
+        latency_ms=dict(p50=latency[math.ceil(len(latency)*.5)-1], p95=latency[math.ceil(len(latency)*.95)-1],
+                        p99=latency[math.ceil(len(latency)*.99)-1], max=latency[-1]))
+
+
+def jobs_for(cases, manifest, task):
+    jobs = [dict(id='text/'+c['id'], case_id=c['id'], group='text', modality='text', voice='none', file=None)
+            for c in cases]
+    for entry in manifest['audio']:
+        jobs.append(dict(id=entry['file'], case_id=entry['case_id'], group=entry['condition'],
+                         modality='audio', voice=entry['voice'], file=entry['file']))
+    rng = random.Random(task['seed'])
+    first_voice = task['voices'][0]['id']
+    first = {j['case_id']:j for j in jobs if j['group']=='clean' and j['voice']==first_voice}
+    for case in rng.sample(cases, 24):
+        jobs.append(dict(first[case['id']], id='permutation/'+case['id'], group='permutation', reverse=True))
+    repeat_ids = ['withdraw-02-navigate', 'balance-02-inquire', 'ctx-transfer-go', 'clarify-bare-transfer']
+    for repeat in range(3):
+        for id in repeat_ids:
+            jobs.append(dict(first[id], id=f'repeat/{repeat}/{id}', group='repeat'))
+    ordered = []
+    for group in ['text', 'clean', 'noise15', 'control', 'permutation', 'repeat']:
+        selected = [j for j in jobs if j['group']==group]
+        if group != 'repeat':
+            rng.shuffle(selected)
+        ordered.extend(selected)
+    return ordered
+
+
+def send(url, body, expected):
+    encoded = json.dumps(body, ensure_ascii=False).encode()
+    record = dict(predicted={'mode': None, 'function': None}, probabilities={}, error=None,
+                  http_status=None, response_body=None, payload_sha256=hashlib.sha256(encoded).hexdigest())
+    start = time.perf_counter()
+    try:
+        request = urllib.request.Request(url, data=encoded, headers={'Content-Type': 'application/json'})
+        with urllib.request.urlopen(request, timeout=90) as response:
+            record['http_status'] = response.status
+            record['response_body'] = response.read().decode('utf-8')
+        payload = json.loads(record['response_body'])
+        if not isinstance(payload, dict):
+            raise ValueError('Response must be a JSON object')
+        if payload.get('model') != body['model']:
+            raise ValueError('Returned unexpected model')
+        for key in ['mode', 'function']:
+            result = grade(dict(request={'questions':{'decision':body['questions'][key]}}, expected=expected[key]),
+                dict(payload, answers={'decision':payload['answers'][key]}))
+            record['predicted'][key] = result['predicted']
+            record['probabilities'][key] = result['probabilities']
+    except urllib.error.HTTPError as exc:
+        record.update(http_status=exc.code, response_body=exc.read().decode('utf-8', errors='replace'),
+                      error=f'HTTPError: {exc.code}')
+    except (OSError, http.client.HTTPException, ValueError, KeyError, TypeError) as exc:
+        record['error'] = type(exc).__name__+': '+str(exc)
+    record['latency_ms'] = (time.perf_counter()-start)*1000
+    return record
+
+
+def cluster_interval(rows, seed):
+    groups = defaultdict(list)
+    for row in rows:
+        groups[row['family']].append(row)
+    clusters = list(groups.values())
+    rng = random.Random(seed)
+    values = []
+    for _ in range(2000):
+        selected = [rng.choice(clusters) for _ in clusters]
+        values.append(sum(r['predicted']==r['expected'] for g in selected for r in g)/sum(map(len,selected)))
+    values.sort()
+    return dict(method='family-cluster bootstrap, 2000 draws; voices and paired utterances kept together',
+                clusters=len(clusters), lower=values[49], upper=values[1949])
+
+
+def audit(root, output):
+    cases, task = validate_dataset(root)
+    manifest = verify_media(root)
+    by_id = {c['id']:c for c in cases}
+    by_id.update({c['id']:c for c in map(control_case,CONTROLS)})
+    expected_jobs = {j['id']:j for j in jobs_for(cases,manifest,task)}
+    records = [json.loads(line) for line in (output/'predictions.jsonl').read_text().splitlines()]
+    if len(records)!=len(expected_jobs) or {r['id'] for r in records}!=set(expected_jobs):
+        raise ValueError('Missing, duplicated or unexpected evaluation jobs')
+    groups = defaultdict(list)
+    for row in records:
+        case = by_id[row['case_id']]
+        job = expected_jobs[row['id']]
+        if row['expected']!=case['expected'] or any(row[k]!=job[k] for k in ['case_id','group','voice','file','modality']) \
+                or any(row[k]!=case[k] for k in ['pair','family','tags']):
+            raise ValueError('Recorded metadata differs from frozen job')
+        body = build_request(case, task, job['modality'], root/job['file'] if job['file'] else None, job.get('reverse',False))
+        if hashlib.sha256(json.dumps(body,ensure_ascii=False).encode()).hexdigest()!=row['payload_sha256']:
+            raise ValueError('Recorded request identity mismatch')
+        if not row['error']:
+            if row['http_status']!=200:
+                raise ValueError('Success without HTTP 200')
+            payload=json.loads(row['response_body'])
+            if payload.get('model')!=task['model']:
+                raise ValueError('Wrong model')
+            for key in ['mode','function']:
+                result=grade(dict(request={'questions':{'decision':body['questions'][key]}},expected=case['expected'][key]),
+                    dict(payload,answers={'decision':payload['answers'][key]}))
+                if result['predicted']!=row['predicted'][key] or result['probabilities']!=row['probabilities'][key]:
+                    raise ValueError('Persisted grade differs from raw response')
+        groups[row['group']].append(row)
+    report = dict(groups={g:summarize(rows) for g,rows in groups.items()},
+                  frozen_inputs=manifest['inputs'], audio_manifest_sha256=sha(root/'manifest.json'))
+    for group in ['text','clean','noise15']:
+        report['groups'][group]['joint_accuracy_95ci']=cluster_interval(groups[group],task['seed'])
+    clean = groups['clean']
+    report['clean_by_voice']={v:summarize([r for r in clean if r['voice']==v]) for v in sorted({r['voice'] for r in clean})}
+    report['clean_by_business']={f:summarize([r for r in clean if r['expected']['function']==f]) for f in task['questions']['function']['criteria']
+                                if any(r['expected']['function']==f for r in clean)}
+    text={r['case_id']:r for r in groups['text']}
+    report['text_audio_pairing']=dict(
+        text_joint_correct_audio_wrong=sum(text[r['case_id']]['predicted']==r['expected'] and r['predicted']!=r['expected'] for r in clean),
+        text_joint_wrong_audio_correct=sum(text[r['case_id']]['predicted']!=r['expected'] and r['predicted']==r['expected'] for r in clean),
+        decisions_differ=sum(text[r['case_id']]['predicted']!=r['predicted'] for r in clean), comparisons=len(clean))
+    baseline=Counter(c['expected']['mode'] for c in cases)
+    report['majority_mode_baseline']=dict(label=baseline.most_common(1)[0][0],correct=baseline.most_common(1)[0][1],
+        cases=len(cases),accuracy=baseline.most_common(1)[0][1]/len(cases),warning='Label-distribution reference, no fitted model')
+    lookup={(r['case_id'],r['voice']):r for r in clean}
+    for group in ['permutation','repeat']:
+        comparisons=[]
+        for row in groups[group]:
+            original=lookup[(row['case_id'],row['voice'])]
+            comparisons.append(dict(id=row['id'],changed=row['predicted']!=original['predicted'],
+                max_probability_delta=max((abs(p-original['probabilities'].get(key,{}).get(label,0))
+                    for key,probs in row['probabilities'].items() for label,p in probs.items()),default=None)))
+        report[group+'_comparison']=comparisons
+    failures=[r for r in records if r['group'] in ['text','clean','noise15','control'] and r['predicted']!=r['expected']]
+    (output/'failures.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in failures))
+    write_json(output/'summary.json',report)
+    print(json.dumps({g:dict(requests=s['requests'],mode_accuracy=s['mode']['accuracy'],
+        joint_accuracy=s['joint_accuracy'],errors=s['request_errors']) for g,s in report['groups'].items()},indent=2),flush=True)
+    return report
+
+
+def run(root, output, url):
+    cases, task=validate_dataset(root)
+    manifest=verify_media(root)
+    by_id={c['id']:c for c in cases}
+    by_id.update({c['id']:c for c in map(control_case,CONTROLS)})
+    output.mkdir(parents=True,exist_ok=False)
+    metadata=dict(model=task['model'],url=url,corpus_sha256=sha(root/'cases.jsonl'),task_sha256=sha(root/'task.json'),
+        manifest_sha256=sha(root/'manifest.json'),runner_sha256=sha(Path(__file__)),
+        timing='Sequential HTTP response time after request construction; excludes disk/base64/TTS. Two decision questions per request.',
+        retry_policy='No retries or result selection', warmup_requests=3, platform=platform.platform())
+    warmups=[]
+    warmup=next(e for e in manifest['audio'] if e['condition']=='clean')
+    for _ in range(3):
+        case=by_id[warmup['case_id']]
+        warmups.append(send(url,build_request(case,task,'audio',root/warmup['file']),case['expected']))
+    write_json(output/'warmups.json',warmups)
+    write_json(output/'metadata.json',metadata)
+    with (output/'predictions.jsonl').open('w') as stream:
+        for index,job in enumerate(jobs_for(cases,manifest,task)):
+            case=by_id[job['case_id']]
+            body=build_request(case,task,job['modality'],root/job['file'] if job['file'] else None,job.get('reverse',False))
+            result=send(url,body,case['expected'])
+            record=dict(job,expected=case['expected'],pair=case['pair'],family=case['family'],tags=case['tags'],**result)
+            stream.write(json.dumps(record,ensure_ascii=False)+'\n')
+            stream.flush()
+            if index%24==0 or result['error']:
+                print(index+1,job['group'],job['case_id'],result['error'],flush=True)
+    report=audit(root,output)
+    if any(g['request_errors'] for g in report['groups'].values()):
+        raise SystemExit('Evaluation complete with recorded request errors; inspect results.')
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command',choices=['validate','prepare','run','audit'])
+    parser.add_argument('--dataset',type=Path,default=ROOT)
+    parser.add_argument('--output',type=Path)
+    parser.add_argument('--url',default='http://127.0.0.1:18084/v1/systemone')
+    args=parser.parse_args()
+    if args.command=='validate':
+        cases,_=validate_dataset(args.dataset)
+        print('Validated',len(cases),'semantic cases')
+    elif args.command=='prepare':
+        prepare(args.dataset)
+    elif not args.output:
+        parser.error('--output required')
+    elif args.command=='run':
+        run(args.dataset,args.output,args.url)
+    else:
+        audit(args.dataset,args.output)
+
+
+if __name__=='__main__':
+    main()

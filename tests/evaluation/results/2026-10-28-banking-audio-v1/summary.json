@@ -1,0 +1,2891 @@
+{
+  "groups": {
+    "text": {
+      "requests": 128,
+      "unique_semantic_cases": 128,
+      "request_errors": 0,
+      "joint_correct": 117,
+      "joint_accuracy": 0.9140625,
+      "mode": {
+        "correct": 125,
+        "accuracy": 0.9765625,
+        "macro_f1": 0.9606606606606606,
+        "confusion": {
+          "inquire": {
+            "inquire": 55
+          },
+          "clarify": {
+            "clarify": 4,
+            "navigate": 2
+          },
+          "navigate": {
+            "navigate": 54,
+            "inquire": 1
+          },
+          "human": {
+            "human": 4
+          },
+          "other": {
+            "other": 4
+          },
+          "cancel": {
+            "cancel": 4
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "clarify": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "human": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 55,
+            "precision": 0.9821428571428571,
+            "recall": 1.0,
+            "f1": 0.9909909909909909
+          },
+          "navigate": {
+            "support": 55,
+            "precision": 0.9642857142857143,
+            "recall": 0.9818181818181818,
+            "f1": 0.972972972972973
+          },
+          "other": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "function": {
+        "correct": 120,
+        "accuracy": 0.9375,
+        "macro_f1": 0.9376444245409762,
+        "confusion": {
+          "pin": {
+            "pin": 10
+          },
+          "transfer": {
+            "unknown": 1,
+            "transfer": 14
+          },
+          "phone": {
+            "phone": 10,
+            "unknown": 1
+          },
+          "withdraw": {
+            "withdraw": 10,
+            "unknown": 1
+          },
+          "unknown": {
+            "deposit": 1,
+            "unknown": 8,
+            "pin": 1
+          },
+          "statement": {
+            "statement": 12,
+            "unknown": 1
+          },
+          "loss": {
+            "loss": 13
+          },
+          "mobile": {
+            "mobile": 10,
+            "unknown": 1
+          },
+          "replace": {
+            "replace": 11
+          },
+          "deposit": {
+            "deposit": 10
+          },
+          "balance": {
+            "balance": 12,
+            "unknown": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 0.9230769230769231,
+            "f1": 0.9600000000000001
+          },
+          "deposit": {
+            "support": 10,
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523
+          },
+          "loss": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "mobile": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 0.9090909090909091,
+            "f1": 0.9523809523809523
+          },
+          "phone": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 0.9090909090909091,
+            "f1": 0.9523809523809523
+          },
+          "pin": {
+            "support": 10,
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1": 0.9523809523809523
+          },
+          "replace": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "statement": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 0.9230769230769231,
+            "f1": 0.9600000000000001
+          },
+          "transfer": {
+            "support": 15,
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1": 0.9655172413793104
+          },
+          "unknown": {
+            "support": 10,
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1": 0.6666666666666666
+          },
+          "withdraw": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 0.9090909090909091,
+            "f1": 0.9523809523809523
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 55,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 2,
+        "denominator": 73,
+        "rate": 0.0273972602739726
+      },
+      "missed_navigation": {
+        "count": 1,
+        "denominator": 55,
+        "rate": 0.01818181818181818
+      },
+      "paired_mode_all_correct": {
+        "pairs": 50,
+        "correct": 49
+      },
+      "latency_ms": {
+        "p50": 288.44891700000016,
+        "p95": 318.47645799999924,
+        "p99": 333.48662499999904,
+        "max": 353.4497500000029
+      },
+      "joint_accuracy_95ci": {
+        "method": "family-cluster bootstrap, 2000 draws; voices and paired utterances kept together",
+        "clusters": 78,
+        "lower": 0.8617886178861789,
+        "upper": 0.9609375
+      }
+    },
+    "clean": {
+      "requests": 256,
+      "unique_semantic_cases": 128,
+      "request_errors": 0,
+      "joint_correct": 94,
+      "joint_accuracy": 0.3671875,
+      "mode": {
+        "correct": 190,
+        "accuracy": 0.7421875,
+        "macro_f1": 0.5898850015126549,
+        "confusion": {
+          "navigate": {
+            "navigate": 70,
+            "inquire": 10,
+            "cancel": 27,
+            "clarify": 2,
+            "human": 1
+          },
+          "inquire": {
+            "inquire": 100,
+            "cancel": 8,
+            "clarify": 2
+          },
+          "human": {
+            "human": 7,
+            "cancel": 1
+          },
+          "cancel": {
+            "cancel": 7,
+            "inquire": 1
+          },
+          "other": {
+            "inquire": 4,
+            "cancel": 2,
+            "other": 2
+          },
+          "clarify": {
+            "clarify": 4,
+            "cancel": 3,
+            "inquire": 3,
+            "other": 1,
+            "navigate": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 8,
+            "precision": 0.14583333333333334,
+            "recall": 0.875,
+            "f1": 0.25000000000000006
+          },
+          "clarify": {
+            "support": 12,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4
+          },
+          "human": {
+            "support": 8,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "inquire": {
+            "support": 110,
+            "precision": 0.847457627118644,
+            "recall": 0.9090909090909091,
+            "f1": 0.8771929824561402
+          },
+          "navigate": {
+            "support": 110,
+            "precision": 0.9859154929577465,
+            "recall": 0.6363636363636364,
+            "f1": 0.7734806629834254
+          },
+          "other": {
+            "support": 8,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "f1": 0.36363636363636365
+          }
+        }
+      },
+      "function": {
+        "correct": 120,
+        "accuracy": 0.46875,
+        "macro_f1": 0.49880549492821,
+        "confusion": {
+          "mobile": {
+            "mobile": 16,
+            "unknown": 4,
+            "phone": 1,
+            "pin": 1
+          },
+          "phone": {
+            "phone": 20,
+            "unknown": 2
+          },
+          "statement": {
+            "pin": 2,
+            "unknown": 22,
+            "mobile": 1,
+            "statement": 1
+          },
+          "transfer": {
+            "unknown": 22,
+            "transfer": 5,
+            "deposit": 1,
+            "pin": 1,
+            "replace": 1
+          },
+          "pin": {
+            "pin": 11,
+            "replace": 1,
+            "phone": 1,
+            "unknown": 5,
+            "mobile": 1,
+            "loss": 1
+          },
+          "replace": {
+            "unknown": 6,
+            "replace": 15,
+            "pin": 1
+          },
+          "loss": {
+            "unknown": 10,
+            "loss": 14,
+            "pin": 1,
+            "replace": 1
+          },
+          "deposit": {
+            "deposit": 9,
+            "unknown": 9,
+            "pin": 1,
+            "balance": 1
+          },
+          "balance": {
+            "balance": 10,
+            "unknown": 16
+          },
+          "withdraw": {
+            "deposit": 4,
+            "unknown": 14,
+            "withdraw": 2,
+            "pin": 2
+          },
+          "unknown": {
+            "unknown": 17,
+            "pin": 2,
+            "withdraw": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 26,
+            "precision": 0.9090909090909091,
+            "recall": 0.38461538461538464,
+            "f1": 0.5405405405405405
+          },
+          "deposit": {
+            "support": 20,
+            "precision": 0.6428571428571429,
+            "recall": 0.45,
+            "f1": 0.5294117647058824
+          },
+          "loss": {
+            "support": 26,
+            "precision": 0.9333333333333333,
+            "recall": 0.5384615384615384,
+            "f1": 0.6829268292682926
+          },
+          "mobile": {
+            "support": 22,
+            "precision": 0.8888888888888888,
+            "recall": 0.7272727272727273,
+            "f1": 0.7999999999999999
+          },
+          "phone": {
+            "support": 22,
+            "precision": 0.9090909090909091,
+            "recall": 0.9090909090909091,
+            "f1": 0.9090909090909091
+          },
+          "pin": {
+            "support": 20,
+            "precision": 0.5,
+            "recall": 0.55,
+            "f1": 0.5238095238095238
+          },
+          "replace": {
+            "support": 22,
+            "precision": 0.8333333333333334,
+            "recall": 0.6818181818181818,
+            "f1": 0.7499999999999999
+          },
+          "statement": {
+            "support": 26,
+            "precision": 1.0,
+            "recall": 0.038461538461538464,
+            "f1": 0.07407407407407407
+          },
+          "transfer": {
+            "support": 30,
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857
+          },
+          "unknown": {
+            "support": 20,
+            "precision": 0.13385826771653545,
+            "recall": 0.85,
+            "f1": 0.23129251700680276
+          },
+          "withdraw": {
+            "support": 22,
+            "precision": 0.6666666666666666,
+            "recall": 0.09090909090909091,
+            "f1": 0.16
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 110,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 146,
+        "rate": 0.00684931506849315
+      },
+      "missed_navigation": {
+        "count": 40,
+        "denominator": 110,
+        "rate": 0.36363636363636365
+      },
+      "paired_mode_all_correct": {
+        "pairs": 50,
+        "correct": 18
+      },
+      "latency_ms": {
+        "p50": 398.66066600001204,
+        "p95": 441.4757090000023,
+        "p99": 725.1431659999952,
+        "max": 904.893125000001
+      },
+      "joint_accuracy_95ci": {
+        "method": "family-cluster bootstrap, 2000 draws; voices and paired utterances kept together",
+        "clusters": 78,
+        "lower": 0.296875,
+        "upper": 0.4409448818897638
+      }
+    },
+    "noise15": {
+      "requests": 64,
+      "unique_semantic_cases": 32,
+      "request_errors": 0,
+      "joint_correct": 21,
+      "joint_accuracy": 0.328125,
+      "mode": {
+        "correct": 49,
+        "accuracy": 0.765625,
+        "macro_f1": 0.8131313131313131,
+        "confusion": {
+          "navigate": {
+            "inquire": 6,
+            "navigate": 21,
+            "cancel": 5
+          },
+          "inquire": {
+            "inquire": 28,
+            "cancel": 3,
+            "navigate": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 32,
+            "precision": 0.8235294117647058,
+            "recall": 0.875,
+            "f1": 0.8484848484848485
+          },
+          "navigate": {
+            "support": 32,
+            "precision": 0.9545454545454546,
+            "recall": 0.65625,
+            "f1": 0.7777777777777778
+          }
+        }
+      },
+      "function": {
+        "correct": 27,
+        "accuracy": 0.421875,
+        "macro_f1": 0.4550702075702076,
+        "confusion": {
+          "statement": {
+            "unknown": 6,
+            "pin": 2
+          },
+          "transfer": {
+            "unknown": 5,
+            "pin": 1,
+            "transfer": 2
+          },
+          "withdraw": {
+            "unknown": 3,
+            "pin": 1
+          },
+          "mobile": {
+            "mobile": 7,
+            "phone": 1
+          },
+          "phone": {
+            "loss": 1,
+            "phone": 7
+          },
+          "pin": {
+            "unknown": 2,
+            "pin": 2
+          },
+          "loss": {
+            "replace": 1,
+            "pin": 2,
+            "loss": 4,
+            "unknown": 1
+          },
+          "replace": {
+            "unknown": 1,
+            "pin": 1,
+            "replace": 2
+          },
+          "balance": {
+            "balance": 1,
+            "unknown": 6,
+            "pin": 1
+          },
+          "deposit": {
+            "pin": 1,
+            "deposit": 2,
+            "unknown": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.125,
+            "f1": 0.2222222222222222
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "loss": {
+            "support": 8,
+            "precision": 0.8,
+            "recall": 0.5,
+            "f1": 0.6153846153846154
+          },
+          "mobile": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "phone": {
+            "support": 8,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          },
+          "pin": {
+            "support": 4,
+            "precision": 0.18181818181818182,
+            "recall": 0.5,
+            "f1": 0.26666666666666666
+          },
+          "replace": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "statement": {
+            "support": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "withdraw": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 1,
+        "denominator": 32,
+        "rate": 0.03125
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 32,
+        "rate": 0.03125
+      },
+      "missed_navigation": {
+        "count": 11,
+        "denominator": 32,
+        "rate": 0.34375
+      },
+      "paired_mode_all_correct": {
+        "pairs": 16,
+        "correct": 6
+      },
+      "latency_ms": {
+        "p50": 408.8210419999996,
+        "p95": 438.975207999988,
+        "p99": 447.6611669999784,
+        "max": 447.6611669999784
+      },
+      "joint_accuracy_95ci": {
+        "method": "family-cluster bootstrap, 2000 draws; voices and paired utterances kept together",
+        "clusters": 16,
+        "lower": 0.15625,
+        "upper": 0.5
+      }
+    },
+    "control": {
+      "requests": 4,
+      "unique_semantic_cases": 4,
+      "request_errors": 0,
+      "joint_correct": 4,
+      "joint_accuracy": 1.0,
+      "mode": {
+        "correct": 4,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "clarify": {
+            "clarify": 4
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "function": {
+        "correct": 4,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "unknown": {
+            "unknown": 4
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 4,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 366.68650000001435,
+        "p95": 377.69058300000324,
+        "p99": 377.69058300000324,
+        "max": 377.69058300000324
+      }
+    },
+    "permutation": {
+      "requests": 24,
+      "unique_semantic_cases": 24,
+      "request_errors": 0,
+      "joint_correct": 14,
+      "joint_accuracy": 0.5833333333333334,
+      "mode": {
+        "correct": 21,
+        "accuracy": 0.875,
+        "macro_f1": 0.7181818181818183,
+        "confusion": {
+          "inquire": {
+            "inquire": 10
+          },
+          "navigate": {
+            "inquire": 1,
+            "navigate": 7
+          },
+          "clarify": {
+            "clarify": 1
+          },
+          "cancel": {
+            "cancel": 2
+          },
+          "other": {
+            "other": 1,
+            "inquire": 1
+          },
+          "human": {
+            "cancel": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "clarify": {
+            "support": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "human": {
+            "support": 1,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inquire": {
+            "support": 10,
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091
+          },
+          "navigate": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          },
+          "other": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 16,
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.6192837465564739,
+        "confusion": {
+          "loss": {
+            "loss": 2
+          },
+          "statement": {
+            "unknown": 2
+          },
+          "phone": {
+            "phone": 2,
+            "pin": 1
+          },
+          "withdraw": {
+            "withdraw": 1,
+            "unknown": 1,
+            "deposit": 1
+          },
+          "balance": {
+            "unknown": 1,
+            "balance": 1
+          },
+          "transfer": {
+            "unknown": 1,
+            "pin": 1
+          },
+          "deposit": {
+            "deposit": 2
+          },
+          "unknown": {
+            "unknown": 3
+          },
+          "mobile": {
+            "mobile": 2
+          },
+          "pin": {
+            "pin": 1
+          },
+          "replace": {
+            "replace": 2
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "deposit": {
+            "support": 2,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "loss": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "mobile": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "phone": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "pin": {
+            "support": 1,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "replace": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "statement": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "unknown": {
+            "support": 3,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          "withdraw": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 16,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 403.3932499999935,
+        "p95": 424.6905830000003,
+        "p99": 427.07466600001,
+        "max": 427.07466600001
+      }
+    },
+    "repeat": {
+      "requests": 12,
+      "unique_semantic_cases": 4,
+      "request_errors": 0,
+      "joint_correct": 3,
+      "joint_accuracy": 0.25,
+      "mode": {
+        "correct": 9,
+        "accuracy": 0.75,
+        "macro_f1": 0.6,
+        "confusion": {
+          "navigate": {
+            "navigate": 6
+          },
+          "inquire": {
+            "inquire": 3
+          },
+          "clarify": {
+            "navigate": 3
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "inquire": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "navigate": {
+            "support": 6,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          }
+        }
+      },
+      "function": {
+        "correct": 6,
+        "accuracy": 0.5,
+        "macro_f1": 0.5555555555555555,
+        "confusion": {
+          "withdraw": {
+            "unknown": 3
+          },
+          "balance": {
+            "balance": 3
+          },
+          "transfer": {
+            "unknown": 3,
+            "transfer": 3
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "transfer": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "withdraw": {
+            "support": 3,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 3,
+        "denominator": 6,
+        "rate": 0.5
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 378.2654169999944,
+        "p95": 426.5687079999907,
+        "p99": 426.5687079999907,
+        "max": 426.5687079999907
+      }
+    }
+  },
+  "frozen_inputs": {
+    "cases.jsonl": "0097dee503017e5bb16bc00169af7394eabe88834303b5bd298422e6891d3c6c",
+    "task.json": "bf2a7d8666707c73b22e7a9bfe294170cc874ffbe591e6ea723e35a0688f1cd8"
+  },
+  "audio_manifest_sha256": "252c27dda3b7ce326d5f22a8597f0acd5161bc215d57a874ff84d6b178478afe",
+  "noise_matched_clean": {
+    "requests": 64,
+    "unique_semantic_cases": 32,
+    "request_errors": 0,
+    "joint_correct": 26,
+    "joint_accuracy": 0.40625,
+    "mode": {
+      "correct": 48,
+      "accuracy": 0.75,
+      "macro_f1": 0.8096253426743831,
+      "confusion": {
+        "navigate": {
+          "cancel": 10,
+          "navigate": 17,
+          "inquire": 4,
+          "human": 1
+        },
+        "inquire": {
+          "inquire": 31,
+          "cancel": 1
+        }
+      },
+      "per_class": {
+        "inquire": {
+          "support": 32,
+          "precision": 0.8857142857142857,
+          "recall": 0.96875,
+          "f1": 0.9253731343283582
+        },
+        "navigate": {
+          "support": 32,
+          "precision": 1.0,
+          "recall": 0.53125,
+          "f1": 0.6938775510204082
+        }
+      }
+    },
+    "function": {
+      "correct": 31,
+      "accuracy": 0.484375,
+      "macro_f1": 0.5627107206518972,
+      "confusion": {
+        "statement": {
+          "unknown": 6,
+          "pin": 2
+        },
+        "transfer": {
+          "unknown": 6,
+          "transfer": 2
+        },
+        "withdraw": {
+          "withdraw": 1,
+          "unknown": 3
+        },
+        "mobile": {
+          "mobile": 6,
+          "pin": 1,
+          "phone": 1
+        },
+        "phone": {
+          "phone": 8
+        },
+        "pin": {
+          "unknown": 2,
+          "pin": 2
+        },
+        "loss": {
+          "replace": 1,
+          "pin": 1,
+          "unknown": 2,
+          "loss": 4
+        },
+        "replace": {
+          "replace": 3,
+          "unknown": 1
+        },
+        "balance": {
+          "balance": 3,
+          "unknown": 5
+        },
+        "deposit": {
+          "unknown": 2,
+          "deposit": 2
+        }
+      },
+      "per_class": {
+        "balance": {
+          "support": 8,
+          "precision": 1.0,
+          "recall": 0.375,
+          "f1": 0.5454545454545454
+        },
+        "deposit": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "loss": {
+          "support": 8,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "mobile": {
+          "support": 8,
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "phone": {
+          "support": 8,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353
+        },
+        "pin": {
+          "support": 4,
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4
+        },
+        "replace": {
+          "support": 4,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        },
+        "statement": {
+          "support": 8,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "transfer": {
+          "support": 8,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        },
+        "withdraw": {
+          "support": 4,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4
+        }
+      }
+    },
+    "inquiry_to_navigation": {
+      "count": 0,
+      "denominator": 32,
+      "rate": 0.0
+    },
+    "non_navigation_open": {
+      "count": 0,
+      "denominator": 32,
+      "rate": 0.0
+    },
+    "missed_navigation": {
+      "count": 15,
+      "denominator": 32,
+      "rate": 0.46875
+    },
+    "paired_mode_all_correct": {
+      "pairs": 16,
+      "correct": 4
+    },
+    "latency_ms": {
+      "p50": 402.918083000003,
+      "p95": 458.5287079999887,
+      "p99": 469.8564580000024,
+      "max": 469.8564580000024
+    }
+  },
+  "clean_noise_pairing": {
+    "comparisons": 64,
+    "clean_joint_correct_noise_wrong": 6,
+    "clean_joint_wrong_noise_correct": 1
+  },
+  "clean_by_voice": {
+    "eddy": {
+      "requests": 128,
+      "unique_semantic_cases": 128,
+      "request_errors": 0,
+      "joint_correct": 24,
+      "joint_accuracy": 0.1875,
+      "mode": {
+        "correct": 76,
+        "accuracy": 0.59375,
+        "macro_f1": 0.4728075065031587,
+        "confusion": {
+          "navigate": {
+            "navigate": 23,
+            "cancel": 25,
+            "inquire": 5,
+            "human": 1,
+            "clarify": 1
+          },
+          "inquire": {
+            "inquire": 45,
+            "cancel": 8,
+            "clarify": 2
+          },
+          "cancel": {
+            "cancel": 3,
+            "inquire": 1
+          },
+          "other": {
+            "inquire": 1,
+            "cancel": 2,
+            "other": 1
+          },
+          "human": {
+            "cancel": 1,
+            "human": 3
+          },
+          "clarify": {
+            "cancel": 3,
+            "clarify": 1,
+            "other": 1,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 4,
+            "precision": 0.07142857142857142,
+            "recall": 0.75,
+            "f1": 0.13043478260869565
+          },
+          "clarify": {
+            "support": 6,
+            "precision": 0.25,
+            "recall": 0.16666666666666666,
+            "f1": 0.2
+          },
+          "human": {
+            "support": 4,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "inquire": {
+            "support": 55,
+            "precision": 0.8490566037735849,
+            "recall": 0.8181818181818182,
+            "f1": 0.8333333333333334
+          },
+          "navigate": {
+            "support": 55,
+            "precision": 1.0,
+            "recall": 0.41818181818181815,
+            "f1": 0.5897435897435896
+          },
+          "other": {
+            "support": 4,
+            "precision": 0.5,
+            "recall": 0.25,
+            "f1": 0.3333333333333333
+          }
+        }
+      },
+      "function": {
+        "correct": 40,
+        "accuracy": 0.3125,
+        "macro_f1": 0.3136957122385848,
+        "confusion": {
+          "mobile": {
+            "mobile": 5,
+            "unknown": 4,
+            "phone": 1,
+            "pin": 1
+          },
+          "transfer": {
+            "unknown": 11,
+            "transfer": 1,
+            "deposit": 1,
+            "pin": 1,
+            "replace": 1
+          },
+          "statement": {
+            "mobile": 1,
+            "unknown": 12
+          },
+          "loss": {
+            "unknown": 9,
+            "loss": 2,
+            "pin": 1,
+            "replace": 1
+          },
+          "replace": {
+            "replace": 7,
+            "unknown": 4
+          },
+          "balance": {
+            "balance": 1,
+            "unknown": 12
+          },
+          "pin": {
+            "replace": 1,
+            "phone": 1,
+            "unknown": 5,
+            "pin": 2,
+            "loss": 1
+          },
+          "withdraw": {
+            "unknown": 8,
+            "pin": 2,
+            "deposit": 1
+          },
+          "unknown": {
+            "unknown": 9,
+            "pin": 1
+          },
+          "deposit": {
+            "unknown": 6,
+            "pin": 1,
+            "deposit": 3
+          },
+          "phone": {
+            "phone": 10,
+            "unknown": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 0.07692307692307693,
+            "f1": 0.14285714285714288
+          },
+          "deposit": {
+            "support": 10,
+            "precision": 0.6,
+            "recall": 0.3,
+            "f1": 0.4
+          },
+          "loss": {
+            "support": 13,
+            "precision": 0.6666666666666666,
+            "recall": 0.15384615384615385,
+            "f1": 0.25
+          },
+          "mobile": {
+            "support": 11,
+            "precision": 0.8333333333333334,
+            "recall": 0.45454545454545453,
+            "f1": 0.5882352941176471
+          },
+          "phone": {
+            "support": 11,
+            "precision": 0.8333333333333334,
+            "recall": 0.9090909090909091,
+            "f1": 0.8695652173913043
+          },
+          "pin": {
+            "support": 10,
+            "precision": 0.2222222222222222,
+            "recall": 0.2,
+            "f1": 0.2105263157894737
+          },
+          "replace": {
+            "support": 11,
+            "precision": 0.7,
+            "recall": 0.6363636363636364,
+            "f1": 0.6666666666666666
+          },
+          "statement": {
+            "support": 13,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 15,
+            "precision": 1.0,
+            "recall": 0.06666666666666667,
+            "f1": 0.125
+          },
+          "unknown": {
+            "support": 10,
+            "precision": 0.1111111111111111,
+            "recall": 0.9,
+            "f1": 0.1978021978021978
+          },
+          "withdraw": {
+            "support": 11,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 55,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 73,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 32,
+        "denominator": 55,
+        "rate": 0.5818181818181818
+      },
+      "paired_mode_all_correct": {
+        "pairs": 50,
+        "correct": 19
+      },
+      "latency_ms": {
+        "p50": 399.2599999999982,
+        "p95": 446.4674590000186,
+        "p99": 891.841707999994,
+        "max": 904.893125000001
+      }
+    },
+    "tingting": {
+      "requests": 128,
+      "unique_semantic_cases": 128,
+      "request_errors": 0,
+      "joint_correct": 70,
+      "joint_accuracy": 0.546875,
+      "mode": {
+        "correct": 114,
+        "accuracy": 0.890625,
+        "macro_f1": 0.7715480043149947,
+        "confusion": {
+          "inquire": {
+            "inquire": 55
+          },
+          "navigate": {
+            "inquire": 5,
+            "navigate": 47,
+            "clarify": 1,
+            "cancel": 2
+          },
+          "human": {
+            "human": 4
+          },
+          "clarify": {
+            "clarify": 3,
+            "inquire": 2,
+            "navigate": 1
+          },
+          "cancel": {
+            "cancel": 4
+          },
+          "other": {
+            "other": 1,
+            "inquire": 3
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "clarify": {
+            "support": 6,
+            "precision": 0.75,
+            "recall": 0.5,
+            "f1": 0.6
+          },
+          "human": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 55,
+            "precision": 0.8461538461538461,
+            "recall": 1.0,
+            "f1": 0.9166666666666666
+          },
+          "navigate": {
+            "support": 55,
+            "precision": 0.9791666666666666,
+            "recall": 0.8545454545454545,
+            "f1": 0.912621359223301
+          },
+          "other": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          }
+        }
+      },
+      "function": {
+        "correct": 80,
+        "accuracy": 0.625,
+        "macro_f1": 0.6402856944733375,
+        "confusion": {
+          "phone": {
+            "phone": 10,
+            "unknown": 1
+          },
+          "statement": {
+            "pin": 2,
+            "unknown": 10,
+            "statement": 1
+          },
+          "pin": {
+            "pin": 9,
+            "mobile": 1
+          },
+          "replace": {
+            "unknown": 2,
+            "replace": 8,
+            "pin": 1
+          },
+          "deposit": {
+            "deposit": 6,
+            "unknown": 3,
+            "balance": 1
+          },
+          "loss": {
+            "loss": 12,
+            "unknown": 1
+          },
+          "withdraw": {
+            "deposit": 3,
+            "withdraw": 2,
+            "unknown": 6
+          },
+          "transfer": {
+            "unknown": 11,
+            "transfer": 4
+          },
+          "balance": {
+            "balance": 9,
+            "unknown": 4
+          },
+          "unknown": {
+            "pin": 1,
+            "unknown": 8,
+            "withdraw": 1
+          },
+          "mobile": {
+            "mobile": 11
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 13,
+            "precision": 0.9,
+            "recall": 0.6923076923076923,
+            "f1": 0.7826086956521738
+          },
+          "deposit": {
+            "support": 10,
+            "precision": 0.6666666666666666,
+            "recall": 0.6,
+            "f1": 0.631578947368421
+          },
+          "loss": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 0.9230769230769231,
+            "f1": 0.9600000000000001
+          },
+          "mobile": {
+            "support": 11,
+            "precision": 0.9166666666666666,
+            "recall": 1.0,
+            "f1": 0.9565217391304348
+          },
+          "phone": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 0.9090909090909091,
+            "f1": 0.9523809523809523
+          },
+          "pin": {
+            "support": 10,
+            "precision": 0.6923076923076923,
+            "recall": 0.9,
+            "f1": 0.7826086956521738
+          },
+          "replace": {
+            "support": 11,
+            "precision": 1.0,
+            "recall": 0.7272727272727273,
+            "f1": 0.8421052631578948
+          },
+          "statement": {
+            "support": 13,
+            "precision": 1.0,
+            "recall": 0.07692307692307693,
+            "f1": 0.14285714285714288
+          },
+          "transfer": {
+            "support": 15,
+            "precision": 1.0,
+            "recall": 0.26666666666666666,
+            "f1": 0.4210526315789474
+          },
+          "unknown": {
+            "support": 10,
+            "precision": 0.17391304347826086,
+            "recall": 0.8,
+            "f1": 0.2857142857142857
+          },
+          "withdraw": {
+            "support": 11,
+            "precision": 0.6666666666666666,
+            "recall": 0.18181818181818182,
+            "f1": 0.28571428571428575
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 55,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 73,
+        "rate": 0.0136986301369863
+      },
+      "missed_navigation": {
+        "count": 8,
+        "denominator": 55,
+        "rate": 0.14545454545454545
+      },
+      "paired_mode_all_correct": {
+        "pairs": 50,
+        "correct": 43
+      },
+      "latency_ms": {
+        "p50": 397.7617500000008,
+        "p95": 435.1228749999905,
+        "p99": 465.77929199999346,
+        "max": 725.1431659999952
+      }
+    }
+  },
+  "clean_by_business": {
+    "withdraw": {
+      "requests": 22,
+      "unique_semantic_cases": 11,
+      "request_errors": 0,
+      "joint_correct": 2,
+      "joint_accuracy": 0.09090909090909091,
+      "mode": {
+        "correct": 15,
+        "accuracy": 0.6818181818181818,
+        "macro_f1": 0.6034571723426212,
+        "confusion": {
+          "navigate": {
+            "navigate": 7,
+            "inquire": 1,
+            "cancel": 2
+          },
+          "inquire": {
+            "inquire": 7,
+            "cancel": 3
+          },
+          "cancel": {
+            "inquire": 1,
+            "cancel": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25
+          },
+          "inquire": {
+            "support": 10,
+            "precision": 0.7777777777777778,
+            "recall": 0.7,
+            "f1": 0.7368421052631577
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.7,
+            "f1": 0.8235294117647058
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 0.09090909090909091,
+        "macro_f1": 0.16666666666666669,
+        "confusion": {
+          "withdraw": {
+            "deposit": 4,
+            "unknown": 14,
+            "withdraw": 2,
+            "pin": 2
+          }
+        },
+        "per_class": {
+          "withdraw": {
+            "support": 22,
+            "precision": 1.0,
+            "recall": 0.09090909090909091,
+            "f1": 0.16666666666666669
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 3,
+        "denominator": 10,
+        "rate": 0.3
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 2
+      },
+      "latency_ms": {
+        "p50": 398.1811250000078,
+        "p95": 428.36837500001934,
+        "p99": 469.8564580000024,
+        "max": 469.8564580000024
+      }
+    },
+    "deposit": {
+      "requests": 20,
+      "unique_semantic_cases": 10,
+      "request_errors": 0,
+      "joint_correct": 9,
+      "joint_accuracy": 0.45,
+      "mode": {
+        "correct": 18,
+        "accuracy": 0.9,
+        "macro_f1": 0.9236842105263159,
+        "confusion": {
+          "navigate": {
+            "navigate": 9,
+            "inquire": 1
+          },
+          "inquire": {
+            "cancel": 1,
+            "inquire": 9
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 10,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1": 0.9473684210526316
+          }
+        }
+      },
+      "function": {
+        "correct": 9,
+        "accuracy": 0.45,
+        "macro_f1": 0.6206896551724138,
+        "confusion": {
+          "deposit": {
+            "deposit": 9,
+            "unknown": 9,
+            "pin": 1,
+            "balance": 1
+          }
+        },
+        "per_class": {
+          "deposit": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.45,
+            "f1": 0.6206896551724138
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 1,
+        "denominator": 10,
+        "rate": 0.1
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 4
+      },
+      "latency_ms": {
+        "p50": 398.95566700000273,
+        "p95": 429.54841700000657,
+        "p99": 458.5287079999887,
+        "max": 458.5287079999887
+      }
+    },
+    "transfer": {
+      "requests": 30,
+      "unique_semantic_cases": 15,
+      "request_errors": 0,
+      "joint_correct": 2,
+      "joint_accuracy": 0.06666666666666667,
+      "mode": {
+        "correct": 22,
+        "accuracy": 0.7333333333333333,
+        "macro_f1": 0.5801932367149758,
+        "confusion": {
+          "inquire": {
+            "inquire": 11,
+            "cancel": 1
+          },
+          "navigate": {
+            "navigate": 7,
+            "cancel": 3,
+            "human": 1,
+            "clarify": 1
+          },
+          "cancel": {
+            "cancel": 2
+          },
+          "clarify": {
+            "cancel": 1,
+            "navigate": 1
+          },
+          "human": {
+            "human": 2
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444445
+          },
+          "clarify": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "human": {
+            "support": 2,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "inquire": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1": 0.9565217391304348
+          },
+          "navigate": {
+            "support": 12,
+            "precision": 0.875,
+            "recall": 0.5833333333333334,
+            "f1": 0.7000000000000001
+          }
+        }
+      },
+      "function": {
+        "correct": 5,
+        "accuracy": 0.16666666666666666,
+        "macro_f1": 0.2857142857142857,
+        "confusion": {
+          "transfer": {
+            "unknown": 22,
+            "transfer": 5,
+            "deposit": 1,
+            "pin": 1,
+            "replace": 1
+          }
+        },
+        "per_class": {
+          "transfer": {
+            "support": 30,
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 18,
+        "rate": 0.05555555555555555
+      },
+      "missed_navigation": {
+        "count": 5,
+        "denominator": 12,
+        "rate": 0.4166666666666667
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 2
+      },
+      "latency_ms": {
+        "p50": 400.695958,
+        "p95": 445.3244999999981,
+        "p99": 904.893125000001,
+        "max": 904.893125000001
+      }
+    },
+    "balance": {
+      "requests": 26,
+      "unique_semantic_cases": 13,
+      "request_errors": 0,
+      "joint_correct": 7,
+      "joint_accuracy": 0.2692307692307692,
+      "mode": {
+        "correct": 20,
+        "accuracy": 0.7692307692307693,
+        "macro_f1": 0.8412698412698413,
+        "confusion": {
+          "navigate": {
+            "navigate": 6,
+            "inquire": 4,
+            "cancel": 2
+          },
+          "inquire": {
+            "inquire": 12
+          },
+          "clarify": {
+            "clarify": 2
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 12,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "navigate": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 10,
+        "accuracy": 0.38461538461538464,
+        "macro_f1": 0.5555555555555556,
+        "confusion": {
+          "balance": {
+            "balance": 10,
+            "unknown": 16
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 26,
+            "precision": 1.0,
+            "recall": 0.38461538461538464,
+            "f1": 0.5555555555555556
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 6,
+        "denominator": 12,
+        "rate": 0.5
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 1
+      },
+      "latency_ms": {
+        "p50": 395.0669170000012,
+        "p95": 725.1431659999952,
+        "p99": 891.841707999994,
+        "max": 891.841707999994
+      }
+    },
+    "statement": {
+      "requests": 26,
+      "unique_semantic_cases": 13,
+      "request_errors": 0,
+      "joint_correct": 1,
+      "joint_accuracy": 0.038461538461538464,
+      "mode": {
+        "correct": 16,
+        "accuracy": 0.6153846153846154,
+        "macro_f1": 0.7902813299232737,
+        "confusion": {
+          "navigate": {
+            "inquire": 2,
+            "navigate": 5,
+            "clarify": 1,
+            "cancel": 4
+          },
+          "inquire": {
+            "inquire": 9,
+            "clarify": 1,
+            "cancel": 2
+          },
+          "human": {
+            "human": 2
+          }
+        },
+        "per_class": {
+          "human": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 12,
+            "precision": 0.8181818181818182,
+            "recall": 0.75,
+            "f1": 0.7826086956521738
+          },
+          "navigate": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.4166666666666667,
+            "f1": 0.5882352941176471
+          }
+        }
+      },
+      "function": {
+        "correct": 1,
+        "accuracy": 0.038461538461538464,
+        "macro_f1": 0.07407407407407407,
+        "confusion": {
+          "statement": {
+            "pin": 2,
+            "unknown": 22,
+            "mobile": 1,
+            "statement": 1
+          }
+        },
+        "per_class": {
+          "statement": {
+            "support": 26,
+            "precision": 1.0,
+            "recall": 0.038461538461538464,
+            "f1": 0.07407407407407407
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 7,
+        "denominator": 12,
+        "rate": 0.5833333333333334
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 395.3446249999999,
+        "p95": 433.59095799999636,
+        "p99": 441.4757090000023,
+        "max": 441.4757090000023
+      }
+    },
+    "pin": {
+      "requests": 20,
+      "unique_semantic_cases": 10,
+      "request_errors": 0,
+      "joint_correct": 11,
+      "joint_accuracy": 0.55,
+      "mode": {
+        "correct": 18,
+        "accuracy": 0.9,
+        "macro_f1": 0.9444444444444444,
+        "confusion": {
+          "inquire": {
+            "inquire": 10
+          },
+          "navigate": {
+            "navigate": 8,
+            "cancel": 2
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          }
+        }
+      },
+      "function": {
+        "correct": 11,
+        "accuracy": 0.55,
+        "macro_f1": 0.7096774193548387,
+        "confusion": {
+          "pin": {
+            "pin": 11,
+            "replace": 1,
+            "phone": 1,
+            "unknown": 5,
+            "mobile": 1,
+            "loss": 1
+          }
+        },
+        "per_class": {
+          "pin": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.55,
+            "f1": 0.7096774193548387
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 2,
+        "denominator": 10,
+        "rate": 0.2
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 3
+      },
+      "latency_ms": {
+        "p50": 396.9714579999959,
+        "p95": 432.8459580000015,
+        "p99": 438.3800420000057,
+        "max": 438.3800420000057
+      }
+    },
+    "loss": {
+      "requests": 26,
+      "unique_semantic_cases": 13,
+      "request_errors": 0,
+      "joint_correct": 13,
+      "joint_accuracy": 0.5,
+      "mode": {
+        "correct": 20,
+        "accuracy": 0.7692307692307693,
+        "macro_f1": 0.8888888888888888,
+        "confusion": {
+          "navigate": {
+            "cancel": 6,
+            "navigate": 6
+          },
+          "inquire": {
+            "inquire": 12
+          },
+          "human": {
+            "human": 2
+          }
+        },
+        "per_class": {
+          "human": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "navigate": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 14,
+        "accuracy": 0.5384615384615384,
+        "macro_f1": 0.7000000000000001,
+        "confusion": {
+          "loss": {
+            "unknown": 10,
+            "loss": 14,
+            "pin": 1,
+            "replace": 1
+          }
+        },
+        "per_class": {
+          "loss": {
+            "support": 26,
+            "precision": 1.0,
+            "recall": 0.5384615384615384,
+            "f1": 0.7000000000000001
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 6,
+        "denominator": 12,
+        "rate": 0.5
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 398.42725000000456,
+        "p95": 459.0955409999964,
+        "p99": 460.0201249999998,
+        "max": 460.0201249999998
+      }
+    },
+    "replace": {
+      "requests": 22,
+      "unique_semantic_cases": 11,
+      "request_errors": 0,
+      "joint_correct": 12,
+      "joint_accuracy": 0.5454545454545454,
+      "mode": {
+        "correct": 17,
+        "accuracy": 0.7727272727272727,
+        "macro_f1": 0.8500000000000001,
+        "confusion": {
+          "inquire": {
+            "inquire": 9,
+            "cancel": 1
+          },
+          "navigate": {
+            "cancel": 3,
+            "navigate": 8,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 10,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "navigate": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          }
+        }
+      },
+      "function": {
+        "correct": 15,
+        "accuracy": 0.6818181818181818,
+        "macro_f1": 0.8108108108108109,
+        "confusion": {
+          "replace": {
+            "unknown": 6,
+            "replace": 15,
+            "pin": 1
+          }
+        },
+        "per_class": {
+          "replace": {
+            "support": 22,
+            "precision": 1.0,
+            "recall": 0.6818181818181818,
+            "f1": 0.8108108108108109
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 4,
+        "denominator": 12,
+        "rate": 0.3333333333333333
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 1
+      },
+      "latency_ms": {
+        "p50": 392.4369590000083,
+        "p95": 425.6208749999928,
+        "p99": 446.6181670000253,
+        "max": 446.6181670000253
+      }
+    },
+    "phone": {
+      "requests": 22,
+      "unique_semantic_cases": 11,
+      "request_errors": 0,
+      "joint_correct": 15,
+      "joint_accuracy": 0.6818181818181818,
+      "mode": {
+        "correct": 17,
+        "accuracy": 0.7727272727272727,
+        "macro_f1": 0.8333333333333333,
+        "confusion": {
+          "inquire": {
+            "inquire": 11,
+            "clarify": 1
+          },
+          "navigate": {
+            "navigate": 6,
+            "cancel": 3,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 12,
+            "precision": 0.9166666666666666,
+            "recall": 0.9166666666666666,
+            "f1": 0.9166666666666666
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          }
+        }
+      },
+      "function": {
+        "correct": 20,
+        "accuracy": 0.9090909090909091,
+        "macro_f1": 0.9523809523809523,
+        "confusion": {
+          "phone": {
+            "phone": 20,
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "phone": {
+            "support": 22,
+            "precision": 1.0,
+            "recall": 0.9090909090909091,
+            "f1": 0.9523809523809523
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 4,
+        "denominator": 10,
+        "rate": 0.4
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 2
+      },
+      "latency_ms": {
+        "p50": 412.9536250000001,
+        "p95": 439.86029199999166,
+        "p99": 440.7037500000115,
+        "max": 440.7037500000115
+      }
+    },
+    "mobile": {
+      "requests": 22,
+      "unique_semantic_cases": 11,
+      "request_errors": 0,
+      "joint_correct": 16,
+      "joint_accuracy": 0.7272727272727273,
+      "mode": {
+        "correct": 20,
+        "accuracy": 0.9090909090909091,
+        "macro_f1": 0.8518518518518517,
+        "confusion": {
+          "navigate": {
+            "navigate": 8,
+            "cancel": 2
+          },
+          "inquire": {
+            "inquire": 10
+          },
+          "cancel": {
+            "cancel": 2
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          "inquire": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          }
+        }
+      },
+      "function": {
+        "correct": 16,
+        "accuracy": 0.7272727272727273,
+        "macro_f1": 0.8421052631578948,
+        "confusion": {
+          "mobile": {
+            "mobile": 16,
+            "unknown": 4,
+            "phone": 1,
+            "pin": 1
+          }
+        },
+        "per_class": {
+          "mobile": {
+            "support": 22,
+            "precision": 1.0,
+            "recall": 0.7272727272727273,
+            "f1": 0.8421052631578948
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 12,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 2,
+        "denominator": 10,
+        "rate": 0.2
+      },
+      "paired_mode_all_correct": {
+        "pairs": 5,
+        "correct": 3
+      },
+      "latency_ms": {
+        "p50": 399.0969999999976,
+        "p95": 431.1950409999952,
+        "p99": 465.77929199999346,
+        "max": 465.77929199999346
+      }
+    },
+    "unknown": {
+      "requests": 20,
+      "unique_semantic_cases": 10,
+      "request_errors": 0,
+      "joint_correct": 6,
+      "joint_accuracy": 0.3,
+      "mode": {
+        "correct": 7,
+        "accuracy": 0.35,
+        "macro_f1": 0.4686868686868687,
+        "confusion": {
+          "cancel": {
+            "cancel": 2
+          },
+          "other": {
+            "inquire": 4,
+            "cancel": 2,
+            "other": 2
+          },
+          "human": {
+            "cancel": 1,
+            "human": 1
+          },
+          "clarify": {
+            "clarify": 2,
+            "cancel": 2,
+            "inquire": 3,
+            "other": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444445
+          },
+          "clarify": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "human": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "other": {
+            "support": 8,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "f1": 0.36363636363636365
+          }
+        }
+      },
+      "function": {
+        "correct": 17,
+        "accuracy": 0.85,
+        "macro_f1": 0.9189189189189189,
+        "confusion": {
+          "unknown": {
+            "unknown": 17,
+            "pin": 2,
+            "withdraw": 1
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.85,
+            "f1": 0.9189189189189189
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 375.86350000000834,
+        "p95": 435.1228749999905,
+        "p99": 446.4674590000186,
+        "max": 446.4674590000186
+      }
+    }
+  },
+  "text_audio_pairing": {
+    "text_joint_correct_audio_wrong": 144,
+    "text_joint_wrong_audio_correct": 4,
+    "decisions_differ": 160,
+    "comparisons": 256
+  },
+  "majority_mode_baseline": {
+    "label": "navigate",
+    "correct": 55,
+    "cases": 128,
+    "accuracy": 0.4296875,
+    "warning": "Label-distribution reference, no fitted model"
+  },
+  "permutation_comparison": [
+    {
+      "id": "permutation/loss-02-inquire",
+      "changed": false,
+      "max_probability_delta": 0.021594118500211968
+    },
+    {
+      "id": "permutation/ctx-statement-cost",
+      "changed": false,
+      "max_probability_delta": 0.09662496011324428
+    },
+    {
+      "id": "permutation/phone-03-navigate",
+      "changed": false,
+      "max_probability_delta": 0.07377405532736836
+    },
+    {
+      "id": "permutation/loss-05-inquire",
+      "changed": false,
+      "max_probability_delta": 0.11732462132674824
+    },
+    {
+      "id": "permutation/withdraw-03-navigate",
+      "changed": true,
+      "max_probability_delta": 0.20445007136204885
+    },
+    {
+      "id": "permutation/clarify-bare-balance",
+      "changed": false,
+      "max_probability_delta": 0.10504714903154469
+    },
+    {
+      "id": "permutation/transfer-04-inquire",
+      "changed": false,
+      "max_probability_delta": 0.0840355535666881
+    },
+    {
+      "id": "permutation/phone-04-inquire",
+      "changed": true,
+      "max_probability_delta": 0.1673597320432507
+    },
+    {
+      "id": "permutation/ctx-phone-policy",
+      "changed": false,
+      "max_probability_delta": 0.0548335978158693
+    },
+    {
+      "id": "permutation/deposit-05-navigate",
+      "changed": false,
+      "max_probability_delta": 0.12168027098244694
+    },
+    {
+      "id": "permutation/cancel-withdraw",
+      "changed": false,
+      "max_probability_delta": 0.10362390452977444
+    },
+    {
+      "id": "permutation/other-negated-need",
+      "changed": true,
+      "max_probability_delta": 0.21003333053557252
+    },
+    {
+      "id": "permutation/withdraw-01-navigate",
+      "changed": false,
+      "max_probability_delta": 0.09928850353316221
+    },
+    {
+      "id": "permutation/cancel-no-target",
+      "changed": false,
+      "max_probability_delta": 0.1515067014441998
+    },
+    {
+      "id": "permutation/mobile-03-navigate",
+      "changed": false,
+      "max_probability_delta": 0.08642523928381828
+    },
+    {
+      "id": "permutation/pin-05-navigate",
+      "changed": false,
+      "max_probability_delta": 0.05514722626726859
+    },
+    {
+      "id": "permutation/replace-03-navigate",
+      "changed": false,
+      "max_probability_delta": 0.11955076452952412
+    },
+    {
+      "id": "permutation/mobile-05-inquire",
+      "changed": false,
+      "max_probability_delta": 0.04685308982271918
+    },
+    {
+      "id": "permutation/other-weather",
+      "changed": false,
+      "max_probability_delta": 0.048891743020119116
+    },
+    {
+      "id": "permutation/human-context",
+      "changed": true,
+      "max_probability_delta": 0.10309782234336196
+    },
+    {
+      "id": "permutation/transfer-05-inquire",
+      "changed": true,
+      "max_probability_delta": 0.15843504127680436
+    },
+    {
+      "id": "permutation/balance-02-inquire",
+      "changed": false,
+      "max_probability_delta": 0.10218369361609791
+    },
+    {
+      "id": "permutation/replace-04-navigate",
+      "changed": false,
+      "max_probability_delta": 0.10447098946939448
+    },
+    {
+      "id": "permutation/deposit-01-inquire",
+      "changed": false,
+      "max_probability_delta": 0.12041690979242392
+    }
+  ],
+  "repeat_comparison": [
+    {
+      "id": "repeat/0/withdraw-02-navigate",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/0/balance-02-inquire",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/0/ctx-transfer-go",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/0/clarify-bare-transfer",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/1/withdraw-02-navigate",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/1/balance-02-inquire",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/1/ctx-transfer-go",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/1/clarify-bare-transfer",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/2/withdraw-02-navigate",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/2/balance-02-inquire",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/2/ctx-transfer-go",
+      "changed": false,
+      "max_probability_delta": 0.0
+    },
+    {
+      "id": "repeat/2/clarify-bare-transfer",
+      "changed": false,
+      "max_probability_delta": 0.0
+    }
+  ]
+}

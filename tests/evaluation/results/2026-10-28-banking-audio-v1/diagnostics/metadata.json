@@ -1,0 +1,7 @@
+{
+  "post_hoc": true,
+  "purpose": "Binary label restriction and closed-set sentence discrimination after primary evaluation. No ASR accuracy claim.",
+  "dataset_manifest_sha256": "252c27dda3b7ce326d5f22a8597f0acd5161bc215d57a874ff84d6b178478afe",
+  "runner_sha256": "059c1f54ad4b5aeaa502fde123db3cf108b478f7dd31d819a0bf5ae364aaf2ae",
+  "url": "http://127.0.0.1:18084/v1/systemone"
+}

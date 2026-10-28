@@ -1,0 +1,139 @@
+{
+  "pid": 55172,
+  "command": "dist/liquid-d1/build/bin/llama-server --model dist/liquid-d1/models/d1-Omni-2B-Q8_0.gguf --mmproj dist/liquid-d1/models/mmproj-d1-Omni-2B-F16.gguf --alias d1-omni-2b --host 127.0.0.1 --port 18084 --n-gpu-layers 99 --ctx-size 8192 --batch-size 8192 --ubatch-size 8192 --parallel 1 --threads 4 --threads-batch 4 --cache-ram 0 --no-context-shift --metrics --no-webui",
+  "library_hashes": {
+    "dist/liquid-d1/build/bin/llama-server": "88c457824dd3b5d7a98066132c73b7f77a52d22e59a29a02e2e1736ed2c275cd",
+    "dist/liquid-d1/build/bin/libllama.0.7.0.dylib": "8ef89d805e2b13276f14876c89526475e5c700819adc11d04d194921b324b526",
+    "dist/liquid-d1/build/bin/libmtmd.0.7.0.dylib": "da415d6f9357a1ab9b9e68212758fc318ec667d40b0d134a12894e5663ea5a33",
+    "dist/liquid-d1/build/bin/libllama-common.0.7.0.dylib": "2bdcf84cb27e759926887d306464741722be9a7d24a8f37d14a7e7a65d531624",
+    "dist/liquid-d1/build/bin/libllama.0.dylib": "8ef89d805e2b13276f14876c89526475e5c700819adc11d04d194921b324b526",
+    "dist/liquid-d1/build/bin/libmtmd.0.dylib": "da415d6f9357a1ab9b9e68212758fc318ec667d40b0d134a12894e5663ea5a33",
+    "dist/liquid-d1/build/bin/libggml.dylib": "dae8fd07861afec92073def3e082b8ac179892a0ab40a48bf69700ac1736bee0",
+    "dist/liquid-d1/build/bin/libggml.0.dylib": "dae8fd07861afec92073def3e082b8ac179892a0ab40a48bf69700ac1736bee0",
+    "dist/liquid-d1/build/bin/libggml-cpu.0.27.0.dylib": "08849325b7d90eeb6a1cc464489a0e3cf197be2fc0ceefee11963183bcc3f5a8",
+    "dist/liquid-d1/build/bin/libggml.0.27.0.dylib": "dae8fd07861afec92073def3e082b8ac179892a0ab40a48bf69700ac1736bee0",
+    "dist/liquid-d1/build/bin/libmtmd.dylib": "da415d6f9357a1ab9b9e68212758fc318ec667d40b0d134a12894e5663ea5a33",
+    "dist/liquid-d1/build/bin/libllama-server-impl.dylib": "8b41f93f004d03730c546270cc9a9973d7cc6896f4bf8036bc43c78e910fcdfc",
+    "dist/liquid-d1/build/bin/libggml-metal.0.27.0.dylib": "a9ebcba61ce3c65adc4e4f8df43deff11a6d4df63a2fbd47e082dd95db119283",
+    "dist/liquid-d1/build/bin/libggml-base.dylib": "401b8ebfb185c6604427012265068b9521acba0935aed5c59a878dd8b3e54fd0",
+    "dist/liquid-d1/build/bin/libggml-blas.0.27.0.dylib": "bcc00766065929e3e8e3efbc45c2acb1ae1e2f3a28c4ea4a715c5b25c46340c1",
+    "dist/liquid-d1/build/bin/libggml-blas.dylib": "bcc00766065929e3e8e3efbc45c2acb1ae1e2f3a28c4ea4a715c5b25c46340c1",
+    "dist/liquid-d1/build/bin/libggml-metal.0.dylib": "a9ebcba61ce3c65adc4e4f8df43deff11a6d4df63a2fbd47e082dd95db119283",
+    "dist/liquid-d1/build/bin/libllama-common.0.dylib": "2bdcf84cb27e759926887d306464741722be9a7d24a8f37d14a7e7a65d531624",
+    "dist/liquid-d1/build/bin/libllama.dylib": "8ef89d805e2b13276f14876c89526475e5c700819adc11d04d194921b324b526",
+    "dist/liquid-d1/build/bin/libggml-cpu.dylib": "08849325b7d90eeb6a1cc464489a0e3cf197be2fc0ceefee11963183bcc3f5a8",
+    "dist/liquid-d1/build/bin/libggml-base.0.27.0.dylib": "401b8ebfb185c6604427012265068b9521acba0935aed5c59a878dd8b3e54fd0",
+    "dist/liquid-d1/build/bin/libggml-metal.dylib": "a9ebcba61ce3c65adc4e4f8df43deff11a6d4df63a2fbd47e082dd95db119283",
+    "dist/liquid-d1/build/bin/libllama-common.dylib": "2bdcf84cb27e759926887d306464741722be9a7d24a8f37d14a7e7a65d531624",
+    "dist/liquid-d1/build/bin/libggml-base.0.dylib": "401b8ebfb185c6604427012265068b9521acba0935aed5c59a878dd8b3e54fd0",
+    "dist/liquid-d1/build/bin/libggml-blas.0.dylib": "bcc00766065929e3e8e3efbc45c2acb1ae1e2f3a28c4ea4a715c5b25c46340c1",
+    "dist/liquid-d1/build/bin/libggml-cpu.0.dylib": "08849325b7d90eeb6a1cc464489a0e3cf197be2fc0ceefee11963183bcc3f5a8"
+  },
+  "model_identity": {
+    "models": [
+      {
+        "name": "d1-omni-2b",
+        "model": "d1-omni-2b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion",
+          "multimodal"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "d1-omni-2b",
+        "aliases": [
+          "d1-omni-2b"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1793157089,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 128000,
+          "n_ctx": 8192,
+          "n_ctx_train": 128000,
+          "n_embd": 2048,
+          "n_params": 1728801600,
+          "size": 1837991168,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "model_manifest": {
+    "llama_cpp": {
+      "revision": "d05706b4f32a545814856e98ca518292585443b9",
+      "archive_sha256": "65b13ebdf4e03cefe58f27096e9af698dc3d41ec6f63f6cd9b4a32ce02e525cf"
+    },
+    "models": [
+      {
+        "id": "d1-omni-2b",
+        "repository": "LiquidAI/d1-Omni-2B-GGUF",
+        "revision": "807fea1af72ebaef653404f64a4bec8e5afeedea",
+        "files": [
+          {
+            "name": "d1-Omni-2B-Q8_0.gguf",
+            "sha256": "aedf1a7c341b4281979423dbc39e9c3d3ad1da8834156c8e75af5399ca3b0861",
+            "size": 1846241184
+          },
+          {
+            "name": "mmproj-d1-Omni-2B-F16.gguf",
+            "sha256": "b22f8d7d5538dbc09897b214e940240be5fe0aee429ec55c83bd9fdd62d8af62",
+            "size": 609956896
+          }
+        ]
+      },
+      {
+        "id": "d1-2b",
+        "repository": "LiquidAI/d1-2B-GGUF",
+        "revision": "63be75e6586882defeb706ed4bda812d90256a6d",
+        "files": [
+          {
+            "name": "d1-2B-Q8_0.gguf",
+            "sha256": "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c",
+            "size": 1846240576
+          },
+          {
+            "name": "mmproj-d1-2B-F16.gguf",
+            "sha256": "c54d0c0cc66c7e5b6b516204cab556e41d1da9e9cd970245a57d7b509af68ab3",
+            "size": 378995744
+          }
+        ]
+      }
+    ]
+  }
+}

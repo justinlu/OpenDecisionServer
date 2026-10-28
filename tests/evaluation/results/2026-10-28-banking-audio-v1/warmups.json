@@ -1,0 +1,104 @@
+[
+  {
+    "predicted": {
+      "mode": "inquire",
+      "function": "unknown"
+    },
+    "probabilities": {
+      "mode": {
+        "navigate": 0.05390030651317623,
+        "inquire": 0.6482069965004763,
+        "clarify": 0.2189537202240932,
+        "cancel": 0.015653629661937157,
+        "human": 0.035315958563573696,
+        "other": 0.027969388536743318
+      },
+      "function": {
+        "withdraw": 0.015026560823302405,
+        "deposit": 0.018881566136130335,
+        "transfer": 0.01701404711448403,
+        "balance": 0.024612064185812164,
+        "statement": 0.012092192785029808,
+        "pin": 0.2333948827910176,
+        "loss": 0.032459251689580526,
+        "replace": 0.15360690456282994,
+        "phone": 0.07500258275929256,
+        "mobile": 0.05924046292585709,
+        "unknown": 0.35866948422666345
+      }
+    },
+    "error": null,
+    "http_status": 200,
+    "response_body": "{\"model\":\"d1-omni-2b\",\"answers\":{\"mode\":{\"type\":\"choice\",\"choice\":\"inquire\",\"probabilities\":{\"navigate\":0.05390030651317623,\"inquire\":0.6482069965004763,\"clarify\":0.2189537202240932,\"cancel\":0.015653629661937157,\"human\":0.035315958563573696,\"other\":0.027969388536743318},\"confidence\":0.6482069965004763},\"function\":{\"type\":\"choice\",\"choice\":\"unknown\",\"probabilities\":{\"withdraw\":0.015026560823302405,\"deposit\":0.018881566136130335,\"transfer\":0.01701404711448403,\"balance\":0.024612064185812164,\"statement\":0.012092192785029808,\"pin\":0.2333948827910176,\"loss\":0.032459251689580526,\"replace\":0.15360690456282994,\"phone\":0.07500258275929256,\"mobile\":0.05924046292585709,\"unknown\":0.35866948422666345},\"confidence\":0.35866948422666345}},\"usage\":{\"input_tokens\":573,\"output_tokens\":0}}",
+    "payload_sha256": "1aec53b818dceabc56a2c6af71056b60c05afc006a6e7d369d90620feb944591",
+    "latency_ms": 1937.2944169999998
+  },
+  {
+    "predicted": {
+      "mode": "inquire",
+      "function": "unknown"
+    },
+    "probabilities": {
+      "mode": {
+        "navigate": 0.05390030651317623,
+        "inquire": 0.6482069965004763,
+        "clarify": 0.2189537202240932,
+        "cancel": 0.015653629661937157,
+        "human": 0.035315958563573696,
+        "other": 0.027969388536743318
+      },
+      "function": {
+        "withdraw": 0.015026560823302405,
+        "deposit": 0.018881566136130335,
+        "transfer": 0.01701404711448403,
+        "balance": 0.024612064185812164,
+        "statement": 0.012092192785029808,
+        "pin": 0.2333948827910176,
+        "loss": 0.032459251689580526,
+        "replace": 0.15360690456282994,
+        "phone": 0.07500258275929256,
+        "mobile": 0.05924046292585709,
+        "unknown": 0.35866948422666345
+      }
+    },
+    "error": null,
+    "http_status": 200,
+    "response_body": "{\"model\":\"d1-omni-2b\",\"answers\":{\"mode\":{\"type\":\"choice\",\"choice\":\"inquire\",\"probabilities\":{\"navigate\":0.05390030651317623,\"inquire\":0.6482069965004763,\"clarify\":0.2189537202240932,\"cancel\":0.015653629661937157,\"human\":0.035315958563573696,\"other\":0.027969388536743318},\"confidence\":0.6482069965004763},\"function\":{\"type\":\"choice\",\"choice\":\"unknown\",\"probabilities\":{\"withdraw\":0.015026560823302405,\"deposit\":0.018881566136130335,\"transfer\":0.01701404711448403,\"balance\":0.024612064185812164,\"statement\":0.012092192785029808,\"pin\":0.2333948827910176,\"loss\":0.032459251689580526,\"replace\":0.15360690456282994,\"phone\":0.07500258275929256,\"mobile\":0.05924046292585709,\"unknown\":0.35866948422666345},\"confidence\":0.35866948422666345}},\"usage\":{\"input_tokens\":573,\"output_tokens\":0}}",
+    "payload_sha256": "1aec53b818dceabc56a2c6af71056b60c05afc006a6e7d369d90620feb944591",
+    "latency_ms": 356.89008299999966
+  },
+  {
+    "predicted": {
+      "mode": "inquire",
+      "function": "unknown"
+    },
+    "probabilities": {
+      "mode": {
+        "navigate": 0.05390030651317623,
+        "inquire": 0.6482069965004763,
+        "clarify": 0.2189537202240932,
+        "cancel": 0.015653629661937157,
+        "human": 0.035315958563573696,
+        "other": 0.027969388536743318
+      },
+      "function": {
+        "withdraw": 0.015026560823302405,
+        "deposit": 0.018881566136130335,
+        "transfer": 0.01701404711448403,
+        "balance": 0.024612064185812164,
+        "statement": 0.012092192785029808,
+        "pin": 0.2333948827910176,
+        "loss": 0.032459251689580526,
+        "replace": 0.15360690456282994,
+        "phone": 0.07500258275929256,
+        "mobile": 0.05924046292585709,
+        "unknown": 0.35866948422666345
+      }
+    },
+    "error": null,
+    "http_status": 200,
+    "response_body": "{\"model\":\"d1-omni-2b\",\"answers\":{\"mode\":{\"type\":\"choice\",\"choice\":\"inquire\",\"probabilities\":{\"navigate\":0.05390030651317623,\"inquire\":0.6482069965004763,\"clarify\":0.2189537202240932,\"cancel\":0.015653629661937157,\"human\":0.035315958563573696,\"other\":0.027969388536743318},\"confidence\":0.6482069965004763},\"function\":{\"type\":\"choice\",\"choice\":\"unknown\",\"probabilities\":{\"withdraw\":0.015026560823302405,\"deposit\":0.018881566136130335,\"transfer\":0.01701404711448403,\"balance\":0.024612064185812164,\"statement\":0.012092192785029808,\"pin\":0.2333948827910176,\"loss\":0.032459251689580526,\"replace\":0.15360690456282994,\"phone\":0.07500258275929256,\"mobile\":0.05924046292585709,\"unknown\":0.35866948422666345},\"confidence\":0.35866948422666345}},\"usage\":{\"input_tokens\":573,\"output_tokens\":0}}",
+    "payload_sha256": "1aec53b818dceabc56a2c6af71056b60c05afc006a6e7d369d90620feb944591",
+    "latency_ms": 360.66570900000005
+  }
+]
