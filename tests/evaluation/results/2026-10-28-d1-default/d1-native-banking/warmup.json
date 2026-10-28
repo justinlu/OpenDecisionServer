@@ -1,0 +1,15 @@
+{
+  "expected": "navigate",
+  "predicted": "navigate",
+  "correct": true,
+  "error": null,
+  "http_status": 200,
+  "response_body": "{\"model\":\"d1-2b\",\"answers\":{\"decision\":{\"type\":\"choice\",\"choice\":\"navigate\",\"probabilities\":{\"navigate\":0.9587388179349046,\"inquire\":0.041261182065095534},\"confidence\":0.9587388179349046}},\"usage\":{\"input_tokens\":144,\"output_tokens\":0}}\n",
+  "payload_sha256": "7723b3fbd17d4061f9d4ff8aee4f0f0f0795c19da134b5ef774f29efb50a5d94",
+  "probabilities": {
+    "navigate": 0.9587388179349046,
+    "inquire": 0.041261182065095534
+  },
+  "returned_model": "d1-2b",
+  "latency_ms": 92.24449999999999
+}

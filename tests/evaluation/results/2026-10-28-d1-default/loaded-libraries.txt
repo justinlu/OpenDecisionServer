@@ -1,0 +1,9 @@
+ods-metal 54801 justinlu  txt      REG               1,24      60096            30675032 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libggml.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24      58776            30675049 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libggml-blas.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24     451520            30675042 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libods_d1.dylib
+ods-metal 54801 justinlu  txt      REG               1,24     754376            30675048 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libggml-base.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24    1608592            30675030 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libmtmd.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24     991024            30675050 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libggml-cpu.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24    5386040            30675041 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libllama-common.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24    3745712            30675029 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libllama.0.dylib
+ods-metal 54801 justinlu  txt      REG               1,24    5604504            30675040 /Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/d1/lib/libggml-metal.0.dylib

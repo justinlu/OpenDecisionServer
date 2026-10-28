@@ -26,6 +26,7 @@ type Input struct {
 	Question     string
 	Instructions json.RawMessage
 	Options      []Option
+	RawQuestion  json.RawMessage // retained for the official d1 prompt compiler
 }
 
 type Result struct {
@@ -33,6 +34,7 @@ type Result struct {
 	Probabilities []float64
 	Winner        int
 	InputTokens   int
+	Answer        json.RawMessage // official d1 readout, including calibrated score semantics
 }
 
 type Engine interface {

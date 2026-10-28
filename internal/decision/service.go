@@ -2,6 +2,7 @@ package decision
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"strconv"
@@ -99,6 +100,14 @@ func (s *Service) Decide(ctx context.Context, req Request) (Response, error) {
 	response.Answers = make(map[string]any, len(results))
 	for i, row := range req.Questions {
 		result := results[i]
+		if model.D1 {
+			if !json.Valid(result.Answer) || result.InputTokens < 1 {
+				return Response{}, fmt.Errorf("invalid native decision response")
+			}
+			response.Usage.InputTokens += result.InputTokens
+			response.Answers[row.ID] = result.Answer
+			continue
+		}
 		if len(result.Probabilities) != len(row.Options) || result.Winner < 0 || result.Winner >= len(row.Options) {
 			return Response{}, fmt.Errorf("engine option count mismatch")
 		}

@@ -1,6 +1,6 @@
 # Open Decision Server
 
-Open Decision Server serves typed probabilistic decisions through a Jev-compatible System One HTTP API. The first engine runs Julia-1 ONNX on ONNX Runtime CPU. Request encoding and tokenization are implemented in Go.
+Open Decision Server serves typed probabilistic decisions through a Jev-compatible System One HTTP API. The default Apple Silicon engine is Liquid d1-2B Q8_0 through Go → cgo → an in-process llama.cpp Metal library. Julia-1 ONNX CPU and Chinese Decision remain explicitly selectable engines.
 
 Chinese Decision 2B Q8_0 is also available on Apple Silicon through an optional cgo/llama.cpp Metal build. It runs in the ODS process with a standalone native SDK and separate model files; Python is only used to export reference tests, never by the running service.
 
@@ -9,17 +9,33 @@ Chinese Decision 2B Q8_0 is also available on Apple Silicon through an optional 
 - macOS ARM64: native development and primary acceptance platform.
 - Linux x86-64: container deployment and CI target.
 
-The service needs Go 1.26 or newer with cgo and a C compiler to build, plus the ONNX Runtime native library at runtime. The model graph, external weights, tokenizer, and ORT library are downloaded separately from source control.
+The service needs Go 1.26 or newer with cgo and a C compiler to build. Julia additionally needs the ONNX Runtime native library at runtime. The model graph, external weights, tokenizer, and ORT library are downloaded separately from source control.
 
-## Run on macOS ARM64
+## Default d1-2B on macOS ARM64
+
+```sh
+bash scripts/prepare-liquid-d1.sh
+bash scripts/prepare-llama.sh # matching headers for the explicitly selectable Chinese engine
+bash scripts/prepare-d1-native.sh
+bash scripts/build-d1.sh
+./bin/ods-metal -http 127.0.0.1:8080
+```
+
+`d1-2b` is the default engine and returned model ID. Startup verifies the Q8_0 model, fixed source/compatibility patch markers, native-library manifest and Metal warmup. Inference uses a C ABI library with the upstream prompt compiler and calibrated readout; no Python/llama-server process or HTTP hop is involved. Only the selected engine is loaded. This release enables **text only**; images, audio and multi-label choice return422. Choice supports2–255 candidates; score2–10 levels and official median readout. Each full prompt must fit one8192-token physical batch; oversized inputs return422 rather than truncating.
+
+The default queue allows32 waiting requests, each bounded to1MiB, and at most65536 compiled tokens per request across up to64 questions. Questions run sequentially in one worker. `-llama-max-tokens` is a per-request compilation cap for d1; Chinese retains its total reserved-token semantics. Cancellation ends the caller's wait but native resources remain owned until computation finishes; shutdown drains before freeing. Multi-model configuration/routing remains a separate planned feature.
+
+`-http 127.0.0.1:8080,127.0.0.1:18083` serves both addresses with one process/model. `/v1/models` reports only the active model; omitting `model` defaults to d1-2b. Explicit Julia/Chinese model names are not silently remapped. See the [native acceptance and local deployment record](tests/evaluation/results/2026-10-28-d1-default/README.md).
+
+To use Julia instead (also the explicit Linux container engine):
 
 ```sh
 make deps
 make build
-./bin/ods -http 127.0.0.1:8080
+./bin/ods -engine julia -http 127.0.0.1:8080
 ```
 
-`make deps` verifies SHA-256 checksums for the pinned Julia-1 ONNX snapshot and ONNX Runtime 1.30.0. Model files go to `models/julia-1/`; the native library goes to `lib/darwin-arm64/`. Both are ignored by Git.
+The ordinary build omits native support; selecting its default d1 engine fails with a build instruction. Use the Metal build above for d1. Model and runtime files are downloaded separately and ignored by Git.
 
 Check readiness and ask a question:
 
@@ -27,7 +43,7 @@ Check readiness and ask a question:
 curl http://127.0.0.1:8080/health/ready
 curl -sS http://127.0.0.1:8080/v1/systemone \
   -H 'Content-Type: application/json' \
-  -d '{"model":"jev-latest","state":"The customer was charged twice.","questions":{"refund":{"type":"noul","instructions":"Is the customer asking for a refund?"},"team":{"type":"choice","instructions":"Which team should handle this?","criteria":{"billing":"Payments and refunds","support":"General help"}}}}'
+  -d '{"model":"d1-2b","state":"The customer was charged twice.","questions":{"refund":{"type":"noul","instructions":"Is the customer asking for a refund?"},"team":{"type":"choice","instructions":"Which team should handle this?","criteria":{"billing":"Payments and refunds","support":"General help"}}}}'
 ```
 
 With the official Python SDK, configure only the API root and use any nonempty local API key:
@@ -39,6 +55,7 @@ with TypeSafeClient(api_key="local", base_url="http://127.0.0.1:8080") as client
     response = client.system_one(
         state="The customer was charged twice.",
         questions={"refund": Noul(instructions="Is a refund requested?")},
+        model="d1-2b",
     )
     print(response.nouls["refund"].noul)
 ```
@@ -56,9 +73,9 @@ bash scripts/build-llama.sh
 
 The SDK is built directly from the native source bundled with llama-cpp-python 0.3.36 (verified SHA-256); no Python installation is required. Dynamic-library dependencies resolve relative to their own directory. Distribute `bin/ods-metal`, the SDK `lib/` directory, its adjacent `source.sha256` marker, `SHA256SUMS`, native licenses and model/config files together. `LLAMA_SDK` selects another SDK build/install directory; pass its `lib/libllama.dylib` through `-llama-lib` at runtime.
 
-For the isolated LFM3/d1 candidate SDK and Chinese Decision numerical compatibility patch, see the [compatibility report](tests/evaluation/results/2026-10-28-chinese-parity-fix/README.md). The [unified native routing design](docs/superpowers/specs/2026-10-28-unified-native-model-routing-design.md) describes the planned Go+cgo integration; production model routing and the SDK above have not yet changed.
+For the isolated LFM3/d1 candidate SDK and Chinese Decision numerical compatibility patch, see the [compatibility report](tests/evaluation/results/2026-10-28-chinese-parity-fix/README.md). The [unified native routing design](docs/superpowers/specs/2026-10-28-unified-native-model-routing-design.md) describes the planned Go+cgo integration; d1 now has a text-only in-process adapter; simultaneous multi-model routing and Omni media remain planned. The Chinese SDK above retains its pinned ABI.
 
-Use `-llama-model`, `-llama-config` and `-llama-lib` for files outside the default directories. Startup verifies model/config hashes, the SDK source marker and library manifest, candidate token IDs, Metal availability and warmup. A wrong model, missing library or unavailable GPU fails startup; there is no CPU fallback. Ordinary `make build` still defaults to Julia and does not require native SDK headers.
+Use `-llama-model`, `-llama-config` and `-llama-lib` for files outside the default directories. Startup verifies model/config hashes, the SDK source marker and library manifest, candidate token IDs, Metal availability and warmup. A wrong model, missing library or unavailable GPU fails startup; there is no CPU fallback. Ordinary `make build` does not require native SDK headers; pass `-engine julia` when running that build.
 
 Requests select `"model":"chinese-decision-2b"`. Its choice/score limit is 2–26 candidates, and full prompts may contain at most 16,384 tokens. It preserves ordered structured JSON, large integers, finite Python-style floats, null and empty candidate descriptions. Missing/null instructions are rejected; noul descriptions default to “否/是”. All three answer types include calibrated probabilities and confidence. Score legends preserve original criteria JSON. Duplicate JSON keys and invalid Unicode are rejected.
 
@@ -119,7 +136,7 @@ The [banking audio intent dataset](tests/evaluation/datasets/banking-audio-v1/RE
 
 ## Configuration
 
-`ods -h` lists all flags. Select `-engine julia|chinese-decision`; the default is Julia. Julia options include `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-length` and `-head-length`. Native options are described above. Shared options include `-http`, `-max-questions` and `-log-requests`. Structured request logging omits state, instructions, and criteria.
+`ods -h` lists all flags. Select `-engine d1-2b|julia|chinese-decision`; the default is d1-2b. Julia options include `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-length` and `-head-length`. Native options are described above. Shared options include `-http`, `-max-questions` and `-log-requests`. Structured request logging omits state, instructions, and criteria.
 
 ## Upstream references
 

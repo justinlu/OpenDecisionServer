@@ -1,0 +1,2082 @@
+{
+  "native_vs_official": {
+    "cases": 989,
+    "winner_disagreements": 0,
+    "max_probability_absolute_delta": 0.0
+  },
+  "banking": {
+    "legacy": {
+      "chinese-banking": {
+        "full-mode": {
+          "cases": 128,
+          "errors": 0,
+          "correct": 115,
+          "accuracy": 0.8984375,
+          "macro_f1": 0.7354372566636718,
+          "confusion": {
+            "navigate": {
+              "navigate": 49,
+              "human": 4,
+              "inquire": 2
+            },
+            "inquire": {
+              "inquire": 54,
+              "human": 1
+            },
+            "clarify": {
+              "navigate": 2,
+              "other": 2,
+              "human": 1,
+              "clarify": 1
+            },
+            "cancel": {
+              "cancel": 4
+            },
+            "human": {
+              "human": 4
+            },
+            "other": {
+              "other": 3,
+              "inquire": 1
+            }
+          },
+          "per_class": {
+            "cancel": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "clarify": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.16666666666666666,
+              "f1": 0.2857142857142857
+            },
+            "human": {
+              "support": 4,
+              "precision": 0.4,
+              "recall": 1.0,
+              "f1": 0.5714285714285715
+            },
+            "inquire": {
+              "support": 55,
+              "precision": 0.9473684210526315,
+              "recall": 0.9818181818181818,
+              "f1": 0.9642857142857142
+            },
+            "navigate": {
+              "support": 55,
+              "precision": 0.9607843137254902,
+              "recall": 0.8909090909090909,
+              "f1": 0.9245283018867925
+            },
+            "other": {
+              "support": 4,
+              "precision": 0.6,
+              "recall": 0.75,
+              "f1": 0.6666666666666665
+            }
+          },
+          "latency_ms": {
+            "p50": 121.96129200000172,
+            "p95": 135.14895899999857,
+            "p99": 142.61879100000385
+          }
+        },
+        "full-function": {
+          "cases": 128,
+          "errors": 0,
+          "correct": 121,
+          "accuracy": 0.9453125,
+          "macro_f1": 0.9443777389804378,
+          "confusion": {
+            "withdraw": {
+              "withdraw": 11
+            },
+            "deposit": {
+              "deposit": 8,
+              "unknown": 2
+            },
+            "transfer": {
+              "transfer": 13,
+              "unknown": 2
+            },
+            "balance": {
+              "balance": 13
+            },
+            "statement": {
+              "statement": 13
+            },
+            "pin": {
+              "pin": 10
+            },
+            "loss": {
+              "loss": 13
+            },
+            "replace": {
+              "replace": 10,
+              "loss": 1
+            },
+            "phone": {
+              "phone": 10,
+              "transfer": 1
+            },
+            "mobile": {
+              "mobile": 11
+            },
+            "unknown": {
+              "unknown": 9,
+              "pin": 1
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "deposit": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "loss": {
+              "support": 13,
+              "precision": 0.9285714285714286,
+              "recall": 1.0,
+              "f1": 0.962962962962963
+            },
+            "mobile": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "pin": {
+              "support": 10,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523
+            },
+            "replace": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "statement": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 15,
+              "precision": 0.9285714285714286,
+              "recall": 0.8666666666666667,
+              "f1": 0.896551724137931
+            },
+            "unknown": {
+              "support": 10,
+              "precision": 0.6923076923076923,
+              "recall": 0.9,
+              "f1": 0.7826086956521738
+            },
+            "withdraw": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 97.10570899999738,
+            "p95": 121.18929199999684,
+            "p99": 131.317291000002
+          }
+        },
+        "full-joint": {
+          "cases": 128,
+          "correct": 108
+        },
+        "two-stage": {
+          "cases": 100,
+          "gate_correct": 96,
+          "route_correct": 94,
+          "navigation_cases": 50,
+          "navigation_correct": 44,
+          "consultation_cases": 50,
+          "consultation_misgated": 0,
+          "missed_navigation": 4,
+          "latency_ms": {
+            "p50": 91.16454099999771,
+            "p95": 192.57875000000269,
+            "p99": 197.07429199999638
+          }
+        },
+        "flat": {
+          "cases": 50,
+          "correct": 48,
+          "accuracy": 0.96,
+          "macro_f1": 0.9777777777777779,
+          "confusion": {
+            "pin": {
+              "pin": 5
+            },
+            "balance": {
+              "balance": 5
+            },
+            "transfer": {
+              "transfer": 4,
+              "unknown": 1
+            },
+            "replace": {
+              "replace": 5
+            },
+            "loss": {
+              "loss": 5
+            },
+            "statement": {
+              "statement": 5
+            },
+            "deposit": {
+              "deposit": 4,
+              "unknown": 1
+            },
+            "mobile": {
+              "mobile": 5
+            },
+            "phone": {
+              "phone": 5
+            },
+            "withdraw": {
+              "withdraw": 5
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "deposit": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "loss": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "mobile": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "pin": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "replace": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "withdraw": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 50,
+          "correct": 49,
+          "accuracy": 0.98,
+          "macro_f1": 0.986842105263158,
+          "confusion": {
+            "card": {
+              "card": 15
+            },
+            "account": {
+              "account": 15
+            },
+            "cash": {
+              "cash": 9,
+              "unknown": 1
+            },
+            "digital": {
+              "digital": 10
+            }
+          },
+          "per_class": {
+            "account": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "card": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "cash": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 0.9,
+              "f1": 0.9473684210526316
+            },
+            "digital": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 50,
+          "correct": 49
+        }
+      },
+      "d1-native-banking": {
+        "full-mode": {
+          "cases": 128,
+          "errors": 0,
+          "correct": 125,
+          "accuracy": 0.9765625,
+          "macro_f1": 0.9436429056841901,
+          "confusion": {
+            "navigate": {
+              "navigate": 55
+            },
+            "inquire": {
+              "inquire": 54,
+              "human": 1
+            },
+            "clarify": {
+              "navigate": 2,
+              "clarify": 4
+            },
+            "cancel": {
+              "cancel": 4
+            },
+            "human": {
+              "human": 4
+            },
+            "other": {
+              "other": 4
+            }
+          },
+          "per_class": {
+            "cancel": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "clarify": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8
+            },
+            "human": {
+              "support": 4,
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889
+            },
+            "inquire": {
+              "support": 55,
+              "precision": 1.0,
+              "recall": 0.9818181818181818,
+              "f1": 0.9908256880733944
+            },
+            "navigate": {
+              "support": 55,
+              "precision": 0.9649122807017544,
+              "recall": 1.0,
+              "f1": 0.9821428571428572
+            },
+            "other": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 123.93883299999686,
+            "p95": 132.08124999999882,
+            "p99": 133.7365409999993
+          }
+        },
+        "full-function": {
+          "cases": 128,
+          "errors": 0,
+          "correct": 120,
+          "accuracy": 0.9375,
+          "macro_f1": 0.9402351671317187,
+          "confusion": {
+            "withdraw": {
+              "withdraw": 11
+            },
+            "deposit": {
+              "deposit": 10
+            },
+            "transfer": {
+              "transfer": 14,
+              "unknown": 1
+            },
+            "balance": {
+              "balance": 12,
+              "unknown": 1
+            },
+            "statement": {
+              "statement": 12,
+              "unknown": 1
+            },
+            "pin": {
+              "pin": 10
+            },
+            "loss": {
+              "loss": 12,
+              "unknown": 1
+            },
+            "replace": {
+              "replace": 11
+            },
+            "phone": {
+              "phone": 10,
+              "unknown": 1
+            },
+            "mobile": {
+              "mobile": 9,
+              "unknown": 2
+            },
+            "unknown": {
+              "unknown": 9,
+              "pin": 1
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "deposit": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "loss": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "mobile": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.8181818181818182,
+              "f1": 0.9
+            },
+            "phone": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "pin": {
+              "support": 10,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523
+            },
+            "replace": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "transfer": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 0.9333333333333333,
+              "f1": 0.9655172413793104
+            },
+            "unknown": {
+              "support": 10,
+              "precision": 0.5625,
+              "recall": 0.9,
+              "f1": 0.6923076923076923
+            },
+            "withdraw": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 96.12804100000005,
+            "p95": 117.72741699999756,
+            "p99": 123.8257919999981
+          }
+        },
+        "full-joint": {
+          "cases": 128,
+          "correct": 117
+        },
+        "two-stage": {
+          "cases": 100,
+          "gate_correct": 100,
+          "route_correct": 100,
+          "navigation_cases": 50,
+          "navigation_correct": 50,
+          "consultation_cases": 50,
+          "consultation_misgated": 0,
+          "missed_navigation": 0,
+          "latency_ms": {
+            "p50": 86.8312919999994,
+            "p95": 178.57895799999923,
+            "p99": 183.72637500000266
+          }
+        },
+        "flat": {
+          "cases": 50,
+          "correct": 50,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "pin": {
+              "pin": 5
+            },
+            "balance": {
+              "balance": 5
+            },
+            "transfer": {
+              "transfer": 5
+            },
+            "replace": {
+              "replace": 5
+            },
+            "loss": {
+              "loss": 5
+            },
+            "statement": {
+              "statement": 5
+            },
+            "deposit": {
+              "deposit": 5
+            },
+            "mobile": {
+              "mobile": 5
+            },
+            "phone": {
+              "phone": 5
+            },
+            "withdraw": {
+              "withdraw": 5
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "deposit": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "loss": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "mobile": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "pin": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "replace": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "withdraw": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 50,
+          "correct": 50,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "card": {
+              "card": 15
+            },
+            "account": {
+              "account": 15
+            },
+            "cash": {
+              "cash": 10
+            },
+            "digital": {
+              "digital": 10
+            }
+          },
+          "per_class": {
+            "account": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "card": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "cash": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "digital": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 50,
+          "correct": 49
+        }
+      }
+    },
+    "credit": {
+      "chinese-banking": {
+        "full-mode": {
+          "cases": 30,
+          "errors": 0,
+          "correct": 29,
+          "accuracy": 0.9666666666666667,
+          "macro_f1": 0.9666295884315907,
+          "confusion": {
+            "navigate": {
+              "navigate": 14,
+              "inquire": 1
+            },
+            "inquire": {
+              "inquire": 15
+            }
+          },
+          "per_class": {
+            "inquire": {
+              "support": 15,
+              "precision": 0.9375,
+              "recall": 1.0,
+              "f1": 0.967741935483871
+            },
+            "navigate": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 0.9333333333333333,
+              "f1": 0.9655172413793104
+            }
+          },
+          "latency_ms": {
+            "p50": 123.34187499999416,
+            "p95": 134.86079099999415,
+            "p99": 135.6632090000005
+          }
+        },
+        "full-function": {
+          "cases": 30,
+          "errors": 0,
+          "correct": 28,
+          "accuracy": 0.9333333333333333,
+          "macro_f1": 0.935064935064935,
+          "confusion": {
+            "credit_repay": {
+              "credit_repay": 6
+            },
+            "credit_bill": {
+              "credit_bill": 5,
+              "credit_repay": 1
+            },
+            "credit_limit": {
+              "credit_limit": 6
+            },
+            "credit_installment": {
+              "credit_installment": 5,
+              "credit_repay": 1
+            },
+            "credit_apply": {
+              "credit_apply": 6
+            }
+          },
+          "per_class": {
+            "credit_apply": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_installment": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_limit": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 6,
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571
+            }
+          },
+          "latency_ms": {
+            "p50": 85.20491599999502,
+            "p95": 95.25412500000385,
+            "p99": 95.48620800000407
+          }
+        },
+        "full-joint": {
+          "cases": 30,
+          "correct": 27
+        },
+        "two-stage": {
+          "cases": 30,
+          "gate_correct": 26,
+          "route_correct": 26,
+          "navigation_cases": 15,
+          "navigation_correct": 11,
+          "consultation_cases": 15,
+          "consultation_misgated": 0,
+          "missed_navigation": 4,
+          "latency_ms": {
+            "p50": 86.19666700000295,
+            "p95": 221.81391699999864,
+            "p99": 227.1286660000058
+          }
+        },
+        "flat": {
+          "cases": 15,
+          "correct": 15,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "credit_limit": {
+              "credit_limit": 3
+            },
+            "credit_installment": {
+              "credit_installment": 3
+            },
+            "credit_bill": {
+              "credit_bill": 3
+            },
+            "credit_repay": {
+              "credit_repay": 3
+            },
+            "credit_apply": {
+              "credit_apply": 3
+            }
+          },
+          "per_class": {
+            "credit_apply": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_installment": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_limit": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 15,
+          "correct": 15,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "credit": {
+              "credit": 15
+            }
+          },
+          "per_class": {
+            "credit": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 15,
+          "correct": 15
+        }
+      },
+      "d1-native-banking": {
+        "full-mode": {
+          "cases": 30,
+          "errors": 0,
+          "correct": 30,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "navigate": {
+              "navigate": 15
+            },
+            "inquire": {
+              "inquire": 15
+            }
+          },
+          "per_class": {
+            "inquire": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "navigate": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 122.94429099999604,
+            "p95": 132.19216699999947,
+            "p99": 134.73725000000059
+          }
+        },
+        "full-function": {
+          "cases": 30,
+          "errors": 0,
+          "correct": 28,
+          "accuracy": 0.9333333333333333,
+          "macro_f1": 0.935064935064935,
+          "confusion": {
+            "credit_repay": {
+              "credit_repay": 6
+            },
+            "credit_bill": {
+              "credit_bill": 5,
+              "credit_repay": 1
+            },
+            "credit_limit": {
+              "credit_limit": 6
+            },
+            "credit_installment": {
+              "credit_installment": 5,
+              "credit_repay": 1
+            },
+            "credit_apply": {
+              "credit_apply": 6
+            }
+          },
+          "per_class": {
+            "credit_apply": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_installment": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_limit": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 6,
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571
+            }
+          },
+          "latency_ms": {
+            "p50": 81.46733299999909,
+            "p95": 87.45095899999988,
+            "p99": 88.92270799999835
+          }
+        },
+        "full-joint": {
+          "cases": 30,
+          "correct": 28
+        },
+        "two-stage": {
+          "cases": 30,
+          "gate_correct": 30,
+          "route_correct": 30,
+          "navigation_cases": 15,
+          "navigation_correct": 15,
+          "consultation_cases": 15,
+          "consultation_misgated": 0,
+          "missed_navigation": 0,
+          "latency_ms": {
+            "p50": 83.8694170000025,
+            "p95": 181.31587500000103,
+            "p99": 187.89425000000114
+          }
+        },
+        "flat": {
+          "cases": 15,
+          "correct": 15,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "credit_limit": {
+              "credit_limit": 3
+            },
+            "credit_installment": {
+              "credit_installment": 3
+            },
+            "credit_bill": {
+              "credit_bill": 3
+            },
+            "credit_repay": {
+              "credit_repay": 3
+            },
+            "credit_apply": {
+              "credit_apply": 3
+            }
+          },
+          "per_class": {
+            "credit_apply": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_installment": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_limit": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 15,
+          "correct": 15,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "credit": {
+              "credit": 15
+            }
+          },
+          "per_class": {
+            "credit": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 15,
+          "correct": 15
+        }
+      }
+    },
+    "all": {
+      "chinese-banking": {
+        "full-mode": {
+          "cases": 158,
+          "errors": 0,
+          "correct": 144,
+          "accuracy": 0.9113924050632911,
+          "macro_f1": 0.7370296370296371,
+          "confusion": {
+            "navigate": {
+              "navigate": 63,
+              "human": 4,
+              "inquire": 3
+            },
+            "inquire": {
+              "inquire": 69,
+              "human": 1
+            },
+            "clarify": {
+              "navigate": 2,
+              "other": 2,
+              "human": 1,
+              "clarify": 1
+            },
+            "cancel": {
+              "cancel": 4
+            },
+            "human": {
+              "human": 4
+            },
+            "other": {
+              "other": 3,
+              "inquire": 1
+            }
+          },
+          "per_class": {
+            "cancel": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "clarify": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.16666666666666666,
+              "f1": 0.2857142857142857
+            },
+            "human": {
+              "support": 4,
+              "precision": 0.4,
+              "recall": 1.0,
+              "f1": 0.5714285714285715
+            },
+            "inquire": {
+              "support": 70,
+              "precision": 0.9452054794520548,
+              "recall": 0.9857142857142858,
+              "f1": 0.9650349650349651
+            },
+            "navigate": {
+              "support": 70,
+              "precision": 0.9692307692307692,
+              "recall": 0.9,
+              "f1": 0.9333333333333333
+            },
+            "other": {
+              "support": 4,
+              "precision": 0.6,
+              "recall": 0.75,
+              "f1": 0.6666666666666665
+            }
+          },
+          "latency_ms": {
+            "p50": 122.25025000000045,
+            "p95": 135.14895899999857,
+            "p99": 142.61879100000385
+          }
+        },
+        "full-function": {
+          "cases": 158,
+          "errors": 0,
+          "correct": 149,
+          "accuracy": 0.9430379746835443,
+          "macro_f1": 0.9414674877568431,
+          "confusion": {
+            "withdraw": {
+              "withdraw": 11
+            },
+            "deposit": {
+              "deposit": 8,
+              "unknown": 2
+            },
+            "transfer": {
+              "transfer": 13,
+              "unknown": 2
+            },
+            "balance": {
+              "balance": 13
+            },
+            "statement": {
+              "statement": 13
+            },
+            "pin": {
+              "pin": 10
+            },
+            "loss": {
+              "loss": 13
+            },
+            "replace": {
+              "replace": 10,
+              "loss": 1
+            },
+            "phone": {
+              "phone": 10,
+              "transfer": 1
+            },
+            "mobile": {
+              "mobile": 11
+            },
+            "unknown": {
+              "unknown": 9,
+              "pin": 1
+            },
+            "credit_repay": {
+              "credit_repay": 6
+            },
+            "credit_bill": {
+              "credit_bill": 5,
+              "credit_repay": 1
+            },
+            "credit_limit": {
+              "credit_limit": 6
+            },
+            "credit_installment": {
+              "credit_installment": 5,
+              "credit_repay": 1
+            },
+            "credit_apply": {
+              "credit_apply": 6
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_apply": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_installment": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_limit": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 6,
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571
+            },
+            "deposit": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "loss": {
+              "support": 13,
+              "precision": 0.9285714285714286,
+              "recall": 1.0,
+              "f1": 0.962962962962963
+            },
+            "mobile": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "pin": {
+              "support": 10,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523
+            },
+            "replace": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "statement": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 15,
+              "precision": 0.9285714285714286,
+              "recall": 0.8666666666666667,
+              "f1": 0.896551724137931
+            },
+            "unknown": {
+              "support": 10,
+              "precision": 0.6923076923076923,
+              "recall": 0.9,
+              "f1": 0.7826086956521738
+            },
+            "withdraw": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 94.70687499999997,
+            "p95": 119.86904200000126,
+            "p99": 131.317291000002
+          }
+        },
+        "full-joint": {
+          "cases": 158,
+          "correct": 135
+        },
+        "two-stage": {
+          "cases": 130,
+          "gate_correct": 122,
+          "route_correct": 120,
+          "navigation_cases": 65,
+          "navigation_correct": 55,
+          "consultation_cases": 65,
+          "consultation_misgated": 0,
+          "missed_navigation": 8,
+          "latency_ms": {
+            "p50": 90.4697499999969,
+            "p95": 206.14004200000124,
+            "p99": 221.81391699999864
+          }
+        },
+        "flat": {
+          "cases": 65,
+          "correct": 63,
+          "accuracy": 0.9692307692307692,
+          "macro_f1": 0.9851851851851853,
+          "confusion": {
+            "pin": {
+              "pin": 5
+            },
+            "balance": {
+              "balance": 5
+            },
+            "credit_limit": {
+              "credit_limit": 3
+            },
+            "credit_installment": {
+              "credit_installment": 3
+            },
+            "transfer": {
+              "transfer": 4,
+              "unknown": 1
+            },
+            "replace": {
+              "replace": 5
+            },
+            "credit_bill": {
+              "credit_bill": 3
+            },
+            "credit_repay": {
+              "credit_repay": 3
+            },
+            "loss": {
+              "loss": 5
+            },
+            "statement": {
+              "statement": 5
+            },
+            "credit_apply": {
+              "credit_apply": 3
+            },
+            "deposit": {
+              "deposit": 4,
+              "unknown": 1
+            },
+            "mobile": {
+              "mobile": 5
+            },
+            "phone": {
+              "phone": 5
+            },
+            "withdraw": {
+              "withdraw": 5
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_apply": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_installment": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_limit": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "deposit": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "loss": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "mobile": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "pin": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "replace": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "withdraw": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 65,
+          "correct": 64,
+          "accuracy": 0.9846153846153847,
+          "macro_f1": 0.9894736842105264,
+          "confusion": {
+            "card": {
+              "card": 15
+            },
+            "account": {
+              "account": 15
+            },
+            "credit": {
+              "credit": 15
+            },
+            "cash": {
+              "cash": 9,
+              "unknown": 1
+            },
+            "digital": {
+              "digital": 10
+            }
+          },
+          "per_class": {
+            "account": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "card": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "cash": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 0.9,
+              "f1": 0.9473684210526316
+            },
+            "credit": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "digital": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 65,
+          "correct": 64
+        }
+      },
+      "d1-native-banking": {
+        "full-mode": {
+          "cases": 158,
+          "errors": 0,
+          "correct": 155,
+          "accuracy": 0.9810126582278481,
+          "macro_f1": 0.9446016895403865,
+          "confusion": {
+            "navigate": {
+              "navigate": 70
+            },
+            "inquire": {
+              "inquire": 69,
+              "human": 1
+            },
+            "clarify": {
+              "navigate": 2,
+              "clarify": 4
+            },
+            "cancel": {
+              "cancel": 4
+            },
+            "human": {
+              "human": 4
+            },
+            "other": {
+              "other": 4
+            }
+          },
+          "per_class": {
+            "cancel": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "clarify": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.6666666666666666,
+              "f1": 0.8
+            },
+            "human": {
+              "support": 4,
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889
+            },
+            "inquire": {
+              "support": 70,
+              "precision": 1.0,
+              "recall": 0.9857142857142858,
+              "f1": 0.9928057553956835
+            },
+            "navigate": {
+              "support": 70,
+              "precision": 0.9722222222222222,
+              "recall": 1.0,
+              "f1": 0.9859154929577464
+            },
+            "other": {
+              "support": 4,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 123.90141699999901,
+            "p95": 132.11920800000064,
+            "p99": 134.73725000000059
+          }
+        },
+        "full-function": {
+          "cases": 158,
+          "errors": 0,
+          "correct": 148,
+          "accuracy": 0.9367088607594937,
+          "macro_f1": 0.9386194696108489,
+          "confusion": {
+            "withdraw": {
+              "withdraw": 11
+            },
+            "deposit": {
+              "deposit": 10
+            },
+            "transfer": {
+              "transfer": 14,
+              "unknown": 1
+            },
+            "balance": {
+              "balance": 12,
+              "unknown": 1
+            },
+            "statement": {
+              "statement": 12,
+              "unknown": 1
+            },
+            "pin": {
+              "pin": 10
+            },
+            "loss": {
+              "loss": 12,
+              "unknown": 1
+            },
+            "replace": {
+              "replace": 11
+            },
+            "phone": {
+              "phone": 10,
+              "unknown": 1
+            },
+            "mobile": {
+              "mobile": 9,
+              "unknown": 2
+            },
+            "unknown": {
+              "unknown": 9,
+              "pin": 1
+            },
+            "credit_repay": {
+              "credit_repay": 6
+            },
+            "credit_bill": {
+              "credit_bill": 5,
+              "credit_repay": 1
+            },
+            "credit_limit": {
+              "credit_limit": 6
+            },
+            "credit_installment": {
+              "credit_installment": 5,
+              "credit_repay": 1
+            },
+            "credit_apply": {
+              "credit_apply": 6
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "credit_apply": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_installment": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 0.8333333333333334,
+              "f1": 0.9090909090909091
+            },
+            "credit_limit": {
+              "support": 6,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 6,
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571
+            },
+            "deposit": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "loss": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "mobile": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.8181818181818182,
+              "f1": 0.9
+            },
+            "phone": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 0.9090909090909091,
+              "f1": 0.9523809523809523
+            },
+            "pin": {
+              "support": 10,
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523
+            },
+            "replace": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 13,
+              "precision": 1.0,
+              "recall": 0.9230769230769231,
+              "f1": 0.9600000000000001
+            },
+            "transfer": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 0.9333333333333333,
+              "f1": 0.9655172413793104
+            },
+            "unknown": {
+              "support": 10,
+              "precision": 0.5625,
+              "recall": 0.9,
+              "f1": 0.6923076923076923
+            },
+            "withdraw": {
+              "support": 11,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "latency_ms": {
+            "p50": 93.87150000000588,
+            "p95": 117.12750000000227,
+            "p99": 123.8257919999981
+          }
+        },
+        "full-joint": {
+          "cases": 158,
+          "correct": 145
+        },
+        "two-stage": {
+          "cases": 130,
+          "gate_correct": 130,
+          "route_correct": 130,
+          "navigation_cases": 65,
+          "navigation_correct": 65,
+          "consultation_cases": 65,
+          "consultation_misgated": 0,
+          "missed_navigation": 0,
+          "latency_ms": {
+            "p50": 86.8312919999994,
+            "p95": 179.42595799999594,
+            "p99": 187.89425000000114
+          }
+        },
+        "flat": {
+          "cases": 65,
+          "correct": 65,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "pin": {
+              "pin": 5
+            },
+            "balance": {
+              "balance": 5
+            },
+            "credit_limit": {
+              "credit_limit": 3
+            },
+            "credit_installment": {
+              "credit_installment": 3
+            },
+            "transfer": {
+              "transfer": 5
+            },
+            "replace": {
+              "replace": 5
+            },
+            "credit_bill": {
+              "credit_bill": 3
+            },
+            "credit_repay": {
+              "credit_repay": 3
+            },
+            "loss": {
+              "loss": 5
+            },
+            "statement": {
+              "statement": 5
+            },
+            "credit_apply": {
+              "credit_apply": 3
+            },
+            "deposit": {
+              "deposit": 5
+            },
+            "mobile": {
+              "mobile": 5
+            },
+            "phone": {
+              "phone": 5
+            },
+            "withdraw": {
+              "withdraw": 5
+            }
+          },
+          "per_class": {
+            "balance": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_apply": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_bill": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_installment": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_limit": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit_repay": {
+              "support": 3,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "deposit": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "loss": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "mobile": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "phone": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "pin": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "replace": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "statement": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "transfer": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "withdraw": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain": {
+          "cases": 65,
+          "correct": 65,
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion": {
+            "card": {
+              "card": 15
+            },
+            "account": {
+              "account": 15
+            },
+            "credit": {
+              "credit": 15
+            },
+            "cash": {
+              "cash": 10
+            },
+            "digital": {
+              "digital": 10
+            }
+          },
+          "per_class": {
+            "account": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "card": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "cash": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "credit": {
+              "support": 15,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "digital": {
+              "support": 10,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          }
+        },
+        "domain-then-leaf": {
+          "cases": 65,
+          "correct": 64
+        }
+      }
+    }
+  }
+}

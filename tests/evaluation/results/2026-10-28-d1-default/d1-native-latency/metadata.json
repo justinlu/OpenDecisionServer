@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-28T06:17:04.506115+00:00",
+  "url": "http://127.0.0.1:18085/v1/systemone",
+  "model": "d1-2b",
+  "samples_per_group": 20,
+  "clients": [
+    1,
+    4
+  ],
+  "warmup": 2,
+  "timeout": 120.0,
+  "budget_ms": 100.0,
+  "quantiles": "nearest rank of successful requests",
+  "score_readout": "median",
+  "workload": "closed loop; one persistent HTTP connection per worker; not open-loop production traffic",
+  "fixtures_sha256": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32",
+  "script_sha256": "bae6486707f041cde29389bfd88652a115148eca76109292b2bbb8c4b26417b5"
+}

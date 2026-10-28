@@ -13,4 +13,4 @@ COPY --from=build /out/ods /usr/local/bin/ods
 COPY --from=build /src/lib/linux-amd64 /opt/ods/lib
 COPY models/julia-1 /models/julia-1
 EXPOSE 8080
-ENTRYPOINT ["/usr/local/bin/ods","-http",":8080","-model","/models/julia-1/model.onnx","-tokenizer","/models/julia-1/tokenizer.json","-ort-lib","/opt/ods/lib/libonnxruntime.so"]
+ENTRYPOINT ["/usr/local/bin/ods","-engine","julia","-http",":8080","-model","/models/julia-1/model.onnx","-tokenizer","/models/julia-1/tokenizer.json","-ort-lib","/opt/ods/lib/libonnxruntime.so"]

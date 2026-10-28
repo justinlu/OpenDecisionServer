@@ -1,0 +1,15 @@
+{
+  "expected": "navigate",
+  "predicted": "navigate",
+  "correct": true,
+  "error": null,
+  "http_status": 200,
+  "response_body": "{\"model\":\"chinese-decision-2b\",\"answers\":{\"decision\":{\"choice\":\"navigate\",\"confidence\":0.45567723383949366,\"probabilities\":{\"navigate\":0.7278386169197468,\"inquire\":0.2721613830802531},\"type\":\"choice\"}},\"usage\":{\"input_tokens\":150,\"output_tokens\":0}}\n",
+  "payload_sha256": "0b67a5c43c7292e91f2243cc8fd09034636e01a8b195ea724a61b5d885e0d001",
+  "probabilities": {
+    "navigate": 0.7278386169197468,
+    "inquire": 0.2721613830802531
+  },
+  "returned_model": "chinese-decision-2b",
+  "latency_ms": 132.138667
+}

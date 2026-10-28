@@ -5,7 +5,12 @@ type Model struct {
 	ID                                         string
 	Aliases                                    []string
 	Chinese                                    bool
+	D1                                         bool
 	Description, AliasDescription, ReleaseDate string
+}
+
+func D1Model() Model {
+	return Model{ID: "d1-2b", D1: true, Description: "Local Liquid d1-2B Q8_0 Metal text decision model"}
 }
 
 func JuliaModel() Model {
@@ -47,6 +52,9 @@ func (s *Service) ModelInfo() Model {
 	return s.Model
 }
 func ParseForModel(body []byte, maxQuestions int, model Model) (Request, error) {
+	if model.D1 {
+		return parseD1(body, maxQuestions)
+	}
 	if model.Chinese {
 		return parseChinese(body, maxQuestions)
 	}

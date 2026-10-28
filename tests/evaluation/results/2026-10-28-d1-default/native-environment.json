@@ -1,0 +1,20 @@
+{
+  "pid": 54801,
+  "command": "./bin/ods-metal -http 127.0.0.1:18085,127.0.0.1:18086",
+  "model_listing": {
+    "models": [
+      {
+        "description": "Local Liquid d1-2B Q8_0 Metal text decision model",
+        "name": "d1-2b"
+      }
+    ]
+  },
+  "bridge_sha256": "ba062f71247cb7f163e428dc2efd03b631dd03b5c169d913ebba5f11ac712ac7",
+  "native_manifest_sha256": "89022cb329d4a6a5347d9c0299de7cc4d25d4a183de822a06874607fecbbcb06",
+  "binary_sha256": "d794a88131fdfb254bcab491bb93cc60d322fbf413f49891c09cf530a5e89497",
+  "ports": [
+    18085,
+    18086
+  ],
+  "note": "One guarded Go+cgo native instance. Chinese and Julia original jobs remain resident during staging; activation will replace them."
+}

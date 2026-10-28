@@ -73,3 +73,32 @@ func TestShutdownTimeoutStillWaitsForHandlerBeforeFree(t *testing.T) {
 		t.Fatal("engine not closed")
 	}
 }
+
+func TestDefaultD1Paths(t *testing.T) {
+	if defaultEngine != "d1-2b" {
+		t.Fatal(defaultEngine)
+	}
+	model, lib := nativePaths("d1-2b", "", "")
+	if model != "dist/liquid-d1/models/d1-2B-Q8_0.gguf" || lib != "lib/darwin-arm64/d1/lib/libods_d1.dylib" {
+		t.Fatalf("%s %s", model, lib)
+	}
+	model, lib = nativePaths("chinese-decision", "custom.gguf", "custom.dylib")
+	if model != "custom.gguf" || lib != "custom.dylib" {
+		t.Fatal("explicit paths ignored")
+	}
+}
+
+func TestListenAllRollsBackOnConflict(t *testing.T) {
+	listeners, err := listenAll("127.0.0.1:0,127.0.0.1:0")
+	if err != nil || len(listeners) != 2 {
+		t.Fatalf("%v %v", listeners, err)
+	}
+	defer func() {
+		for _, l := range listeners {
+			l.Close()
+		}
+	}()
+	if _, err = listenAll("127.0.0.1:0," + listeners[1].Addr().String()); err == nil {
+		t.Fatal("accepted occupied address")
+	}
+}
