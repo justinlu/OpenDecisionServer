@@ -1,0 +1,6 @@
+{"case_id":"h0-q1-u0","history":0,"iteration":0,"latency_ms":76.607708,"mode":"serial","questions":1}
+{"case_id":"h0-q3-u0","history":0,"iteration":0,"latency_ms":212.21425,"mode":"serial","questions":3}
+{"case_id":"h4-q1-u0","history":4,"iteration":0,"latency_ms":128.439417,"mode":"serial","questions":1}
+{"case_id":"h4-q3-u0","history":4,"iteration":0,"latency_ms":371.681584,"mode":"serial","questions":3}
+{"case_id":"h12-q1-u0","history":12,"iteration":0,"latency_ms":202.675292,"mode":"serial","questions":1}
+{"case_id":"h12-q3-u0","history":12,"iteration":0,"latency_ms":603.056209,"mode":"serial","questions":3}

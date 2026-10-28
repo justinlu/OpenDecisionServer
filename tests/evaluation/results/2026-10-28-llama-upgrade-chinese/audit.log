@@ -1,0 +1,81 @@
+{
+  "probability_tolerance": 0.0001,
+  "rows": 1069,
+  "comparison": {
+    "max_probability_delta": 0.0008434699469788143,
+    "corpus_max_probability_delta": 0.0008434699469788143,
+    "golden_max_probability_delta": 0.0006225160882333824,
+    "rows_above_tolerance": 849,
+    "winner_changes": 1,
+    "corpus_winner_changes": 1,
+    "changed_rows": [
+      {
+        "id": "toksuite/romanization/312-4.10:decision",
+        "suite": "toksuite",
+        "case_id": "toksuite/romanization/312-4.10",
+        "max_probability_delta": 0.0003121161808660733,
+        "max_logit_delta": 0.0074615478515625,
+        "winner_changed": true,
+        "old_winner": "D",
+        "new_winner": "C",
+        "old_probabilities": [
+          0.1567023864748335,
+          0.2354664968223533,
+          0.3038160584914029,
+          0.3040150582114103
+        ],
+        "new_probabilities": [
+          0.15687575764577708,
+          0.23559653854259324,
+          0.3038247617810854,
+          0.3037029420305442
+        ]
+      }
+    ]
+  },
+  "strict_upgrade_pass": false,
+  "performance_ratios_new_over_old": {
+    "serial/h0/q1": 0.9781453686308851,
+    "serial/h0/q3": 0.9535641303176708,
+    "serial/h4/q1": 0.9154797960451148,
+    "serial/h4/q3": 0.9219228046028493,
+    "serial/h12/q1": 0.9293370974089112,
+    "serial/h12/q3": 0.9598552632622317
+  },
+  "repeat_diagnostics": {
+    "old": {
+      "toksuite/romanization/312-4.10:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "D"
+      },
+      "toksuite/keyboard_proximity_errors/307-4.2:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "D"
+      },
+      "routing-choice/zh/zh:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "c1"
+      }
+    },
+    "new": {
+      "toksuite/romanization/312-4.10:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "C"
+      },
+      "toksuite/keyboard_proximity_errors/307-4.2:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "D"
+      },
+      "routing-choice/zh/zh:decision": {
+        "repeats": 10,
+        "max_probability_drift": 0.0,
+        "winner": "c1"
+      }
+    }
+  }
+}

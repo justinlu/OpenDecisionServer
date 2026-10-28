@@ -1,0 +1,1 @@
+{"model_params_size":80,"context_params_size":168,"batch_size":56,"n_ctx_offset":0,"n_threads_offset":28,"flash_attn_offset":52,"offload_kqv_offset":137}
