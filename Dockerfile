@@ -1,5 +1,7 @@
 # d1-2B CPU inference image. Multi-arch via buildx (linux/amd64, linux/arm64).
 # All inputs are pinned and hash-verified; see tests/evaluation/liquid-d1-models.json.
+# The model is NOT in the image: mount the pinned GGUF at /models/d1-2b/
+# (see scripts/download-d1-model.sh).
 
 FROM debian:bookworm-slim AS llama-src
 RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates patch \
@@ -40,20 +42,11 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=1 go build -tags llama -o /out/ods ./cmd/ods
 
-FROM debian:bookworm-slim AS model
-RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
-ARG D1_MODEL_REVISION=63be75e6586882defeb706ed4bda812d90256a6d
-ARG D1_MODEL_SHA256=073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c
-RUN curl -fL --retry 3 -o /d1-2B-Q8_0.gguf "https://huggingface.co/LiquidAI/d1-2B-GGUF/resolve/${D1_MODEL_REVISION}/d1-2B-Q8_0.gguf" \
-    && echo "${D1_MODEL_SHA256}  /d1-2B-Q8_0.gguf" | sha256sum -c -
-
 FROM debian:bookworm-slim
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates libstdc++6 curl \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=go-build /out/ods /usr/local/bin/ods
 COPY --from=bridge-build /sdk /opt/ods/d1
-COPY --from=model /d1-2B-Q8_0.gguf /models/d1-2b/d1-2B-Q8_0.gguf
 EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s --start-period=120s CMD curl -fsS http://127.0.0.1:8080/health/ready || exit 1
 ENTRYPOINT ["/usr/local/bin/ods","-engine","d1-2b","-http",":8080","-llama-model","/models/d1-2b/d1-2B-Q8_0.gguf","-llama-lib","/opt/ods/d1/lib/libods_d1.so"]

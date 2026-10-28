@@ -30,9 +30,16 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Build image with layer cache
         run: docker buildx build --platform linux/amd64 -t ods-ci --load --cache-from type=gha --cache-to type=gha,mode=max .
+      - name: Cache pinned d1 model
+        uses: actions/cache@v4
+        with:
+          path: models/d1-2b
+          key: d1-2b-model-073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c
+      - name: Download pinned d1 model
+        run: ./scripts/download-d1-model.sh
       - name: Container HTTP smoke test
         run: |
-          docker run -d --name ods-ci -p 18080:8080 ods-ci
+          docker run -d --name ods-ci -p 18080:8080 -v "$PWD/models/d1-2b:/models/d1-2b:ro" ods-ci
           for i in $(seq 1 300); do
             if curl -fsS http://127.0.0.1:18080/health/ready; then break; fi
             sleep 1

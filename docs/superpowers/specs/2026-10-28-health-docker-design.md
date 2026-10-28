@@ -35,7 +35,9 @@
 
 ## 方案（已选定）
 
-考虑过三种：A) 全源码构建 Linux 镜像；B) 只容器化 julia；C) 仅 linux/arm64。用户选定 **A + 多架构（amd64 + arm64）**。模型分发用户确认**打进镜像**（约 2.3GB 镜像，构建期下载 1.8GB 并校验 SHA-256，Docker 层缓存保证重建不重复下载）。
+考虑过三种：A) 全源码构建 Linux 镜像；B) 只容器化 julia；C) 仅 linux/arm64。用户选定 **A + 多架构（amd64 + arm64）**。
+
+模型分发（2026-10-29 修订）：最初用户确认打进镜像，随后改为**完全移出镜像**——镜像只含二进制与推理库（几百 MB），pinned GGUF 由 `scripts/download-d1-model.sh` 下载到宿主机并经 SHA-256 校验，compose/CI 以只读 volume 挂载进容器。
 
 ## 设计细节
 
@@ -78,7 +80,7 @@
 1. **llama-src**：下载 pinned 源码 tarball（校验 `65b13ebd…`）、打补丁。
 2. **bridge-build**：cmake 构建 llama.cpp + `ods_d1` bridge（Linux CPU）；按 `prepare-d1-native.sh` 的布局产出 SDK：`lib/*.so` + `SHA256SUMS` + `source.sha256` + `patch.sha256` + `bridge.sha256` + `LICENSE-llama.cpp`。
 3. **go-build**：`CGO_ENABLED=1 go build -tags llama`，`CGO_CFLAGS` 指向 SDK include。
-4. **model**：从 HuggingFace 下载 `d1-2B-Q8_0.gguf`（pinned revision `63be75e6…`），校验 SHA-256。
+4. **model**：（2026-10-29 修订：此阶段已移除，模型不再进镜像，见"方案"一节。）
 5. **runtime**：`debian:bookworm-slim` + ca-certificates + libgomp1 + libstdc++6 + **curl**（healthcheck 需要，slim 镜像不带）；拷入二进制、`/opt/ods/d1/` SDK、`/models/d1-2b/`；`HEALTHCHECK` 调 `/health/ready`；`EXPOSE 8080`。
 
 多架构策略：优先 `$BUILDPLATFORM` 原生交叉编译（Go 交叉 + CMake 工具链文件）；`ods_d1_error_test` 构建期自检在 `TARGETARCH` ≠ 构建机架构时用 QEMU/binfmt 跑（二进制小、开销可忽略）。**降级预案**：若 ggml 的 x86 CPU 变体交叉编译不可行，amd64 阶段整体退回 QEMU 模拟构建（慢但正确），不允许交付"只编译过、没跑过测试"的产物。

@@ -5,16 +5,16 @@ services:
     ports:
       - "8080:8080"
     restart: unless-stopped
+    # 模型不在镜像里：先跑 scripts/download-d1-model.sh 下载 pinned 模型。
+    # 启动时强校验 SHA-256，只接受 pinned 文件（073313d9…），挂其他模型会拒绝启动。
+    volumes:
+      - ./models/d1-2b:/models/d1-2b:ro
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/health/ready"]
       interval: 30s
       timeout: 5s
       start_period: 120s
       retries: 5
-    # 可选：用宿主机模型覆盖镜像内模型。注意启动时强校验 SHA-256，
-    # 只接受同一个 pinned 文件（073313d9…），挂其他模型会拒绝启动。
-    # volumes:
-    #   - ./models/d1-2b:/models/d1-2b:ro
     # 可选：资源限制示例
     # deploy:
     #   resources:

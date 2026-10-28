@@ -184,7 +184,21 @@ docker buildx build --platform linux/amd64 -t open-decision-server --load .
 docker run --rm -p 127.0.0.1:8080:8080 open-decision-server
 ```
 
-镜像内含 pinned 的 d1-2B Q8_0 模型（约 1.8GB，构建期下载并校验 SHA-256）与从 pinned llama.cpp 源码编译的 CPU 推理库，首次构建较久。健康检查：
+镜像内含从 pinned llama.cpp 源码编译的 CPU 推理库，但**不包含模型**。先下载 pinned 的 d1-2B Q8_0 模型（约 1.8GB，带 SHA-256 校验），再启动：
+
+```sh
+./scripts/download-d1-model.sh   # 下载到 models/d1-2b/（compose 默认挂载此目录）
+docker compose up --build
+```
+
+裸 Docker 需要手动挂载同一目录：
+
+```sh
+docker buildx build --platform linux/amd64 -t open-decision-server --load .
+docker run --rm -p 127.0.0.1:8080:8080 -v "$PWD/models/d1-2b:/models/d1-2b:ro" open-decision-server
+```
+
+启动时强校验模型 SHA-256，只接受 pinned 文件。健康检查：
 
 ```sh
 curl -fsS http://127.0.0.1:8080/health        # 聚合状态（引擎、模型、就绪）
