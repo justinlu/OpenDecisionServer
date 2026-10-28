@@ -1,0 +1,76 @@
+{
+  "speech-zh-text": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      78.91854199999999,
+      53.628666999999965,
+      55.50566700000004
+    ]
+  },
+  "speech-zh-audio": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      92.510209,
+      83.68149999999997,
+      97.08012499999997
+    ]
+  },
+  "speech-en-text": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      51.22416699999999,
+      51.59858299999998,
+      54.84741699999995
+    ]
+  },
+  "speech-en-audio": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      80.89845799999995,
+      82.887708,
+      82.09183300000001
+    ]
+  },
+  "image": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      800.4827919999999
+    ]
+  },
+  "audio-image": {
+    "questions": 2,
+    "correct": 2,
+    "request_errors": 0,
+    "latencies_ms": [
+      336.5660410000002,
+      328.7292909999997
+    ]
+  },
+  "spoken-question-image": {
+    "questions": 1,
+    "correct": 1,
+    "request_errors": 0,
+    "latencies_ms": [
+      283.8400000000001
+    ]
+  },
+  "sound": {
+    "questions": 2,
+    "correct": 2,
+    "request_errors": 0,
+    "latencies_ms": [
+      71.1940000000002,
+      65.40629099999995
+    ]
+  }
+}
