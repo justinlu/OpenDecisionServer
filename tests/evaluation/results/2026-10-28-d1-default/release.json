@@ -1,0 +1,28 @@
+{
+  "commit": "3083f8b8b885cd1c09133600718a03085f2e00f1",
+  "binary_sha256": "a0346abbaeb36735d58f9c28ce7313cd7711fe2348342cdca11381af32a3959b",
+  "build_info": "/Volumes/ExtHD/GitHub/OpenDecisionServer/bin/ods-metal: go1.27.3\n\tpath\tgithub.com/opendecisionserver/ods/cmd/ods\n\tmod\tgithub.com/opendecisionserver/ods\tv0.0.0-20261028064734-3083f8b8b885\t\n\tdep\tgithub.com/microsoft/onnxruntime/go\tv0.0.0-20260915212525-84d758f8cf95\th1:ikejlr9o8aUsDKqrTG7peBPqpNSh52xsQCbiBlpRsso=\n\tdep\tgithub.com/tggo/goSentencePiece\tv1.1.0\th1:h13/8iLtIUXR03DLZ7BTa4dQhs7fWfpsHTzNF/Q/OwI=\n\tdep\tgoogle.golang.org/protobuf\tv1.36.11\th1:fV6ZwhNocDyBLK0dj+fg8ektcVegBBuEolpbTQyBNVE=\n\tbuild\t-buildmode=exe\n\tbuild\t-compiler=gc\n\tbuild\t-tags=llama\n\tbuild\tDefaultGODEBUG=tracebacklabels=0,x509sslcertoverrideplatform=0\n\tbuild\tCGO_ENABLED=1\n\tbuild\tCGO_CFLAGS=\"-I/Volumes/ExtHD/GitHub/OpenDecisionServer/lib/darwin-arm64/llama/include \"\n\tbuild\tCGO_CPPFLAGS=\n\tbuild\tCGO_CXXFLAGS=\n\tbuild\tCGO_LDFLAGS=\n\tbuild\tGOARCH=arm64\n\tbuild\tGOOS=darwin\n\tbuild\tGOARM64=v8.0\n\tbuild\tvcs=git\n\tbuild\tvcs.revision=3083f8b8b885cd1c09133600718a03085f2e00f1\n\tbuild\tvcs.time=2026-10-28T06:47:34Z\n\tbuild\tvcs.modified=false\n",
+  "model": {
+    "id": "d1-2b",
+    "repository": "LiquidAI/d1-2B-GGUF",
+    "revision": "63be75e6586882defeb706ed4bda812d90256a6d",
+    "files": [
+      {
+        "name": "d1-2B-Q8_0.gguf",
+        "sha256": "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c",
+        "size": 1846240576
+      },
+      {
+        "name": "mmproj-d1-2B-F16.gguf",
+        "sha256": "c54d0c0cc66c7e5b6b516204cab556e41d1da9e9cd970245a57d7b509af68ab3",
+        "size": 378995744
+      }
+    ]
+  },
+  "source_root": "/Volumes/ExtHD/GitHub/OpenDecisionServer",
+  "ports": [
+    8080,
+    18083
+  ],
+  "label": "app.powermobile.voiceai.decision"
+}

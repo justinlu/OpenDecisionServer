@@ -62,3 +62,7 @@ python3 tests/evaluation/results/2026-10-28-d1-default/audit.py
 Go全套／race／vet、Python46项及无GPU的C++后端错误回归通过。真实native测试需一次只启动一个d1实例，按 `internal/engine/d1/native_integration_test.go` 的环境开关运行。部署脚本回归仅使用临时目录与模拟命令，不改本机服务。
 
 首次激活因launchd退出竞态未通过，原配置已自动还原、原两服务经直接bootstrap恢复并核验。`first-activation-failure.json`保留失败与恢复身份。无模型3秒延迟退出探针复现：bootout约0.004秒即返回，立即bootstrap退出5，等PID退出后成功。部署工具已增加PID退出等待、跨中断保留PID及登记清理短重试，四项部署回归通过。最终成功激活另见activation.json，不将首次失败当成功。
+
+最终发布：`3083f8b8b885cd1c09133600718a03085f2e00f1`，自包含release为`20261028T064738Z-3083f8b8`。一个launchd管理的d1进程接管8080及18083，正常停启后PID从91072变为91466，两端实际推理通过；实际入口另24项协议检查通过。原两个job中primary已更新为d1，旧Chinese job处于disabled，旧模型及原配置在release/rollback保留。部署记录与源码已推送main；服务仅加载d1，不依赖开发目录或ONNX库。
+
+线上协议检查后`ods_http_errors_total=16`对应两端各8个故意构造的404/422请求；`ods_native_errors_total=0`，active/waiting均0，原生计数15（预热1、重启后冒烟2、两端成功协议推理12）。这16个HTTP错误是负向契约测试预期，不能计为推理失败。

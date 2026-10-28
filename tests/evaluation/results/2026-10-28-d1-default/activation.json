@@ -1,0 +1,139 @@
+{
+  "release": "/Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8",
+  "commit": "3083f8b8b885cd1c09133600718a03085f2e00f1",
+  "before_restart": {
+    "8080": {
+      "pid": 91072,
+      "models": {
+        "models": [
+          {
+            "description": "Local Liquid d1-2B Q8_0 Metal text decision model",
+            "name": "d1-2b"
+          }
+        ]
+      },
+      "response": {
+        "model": "d1-2b",
+        "answers": {
+          "business": {
+            "type": "choice",
+            "choice": "withdraw",
+            "probabilities": {
+              "withdraw": 0.9932538110771629,
+              "deposit": 0.004176428938674717,
+              "transfer": 0.002569759984162225
+            },
+            "confidence": 0.9932538110771629
+          }
+        },
+        "usage": {
+          "input_tokens": 49,
+          "output_tokens": 0
+        }
+      }
+    },
+    "18083": {
+      "pid": 91072,
+      "models": {
+        "models": [
+          {
+            "description": "Local Liquid d1-2B Q8_0 Metal text decision model",
+            "name": "d1-2b"
+          }
+        ]
+      },
+      "response": {
+        "model": "d1-2b",
+        "answers": {
+          "business": {
+            "type": "choice",
+            "choice": "withdraw",
+            "probabilities": {
+              "withdraw": 0.9932538110771629,
+              "deposit": 0.004176428938674717,
+              "transfer": 0.002569759984162225
+            },
+            "confidence": 0.9932538110771629
+          }
+        },
+        "usage": {
+          "input_tokens": 49,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "after_restart": {
+    "8080": {
+      "pid": 91466,
+      "models": {
+        "models": [
+          {
+            "description": "Local Liquid d1-2B Q8_0 Metal text decision model",
+            "name": "d1-2b"
+          }
+        ]
+      },
+      "response": {
+        "model": "d1-2b",
+        "answers": {
+          "business": {
+            "type": "choice",
+            "choice": "withdraw",
+            "probabilities": {
+              "withdraw": 0.9932538110771629,
+              "deposit": 0.004176428938674717,
+              "transfer": 0.002569759984162225
+            },
+            "confidence": 0.9932538110771629
+          }
+        },
+        "usage": {
+          "input_tokens": 49,
+          "output_tokens": 0
+        }
+      }
+    },
+    "18083": {
+      "pid": 91466,
+      "models": {
+        "models": [
+          {
+            "description": "Local Liquid d1-2B Q8_0 Metal text decision model",
+            "name": "d1-2b"
+          }
+        ]
+      },
+      "response": {
+        "model": "d1-2b",
+        "answers": {
+          "business": {
+            "type": "choice",
+            "choice": "withdraw",
+            "probabilities": {
+              "withdraw": 0.9932538110771629,
+              "deposit": 0.004176428938674717,
+              "transfer": 0.002569759984162225
+            },
+            "confidence": 0.9932538110771629
+          }
+        },
+        "usage": {
+          "input_tokens": 49,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "native_libraries": [
+    "ods-metal 91466 justinlu  txt      REG               1,13      60096            40674218 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libggml.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13      58776            40674236 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libggml-blas.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13     451520            40674228 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libods_d1.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13     754376            40674235 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libggml-base.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13    1608592            40674216 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libmtmd.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13     991024            40674237 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libggml-cpu.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13    5386040            40674227 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libllama-common.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13    3745712            40674214 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libllama.0.dylib",
+    "ods-metal 91466 justinlu  txt      REG               1,13    5604504            40674226 /Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T064738Z-3083f8b8/native/lib/libggml-metal.0.dylib"
+  ]
+}

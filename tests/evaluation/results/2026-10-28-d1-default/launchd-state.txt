@@ -1,0 +1,2 @@
+		"app.powermobile.voiceai.decision-chinese" => disabled
+		"app.powermobile.voiceai.decision" => enabled

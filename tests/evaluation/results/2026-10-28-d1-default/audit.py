@@ -34,4 +34,18 @@ result=dict(native_vs_official=parity,banking=comparison)
 path=ROOT/'comparison.json'
 if path.exists():assert json.loads(path.read_text())==result
 else:path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+if (ROOT/'activation.json').exists():
+    activation=json.loads((ROOT/'activation.json').read_text())
+    release=json.loads((ROOT/'release.json').read_text())
+    assert activation['commit']==release['commit']
+    assert 'vcs.revision='+release['commit'] in release['build_info']
+    assert 'vcs.modified=false' in release['build_info']
+    assert activation['before_restart']['8080']['pid']!=activation['after_restart']['8080']['pid']
+    assert activation['after_restart']['8080']['pid']==activation['after_restart']['18083']['pid']
+    for port in ['8080','18083']:
+        response=activation['after_restart'][port]['response']
+        assert response['model']=='d1-2b' and response['answers']['business']['choice']=='withdraw'
+        live=json.loads((ROOT/('live-contract-'+port+'.json')).read_text())
+        assert len(live)==12 and all(r['status']==r['expected_status'] for r in live)
+    print('Audited clean-release identity, shared live process, managed restart and 24 live protocol checks')
 print('Audited 989 native responses, bank comparison, 24 protocol checks and exact probability parity')
