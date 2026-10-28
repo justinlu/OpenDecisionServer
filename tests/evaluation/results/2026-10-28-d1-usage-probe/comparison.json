@@ -1,0 +1,22 @@
+{
+  "business/text": {
+    "matched_observations": 28,
+    "winner_disagreements": 0,
+    "max_probability_absolute_delta": 0.01350633566721604
+  },
+  "business/audio": {
+    "matched_observations": 56,
+    "winner_disagreements": 1,
+    "max_probability_absolute_delta": 0.031048453525299557
+  },
+  "gate/text": {
+    "matched_observations": 16,
+    "winner_disagreements": 0,
+    "max_probability_absolute_delta": 0.01606948357136212
+  },
+  "gate/audio": {
+    "matched_observations": 32,
+    "winner_disagreements": 1,
+    "max_probability_absolute_delta": 0.011559152264230987
+  }
+}

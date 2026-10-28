@@ -1,0 +1,7 @@
+{
+  "backend": "gguf",
+  "revision": "4cccbfd5ba3405ee0f973134bd03e0d9d60ef1d8",
+  "runner_sha256": "cc7c0c847f74c169c590911c3df05c0a050f78cc893ac8e2b72724a05a3e56be",
+  "protocol_sha256": "e6e7cc54f7a062fab200fd5afb0d5a37b74b6b4ce3b5550348e7953a188280ba",
+  "diagnostic_only": true
+}

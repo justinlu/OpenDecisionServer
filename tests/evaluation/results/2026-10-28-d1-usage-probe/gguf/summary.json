@@ -1,0 +1,82 @@
+{
+  "business/text/baseline_zh": {
+    "cases": 14,
+    "correct": 14,
+    "errors": 0
+  },
+  "business/text/short_en": {
+    "cases": 14,
+    "correct": 14,
+    "errors": 0
+  },
+  "business/text/short_en_scene": {
+    "cases": 14,
+    "correct": 14,
+    "errors": 0
+  },
+  "business/text/short_zh": {
+    "cases": 14,
+    "correct": 14,
+    "errors": 0
+  },
+  "business/audio/baseline_zh": {
+    "cases": 28,
+    "correct": 10,
+    "errors": 0
+  },
+  "business/audio/short_en": {
+    "cases": 28,
+    "correct": 11,
+    "errors": 0
+  },
+  "business/audio/short_en_scene": {
+    "cases": 28,
+    "correct": 10,
+    "errors": 0
+  },
+  "business/audio/short_zh": {
+    "cases": 28,
+    "correct": 11,
+    "errors": 0
+  },
+  "gate/text/baseline_zh": {
+    "cases": 8,
+    "correct": 8,
+    "errors": 0
+  },
+  "gate/text/noul_en": {
+    "cases": 8,
+    "correct": 8,
+    "errors": 0
+  },
+  "gate/text/noul_zh": {
+    "cases": 8,
+    "correct": 7,
+    "errors": 0
+  },
+  "gate/text/short_en": {
+    "cases": 8,
+    "correct": 8,
+    "errors": 0
+  },
+  "gate/audio/baseline_zh": {
+    "cases": 16,
+    "correct": 11,
+    "errors": 0
+  },
+  "gate/audio/noul_en": {
+    "cases": 16,
+    "correct": 9,
+    "errors": 0
+  },
+  "gate/audio/noul_zh": {
+    "cases": 16,
+    "correct": 9,
+    "errors": 0
+  },
+  "gate/audio/short_en": {
+    "cases": 16,
+    "correct": 14,
+    "errors": 0
+  }
+}

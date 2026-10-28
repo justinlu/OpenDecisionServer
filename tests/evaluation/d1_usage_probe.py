@@ -1,0 +1,178 @@
+"""Small official-usage diagnostic, not a new banking accuracy benchmark."""
+import argparse
+import copy
+import hashlib
+import json
+from pathlib import Path
+import time
+
+from banking_audio import ROOT,build_request,sha,validate_dataset,verify_media,write_json
+from banking_audio_cascade import questions
+from banking_audio_diagnostics import request_one
+from evaluate import grade
+
+REVISION='4cccbfd5ba3405ee0f973134bd03e0d9d60ef1d8'
+SCENE='A customer is speaking to an assistant at a self-service banking terminal. The recording contains the customer’s current request.'
+
+
+def protocol():
+    cases,task=validate_dataset(ROOT);manifest=verify_media(ROOT);lookup={c['id']:c for c in cases}
+    media={(e['case_id'],e['voice']):e['file'] for e in manifest['audio'] if e['condition']=='clean'}
+    gate,business=questions(task)
+    en_business=dict(type='choice',instructions='Which banking service does the speaker want to use?',criteria=dict(
+        withdraw='Withdraw cash',deposit='Deposit cash',transfer='Transfer money to another account',
+        balance='Check the account balance',statement='View transaction history or print a bank statement',
+        pin='Change or reset the bank card withdrawal PIN',loss='Report a bank card lost',replace='Replace a bank card',
+        phone='Change the phone number registered with the bank',mobile='Activate mobile banking',
+        unknown='No single listed banking service can be identified'))
+    short_zh=copy.deepcopy(business);short_zh['instructions']='用户当前希望办理哪项银行业务？'
+    en_gate=dict(type='choice',instructions='Does the speaker want to use a banking service now, or only ask for information?',
+        criteria=dict(navigate='A request to open or use a banking service now',inquire='A request for information about a banking service'))
+    zh_noul=dict(type='noul',instructions='用户现在是否要求进入或使用某项银行功能？')
+    en_noul=dict(type='noul',instructions='Is the speaker asking to open or use a banking service now?')
+    business_ids=[f'{topic}-01-navigate' for topic in ['withdraw','deposit','transfer','balance','statement','pin','loss','replace','phone','mobile']]
+    business_ids+=['withdraw-02-navigate','balance-02-navigate','statement-04-navigate','ctx-transfer-go']
+    gate_ids=[f'{topic}-02-{mode}' for topic in ['withdraw','transfer','balance','statement'] for mode in ['navigate','inquire']]
+    jobs=[]
+    for family,ids,variants in [
+        ('business',business_ids,{'baseline_zh':business,'short_zh':short_zh,'short_en':en_business,'short_en_scene':en_business}),
+        ('gate',gate_ids,{'baseline_zh':gate,'short_en':en_gate,'noul_zh':zh_noul,'noul_en':en_noul})]:
+        for id in ids:
+            case=lookup[id]
+            for voice in ['none']+[v['id'] for v in task['voices']]:
+                for variant,question in variants.items():
+                    expected=case['expected']['function' if family=='business' else 'mode']
+                    if question['type']=='noul':expected='true' if expected=='navigate' else 'false'
+                    jobs.append(dict(id='/'.join([family,id,voice,variant]),family=family,case_id=id,voice=voice,
+                        modality='text' if voice=='none' else 'audio',file=None if voice=='none' else media[(id,voice)],
+                        variant=variant,question=question,expected=expected,scene=variant=='short_en_scene'))
+    return dict(revision=REVISION,manifest_sha256=sha(ROOT/'manifest.json'),jobs=jobs)
+
+
+def body_for(job):
+    cases,task=validate_dataset(ROOT);lookup={c['id']:c for c in cases}
+    body=build_request(lookup[job['case_id']],dict(task,questions={'decision':job['question']}),job['modality'],
+        ROOT/job['file'] if job['file'] else None)
+    if job['scene']:body['state']=SCENE+('\n'+body['state'] if body['state'] else '')
+    return body
+
+
+def selected_reference(job):
+    return (job['family']=='business' and job['variant'] in ['baseline_zh','short_en']) or \
+           (job['family']=='gate' and job['variant'] in ['baseline_zh','noul_en'])
+
+
+def summarize(rows):
+    summary={}
+    for family in ['business','gate']:
+        for modality in ['text','audio']:
+            for variant in sorted({r['variant'] for r in rows if r['family']==family}):
+                selected=[r for r in rows if (r['family'],r['modality'],r['variant'])==(family,modality,variant)]
+                if selected:summary['/'.join([family,modality,variant])]=dict(cases=len(selected),
+                    correct=sum(r['correct'] for r in selected),errors=sum(r['error'] is not None for r in selected))
+    return summary
+
+
+def run(args):
+    frozen=protocol();jobs=frozen['jobs']
+    if args.backend=='hf':jobs=[j for j in jobs if selected_reference(j)]
+    args.output.mkdir(parents=True,exist_ok=False);write_json(args.output/'protocol.json',dict(frozen,jobs=jobs))
+    metadata=dict(backend=args.backend,revision=REVISION,runner_sha256=sha(Path(__file__)),
+        protocol_sha256=sha(args.output/'protocol.json'),diagnostic_only=True)
+    model=None
+    if args.backend=='hf':
+        import torch
+        import transformers
+        from transformers import AutoModel
+        torch.set_num_threads(4)
+        device='mps' if torch.backends.mps.is_available() else 'cpu'
+        dtype=torch.bfloat16 if device=='mps' else torch.float32
+        print('loading official model',device,str(dtype),flush=True)
+        model=AutoModel.from_pretrained(str(args.model),revision=REVISION,trust_remote_code=True,dtype=dtype).to(device).eval()
+        metadata.update(device=device,dtype=str(dtype),torch=torch.__version__,transformers=transformers.__version__,
+                        model_path=str(args.model),set_size=1,compiled=False)
+    write_json(args.output/'metadata.json',metadata)
+    rows=[]
+    with (args.output/'predictions.jsonl').open('w') as stream:
+        for index,job in enumerate(jobs):
+            body=body_for(job)
+            if args.backend=='gguf':result=request_one(args.url,body,job['expected'])
+            else:
+                import torch
+                result=dict(expected=job['expected'],predicted=None,correct=False,error=None,response_body=None,
+                    request_sha256=hashlib.sha256(json.dumps(body,ensure_ascii=False).encode()).hexdigest())
+                start=time.perf_counter()
+                try:
+                    media=[{'type':'audio','path':str(ROOT/job['file'])}] if job['file'] else None
+                    with torch.inference_mode():raw=model.system_one(body['state'],body['questions'],media=media,set_size=1)
+                    result['response_body']=json.dumps(raw,ensure_ascii=False)
+                    # HF does not return a model alias. Supply it only to the existing validator,
+                    # retaining the unmodified official response above.
+                    result.update(grade(dict(expected=job['expected'],request={'questions':body['questions']}),dict(raw,model=body['model'])))
+                except Exception as error:
+                    result['error']=type(error).__name__+': '+str(error)
+                result['latency_ms']=(time.perf_counter()-start)*1000
+            row=dict(job,**result);rows.append(row)
+            stream.write(json.dumps(row,ensure_ascii=False)+'\n');stream.flush()
+            if index%16==0 or result['error']:print(index+1,job['id'],result['error'],flush=True)
+    write_json(args.output/'summary.json',summarize(rows))
+    print(json.dumps(summarize(rows),indent=2),flush=True)
+    if any(r['error'] for r in rows):raise SystemExit('Completed with recorded reference errors')
+
+
+def audit(output):
+    frozen=json.loads((output/'protocol.json').read_text());metadata=json.loads((output/'metadata.json').read_text())
+    assert metadata['protocol_sha256']==sha(output/'protocol.json')
+    assert frozen['manifest_sha256']==sha(ROOT/'manifest.json')
+    canonical={j['id']:j for j in protocol()['jobs']}
+    wanted=[j for j in canonical.values() if metadata['backend']=='gguf' or selected_reference(j)]
+    assert frozen['jobs']==wanted
+    assert metadata['runner_sha256']==sha(output/'measurement.py.txt')
+    assert all(canonical[j['id']]==j for j in frozen['jobs'])
+    records=list(map(json.loads,(output/'predictions.jsonl').read_text().splitlines()))
+    expected={j['id'] for j in frozen['jobs']}
+    assert len(records)==len(expected) and {r['id'] for r in records}==expected
+    for row in records:
+        job=canonical[row['id']];body=body_for(job)
+        assert all(row[k]==job[k] for k in job)
+        encoded=hashlib.sha256(json.dumps(body,ensure_ascii=False).encode()).hexdigest()
+        assert row.get('payload_sha256',row.get('request_sha256'))==encoded
+        if row['error']:continue
+        raw=json.loads(row['response_body'])
+        if metadata['backend']=='gguf':assert raw['model']==body['model']
+        result=grade(dict(expected=job['expected'],request={'questions':body['questions']}),dict(raw,model=body['model']))
+        assert all(row[k]==result[k] for k in ['correct','predicted','probabilities'])
+    assert summarize(records)==json.loads((output/'summary.json').read_text())
+    print('Audited',metadata['backend'],len(records),'usage diagnostic observations')
+
+
+def compare(output):
+    for backend in ['gguf','hf-bf16']:audit(output/backend)
+    native={r['id']:r for r in map(json.loads,(output/'gguf/predictions.jsonl').read_text().splitlines())}
+    reference={r['id']:r for r in map(json.loads,(output/'hf-bf16/predictions.jsonl').read_text().splitlines())}
+    comparison={}
+    for family in ['business','gate']:
+        for modality in ['text','audio']:
+            ids=[k for k in reference if reference[k]['family']==family and reference[k]['modality']==modality]
+            comparison[family+'/'+modality]=dict(matched_observations=len(ids),
+                winner_disagreements=sum(native[k]['predicted']!=reference[k]['predicted'] for k in ids),
+                max_probability_absolute_delta=max(abs(native[k]['probabilities'][a]-reference[k]['probabilities'][a])
+                    for k in ids for a in reference[k]['probabilities']))
+    assert comparison==json.loads((output/'comparison.json').read_text())
+    print('Audited matched-backend comparison',len(reference))
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command',choices=['run','audit','compare'])
+    parser.add_argument('--backend',choices=['gguf','hf'],default='gguf')
+    parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--url',default='http://127.0.0.1:18084/v1/systemone')
+    parser.add_argument('--model',type=Path,default=Path('dist/d1-official/model'))
+    args=parser.parse_args()
+    if args.command=='run':run(args)
+    elif args.command=='compare':compare(args.output)
+    else:audit(args.output)
+
+
+if __name__=='__main__':main()

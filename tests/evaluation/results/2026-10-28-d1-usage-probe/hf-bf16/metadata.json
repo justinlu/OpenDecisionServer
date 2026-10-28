@@ -1,0 +1,14 @@
+{
+  "backend": "hf",
+  "revision": "4cccbfd5ba3405ee0f973134bd03e0d9d60ef1d8",
+  "runner_sha256": "cc7c0c847f74c169c590911c3df05c0a050f78cc893ac8e2b72724a05a3e56be",
+  "protocol_sha256": "8cbc992f9cb4676d0d9a8999b46c048f6c1bd8743279ce470696e19b362af981",
+  "diagnostic_only": true,
+  "device": "mps",
+  "dtype": "torch.bfloat16",
+  "torch": "2.14.1",
+  "transformers": "5.21.0",
+  "model_path": "dist/d1-official/model",
+  "set_size": 1,
+  "compiled": false
+}
