@@ -1,0 +1,25 @@
+0.00.068.929 I srv  llama_server: initializing ...
+0.00.068.935 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.068.993 I srv  init_listene: The UI is disabled
+0.00.068.993 I srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+0.00.069.024 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.072.104 I srv    load_model: loading model 'dist/liquid-d1/models/d1-2B-Q8_0.gguf'
+0.01.515.902 I cmn          init: llama threadpool init, n_threads = 4
+0.01.558.957 I srv          init: decision model type: lfm3-d1
+0.02.008.364 I srv    load_model: loaded multimodal model, 'dist/liquid-d1/models/mmproj-d1-2B-F16.gguf'
+0.02.008.377 W srv    load_model: speculative decoding not supported by this context
+0.02.008.378 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+0.02.008.469 W srv          init: --cache-idle-slots requires --cache-ram, disabling
+0.02.015.039 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+0.02.015.071 I srv  server_run_i: model loaded
+0.02.015.074 I srv  server_on_li: listening on http://127.0.0.1:18084
+0.02.181.937 I slot get_availabl: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.02.181.941 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.02.434.053 I slot      release: id  0 | task 0 | stop processing: n_tokens = 339, truncated = 0
+0.02.434.070 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.936 (> 0.100 thold), f_keep = 0.903
+0.02.434.074 I slot launch_slot_: id  0 | task 1 | processing task, is_child = 0
+0.02.696.657 I slot      release: id  0 | task 1 | stop processing: n_tokens = 327, truncated = 0
+0.02.696.692 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.933 (> 0.100 thold), f_keep = 0.936
+0.02.696.700 I slot launch_slot_: id  0 | task 2 | processing task, is_child = 0
+0.02.946.414 I slot      release: id  0 | task 2 | stop processing: n_tokens = 328, truncated = 0
+0.02.963.504 I srv    operator(): operator(): cleaning up before exit...

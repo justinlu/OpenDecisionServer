@@ -1,0 +1,63 @@
+{
+  "full_hidden": false,
+  "go_string_render_rows": 66,
+  "gpu_offload_supported": true,
+  "latency": {
+    "serial/h0/q1": {
+      "samples": 1,
+      "p50_ms": 65.948084,
+      "p95_ms": 65.948084,
+      "max_ms": 65.948084
+    },
+    "serial/h0/q3": {
+      "samples": 1,
+      "p50_ms": 198.071125,
+      "p95_ms": 198.071125,
+      "max_ms": 198.071125
+    },
+    "serial/h12/q1": {
+      "samples": 1,
+      "p50_ms": 190.813584,
+      "p95_ms": 190.813584,
+      "max_ms": 190.813584
+    },
+    "serial/h12/q3": {
+      "samples": 1,
+      "p50_ms": 564.390583,
+      "p95_ms": 564.390583,
+      "max_ms": 564.390583
+    },
+    "serial/h4/q1": {
+      "samples": 1,
+      "p50_ms": 110.630542,
+      "p95_ms": 110.630542,
+      "max_ms": 110.630542
+    },
+    "serial/h4/q3": {
+      "samples": 1,
+      "p50_ms": 330.631833,
+      "p95_ms": 330.631833,
+      "max_ms": 330.631833
+    }
+  },
+  "parity_pass": false,
+  "probability_tolerance": 0.0001,
+  "python_max_probability_delta": 0.0008434699469788143,
+  "python_reference_rows": 30,
+  "python_winner_mismatches": 10,
+  "required_winner_agreement": 1,
+  "samples_per_latency_group": 1,
+  "serial_aba_max_probability_delta": 0,
+  "serial_context": {
+    "n_batch": 512,
+    "n_ctx": 16384,
+    "n_ctx_seq": 16384,
+    "n_seq_max": 1,
+    "n_ubatch": 512
+  },
+  "serial_only": true,
+  "structured_render_not_implemented": 0,
+  "temperature": 1.074872374534607,
+  "tokenizer_rows": 66,
+  "ubatch_requested": 512
+}

@@ -23,8 +23,12 @@ def delta(a, b):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--results', type=Path, required=True)
+    parser.add_argument('--require-pass', action='store_true', help='exit nonzero if the original strict migration gate fails')
     args = parser.parse_args()
     root = args.results
+    # A rejected rerun must not leave a previous successful certificate behind.
+    for name in ['audit.json', 'differences.jsonl']:
+        (root/name).unlink(missing_ok=True)
     reference = json.loads((root/'reference.json').read_text())
     expected = {row['id']: row for row in reference['rows']}
     assert len(expected) == len(reference['rows']) == 1069
@@ -60,6 +64,7 @@ def main():
         aba = delta(phases['serial'][first]['probabilities'], phases['aba-repeat'][first]['probabilities'])
         outputs[version] = phases['serial']
         summary = json.loads((root/version/'summary.json').read_text())
+        assert summary.get('full_hidden', False) is False, 'Diagnostic full-hidden mode cannot certify an SDK upgrade'
         historical_deltas = [delta(expected[id]['expected_probabilities'], r['probabilities'])
                              for id, r in phases['serial'].items() if expected[id].get('expected_probabilities')]
         historical_flips = sum(winner(expected[id]['expected_probabilities']) != winner(r['probabilities'])
@@ -91,7 +96,7 @@ def main():
             values.sort()
             latency[name] = dict(samples=len(values), p50_ms=values[59], p95_ms=values[113], p99_ms=values[118], max_ms=values[-1])
             assert all(summary['latency'][name][k] == v for k, v in latency[name].items() if k != 'p99_ms')
-        report['versions'][version] = dict(grades={k:dict(v) for k,v in grades.items()},
+        report['versions'][version] = dict(full_hidden=summary.get('full_hidden', False), grades={k:dict(v) for k,v in grades.items()},
                                           tokenizer_rows=len(expected), historical_probability_max=max(historical_deltas),
                                           historical_winner_changes=historical_flips, aba_delta=aba, latency=latency,
                                           recorded_strict_gate_pass=summary['parity_pass'])
@@ -108,6 +113,7 @@ def main():
     goldens = [r for r in differences if r['suite'] == 'production-golden']
     assert len(corpus) == 989 and len(goldens) == 24
     report['comparison'] = dict(max_probability_delta=max(r['max_probability_delta'] for r in differences),
+                                max_logit_delta=max(r['max_logit_delta'] for r in differences),
                                 corpus_max_probability_delta=max(r['max_probability_delta'] for r in corpus),
                                 golden_max_probability_delta=max(r['max_probability_delta'] for r in goldens),
                                 rows_above_tolerance=sum(r['max_probability_delta'] > 1e-4 for r in differences),
@@ -143,6 +149,8 @@ def main():
     print(json.dumps({k:v for k,v in report.items() if k!='versions'},ensure_ascii=False,indent=2))
     # This is an audit of evidence, not a command that makes a failed migration gate disappear.
     # A recorded strict failure is a valid research result; callers must read strict_upgrade_pass.
+    if args.require_pass and not report['strict_upgrade_pass']:
+        raise SystemExit('Strict migration gate failed; see audit.json.')
 
 
 if __name__ == '__main__':

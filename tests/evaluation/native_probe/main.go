@@ -6,7 +6,19 @@ package main
 /*
 #include <stdlib.h>
 #include <string.h>
+#include <dlfcn.h>
 #include "llama.h"
+
+// Diagnostic use of the pinned SDK's staging API. The signature is declared in
+// src/llama-ext.h (C++ linkage). This Itanium ABI symbol is ONLY for the pinned
+// d05706b diagnostic, never the production adapter. Lookup keeps old builds compatible.
+static int probe_full_hidden(struct llama_context * ctx) {
+    void (*set_nextn)(struct llama_context *, bool, bool) =
+        (void (*)(struct llama_context *, bool, bool)) dlsym(RTLD_DEFAULT, "_Z26llama_set_embeddings_nextnP13llama_contextbb");
+    if (!set_nextn) return -1;
+    set_nextn(ctx, true, false);
+    return 0;
+}
 
 static struct llama_context * probe_context(struct llama_model * model, int sequences, int ubatch) {
     struct llama_context_params p = llama_context_default_params();
@@ -236,6 +248,7 @@ func main() {
 	samples := flag.Int("samples", 120, "measured iterations per native latency group")
 	ubatch := flag.Int("ubatch", 512, "physical microbatch size for multi-sequence context")
 	serialOnly := flag.Bool("serial-only", false, "validate the production serial path without the experimental multi-sequence path")
+	fullHidden := flag.Bool("full-hidden", false, "diagnostic: retain all-token nextn hidden states to reproduce late last-layer cropping")
 	flag.Parse()
 	if *samples < 1 || *ubatch < 4 || *referencePath == "" || *modelPath == "" || *output == "" {
 		panic("invalid flags")
@@ -289,6 +302,11 @@ func main() {
 	if ctx == nil {
 		panic("serial context failed")
 	}
+	if *fullHidden && C.probe_full_hidden(ctx) != 0 {
+		C.llama_free(ctx)
+		panic("full-hidden staging API unavailable")
+	}
+	summary["full_hidden"] = *fullHidden
 	summary["serial_context"] = map[string]any{"n_ctx": int(C.llama_n_ctx(ctx)), "n_ctx_seq": int(C.llama_n_ctx_seq(ctx)), "n_batch": int(C.llama_n_batch(ctx)), "n_ubatch": int(C.llama_n_ubatch(ctx)), "n_seq_max": int(C.llama_n_seq_max(ctx))}
 	serial := map[string][]float64{}
 	serialLogits := map[string][]float32{}

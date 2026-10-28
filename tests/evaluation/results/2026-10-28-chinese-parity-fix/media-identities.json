@@ -1,0 +1,21 @@
+{
+  "dist/liquid-d1/models/d1-Omni-2B-Q8_0.gguf": "aedf1a7c341b4281979423dbc39e9c3d3ad1da8834156c8e75af5399ca3b0861",
+  "dist/liquid-d1/models/mmproj-d1-Omni-2B-F16.gguf": "b22f8d7d5538dbc09897b214e940240be5fe0aee429ec55c83bd9fdd62d8af62",
+  "dist/liquid-d1/models/d1-2B-Q8_0.gguf": "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c",
+  "dist/liquid-d1/models/mmproj-d1-2B-F16.gguf": "c54d0c0cc66c7e5b6b516204cab556e41d1da9e9cd970245a57d7b509af68ab3",
+  "dist/liquid-d1/media/blue-en.wav": "d6c64e329dd900a06024a64b086aa9919a744563d98de7e1044f7699b0f38943",
+  "dist/liquid-d1/media/cats.jpg": "dea9e7ef97386345f7cff32f9055da4982da5471c48d575146c796ab4563b04e",
+  "dist/liquid-d1/media/red-zh.wav": "707761c93aaf168500afb03eb531ca79f50d8e16117222d03896893beb6c9976",
+  "dist/liquid-d1/media/refund-en.wav": "c075ef998af386e8a2bf576f5f475b282e153712c5f57c304d5dc4e4e28976d9",
+  "dist/liquid-d1/media/refund-zh.wav": "454071f89dcbccadbf4868893c583608ed8d3b2d9fd168af3006cc4abd7e2972",
+  "dist/liquid-d1/media/shipping-en.wav": "278242c85635312e044dda554cf2082470389e1769b2208861345a458b09b3e3",
+  "dist/liquid-d1/media/shipping-zh.wav": "c340e9de4af62a5349e2af64f467fcfa642dae0ee09ed7ce9f255684b53dd3aa",
+  "dist/liquid-d1/media/silence.wav": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+  "dist/liquid-d1/media/spoken-question.wav": "942474c3a7d295a7d698ecdc4099b61f3eff6f5d95dbc137145123863db32a4e",
+  "dist/liquid-d1/media/technical-en.wav": "c49cbc38d387f5e31970759e25514df3c4a0d7bfa02af656b41ff1f5d74deeac",
+  "dist/liquid-d1/media/technical-zh.wav": "15c1cc12ebecadb80daf834e7a26dc1a7f7a40a1c12315f1c53e12dbc73d8470",
+  "dist/liquid-d1/media/tone.wav": "4ffb72be5d0dab0c7012497cdf2c371920715aefacd64eb0c7a85355f057440f",
+  "tests/evaluation/liquid_d1_media.py": "f406699a1c7700d63eedc93d3074c55b3a079113b0babb95683369066569f214",
+  "tests/evaluation/liquid-d1-media.json": "d8f58fa2d9a9a8f07148654ad413498b6d6ec8b38096df368dcd41927c30038c",
+  "dist/liquid-d1/media/manifest.json": "5c2b7c7704ac96aa6938c117ab6bca2d7da15f140cb70d43d8724577a1fe6976"
+}
