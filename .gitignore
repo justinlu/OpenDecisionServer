@@ -4,6 +4,7 @@ bin/
 dist/
 lib/
 models/chinese-decision-2b/
+models/d1-2b/
 *.test
 :memory:.ses
 
