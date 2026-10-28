@@ -1,0 +1,2277 @@
+{
+  "files": 324,
+  "total_seconds": 1171.644499999999,
+  "max_seconds": 6.0305625,
+  "total_bytes": 38544192,
+  "files_with_clipping": 0,
+  "entries": [
+    {
+      "file": "audio/balance-01-inquire--eddy--clean.wav",
+      "seconds": 2.224375,
+      "peak": 21776,
+      "rms": 3160.4295763831415,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-01-inquire--tingting--clean.wav",
+      "seconds": 2.226875,
+      "peak": 19751,
+      "rms": 4130.175814775911,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-01-navigate--eddy--clean.wav",
+      "seconds": 2.9875,
+      "peak": 22325,
+      "rms": 2673.69902627357,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-01-navigate--tingting--clean.wav",
+      "seconds": 3.1375625,
+      "peak": 23772,
+      "rms": 4007.006018232912,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-inquire--eddy--clean.wav",
+      "seconds": 3.3746875,
+      "peak": 22130,
+      "rms": 2882.949909907466,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-inquire--eddy--noise15.wav",
+      "seconds": 3.3746875,
+      "peak": 22299,
+      "rms": 2925.8413919071686,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-inquire--tingting--clean.wav",
+      "seconds": 3.5099375,
+      "peak": 21276,
+      "rms": 4197.6675894637565,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-inquire--tingting--noise15.wav",
+      "seconds": 3.5099375,
+      "peak": 21502,
+      "rms": 4258.765739755491,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-navigate--eddy--clean.wav",
+      "seconds": 2.42075,
+      "peak": 22211,
+      "rms": 2847.133629043731,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-navigate--eddy--noise15.wav",
+      "seconds": 2.42075,
+      "peak": 21706,
+      "rms": 2892.602854467843,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-navigate--tingting--clean.wav",
+      "seconds": 2.4663125,
+      "peak": 19596,
+      "rms": 4123.032110245321,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-02-navigate--tingting--noise15.wav",
+      "seconds": 2.4663125,
+      "peak": 19551,
+      "rms": 4184.500525541885,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-03-inquire--eddy--clean.wav",
+      "seconds": 2.8948125,
+      "peak": 16361,
+      "rms": 3033.4651080753038,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-03-inquire--tingting--clean.wav",
+      "seconds": 3.0074375,
+      "peak": 20271,
+      "rms": 4448.424948742563,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-03-navigate--eddy--clean.wav",
+      "seconds": 3.790875,
+      "peak": 22147,
+      "rms": 2741.8317151830965,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-03-navigate--tingting--clean.wav",
+      "seconds": 3.767,
+      "peak": 22171,
+      "rms": 4157.074508817576,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-04-inquire--eddy--clean.wav",
+      "seconds": 4.2883125,
+      "peak": 23552,
+      "rms": 2942.468218346543,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-04-inquire--tingting--clean.wav",
+      "seconds": 4.3458125,
+      "peak": 23400,
+      "rms": 4026.2663597082483,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-04-navigate--eddy--clean.wav",
+      "seconds": 4.1321875,
+      "peak": 23249,
+      "rms": 2848.9539473597697,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-04-navigate--tingting--clean.wav",
+      "seconds": 4.1009375,
+      "peak": 21769,
+      "rms": 3807.3662756585454,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-inquire--eddy--clean.wav",
+      "seconds": 4.5253125,
+      "peak": 20794,
+      "rms": 2881.4150778125795,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-inquire--eddy--noise15.wav",
+      "seconds": 4.5253125,
+      "peak": 21218,
+      "rms": 2930.147880722124,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-inquire--tingting--clean.wav",
+      "seconds": 4.7163125,
+      "peak": 20355,
+      "rms": 4069.4624090141556,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-inquire--tingting--noise15.wav",
+      "seconds": 4.7163125,
+      "peak": 20427,
+      "rms": 4128.663265670768,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-navigate--eddy--clean.wav",
+      "seconds": 4.0973125,
+      "peak": 23094,
+      "rms": 2704.852726364439,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-navigate--eddy--noise15.wav",
+      "seconds": 4.0973125,
+      "peak": 22653,
+      "rms": 2742.4211901746585,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-navigate--tingting--clean.wav",
+      "seconds": 4.3429375,
+      "peak": 23383,
+      "rms": 3863.8013658075415,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/balance-05-navigate--tingting--noise15.wav",
+      "seconds": 4.3429375,
+      "peak": 24708,
+      "rms": 3919.9999710909806,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-context--eddy--clean.wav",
+      "seconds": 2.28775,
+      "peak": 16229,
+      "rms": 2376.9662345448037,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-context--tingting--clean.wav",
+      "seconds": 2.1644375,
+      "peak": 20675,
+      "rms": 3588.026085573229,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-no-target--eddy--clean.wav",
+      "seconds": 1.9698125,
+      "peak": 16151,
+      "rms": 2251.3715884513117,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-no-target--tingting--clean.wav",
+      "seconds": 1.8775,
+      "peak": 20303,
+      "rms": 3518.26830135881,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-transfer--eddy--clean.wav",
+      "seconds": 2.594375,
+      "peak": 20238,
+      "rms": 2424.5948708818405,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-transfer--tingting--clean.wav",
+      "seconds": 2.3826875,
+      "peak": 18977,
+      "rms": 3818.0886274474456,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-withdraw--eddy--clean.wav",
+      "seconds": 2.525,
+      "peak": 16922,
+      "rms": 2292.717766695843,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/cancel-withdraw--tingting--clean.wav",
+      "seconds": 2.324875,
+      "peak": 21011,
+      "rms": 3283.6001283406695,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-bare-balance--eddy--clean.wav",
+      "seconds": 0.865625,
+      "peak": 12644,
+      "rms": 2468.350677170358,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-bare-balance--tingting--clean.wav",
+      "seconds": 0.5726875,
+      "peak": 15235,
+      "rms": 3917.6538669233296,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-bare-transfer--eddy--clean.wav",
+      "seconds": 0.987,
+      "peak": 16031,
+      "rms": 1963.6144366384851,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-bare-transfer--tingting--clean.wav",
+      "seconds": 0.661625,
+      "peak": 17747,
+      "rms": 3114.614119434285,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-deposit-withdraw--eddy--clean.wav",
+      "seconds": 3.045125,
+      "peak": 19271,
+      "rms": 2175.05860587729,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-deposit-withdraw--tingting--clean.wav",
+      "seconds": 3.1550625,
+      "peak": 24514,
+      "rms": 3532.275528514463,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-two-actions--eddy--clean.wav",
+      "seconds": 4.5424375,
+      "peak": 19855,
+      "rms": 2726.9597094326946,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-two-actions--tingting--clean.wav",
+      "seconds": 4.59125,
+      "peak": 25106,
+      "rms": 4187.0830123976475,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-unresolved-yes--eddy--clean.wav",
+      "seconds": 1.49575,
+      "peak": 17966,
+      "rms": 1910.5729421626606,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-unresolved-yes--tingting--clean.wav",
+      "seconds": 1.2606875,
+      "peak": 18431,
+      "rms": 3549.4064621641,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-unspecified--eddy--clean.wav",
+      "seconds": 1.6115625,
+      "peak": 20792,
+      "rms": 2485.4642276083882,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/clarify-unspecified--tingting--clean.wav",
+      "seconds": 1.4889375,
+      "peak": 22722,
+      "rms": 4640.767588998037,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/control-clicks.wav",
+      "seconds": 2.0,
+      "peak": 4500,
+      "rms": 337.5486451054129,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/control-noise.wav",
+      "seconds": 2.0,
+      "peak": 6176,
+      "rms": 1491.312292558973,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/control-silence.wav",
+      "seconds": 2.0,
+      "peak": 0,
+      "rms": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/control-tone.wav",
+      "seconds": 2.0,
+      "peak": 3000,
+      "rms": 2121.2683847170306,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-balance-definition--eddy--clean.wav",
+      "seconds": 3.2939375,
+      "peak": 21508,
+      "rms": 2817.719538553649,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-balance-definition--tingting--clean.wav",
+      "seconds": 3.347375,
+      "peak": 22166,
+      "rms": 3919.9309244099363,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-balance-go--eddy--clean.wav",
+      "seconds": 1.40925,
+      "peak": 21984,
+      "rms": 2367.3279077728107,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-balance-go--tingting--clean.wav",
+      "seconds": 1.1530625,
+      "peak": 20409,
+      "rms": 3561.4839440282367,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-loss-go--eddy--clean.wav",
+      "seconds": 2.7618125,
+      "peak": 16552,
+      "rms": 2243.899326031111,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-loss-go--tingting--clean.wav",
+      "seconds": 2.5944375,
+      "peak": 20114,
+      "rms": 3829.796237920344,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-loss-policy--eddy--clean.wav",
+      "seconds": 3.6523125,
+      "peak": 19168,
+      "rms": 2770.655852885023,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-loss-policy--tingting--clean.wav",
+      "seconds": 3.8291875,
+      "peak": 21469,
+      "rms": 3984.770047843785,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-phone-policy--eddy--clean.wav",
+      "seconds": 4.55425,
+      "peak": 18873,
+      "rms": 2797.062101633647,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-phone-policy--tingting--clean.wav",
+      "seconds": 4.5664375,
+      "peak": 23798,
+      "rms": 4143.697488827185,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-replace-go--eddy--clean.wav",
+      "seconds": 2.2763125,
+      "peak": 20882,
+      "rms": 2582.825321745785,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-replace-go--tingting--clean.wav",
+      "seconds": 2.069625,
+      "peak": 20137,
+      "rms": 3551.063995013064,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-statement-cost--eddy--clean.wav",
+      "seconds": 2.7445,
+      "peak": 21362,
+      "rms": 2554.559192951914,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-statement-cost--tingting--clean.wav",
+      "seconds": 2.5498125,
+      "peak": 21701,
+      "rms": 4146.515852460884,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-statement-go--eddy--clean.wav",
+      "seconds": 2.4266875,
+      "peak": 21075,
+      "rms": 2570.2566468025,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-statement-go--tingting--clean.wav",
+      "seconds": 2.2850625,
+      "peak": 19588,
+      "rms": 3988.789758752797,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-transfer-cost--eddy--clean.wav",
+      "seconds": 2.98175,
+      "peak": 18557,
+      "rms": 2767.3738263820164,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-transfer-cost--tingting--clean.wav",
+      "seconds": 3.0455,
+      "peak": 22842,
+      "rms": 3689.213484177061,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-transfer-go--eddy--clean.wav",
+      "seconds": 2.4554375,
+      "peak": 21353,
+      "rms": 2452.6782000794165,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/ctx-transfer-go--tingting--clean.wav",
+      "seconds": 2.2475625,
+      "peak": 21631,
+      "rms": 3818.187023061031,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-01-inquire--eddy--clean.wav",
+      "seconds": 3.1320625,
+      "peak": 22911,
+      "rms": 2695.7332035088025,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-01-inquire--tingting--clean.wav",
+      "seconds": 2.929375,
+      "peak": 19526,
+      "rms": 4324.218523290264,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-01-navigate--eddy--clean.wav",
+      "seconds": 4.022125,
+      "peak": 22720,
+      "rms": 2496.7490132051935,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-01-navigate--tingting--clean.wav",
+      "seconds": 3.732125,
+      "peak": 22161,
+      "rms": 3900.860238568843,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-02-inquire--eddy--clean.wav",
+      "seconds": 3.2416875,
+      "peak": 20661,
+      "rms": 2806.7477811215836,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-02-inquire--tingting--clean.wav",
+      "seconds": 3.0505625,
+      "peak": 19080,
+      "rms": 4063.0251189063174,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-02-navigate--eddy--clean.wav",
+      "seconds": 2.7098125,
+      "peak": 20205,
+      "rms": 2647.8620072343065,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-02-navigate--tingting--clean.wav",
+      "seconds": 2.3850625,
+      "peak": 19355,
+      "rms": 4219.310668390167,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-03-inquire--eddy--clean.wav",
+      "seconds": 3.513625,
+      "peak": 21920,
+      "rms": 2655.2120856342754,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-03-inquire--tingting--clean.wav",
+      "seconds": 3.12675,
+      "peak": 19482,
+      "rms": 4024.6773535367975,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-03-navigate--eddy--clean.wav",
+      "seconds": 3.837125,
+      "peak": 21464,
+      "rms": 2559.18910927701,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-03-navigate--tingting--clean.wav",
+      "seconds": 3.48825,
+      "peak": 22077,
+      "rms": 4146.360433227945,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-04-inquire--eddy--clean.wav",
+      "seconds": 4.79125,
+      "peak": 21790,
+      "rms": 2529.009585159545,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-04-inquire--tingting--clean.wav",
+      "seconds": 4.832625,
+      "peak": 20491,
+      "rms": 4045.8364699336116,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-04-navigate--eddy--clean.wav",
+      "seconds": 4.19,
+      "peak": 21132,
+      "rms": 2412.622242142072,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-04-navigate--tingting--clean.wav",
+      "seconds": 4.4144375,
+      "peak": 22743,
+      "rms": 4005.199117504978,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-inquire--eddy--clean.wav",
+      "seconds": 4.9645,
+      "peak": 18084,
+      "rms": 2707.361721956722,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-inquire--eddy--noise15.wav",
+      "seconds": 4.9645,
+      "peak": 18528,
+      "rms": 2749.1652216702787,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-inquire--tingting--clean.wav",
+      "seconds": 5.00475,
+      "peak": 22911,
+      "rms": 4100.476187042186,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-inquire--tingting--noise15.wav",
+      "seconds": 5.00475,
+      "peak": 23314,
+      "rms": 4165.342436400715,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-navigate--eddy--clean.wav",
+      "seconds": 4.5715625,
+      "peak": 19662,
+      "rms": 2360.431355625406,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-navigate--eddy--noise15.wav",
+      "seconds": 4.5715625,
+      "peak": 19904,
+      "rms": 2396.5731726439653,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-navigate--tingting--clean.wav",
+      "seconds": 4.460875,
+      "peak": 20964,
+      "rms": 3689.925858565056,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/deposit-05-navigate--tingting--noise15.wav",
+      "seconds": 4.460875,
+      "peak": 21644,
+      "rms": 3744.8048692254383,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-context--eddy--clean.wav",
+      "seconds": 3.1260625,
+      "peak": 20704,
+      "rms": 2914.7816970716453,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-context--tingting--clean.wav",
+      "seconds": 3.14675,
+      "peak": 21138,
+      "rms": 4129.162629889074,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-general--eddy--clean.wav",
+      "seconds": 3.7330625,
+      "peak": 18092,
+      "rms": 2701.2160339459915,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-general--tingting--clean.wav",
+      "seconds": 3.7901875,
+      "peak": 20247,
+      "rms": 3962.8868003337693,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-loss--eddy--clean.wav",
+      "seconds": 5.8548125,
+      "peak": 23350,
+      "rms": 2908.2996019125444,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-loss--tingting--clean.wav",
+      "seconds": 6.0305625,
+      "peak": 20991,
+      "rms": 4056.257856657707,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-transfer--eddy--clean.wav",
+      "seconds": 3.392,
+      "peak": 21901,
+      "rms": 2752.298575878884,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/human-transfer--tingting--clean.wav",
+      "seconds": 3.4015625,
+      "peak": 20111,
+      "rms": 4165.265027549746,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-01-inquire--eddy--clean.wav",
+      "seconds": 3.6985625,
+      "peak": 22284,
+      "rms": 2800.59643496173,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-01-inquire--tingting--clean.wav",
+      "seconds": 3.7785,
+      "peak": 22205,
+      "rms": 4054.685475249062,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-01-navigate--eddy--clean.wav",
+      "seconds": 3.975875,
+      "peak": 22571,
+      "rms": 3039.2159979423286,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-01-navigate--tingting--clean.wav",
+      "seconds": 3.9875625,
+      "peak": 21980,
+      "rms": 4018.274189868253,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-inquire--eddy--clean.wav",
+      "seconds": 3.3516875,
+      "peak": 21300,
+      "rms": 2966.093551428291,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-inquire--eddy--noise15.wav",
+      "seconds": 3.3516875,
+      "peak": 21855,
+      "rms": 3012.886203201898,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-inquire--tingting--clean.wav",
+      "seconds": 3.33725,
+      "peak": 23916,
+      "rms": 4083.1177208945796,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-inquire--tingting--noise15.wav",
+      "seconds": 3.33725,
+      "peak": 25794,
+      "rms": 4139.792005896709,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-navigate--eddy--clean.wav",
+      "seconds": 2.5768125,
+      "peak": 23780,
+      "rms": 3041.436821371254,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-navigate--eddy--noise15.wav",
+      "seconds": 2.5768125,
+      "peak": 23982,
+      "rms": 3089.298702820432,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-navigate--tingting--clean.wav",
+      "seconds": 2.4915625,
+      "peak": 20660,
+      "rms": 4354.469103298252,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-02-navigate--tingting--noise15.wav",
+      "seconds": 2.4915625,
+      "peak": 21100,
+      "rms": 4414.610596266533,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-03-inquire--eddy--clean.wav",
+      "seconds": 2.9353125,
+      "peak": 21279,
+      "rms": 2889.1901468237347,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-03-inquire--tingting--clean.wav",
+      "seconds": 3.082125,
+      "peak": 19738,
+      "rms": 4003.048974819152,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-03-navigate--eddy--clean.wav",
+      "seconds": 4.548125,
+      "peak": 21143,
+      "rms": 2464.0892259298184,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-03-navigate--tingting--clean.wav",
+      "seconds": 4.5925625,
+      "peak": 22153,
+      "rms": 3967.4999051450322,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-04-inquire--eddy--clean.wav",
+      "seconds": 3.976125,
+      "peak": 23355,
+      "rms": 2849.1743277539913,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-04-inquire--tingting--clean.wav",
+      "seconds": 4.18325,
+      "peak": 23569,
+      "rms": 4014.7861875467006,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-04-navigate--eddy--clean.wav",
+      "seconds": 4.484625,
+      "peak": 21133,
+      "rms": 2692.559499251348,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-04-navigate--tingting--clean.wav",
+      "seconds": 4.6841875,
+      "peak": 21870,
+      "rms": 3807.8649139182803,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-inquire--eddy--clean.wav",
+      "seconds": 4.583125,
+      "peak": 22703,
+      "rms": 2781.9768099580097,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-inquire--eddy--noise15.wav",
+      "seconds": 4.583125,
+      "peak": 22555,
+      "rms": 2829.0581313109906,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-inquire--tingting--clean.wav",
+      "seconds": 4.6814375,
+      "peak": 19668,
+      "rms": 3832.9649752842256,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-inquire--tingting--noise15.wav",
+      "seconds": 4.6814375,
+      "peak": 20406,
+      "rms": 3893.635076481538,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-navigate--eddy--clean.wav",
+      "seconds": 4.6525,
+      "peak": 22514,
+      "rms": 2720.074125524461,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-navigate--eddy--noise15.wav",
+      "seconds": 4.6525,
+      "peak": 22919,
+      "rms": 2762.5092781567637,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-navigate--tingting--clean.wav",
+      "seconds": 4.635,
+      "peak": 21059,
+      "rms": 3782.8314371304173,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/loss-05-navigate--tingting--noise15.wav",
+      "seconds": 4.635,
+      "peak": 21337,
+      "rms": 3839.367254919741,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-01-inquire--eddy--clean.wav",
+      "seconds": 2.60575,
+      "peak": 21389,
+      "rms": 2568.5532159822997,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-01-inquire--tingting--clean.wav",
+      "seconds": 2.5244375,
+      "peak": 19832,
+      "rms": 3942.841760353344,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-01-navigate--eddy--clean.wav",
+      "seconds": 3.9180625,
+      "peak": 21354,
+      "rms": 2598.319931994086,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-01-navigate--tingting--clean.wav",
+      "seconds": 3.8598125,
+      "peak": 18135,
+      "rms": 4027.7869112775575,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-02-inquire--eddy--clean.wav",
+      "seconds": 2.906375,
+      "peak": 21382,
+      "rms": 3134.7584149936206,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-02-inquire--tingting--clean.wav",
+      "seconds": 2.93075,
+      "peak": 20004,
+      "rms": 4085.4968722346766,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-02-navigate--eddy--clean.wav",
+      "seconds": 3.259,
+      "peak": 24441,
+      "rms": 2908.1764847278487,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-02-navigate--tingting--clean.wav",
+      "seconds": 3.14175,
+      "peak": 19320,
+      "rms": 4359.730141399211,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-03-inquire--eddy--clean.wav",
+      "seconds": 3.085625,
+      "peak": 23487,
+      "rms": 2950.5355245769474,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-03-inquire--tingting--clean.wav",
+      "seconds": 3.1720625,
+      "peak": 19895,
+      "rms": 4171.515576477664,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-03-navigate--eddy--clean.wav",
+      "seconds": 3.6925,
+      "peak": 21551,
+      "rms": 2530.1620037961247,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-03-navigate--tingting--clean.wav",
+      "seconds": 3.66375,
+      "peak": 21587,
+      "rms": 4157.137147585448,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-inquire--eddy--clean.wav",
+      "seconds": 4.4036875,
+      "peak": 22855,
+      "rms": 2709.8409576938493,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-inquire--eddy--noise15.wav",
+      "seconds": 4.4036875,
+      "peak": 23043,
+      "rms": 2752.933332413381,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-inquire--tingting--clean.wav",
+      "seconds": 4.4751875,
+      "peak": 21887,
+      "rms": 4090.7891857354466,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-inquire--tingting--noise15.wav",
+      "seconds": 4.4751875,
+      "peak": 21930,
+      "rms": 4158.069301407568,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-navigate--eddy--clean.wav",
+      "seconds": 4.953125,
+      "peak": 21760,
+      "rms": 2658.8013041054674,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-navigate--eddy--noise15.wav",
+      "seconds": 4.953125,
+      "peak": 21980,
+      "rms": 2701.595477021629,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-navigate--tingting--clean.wav",
+      "seconds": 5.1690625,
+      "peak": 21971,
+      "rms": 3918.2194862907213,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-04-navigate--tingting--noise15.wav",
+      "seconds": 5.1690625,
+      "peak": 22888,
+      "rms": 3980.4385812889486,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-inquire--eddy--clean.wav",
+      "seconds": 5.1496875,
+      "peak": 20937,
+      "rms": 2896.100676025456,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-inquire--eddy--noise15.wav",
+      "seconds": 5.1496875,
+      "peak": 21054,
+      "rms": 2940.9769937817873,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-inquire--tingting--clean.wav",
+      "seconds": 5.4825625,
+      "peak": 19803,
+      "rms": 3952.759758847457,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-inquire--tingting--noise15.wav",
+      "seconds": 5.4825625,
+      "peak": 19882,
+      "rms": 4015.1502513405035,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-navigate--eddy--clean.wav",
+      "seconds": 4.8028125,
+      "peak": 21782,
+      "rms": 2738.7068464228705,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-navigate--eddy--noise15.wav",
+      "seconds": 4.8028125,
+      "peak": 21492,
+      "rms": 2782.206642865454,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-navigate--tingting--clean.wav",
+      "seconds": 5.0761875,
+      "peak": 18541,
+      "rms": 3986.3197530158786,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/mobile-05-navigate--tingting--noise15.wav",
+      "seconds": 5.0761875,
+      "peak": 19342,
+      "rms": 4047.153303388513,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-food--eddy--clean.wav",
+      "seconds": 1.9873125,
+      "peak": 18869,
+      "rms": 2641.5943030426665,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-food--tingting--clean.wav",
+      "seconds": 1.937625,
+      "peak": 20177,
+      "rms": 4307.164758918222,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-greeting--eddy--clean.wav",
+      "seconds": 1.8830625,
+      "peak": 13589,
+      "rms": 1986.4187031265346,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-greeting--tingting--clean.wav",
+      "seconds": 1.517,
+      "peak": 17418,
+      "rms": 3357.401480573199,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-negated-need--eddy--clean.wav",
+      "seconds": 3.975875,
+      "peak": 16773,
+      "rms": 2793.136747479172,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-negated-need--tingting--clean.wav",
+      "seconds": 4.3010625,
+      "peak": 21086,
+      "rms": 4040.1526647156525,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-weather--eddy--clean.wav",
+      "seconds": 2.2241875,
+      "peak": 13388,
+      "rms": 2435.334351293644,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/other-weather--tingting--clean.wav",
+      "seconds": 2.2009375,
+      "peak": 22993,
+      "rms": 4271.970076922702,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-01-inquire--eddy--clean.wav",
+      "seconds": 3.0104375,
+      "peak": 19772,
+      "rms": 2834.9569705356653,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-01-inquire--tingting--clean.wav",
+      "seconds": 3.16975,
+      "peak": 24253,
+      "rms": 4313.761866627662,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-01-navigate--eddy--clean.wav",
+      "seconds": 4.1724375,
+      "peak": 21888,
+      "rms": 2925.052862886039,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-01-navigate--tingting--clean.wav",
+      "seconds": 4.393875,
+      "peak": 21270,
+      "rms": 4169.7068818100315,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-inquire--eddy--clean.wav",
+      "seconds": 3.9065625,
+      "peak": 18463,
+      "rms": 2615.465144941918,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-inquire--eddy--noise15.wav",
+      "seconds": 3.9065625,
+      "peak": 19214,
+      "rms": 2658.3365300231367,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-inquire--tingting--clean.wav",
+      "seconds": 3.96375,
+      "peak": 20932,
+      "rms": 4139.305382705287,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-inquire--tingting--noise15.wav",
+      "seconds": 3.96375,
+      "peak": 20784,
+      "rms": 4199.241579154236,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-navigate--eddy--clean.wav",
+      "seconds": 3.2648125,
+      "peak": 20499,
+      "rms": 2922.1781327482795,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-navigate--eddy--noise15.wav",
+      "seconds": 3.2648125,
+      "peak": 21053,
+      "rms": 2971.9159022878907,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-navigate--tingting--clean.wav",
+      "seconds": 3.4531875,
+      "peak": 19110,
+      "rms": 4366.925645255816,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-02-navigate--tingting--noise15.wav",
+      "seconds": 3.4531875,
+      "peak": 20145,
+      "rms": 4431.40324101478,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-03-inquire--eddy--clean.wav",
+      "seconds": 4.681375,
+      "peak": 22030,
+      "rms": 2962.8784394400345,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-03-inquire--tingting--clean.wav",
+      "seconds": 4.8116875,
+      "peak": 20659,
+      "rms": 4126.4789284909,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-03-navigate--eddy--clean.wav",
+      "seconds": 4.530875,
+      "peak": 18849,
+      "rms": 2833.6221590754376,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-03-navigate--tingting--clean.wav",
+      "seconds": 4.6958125,
+      "peak": 22079,
+      "rms": 4093.082465465865,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-04-inquire--eddy--clean.wav",
+      "seconds": 5.0225,
+      "peak": 19059,
+      "rms": 2826.4706850174152,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-04-inquire--tingting--clean.wav",
+      "seconds": 5.2735625,
+      "peak": 20355,
+      "rms": 4098.959974681567,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-04-navigate--eddy--clean.wav",
+      "seconds": 4.4675,
+      "peak": 21283,
+      "rms": 2699.3728143497683,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-04-navigate--tingting--clean.wav",
+      "seconds": 4.5885625,
+      "peak": 21753,
+      "rms": 4027.8833797205125,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-inquire--eddy--clean.wav",
+      "seconds": 4.721875,
+      "peak": 18578,
+      "rms": 2769.0805218529895,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-inquire--eddy--noise15.wav",
+      "seconds": 4.721875,
+      "peak": 19166,
+      "rms": 2817.2578104208415,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-inquire--tingting--clean.wav",
+      "seconds": 4.9020625,
+      "peak": 23385,
+      "rms": 4216.9258250088915,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-inquire--tingting--noise15.wav",
+      "seconds": 4.9020625,
+      "peak": 22905,
+      "rms": 4281.825734643529,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-navigate--eddy--clean.wav",
+      "seconds": 4.6409375,
+      "peak": 20968,
+      "rms": 2717.9625736274625,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-navigate--eddy--noise15.wav",
+      "seconds": 4.6409375,
+      "peak": 21124,
+      "rms": 2761.014846025717,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-navigate--tingting--clean.wav",
+      "seconds": 4.855625,
+      "peak": 24498,
+      "rms": 4150.913900517832,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/phone-05-navigate--tingting--noise15.wav",
+      "seconds": 4.855625,
+      "peak": 22810,
+      "rms": 4210.878574160945,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-01-inquire--eddy--clean.wav",
+      "seconds": 3.051125,
+      "peak": 18177,
+      "rms": 2808.139848129591,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-01-inquire--tingting--clean.wav",
+      "seconds": 2.9178125,
+      "peak": 20261,
+      "rms": 4198.195236759033,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-01-navigate--eddy--clean.wav",
+      "seconds": 4.022125,
+      "peak": 22120,
+      "rms": 2823.7018909095395,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-01-navigate--tingting--clean.wav",
+      "seconds": 4.034,
+      "peak": 22697,
+      "rms": 4058.8918339280444,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-inquire--eddy--clean.wav",
+      "seconds": 2.721375,
+      "peak": 18502,
+      "rms": 2744.431122402945,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-inquire--eddy--noise15.wav",
+      "seconds": 2.721375,
+      "peak": 18328,
+      "rms": 2786.19840437662,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-inquire--tingting--clean.wav",
+      "seconds": 2.736625,
+      "peak": 19569,
+      "rms": 4050.550109247594,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-inquire--tingting--noise15.wav",
+      "seconds": 2.736625,
+      "peak": 20449,
+      "rms": 4116.749377170184,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-navigate--eddy--clean.wav",
+      "seconds": 3.259,
+      "peak": 18698,
+      "rms": 2802.9639328633816,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-navigate--eddy--noise15.wav",
+      "seconds": 3.259,
+      "peak": 19182,
+      "rms": 2846.315948410475,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-navigate--tingting--clean.wav",
+      "seconds": 3.1765625,
+      "peak": 20586,
+      "rms": 4306.006512227404,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-02-navigate--tingting--noise15.wav",
+      "seconds": 3.1765625,
+      "peak": 20349,
+      "rms": 4367.55431626205,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-03-inquire--eddy--clean.wav",
+      "seconds": 3.6695,
+      "peak": 21838,
+      "rms": 3075.3097753259185,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-03-inquire--tingting--clean.wav",
+      "seconds": 3.793125,
+      "peak": 21891,
+      "rms": 4303.723708660644,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-03-navigate--eddy--clean.wav",
+      "seconds": 4.08575,
+      "peak": 23443,
+      "rms": 2797.1495509424876,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-03-navigate--tingting--clean.wav",
+      "seconds": 4.01475,
+      "peak": 21956,
+      "rms": 4108.448625771991,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-04-inquire--eddy--clean.wav",
+      "seconds": 4.3403125,
+      "peak": 18346,
+      "rms": 2875.9577408843443,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-04-inquire--tingting--clean.wav",
+      "seconds": 4.437625,
+      "peak": 22649,
+      "rms": 4071.6102672724746,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-04-navigate--eddy--clean.wav",
+      "seconds": 4.022125,
+      "peak": 19730,
+      "rms": 2661.4400635277566,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-04-navigate--tingting--clean.wav",
+      "seconds": 4.045625,
+      "peak": 21761,
+      "rms": 3829.424874496352,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-05-inquire--eddy--clean.wav",
+      "seconds": 5.2766875,
+      "peak": 19063,
+      "rms": 2885.979535151649,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-05-inquire--tingting--clean.wav",
+      "seconds": 5.562,
+      "peak": 21254,
+      "rms": 4023.5255427150278,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-05-navigate--eddy--clean.wav",
+      "seconds": 4.9415625,
+      "peak": 23326,
+      "rms": 2726.065862520933,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/pin-05-navigate--tingting--clean.wav",
+      "seconds": 5.064625,
+      "peak": 22634,
+      "rms": 3866.654948952863,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-01-inquire--eddy--clean.wav",
+      "seconds": 2.9354375,
+      "peak": 22214,
+      "rms": 2728.159734028636,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-01-inquire--tingting--clean.wav",
+      "seconds": 2.96575,
+      "peak": 25112,
+      "rms": 4098.470739224348,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-01-navigate--eddy--clean.wav",
+      "seconds": 4.762125,
+      "peak": 23240,
+      "rms": 2720.9514286841013,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-01-navigate--tingting--clean.wav",
+      "seconds": 4.5796875,
+      "peak": 24507,
+      "rms": 3770.9893607036,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-02-inquire--eddy--clean.wav",
+      "seconds": 2.964375,
+      "peak": 22814,
+      "rms": 2957.340663237803,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-02-inquire--tingting--clean.wav",
+      "seconds": 2.7890625,
+      "peak": 22018,
+      "rms": 4165.8764844881325,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-02-navigate--eddy--clean.wav",
+      "seconds": 3.2936875,
+      "peak": 23884,
+      "rms": 3004.352987965539,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-02-navigate--tingting--clean.wav",
+      "seconds": 2.9908125,
+      "peak": 22147,
+      "rms": 4270.780713478325,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-03-inquire--eddy--clean.wav",
+      "seconds": 2.363125,
+      "peak": 22542,
+      "rms": 3107.290743452897,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-03-inquire--tingting--clean.wav",
+      "seconds": 2.220125,
+      "peak": 20942,
+      "rms": 3763.828922402545,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-03-navigate--eddy--clean.wav",
+      "seconds": 3.3573125,
+      "peak": 23355,
+      "rms": 2649.416041701816,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-03-navigate--tingting--clean.wav",
+      "seconds": 3.2833125,
+      "peak": 21972,
+      "rms": 4006.1389165923406,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-04-inquire--eddy--clean.wav",
+      "seconds": 4.2649375,
+      "peak": 23039,
+      "rms": 3043.101139527231,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-04-inquire--tingting--clean.wav",
+      "seconds": 4.2894375,
+      "peak": 21469,
+      "rms": 3654.246439361818,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-04-navigate--eddy--clean.wav",
+      "seconds": 5.1034375,
+      "peak": 22738,
+      "rms": 2684.9530637089365,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-04-navigate--tingting--clean.wav",
+      "seconds": 5.145875,
+      "peak": 22379,
+      "rms": 3726.3618728239985,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-inquire--eddy--clean.wav",
+      "seconds": 4.1090625,
+      "peak": 21724,
+      "rms": 2676.092797098275,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-inquire--eddy--noise15.wav",
+      "seconds": 4.1090625,
+      "peak": 22304,
+      "rms": 2722.8906190051766,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-inquire--tingting--clean.wav",
+      "seconds": 4.2635,
+      "peak": 20643,
+      "rms": 4049.972663920171,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-inquire--tingting--noise15.wav",
+      "seconds": 4.2635,
+      "peak": 20775,
+      "rms": 4115.907072593782,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-navigate--eddy--clean.wav",
+      "seconds": 4.23625,
+      "peak": 22550,
+      "rms": 2843.336179085088,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-navigate--eddy--noise15.wav",
+      "seconds": 4.23625,
+      "peak": 22495,
+      "rms": 2886.612167832749,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-navigate--tingting--clean.wav",
+      "seconds": 4.275125,
+      "peak": 20387,
+      "rms": 3771.7946726731393,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/replace-05-navigate--tingting--noise15.wav",
+      "seconds": 4.275125,
+      "peak": 20121,
+      "rms": 3830.769527176739,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-01-inquire--eddy--clean.wav",
+      "seconds": 2.860125,
+      "peak": 20977,
+      "rms": 2721.6197061048065,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-01-inquire--tingting--clean.wav",
+      "seconds": 2.8510625,
+      "peak": 21181,
+      "rms": 4402.184320024502,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-01-navigate--eddy--clean.wav",
+      "seconds": 3.999,
+      "peak": 18498,
+      "rms": 2534.5489376812693,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-01-navigate--tingting--clean.wav",
+      "seconds": 4.0108125,
+      "peak": 22781,
+      "rms": 4306.104375510399,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-02-inquire--eddy--clean.wav",
+      "seconds": 3.6348125,
+      "peak": 20680,
+      "rms": 2661.7182177647614,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-02-inquire--tingting--clean.wav",
+      "seconds": 3.715625,
+      "peak": 23133,
+      "rms": 4221.187169910218,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-02-navigate--eddy--clean.wav",
+      "seconds": 2.865875,
+      "peak": 22676,
+      "rms": 2852.4706687886483,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-02-navigate--tingting--clean.wav",
+      "seconds": 2.7121875,
+      "peak": 19170,
+      "rms": 4311.834470439746,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-03-inquire--eddy--clean.wav",
+      "seconds": 3.2245,
+      "peak": 21300,
+      "rms": 2606.6940429999536,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-03-inquire--tingting--clean.wav",
+      "seconds": 3.12825,
+      "peak": 18481,
+      "rms": 4260.438328242915,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-03-navigate--eddy--clean.wav",
+      "seconds": 3.7330625,
+      "peak": 19138,
+      "rms": 2591.194131962453,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-03-navigate--tingting--clean.wav",
+      "seconds": 3.650375,
+      "peak": 21943,
+      "rms": 4143.791196249962,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-inquire--eddy--clean.wav",
+      "seconds": 4.138,
+      "peak": 19063,
+      "rms": 2677.4971390857,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-inquire--eddy--noise15.wav",
+      "seconds": 4.138,
+      "peak": 19394,
+      "rms": 2720.0140018789375,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-inquire--tingting--clean.wav",
+      "seconds": 4.4735,
+      "peak": 22986,
+      "rms": 4136.765345330325,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-inquire--tingting--noise15.wav",
+      "seconds": 4.4735,
+      "peak": 24035,
+      "rms": 4208.104601197948,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-navigate--eddy--clean.wav",
+      "seconds": 3.77375,
+      "peak": 18375,
+      "rms": 2641.7936698396106,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-navigate--eddy--noise15.wav",
+      "seconds": 3.77375,
+      "peak": 18648,
+      "rms": 2685.830406079641,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-navigate--tingting--clean.wav",
+      "seconds": 3.7294375,
+      "peak": 22897,
+      "rms": 4259.4276760439125,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-04-navigate--tingting--noise15.wav",
+      "seconds": 3.7294375,
+      "peak": 23572,
+      "rms": 4325.775151375037,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-inquire--eddy--clean.wav",
+      "seconds": 4.1321875,
+      "peak": 22076,
+      "rms": 2769.5727272628124,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-inquire--eddy--noise15.wav",
+      "seconds": 4.1321875,
+      "peak": 23010,
+      "rms": 2813.538787018517,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-inquire--tingting--clean.wav",
+      "seconds": 4.5073125,
+      "peak": 19291,
+      "rms": 4108.001956711822,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-inquire--tingting--noise15.wav",
+      "seconds": 4.5073125,
+      "peak": 20082,
+      "rms": 4174.288288723711,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-navigate--eddy--clean.wav",
+      "seconds": 4.5484375,
+      "peak": 23808,
+      "rms": 2755.0757868252567,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-navigate--eddy--noise15.wav",
+      "seconds": 4.5484375,
+      "peak": 24229,
+      "rms": 2797.6149348918484,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-navigate--tingting--clean.wav",
+      "seconds": 4.646625,
+      "peak": 21765,
+      "rms": 3903.188935925208,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/statement-05-navigate--tingting--noise15.wav",
+      "seconds": 4.646625,
+      "peak": 23060,
+      "rms": 3963.517350546789,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-01-inquire--eddy--clean.wav",
+      "seconds": 3.045125,
+      "peak": 24622,
+      "rms": 2803.0818158578613,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-01-inquire--tingting--clean.wav",
+      "seconds": 2.9265625,
+      "peak": 20152,
+      "rms": 4280.250311659879,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-01-navigate--eddy--clean.wav",
+      "seconds": 3.3861875,
+      "peak": 16140,
+      "rms": 2441.3976875479852,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-01-navigate--tingting--clean.wav",
+      "seconds": 3.3025625,
+      "peak": 19060,
+      "rms": 3986.38987208232,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-inquire--eddy--clean.wav",
+      "seconds": 2.5595,
+      "peak": 20272,
+      "rms": 2840.6703992029065,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-inquire--eddy--noise15.wav",
+      "seconds": 2.5595,
+      "peak": 20795,
+      "rms": 2888.670630341537,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-inquire--tingting--clean.wav",
+      "seconds": 2.454,
+      "peak": 18445,
+      "rms": 4010.9535561928187,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-inquire--tingting--noise15.wav",
+      "seconds": 2.454,
+      "peak": 19241,
+      "rms": 4072.3174864063176,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-navigate--eddy--clean.wav",
+      "seconds": 2.8543125,
+      "peak": 22479,
+      "rms": 2832.209778608682,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-navigate--eddy--noise15.wav",
+      "seconds": 2.8543125,
+      "peak": 22872,
+      "rms": 2879.6423628816187,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-navigate--tingting--clean.wav",
+      "seconds": 2.72375,
+      "peak": 20694,
+      "rms": 4397.166125622729,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-02-navigate--tingting--noise15.wav",
+      "seconds": 2.72375,
+      "peak": 21243,
+      "rms": 4463.311921273887,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-03-inquire--eddy--clean.wav",
+      "seconds": 3.80825,
+      "peak": 21697,
+      "rms": 2821.7876155298236,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-03-inquire--tingting--clean.wav",
+      "seconds": 3.6685625,
+      "peak": 21469,
+      "rms": 4074.1642241263667,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-03-navigate--eddy--clean.wav",
+      "seconds": 3.3225,
+      "peak": 21143,
+      "rms": 2525.9789904874006,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-03-navigate--tingting--clean.wav",
+      "seconds": 3.2341875,
+      "peak": 21668,
+      "rms": 4096.933648339659,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-04-inquire--eddy--clean.wav",
+      "seconds": 4.4961875,
+      "peak": 22249,
+      "rms": 2767.121464564804,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-04-inquire--tingting--clean.wav",
+      "seconds": 4.3939375,
+      "peak": 23017,
+      "rms": 4135.630817602713,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-04-navigate--eddy--clean.wav",
+      "seconds": 4.8199375,
+      "peak": 21140,
+      "rms": 2674.683914324491,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-04-navigate--tingting--clean.wav",
+      "seconds": 4.6609375,
+      "peak": 23031,
+      "rms": 3871.2152093518384,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-inquire--eddy--clean.wav",
+      "seconds": 4.23625,
+      "peak": 19544,
+      "rms": 2839.5572485526,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-inquire--eddy--noise15.wav",
+      "seconds": 4.23625,
+      "peak": 19911,
+      "rms": 2889.5714244088354,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-inquire--tingting--clean.wav",
+      "seconds": 4.2286875,
+      "peak": 23380,
+      "rms": 4118.969723938457,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-inquire--tingting--noise15.wav",
+      "seconds": 4.2286875,
+      "peak": 24122,
+      "rms": 4184.4963086704865,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-navigate--eddy--clean.wav",
+      "seconds": 4.1090625,
+      "peak": 22029,
+      "rms": 2564.9653856443324,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-navigate--eddy--noise15.wav",
+      "seconds": 4.1090625,
+      "peak": 21913,
+      "rms": 2602.3638981262,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-navigate--tingting--clean.wav",
+      "seconds": 4.2635,
+      "peak": 22669,
+      "rms": 3912.275967256786,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/transfer-05-navigate--tingting--noise15.wav",
+      "seconds": 4.2635,
+      "peak": 23340,
+      "rms": 3976.8643191615683,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-01-inquire--eddy--clean.wav",
+      "seconds": 3.137625,
+      "peak": 19705,
+      "rms": 2742.671582611258,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-01-inquire--tingting--clean.wav",
+      "seconds": 3.0733125,
+      "peak": 20699,
+      "rms": 4235.458930846795,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-01-navigate--eddy--clean.wav",
+      "seconds": 3.744625,
+      "peak": 20638,
+      "rms": 2703.4005766080186,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-01-navigate--tingting--clean.wav",
+      "seconds": 3.6624375,
+      "peak": 20481,
+      "rms": 4053.4847800415337,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-inquire--eddy--clean.wav",
+      "seconds": 2.582625,
+      "peak": 20462,
+      "rms": 2749.7381419255644,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-inquire--eddy--noise15.wav",
+      "seconds": 2.582625,
+      "peak": 20603,
+      "rms": 2790.1474850942045,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-inquire--tingting--clean.wav",
+      "seconds": 2.446375,
+      "peak": 19981,
+      "rms": 3882.753129158443,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-inquire--tingting--noise15.wav",
+      "seconds": 2.446375,
+      "peak": 20114,
+      "rms": 3942.8815058609916,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-navigate--eddy--clean.wav",
+      "seconds": 2.519,
+      "peak": 21736,
+      "rms": 2831.3220305584255,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-navigate--eddy--noise15.wav",
+      "seconds": 2.519,
+      "peak": 22008,
+      "rms": 2872.75521536671,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-navigate--tingting--clean.wav",
+      "seconds": 2.282625,
+      "peak": 19320,
+      "rms": 4232.823553496699,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-02-navigate--tingting--noise15.wav",
+      "seconds": 2.282625,
+      "peak": 19509,
+      "rms": 4296.9477409048695,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-03-inquire--eddy--clean.wav",
+      "seconds": 3.12025,
+      "peak": 22166,
+      "rms": 2706.200657145556,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-03-inquire--tingting--clean.wav",
+      "seconds": 3.174875,
+      "peak": 22747,
+      "rms": 3987.440184925091,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-03-navigate--eddy--clean.wav",
+      "seconds": 4.2360625,
+      "peak": 23488,
+      "rms": 2775.10927950287,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-03-navigate--tingting--clean.wav",
+      "seconds": 3.9915625,
+      "peak": 21956,
+      "rms": 4098.701344427509,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-04-inquire--eddy--clean.wav",
+      "seconds": 4.4268125,
+      "peak": 18854,
+      "rms": 2694.249657068825,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-04-inquire--tingting--clean.wav",
+      "seconds": 4.6029375,
+      "peak": 22848,
+      "rms": 3717.531480798177,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-04-navigate--eddy--clean.wav",
+      "seconds": 3.3861875,
+      "peak": 16810,
+      "rms": 2642.9532036399037,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-04-navigate--tingting--clean.wav",
+      "seconds": 3.26775,
+      "peak": 20603,
+      "rms": 3708.5534367153177,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-05-inquire--eddy--clean.wav",
+      "seconds": 3.7390625,
+      "peak": 19288,
+      "rms": 2614.0921129799867,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-05-inquire--tingting--clean.wav",
+      "seconds": 3.6598125,
+      "peak": 20249,
+      "rms": 4107.65740325773,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-05-navigate--eddy--clean.wav",
+      "seconds": 4.687,
+      "peak": 18463,
+      "rms": 2405.9732293036595,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/withdraw-05-navigate--tingting--clean.wav",
+      "seconds": 4.79575,
+      "peak": 22374,
+      "rms": 3761.8604546439856,
+      "clipped_samples": 0
+    }
+  ]
+}

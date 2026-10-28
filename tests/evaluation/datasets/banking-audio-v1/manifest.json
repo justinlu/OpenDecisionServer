@@ -1,0 +1,2747 @@
+{
+  "version": "banking-audio-v1",
+  "inputs": {
+    "cases.jsonl": "0097dee503017e5bb16bc00169af7394eabe88834303b5bd298422e6891d3c6c",
+    "task.json": "bf2a7d8666707c73b22e7a9bfe294170cc874ffbe591e6ea723e35a0688f1cd8"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "voices": [
+    {
+      "id": "tingting",
+      "name": "Tingting (Chinese (China mainland))",
+      "rate": 190
+    },
+    {
+      "id": "eddy",
+      "name": "Eddy (Chinese (China mainland))",
+      "rate": 175
+    }
+  ],
+  "sample_rate": 16000,
+  "channels": 1,
+  "bits": 16,
+  "generator_sha256": "9380dfc53509fd346c26851d9fc27af7045df92ead7e7b68ecf9fb43147bd2d4",
+  "warning": "Synthetic TTS and synthetic noise; no real-speaker or real-ATM accuracy claim.",
+  "audio": [
+    {
+      "file": "audio/balance-01-inquire--eddy--clean.wav",
+      "case_id": "balance-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b5f8f8737b04806d67eb175101ac25f02c9b0201466eb220c6540a391a7475a5",
+      "seconds": 2.224375
+    },
+    {
+      "file": "audio/balance-01-inquire--tingting--clean.wav",
+      "case_id": "balance-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "fec586896de4930d61a725ba46d176690e284d6913d4f7b92158d4c6c018e310",
+      "seconds": 2.226875
+    },
+    {
+      "file": "audio/balance-01-navigate--eddy--clean.wav",
+      "case_id": "balance-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7282dd2249ec9389459ed40e51ad08b7ddb25c3ab10a79bf55ce5fe7b6820999",
+      "seconds": 2.9875
+    },
+    {
+      "file": "audio/balance-01-navigate--tingting--clean.wav",
+      "case_id": "balance-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "0126681c90568a018ad5775d2daed561b139ff12e6cfc2c2500d3d7c6dde2a8b",
+      "seconds": 3.1375625
+    },
+    {
+      "file": "audio/balance-02-inquire--eddy--clean.wav",
+      "case_id": "balance-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "cd70c2e1d1cbdd816d92429b213b24eec6e35edd32f6040d99410ec740175c32",
+      "seconds": 3.3746875
+    },
+    {
+      "file": "audio/balance-02-inquire--eddy--noise15.wav",
+      "case_id": "balance-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "a3817d94f304c0eb5ce0ed575151e454a6d570adfe38feb63a75f98a1c5b7c4c",
+      "seconds": 3.3746875,
+      "seed": 3472997170772367359,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-02-inquire--tingting--clean.wav",
+      "case_id": "balance-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "f831383cec4aa7d3129aaa36289257d4d9e0da9a383ea94aec1a75a90a8dd328",
+      "seconds": 3.5099375
+    },
+    {
+      "file": "audio/balance-02-inquire--tingting--noise15.wav",
+      "case_id": "balance-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "f3cb7d86d2f3820c70a292819084a2d379cf01c51cd5a658df167dc380e2e745",
+      "seconds": 3.5099375,
+      "seed": 4334009141692823118,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-02-navigate--eddy--clean.wav",
+      "case_id": "balance-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "9ecc6d0d251b17d20ead4b53879d0707344273d22775501235abf1e686c585fb",
+      "seconds": 2.42075
+    },
+    {
+      "file": "audio/balance-02-navigate--eddy--noise15.wav",
+      "case_id": "balance-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "d3597b10f20a203e70bd83795d157da5c3205b8db7872e77cb7ecebb67668924",
+      "seconds": 2.42075,
+      "seed": 10538929500899157722,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-02-navigate--tingting--clean.wav",
+      "case_id": "balance-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "36f39ec30c48b7d6d50ea178b16a0453580f815572a39bd82a8a3621ef3df088",
+      "seconds": 2.4663125
+    },
+    {
+      "file": "audio/balance-02-navigate--tingting--noise15.wav",
+      "case_id": "balance-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "fcf50a486bc64b297fe0dce5af378ba8d1566f56335f9ebb6760b4542ffda183",
+      "seconds": 2.4663125,
+      "seed": 8155856455287437888,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-03-inquire--eddy--clean.wav",
+      "case_id": "balance-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7282aa33818a835d5efe2854b911ae76242fda565460e12479e46ad5eeed9e6b",
+      "seconds": 2.8948125
+    },
+    {
+      "file": "audio/balance-03-inquire--tingting--clean.wav",
+      "case_id": "balance-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "b7e4a480461eac829283b42784ee8828b5f476bc444073c8102252668f67c676",
+      "seconds": 3.0074375
+    },
+    {
+      "file": "audio/balance-03-navigate--eddy--clean.wav",
+      "case_id": "balance-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "20490e10457d00b76b0c79711967771ac2aae7a86289a6d4f7b6d17940ec5912",
+      "seconds": 3.790875
+    },
+    {
+      "file": "audio/balance-03-navigate--tingting--clean.wav",
+      "case_id": "balance-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5b85fa0c817a4cafe32e99ab8e2571c88062bd699aad765894360d3b6e66e62e",
+      "seconds": 3.767
+    },
+    {
+      "file": "audio/balance-04-inquire--eddy--clean.wav",
+      "case_id": "balance-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "29abce3a411d65be4fba4657b1968f5379f36cb09d6d1d36272d2ed754f1cdf9",
+      "seconds": 4.2883125
+    },
+    {
+      "file": "audio/balance-04-inquire--tingting--clean.wav",
+      "case_id": "balance-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "c19e479c53963d6a394b0fe34703053834b97c4a5c898f3eaafa2573436df45b",
+      "seconds": 4.3458125
+    },
+    {
+      "file": "audio/balance-04-navigate--eddy--clean.wav",
+      "case_id": "balance-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "9ad56cc9f8e3d5605dfafe4c87155532a31225b3d15dc7ee4e0605d49e043c96",
+      "seconds": 4.1321875
+    },
+    {
+      "file": "audio/balance-04-navigate--tingting--clean.wav",
+      "case_id": "balance-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ebd9e0aa54fced120d57e7aa9c1dcf30efde01eefd51c3e9083b7e29a36e0967",
+      "seconds": 4.1009375
+    },
+    {
+      "file": "audio/balance-05-inquire--eddy--clean.wav",
+      "case_id": "balance-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "dee8fafc1ac6bce544889062b9f664a00eb2ba87e06d3f274d1aaf3955224667",
+      "seconds": 4.5253125
+    },
+    {
+      "file": "audio/balance-05-inquire--eddy--noise15.wav",
+      "case_id": "balance-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "d44d2b3f19a3f3a7c8dfecd4f149e864bec846eb7ed46c9e8a3fe5f867f7a6a2",
+      "seconds": 4.5253125,
+      "seed": 17044895315500878529,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-05-inquire--tingting--clean.wav",
+      "case_id": "balance-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7a0e50b1f6a1272c8f9b933a5a2b5b24f560c2d556a2ffe957739f3110d5ba6e",
+      "seconds": 4.7163125
+    },
+    {
+      "file": "audio/balance-05-inquire--tingting--noise15.wav",
+      "case_id": "balance-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "c42e823b5d65952aec522a6311c0fad500bac87acf3c903c506bd1c2a1fff13b",
+      "seconds": 4.7163125,
+      "seed": 13014635212609972630,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-05-navigate--eddy--clean.wav",
+      "case_id": "balance-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "cf39fd4bdd99a7bf910b6146068af97016f92bdb71849b07e6e59e513d83188a",
+      "seconds": 4.0973125
+    },
+    {
+      "file": "audio/balance-05-navigate--eddy--noise15.wav",
+      "case_id": "balance-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c913a6339eaa565a51702c11e4576e61826078c49ad5153549bc445d99486648",
+      "seconds": 4.0973125,
+      "seed": 10909626579102199266,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/balance-05-navigate--tingting--clean.wav",
+      "case_id": "balance-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "15c2e55026113351ad3687106375d7a0a096b5fbcf24923df7f10d8b6d8c9018",
+      "seconds": 4.3429375
+    },
+    {
+      "file": "audio/balance-05-navigate--tingting--noise15.wav",
+      "case_id": "balance-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "66892b18f842cff81c033871d15dcbfc92b427abae8596457ce455a185ce5f39",
+      "seconds": 4.3429375,
+      "seed": 13156187101142340296,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/cancel-context--eddy--clean.wav",
+      "case_id": "cancel-context",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "ec398351bfb2417dea4934071c6d21427b861cab56ba621ed9e601a15e572540",
+      "seconds": 2.28775
+    },
+    {
+      "file": "audio/cancel-context--tingting--clean.wav",
+      "case_id": "cancel-context",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "b44da6c8997a8b12e2697fcb42e3e42f1b595565c6d41d68484c2ee0552a6948",
+      "seconds": 2.1644375
+    },
+    {
+      "file": "audio/cancel-no-target--eddy--clean.wav",
+      "case_id": "cancel-no-target",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "56eecf2d7dbb638777fcf690fe2312ba8a652730d7a60d90d9af4ad48bb7b2a2",
+      "seconds": 1.9698125
+    },
+    {
+      "file": "audio/cancel-no-target--tingting--clean.wav",
+      "case_id": "cancel-no-target",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "0b48abad0cbe470eb61fc4174bf2f171c1eec0e7c3f28be142bab68d3539d24b",
+      "seconds": 1.8775
+    },
+    {
+      "file": "audio/cancel-transfer--eddy--clean.wav",
+      "case_id": "cancel-transfer",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b1a08e2797892ceb8d9eb017407ed8a0517c33d536649d29a1fd70af0a84f1c6",
+      "seconds": 2.594375
+    },
+    {
+      "file": "audio/cancel-transfer--tingting--clean.wav",
+      "case_id": "cancel-transfer",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "acd29956f3da281c0f44136caaab57958540c1f1a3c2e2ac0d5a0accdb470559",
+      "seconds": 2.3826875
+    },
+    {
+      "file": "audio/cancel-withdraw--eddy--clean.wav",
+      "case_id": "cancel-withdraw",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c94301a0f9664f8b44136a158c263d6bc3004f04b09586a9e879c34585af6555",
+      "seconds": 2.525
+    },
+    {
+      "file": "audio/cancel-withdraw--tingting--clean.wav",
+      "case_id": "cancel-withdraw",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "0b92df08f2457edd60d81633cb91d615f4ef647e657565968c1adcef66ebdfef",
+      "seconds": 2.324875
+    },
+    {
+      "file": "audio/clarify-bare-balance--eddy--clean.wav",
+      "case_id": "clarify-bare-balance",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "a5a6fedd0da491af7f1df14f9e2b8efcca1652baffe0a42dbaef720cab857e25",
+      "seconds": 0.865625
+    },
+    {
+      "file": "audio/clarify-bare-balance--tingting--clean.wav",
+      "case_id": "clarify-bare-balance",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d09643054042f195137753c4333807a67fcc37adfb1335ba8c8c35ea5c07644a",
+      "seconds": 0.5726875
+    },
+    {
+      "file": "audio/clarify-bare-transfer--eddy--clean.wav",
+      "case_id": "clarify-bare-transfer",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "37cb02fc1509ed1af175367b5f86d87e838956d5e04ef190df0190b0704d0a5e",
+      "seconds": 0.987
+    },
+    {
+      "file": "audio/clarify-bare-transfer--tingting--clean.wav",
+      "case_id": "clarify-bare-transfer",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "41cc62c936cc1243f4bd663620ff0a3fd24ab7fc8b55b9ee88714de1d8f9b26f",
+      "seconds": 0.661625
+    },
+    {
+      "file": "audio/clarify-deposit-withdraw--eddy--clean.wav",
+      "case_id": "clarify-deposit-withdraw",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fe023a7d1b63d2ee693d7fe16b7f41a7845906be8cb7902a3289b045c5dd5ebf",
+      "seconds": 3.045125
+    },
+    {
+      "file": "audio/clarify-deposit-withdraw--tingting--clean.wav",
+      "case_id": "clarify-deposit-withdraw",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7a270a778aa3a780d1f6d3a1d7c241ea2a9249ab90192581ef119f8bed63601c",
+      "seconds": 3.1550625
+    },
+    {
+      "file": "audio/clarify-two-actions--eddy--clean.wav",
+      "case_id": "clarify-two-actions",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "02bbb77e5e0a25793d1e43ca5692ab464eef14d36d5ae9d2061e9e9bd2650bfa",
+      "seconds": 4.5424375
+    },
+    {
+      "file": "audio/clarify-two-actions--tingting--clean.wav",
+      "case_id": "clarify-two-actions",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5756a6c15fb98032d57b73bd084b7cfb5fb63d73ffa4e7d06ddadac65d389197",
+      "seconds": 4.59125
+    },
+    {
+      "file": "audio/clarify-unresolved-yes--eddy--clean.wav",
+      "case_id": "clarify-unresolved-yes",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d65278c85a322493eb165f33ecc9da65d391f5d8379c4ba4533c6519b8d55f18",
+      "seconds": 1.49575
+    },
+    {
+      "file": "audio/clarify-unresolved-yes--tingting--clean.wav",
+      "case_id": "clarify-unresolved-yes",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "53c3935852234f8bc18a19f0b8a4155388d384153dbe8761df3cca471b74eb87",
+      "seconds": 1.2606875
+    },
+    {
+      "file": "audio/clarify-unspecified--eddy--clean.wav",
+      "case_id": "clarify-unspecified",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b6502da473655d824d565415848900d09be300a02cdf121cfb5e59442547c8c0",
+      "seconds": 1.6115625
+    },
+    {
+      "file": "audio/clarify-unspecified--tingting--clean.wav",
+      "case_id": "clarify-unspecified",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "663366315bae681d07494fe9393fbe67bd0215627565d16499345f789f676231",
+      "seconds": 1.4889375
+    },
+    {
+      "file": "audio/control-clicks.wav",
+      "case_id": "control-clicks",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "adaafe5b0c33aa22aafe43d7dbbedac01aa3c8856056cfa355a4def9f4139a6b",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-noise.wav",
+      "case_id": "control-noise",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "afb422f9ee67462e1d646a8742b9348e56e5884e8c4f52e3328f09e7275e9a4d",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-silence.wav",
+      "case_id": "control-silence",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-tone.wav",
+      "case_id": "control-tone",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "a59cf4129fe7e8529890311ee4b942b054cc8be72be03f51efdcf04a6e2b8cd6",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/ctx-balance-definition--eddy--clean.wav",
+      "case_id": "ctx-balance-definition",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "1614fd6939cd49f67348467ccb31e7018d8a1b92c5dd9d3f34864c09804a35bc",
+      "seconds": 3.2939375
+    },
+    {
+      "file": "audio/ctx-balance-definition--tingting--clean.wav",
+      "case_id": "ctx-balance-definition",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "373b10583170019a05bdab0dd50d3b7a04b8403d9a0cf4acabe5934eb7f2e406",
+      "seconds": 3.347375
+    },
+    {
+      "file": "audio/ctx-balance-go--eddy--clean.wav",
+      "case_id": "ctx-balance-go",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f8a23050311738649382ebdb370a9b8af945d2a126b3709fc3e038b35f47ddc3",
+      "seconds": 1.40925
+    },
+    {
+      "file": "audio/ctx-balance-go--tingting--clean.wav",
+      "case_id": "ctx-balance-go",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "8a5234a39f852e53de95e7b111090de68611c4eee5ff9b46fcec6762f0ea247b",
+      "seconds": 1.1530625
+    },
+    {
+      "file": "audio/ctx-loss-go--eddy--clean.wav",
+      "case_id": "ctx-loss-go",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c413aa77be953ee65f6a9a8d08e4c74752d50fd146fb59e1abecc78624d65bc0",
+      "seconds": 2.7618125
+    },
+    {
+      "file": "audio/ctx-loss-go--tingting--clean.wav",
+      "case_id": "ctx-loss-go",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "82b69f9c500860f4671db0002a9c6475d29dfb8aa42ad9df8ebaf64d50c998ff",
+      "seconds": 2.5944375
+    },
+    {
+      "file": "audio/ctx-loss-policy--eddy--clean.wav",
+      "case_id": "ctx-loss-policy",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "277a285a2b5d1283a63d1bd97c2bb0dc934669f86108b6824c349fdbd8c7fb37",
+      "seconds": 3.6523125
+    },
+    {
+      "file": "audio/ctx-loss-policy--tingting--clean.wav",
+      "case_id": "ctx-loss-policy",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "efd93f9ae1059d48f6bc58a4d14cbe7749506c85cad3150c2f6167e39112a43b",
+      "seconds": 3.8291875
+    },
+    {
+      "file": "audio/ctx-phone-policy--eddy--clean.wav",
+      "case_id": "ctx-phone-policy",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b2979a242608f5d18629efccda603f22072ee543abb19360e517c4eeda24360b",
+      "seconds": 4.55425
+    },
+    {
+      "file": "audio/ctx-phone-policy--tingting--clean.wav",
+      "case_id": "ctx-phone-policy",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "96d9749617cdc2a94e254216a820e52e0745842e11a09ba03f2a2ae167eaf491",
+      "seconds": 4.5664375
+    },
+    {
+      "file": "audio/ctx-replace-go--eddy--clean.wav",
+      "case_id": "ctx-replace-go",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "8f6d9cae62bbe216fca33856347b6f4d250375ad81dbef6ad0ed9e38d7cfcbd1",
+      "seconds": 2.2763125
+    },
+    {
+      "file": "audio/ctx-replace-go--tingting--clean.wav",
+      "case_id": "ctx-replace-go",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "b2afffa4ee19a84462eae2dde209ad33b31e73a804c66b0e11bda29f81943a2c",
+      "seconds": 2.069625
+    },
+    {
+      "file": "audio/ctx-statement-cost--eddy--clean.wav",
+      "case_id": "ctx-statement-cost",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "74ae6d04aba2db4fd98a1954f19a1a623fa4b55b4e4c7a070ac00ae74d7a9a5c",
+      "seconds": 2.7445
+    },
+    {
+      "file": "audio/ctx-statement-cost--tingting--clean.wav",
+      "case_id": "ctx-statement-cost",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "695c570bf5face579bc2267d51f6ccb1954b2d4c484ae3c11091325b18bd4c08",
+      "seconds": 2.5498125
+    },
+    {
+      "file": "audio/ctx-statement-go--eddy--clean.wav",
+      "case_id": "ctx-statement-go",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f665a60720bc836cef0c1cf10a3d9a52d40268eb61f753f13332ffa39b4c5459",
+      "seconds": 2.4266875
+    },
+    {
+      "file": "audio/ctx-statement-go--tingting--clean.wav",
+      "case_id": "ctx-statement-go",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "cee3a06c6f55449e646e92f958795442cd185a47a6b7958201e06032b3741a0d",
+      "seconds": 2.2850625
+    },
+    {
+      "file": "audio/ctx-transfer-cost--eddy--clean.wav",
+      "case_id": "ctx-transfer-cost",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "8da3a9958c405868fe453819bf97f461d64d562efbda00122e6891c8404afd80",
+      "seconds": 2.98175
+    },
+    {
+      "file": "audio/ctx-transfer-cost--tingting--clean.wav",
+      "case_id": "ctx-transfer-cost",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ab038ecd3faad6a2aa270d09d5f906084b0c95e73c5db5adcc0dd48fcf115c30",
+      "seconds": 3.0455
+    },
+    {
+      "file": "audio/ctx-transfer-go--eddy--clean.wav",
+      "case_id": "ctx-transfer-go",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "aa65a7ffc7ca599f5bbabc996688f1df74c1413d9dbfae3776d690f3ea95db08",
+      "seconds": 2.4554375
+    },
+    {
+      "file": "audio/ctx-transfer-go--tingting--clean.wav",
+      "case_id": "ctx-transfer-go",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d009f420fdb6f996cc5d1da118a965c2bda80a0ae2b8a236fc7d048901c67a6e",
+      "seconds": 2.2475625
+    },
+    {
+      "file": "audio/deposit-01-inquire--eddy--clean.wav",
+      "case_id": "deposit-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "349c9da0c948edd7f1a0bb236a0fa1e36957f65f2e42bcd62b2f9aeb21473179",
+      "seconds": 3.1320625
+    },
+    {
+      "file": "audio/deposit-01-inquire--tingting--clean.wav",
+      "case_id": "deposit-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "43bddc3f38d9421a8cfe79b16bf0948b97f9ba87cf5fc77ea6f941637c3cc507",
+      "seconds": 2.929375
+    },
+    {
+      "file": "audio/deposit-01-navigate--eddy--clean.wav",
+      "case_id": "deposit-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c54d05e15bedd164a3b11125cc322505bc1def9d91f5a13015237ddc6b0519d9",
+      "seconds": 4.022125
+    },
+    {
+      "file": "audio/deposit-01-navigate--tingting--clean.wav",
+      "case_id": "deposit-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "30570ead1ce58d34f66ab70b3704b194e3b5fa64ddc8dd2c2c2c10f50e9fe4c9",
+      "seconds": 3.732125
+    },
+    {
+      "file": "audio/deposit-02-inquire--eddy--clean.wav",
+      "case_id": "deposit-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "1a7d16259cffc71806421418135f4b4abbd121d7bce568b14a917640dc4808ea",
+      "seconds": 3.2416875
+    },
+    {
+      "file": "audio/deposit-02-inquire--tingting--clean.wav",
+      "case_id": "deposit-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a11a2491d01adaa56f6851d8f19027883ff430937583cfb3da5a821d2ab9e8cb",
+      "seconds": 3.0505625
+    },
+    {
+      "file": "audio/deposit-02-navigate--eddy--clean.wav",
+      "case_id": "deposit-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "cbf7e6782e917c12300806d0f0bbcd4a7dc9067ed46c36967eb3291608d1be46",
+      "seconds": 2.7098125
+    },
+    {
+      "file": "audio/deposit-02-navigate--tingting--clean.wav",
+      "case_id": "deposit-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "217ac235caf8d91c8948e538dba65b72c0660824efa769baa66f9faa5bd06754",
+      "seconds": 2.3850625
+    },
+    {
+      "file": "audio/deposit-03-inquire--eddy--clean.wav",
+      "case_id": "deposit-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "4f69fe2b4214de093eae53f4a253ce704a2010d8fc2560363533f007436a9e3a",
+      "seconds": 3.513625
+    },
+    {
+      "file": "audio/deposit-03-inquire--tingting--clean.wav",
+      "case_id": "deposit-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "80a98159e8f649aaf3eac25dfcba15ce5535d087183da8297eab3463681a8fdb",
+      "seconds": 3.12675
+    },
+    {
+      "file": "audio/deposit-03-navigate--eddy--clean.wav",
+      "case_id": "deposit-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "286fb661f83766514151682bed7b97856da3d74d83a0320f5cfe52d032cc3f0c",
+      "seconds": 3.837125
+    },
+    {
+      "file": "audio/deposit-03-navigate--tingting--clean.wav",
+      "case_id": "deposit-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "95317a4adee4fce21d45fc22a68592559e7249d2698ab992741b869ed7608dbc",
+      "seconds": 3.48825
+    },
+    {
+      "file": "audio/deposit-04-inquire--eddy--clean.wav",
+      "case_id": "deposit-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "150f59b714547b401fb516415358ce4c56921d33b108b652ac7847a40aa9263f",
+      "seconds": 4.79125
+    },
+    {
+      "file": "audio/deposit-04-inquire--tingting--clean.wav",
+      "case_id": "deposit-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5830a6969865b3ced42545a30f3be7944e8c37b6dd6b70f4c82cfead2fa67507",
+      "seconds": 4.832625
+    },
+    {
+      "file": "audio/deposit-04-navigate--eddy--clean.wav",
+      "case_id": "deposit-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "30dd58a9916bd2b439e9ec9d7897a5e939e24b49271bfddda6d33a1011cdbdd4",
+      "seconds": 4.19
+    },
+    {
+      "file": "audio/deposit-04-navigate--tingting--clean.wav",
+      "case_id": "deposit-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "801a419e0698e79b416644e1aa5e2a207b3bf74de0bd114d9dfb5b79db063c92",
+      "seconds": 4.4144375
+    },
+    {
+      "file": "audio/deposit-05-inquire--eddy--clean.wav",
+      "case_id": "deposit-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "4f00a1282a12ef080e2c9c083a7646c4bef0b5bf5024b6339388d4f094a3dafd",
+      "seconds": 4.9645
+    },
+    {
+      "file": "audio/deposit-05-inquire--eddy--noise15.wav",
+      "case_id": "deposit-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "545a4cadb173d42da64ffe43dfeafac68538194ec414efd10f8e04b54d5fec20",
+      "seconds": 4.9645,
+      "seed": 10640141051623842058,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/deposit-05-inquire--tingting--clean.wav",
+      "case_id": "deposit-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1d309984712b40f2b9583e0df957cf720a2b8ca25124c45e66ef2cfe2facbb2d",
+      "seconds": 5.00475
+    },
+    {
+      "file": "audio/deposit-05-inquire--tingting--noise15.wav",
+      "case_id": "deposit-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "27cb3324ecc6a0af58f3bd06bac27525e848dd25b008977e64cc8a4ea06a7199",
+      "seconds": 5.00475,
+      "seed": 11628020283488168275,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/deposit-05-navigate--eddy--clean.wav",
+      "case_id": "deposit-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "42b3616bef1f19d8cedfb0ad92997267d75065d8c4e1bcee2ec5b87b53940977",
+      "seconds": 4.5715625
+    },
+    {
+      "file": "audio/deposit-05-navigate--eddy--noise15.wav",
+      "case_id": "deposit-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "f4220633c0c2e4e53ebda26ce963ca202a546f6502d60a77d267f0d8bb23dccd",
+      "seconds": 4.5715625,
+      "seed": 4624214153224576090,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/deposit-05-navigate--tingting--clean.wav",
+      "case_id": "deposit-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "2a8a61eb4d0561a7654dbda403a11270904b798751ea00843431457c62c4fefb",
+      "seconds": 4.460875
+    },
+    {
+      "file": "audio/deposit-05-navigate--tingting--noise15.wav",
+      "case_id": "deposit-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "866f3dbc896e4157a96a2236a062d25d7b89ee96c16d84029af0144047030289",
+      "seconds": 4.460875,
+      "seed": 3777321625555284509,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/human-context--eddy--clean.wav",
+      "case_id": "human-context",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d52636e7a75926dc1f0492bf138963bbd4c706fb38a1399fe74855d6c11e1052",
+      "seconds": 3.1260625
+    },
+    {
+      "file": "audio/human-context--tingting--clean.wav",
+      "case_id": "human-context",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "78563a420c05ed264d37b95b867bf5c1cb33f4fdcfc9cd322b3201afeef712d5",
+      "seconds": 3.14675
+    },
+    {
+      "file": "audio/human-general--eddy--clean.wav",
+      "case_id": "human-general",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f507f3d21b6ff9ab51fdff917e64f7006ffb1006d06621dca5b172045dd219d7",
+      "seconds": 3.7330625
+    },
+    {
+      "file": "audio/human-general--tingting--clean.wav",
+      "case_id": "human-general",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "31fb951ffe93dd9a31fef14bbb123a06c3267edd4f304dbb679dd2b70f8aa273",
+      "seconds": 3.7901875
+    },
+    {
+      "file": "audio/human-loss--eddy--clean.wav",
+      "case_id": "human-loss",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "ca2120742a5681ba09ba76ee48886337c4ede0aec2b841f518462da2a02e0f80",
+      "seconds": 5.8548125
+    },
+    {
+      "file": "audio/human-loss--tingting--clean.wav",
+      "case_id": "human-loss",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "163e7bb5384440687101ce0c5a3eb3144dcc811b7af4214b7b592bd23250f2e9",
+      "seconds": 6.0305625
+    },
+    {
+      "file": "audio/human-transfer--eddy--clean.wav",
+      "case_id": "human-transfer",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "a1debedb5d93b23b2c541c65129a3bf9128c23a1d0e85c51e9b3820a9ec2194e",
+      "seconds": 3.392
+    },
+    {
+      "file": "audio/human-transfer--tingting--clean.wav",
+      "case_id": "human-transfer",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "230575d66747ee7b151826393905fe36aa1d4597063953c31771e747c0b316cc",
+      "seconds": 3.4015625
+    },
+    {
+      "file": "audio/loss-01-inquire--eddy--clean.wav",
+      "case_id": "loss-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fa7b0ef924918bf2c0c7bc2c8f1130c7b8362df67eaaea249e2537a2188a92e9",
+      "seconds": 3.6985625
+    },
+    {
+      "file": "audio/loss-01-inquire--tingting--clean.wav",
+      "case_id": "loss-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "018fb3323d40d14bb4934ece261ca824d6590e7790f66699432c4d690a841b6c",
+      "seconds": 3.7785
+    },
+    {
+      "file": "audio/loss-01-navigate--eddy--clean.wav",
+      "case_id": "loss-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "90e13bc7f2b9f1f20ed80e7099881f43806ac8a0c521ca1d0ecb4236cbf68d65",
+      "seconds": 3.975875
+    },
+    {
+      "file": "audio/loss-01-navigate--tingting--clean.wav",
+      "case_id": "loss-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "4feeeaf50fb0f463a09e0ceacf734b22b130a31896841a68fe9874477dbb5bff",
+      "seconds": 3.9875625
+    },
+    {
+      "file": "audio/loss-02-inquire--eddy--clean.wav",
+      "case_id": "loss-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "97c647a4c831ac334ca2c6e525922e55090c6b7fccf04192e0bfe48fb055650c",
+      "seconds": 3.3516875
+    },
+    {
+      "file": "audio/loss-02-inquire--eddy--noise15.wav",
+      "case_id": "loss-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "5e63d5c7bb81c565bf8c836875506d877d90a48b169d4aa6f5aa355d4a77f714",
+      "seconds": 3.3516875,
+      "seed": 15569879611776582084,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-02-inquire--tingting--clean.wav",
+      "case_id": "loss-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "0fd6c156b8e7a0349bf7f78f03a0ecbaffcb7db31fcbcedaf9e4ed6ff6fe33e1",
+      "seconds": 3.33725
+    },
+    {
+      "file": "audio/loss-02-inquire--tingting--noise15.wav",
+      "case_id": "loss-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "ad8e1a852280b131bbf07b4abd4344f080618421d2b84eac8eadf4cfd66c638d",
+      "seconds": 3.33725,
+      "seed": 14649155331955419337,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-02-navigate--eddy--clean.wav",
+      "case_id": "loss-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "5bd1f05c138f946a4192f60e27c7e05d5ee48acc9391fdfc417539ac7de01a1d",
+      "seconds": 2.5768125
+    },
+    {
+      "file": "audio/loss-02-navigate--eddy--noise15.wav",
+      "case_id": "loss-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "132ee590cd90f5435ced030ebe0e2d80e9ddaad799afa0b971303a8fc78cfd56",
+      "seconds": 2.5768125,
+      "seed": 2416351074596272808,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-02-navigate--tingting--clean.wav",
+      "case_id": "loss-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "4092bc31eba889dcdaa70949219852cb4acfb773830e3e79cdef31863b452249",
+      "seconds": 2.4915625
+    },
+    {
+      "file": "audio/loss-02-navigate--tingting--noise15.wav",
+      "case_id": "loss-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "44299ae36e7093dfed3ea0fd29985b0ed20b836ea501bb01c0a45148ab1b67ab",
+      "seconds": 2.4915625,
+      "seed": 11495825321978700947,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-03-inquire--eddy--clean.wav",
+      "case_id": "loss-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "66d763d5f7c4101d2dfe77d40fa54e261c7c66fd2488c83e2fe179b5a4aa2421",
+      "seconds": 2.9353125
+    },
+    {
+      "file": "audio/loss-03-inquire--tingting--clean.wav",
+      "case_id": "loss-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d60275d1f0c588766b39082c3a814201b92280368673e52a2de4cc4af1af21ec",
+      "seconds": 3.082125
+    },
+    {
+      "file": "audio/loss-03-navigate--eddy--clean.wav",
+      "case_id": "loss-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b74784055500580d47449da86cabb7f9eb8694cbba97845bc294cf144ab80397",
+      "seconds": 4.548125
+    },
+    {
+      "file": "audio/loss-03-navigate--tingting--clean.wav",
+      "case_id": "loss-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "f0d0e5d197783bfebadb56349bd6e2ffead8f21d9ea231fd37a8a09907874b57",
+      "seconds": 4.5925625
+    },
+    {
+      "file": "audio/loss-04-inquire--eddy--clean.wav",
+      "case_id": "loss-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "509efa1ad14c40d16a86ba36d2f77072e5c282fe44fc8d31b68c0d4023a92f00",
+      "seconds": 3.976125
+    },
+    {
+      "file": "audio/loss-04-inquire--tingting--clean.wav",
+      "case_id": "loss-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "0303facc9c9d6a45e0ff687992a57f8af5383934b78a74a04f14cc7289762a44",
+      "seconds": 4.18325
+    },
+    {
+      "file": "audio/loss-04-navigate--eddy--clean.wav",
+      "case_id": "loss-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f1fcca1515d80e1a242ffc462dc60b5142dd3a2a70d7b9e7edbf3cd932ef1e4d",
+      "seconds": 4.484625
+    },
+    {
+      "file": "audio/loss-04-navigate--tingting--clean.wav",
+      "case_id": "loss-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "380739cdd36b30bff80cebbf9ecbd5e857f23a388da5a782a11043477a1e1bc7",
+      "seconds": 4.6841875
+    },
+    {
+      "file": "audio/loss-05-inquire--eddy--clean.wav",
+      "case_id": "loss-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b11f9b48da10f5f3cf88f2ed981552d27ccdc12e8c48a1323ce83707ef63ec55",
+      "seconds": 4.583125
+    },
+    {
+      "file": "audio/loss-05-inquire--eddy--noise15.wav",
+      "case_id": "loss-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c3d6e38f82a08569fd4049b409cb3a081468fba041566fd8d54cde1f752581e0",
+      "seconds": 4.583125,
+      "seed": 12015120562167301641,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-05-inquire--tingting--clean.wav",
+      "case_id": "loss-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "16f764d71baba3ad7406b33d1e121a131bf0d86ef228758350cbb707f83d0a97",
+      "seconds": 4.6814375
+    },
+    {
+      "file": "audio/loss-05-inquire--tingting--noise15.wav",
+      "case_id": "loss-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "af1dc78421a95c1f27378962886c3bcfcaaaf8e9848d4c27ce5b8364217e8fb4",
+      "seconds": 4.6814375,
+      "seed": 6334842069282280064,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-05-navigate--eddy--clean.wav",
+      "case_id": "loss-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c6e1f85fa2d321a521516b6f7df2920aa8c75be9efaab2c73a8a395a1d828cc3",
+      "seconds": 4.6525
+    },
+    {
+      "file": "audio/loss-05-navigate--eddy--noise15.wav",
+      "case_id": "loss-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "8200ec242053a07aec0ebd6dbb0ed8f7286742577bc034581c69af68b88daa24",
+      "seconds": 4.6525,
+      "seed": 12414412911989562704,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/loss-05-navigate--tingting--clean.wav",
+      "case_id": "loss-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "2c0f98a67ebf3fe5eae5d54981265994001a6d44ac3335407838e5d093f547b1",
+      "seconds": 4.635
+    },
+    {
+      "file": "audio/loss-05-navigate--tingting--noise15.wav",
+      "case_id": "loss-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "85d0d6b4de7814da446d813f97b993cd9db222b662f15a0699774f95e2f9b723",
+      "seconds": 4.635,
+      "seed": 10986090027788124773,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-01-inquire--eddy--clean.wav",
+      "case_id": "mobile-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "0c491e96bacef87646e746f8996f2c3219caf34b97be734dfb72dacd50a97ad6",
+      "seconds": 2.60575
+    },
+    {
+      "file": "audio/mobile-01-inquire--tingting--clean.wav",
+      "case_id": "mobile-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "fe0b9f80a4bec98ad2b39c753f5f3321d24c5a46c5584d682b6fab1302302798",
+      "seconds": 2.5244375
+    },
+    {
+      "file": "audio/mobile-01-navigate--eddy--clean.wav",
+      "case_id": "mobile-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "82e71b31c8ee5d152f4172d810009f259e4caa34fa3660a777377c3e96f5cdfb",
+      "seconds": 3.9180625
+    },
+    {
+      "file": "audio/mobile-01-navigate--tingting--clean.wav",
+      "case_id": "mobile-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "19bd8c553c6719d5c70b44877751612e1439a70786be5cbfc0ed9a8f090f8794",
+      "seconds": 3.8598125
+    },
+    {
+      "file": "audio/mobile-02-inquire--eddy--clean.wav",
+      "case_id": "mobile-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fcb8d58de7b1b06729d03ef7e35d8ba1f73cb72daf37fd92ceaed7175352f924",
+      "seconds": 2.906375
+    },
+    {
+      "file": "audio/mobile-02-inquire--tingting--clean.wav",
+      "case_id": "mobile-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "8a436697e00aeb80cde2f8380e44e4d339f0ac8b17b452ff0128187374277a02",
+      "seconds": 2.93075
+    },
+    {
+      "file": "audio/mobile-02-navigate--eddy--clean.wav",
+      "case_id": "mobile-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f3a91c38fb07c34fd7d8814f12dd7e53a2fbd0328f94e5847c1ecafaa630b4b5",
+      "seconds": 3.259
+    },
+    {
+      "file": "audio/mobile-02-navigate--tingting--clean.wav",
+      "case_id": "mobile-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "e3f3e78c28f459831dcc07b347833c72f36a242d8785b27f83a1303ab279f8d9",
+      "seconds": 3.14175
+    },
+    {
+      "file": "audio/mobile-03-inquire--eddy--clean.wav",
+      "case_id": "mobile-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7da0c0dfaa3536ce9453bb234a3318ee9a82049ec8e0e8978dc55098876cb3f7",
+      "seconds": 3.085625
+    },
+    {
+      "file": "audio/mobile-03-inquire--tingting--clean.wav",
+      "case_id": "mobile-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1699464b73a4a9969620625c5dbbf5df3265d7ae9bbd899c06e79b885e9beb2e",
+      "seconds": 3.1720625
+    },
+    {
+      "file": "audio/mobile-03-navigate--eddy--clean.wav",
+      "case_id": "mobile-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fda67f485a923bf3766a1ff20de35914758a524f21c50e30a3aa2e9f3f40c27a",
+      "seconds": 3.6925
+    },
+    {
+      "file": "audio/mobile-03-navigate--tingting--clean.wav",
+      "case_id": "mobile-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "677515b168f0c07caa0d93d065b5eec2e3092b3de05c96eedc978c63b90c8c2e",
+      "seconds": 3.66375
+    },
+    {
+      "file": "audio/mobile-04-inquire--eddy--clean.wav",
+      "case_id": "mobile-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "8926cf4cda462b1b24e6514f505496bb23f66023589afd5c80c59df4bc9b497a",
+      "seconds": 4.4036875
+    },
+    {
+      "file": "audio/mobile-04-inquire--eddy--noise15.wav",
+      "case_id": "mobile-04-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "99596f653633223c617b124a7f92ba574e3d66897717694114d584aa023b7de4",
+      "seconds": 4.4036875,
+      "seed": 6478464256406105256,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-04-inquire--tingting--clean.wav",
+      "case_id": "mobile-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "e0fb9e011bc775b84e38bbf2131ac8f58b5c7724c6d8f451c59c3ff59d0e6ef6",
+      "seconds": 4.4751875
+    },
+    {
+      "file": "audio/mobile-04-inquire--tingting--noise15.wav",
+      "case_id": "mobile-04-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "d686448d5c5465a015fce4d40f208b959bc274c345df5030b8c297257b0323fa",
+      "seconds": 4.4751875,
+      "seed": 12858128509059141249,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-04-navigate--eddy--clean.wav",
+      "case_id": "mobile-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b34ee1557a5aab7d429ae17bb22712fc9ca3168528322e585aaa692e450c77d9",
+      "seconds": 4.953125
+    },
+    {
+      "file": "audio/mobile-04-navigate--eddy--noise15.wav",
+      "case_id": "mobile-04-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "ad14eccb08096e3ed0a864bcbf2e9995ddcf6e0d41d830bde1b07a5a00b75719",
+      "seconds": 4.953125,
+      "seed": 8073955096966684179,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-04-navigate--tingting--clean.wav",
+      "case_id": "mobile-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "f34ccaaec30058b4dea9e33fdefcffd2de2426319b9d26e9a7195374ac6215ce",
+      "seconds": 5.1690625
+    },
+    {
+      "file": "audio/mobile-04-navigate--tingting--noise15.wav",
+      "case_id": "mobile-04-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "dba773f095399709fb2ea55469cbc60e9dd366d8f25e9ba4b6d605ec040fb9e5",
+      "seconds": 5.1690625,
+      "seed": 3720465480216205117,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-05-inquire--eddy--clean.wav",
+      "case_id": "mobile-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "6ce2b00ff60c0e5e776482e7c21a79b04d9b6a1c2e8e29a5bedc13761b56cac9",
+      "seconds": 5.1496875
+    },
+    {
+      "file": "audio/mobile-05-inquire--eddy--noise15.wav",
+      "case_id": "mobile-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c2553ae3a185c99c8320ef6f5c9e4e62d20f1e4fb12157fcfc7eaa13254c4736",
+      "seconds": 5.1496875,
+      "seed": 13456019235864402234,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-05-inquire--tingting--clean.wav",
+      "case_id": "mobile-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1e108969144cac7e59cf235e56d1176a8cf0252039c3808c6e3721f85ae3e60b",
+      "seconds": 5.4825625
+    },
+    {
+      "file": "audio/mobile-05-inquire--tingting--noise15.wav",
+      "case_id": "mobile-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "166e3abdf4accc558e88e297be333fd4a28d04b1cf8161eadcf1605cbd8d46a7",
+      "seconds": 5.4825625,
+      "seed": 1576191324277492315,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-05-navigate--eddy--clean.wav",
+      "case_id": "mobile-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c7dfa20c35d823424d5a798c15841fdb2adcc619644053ea8c4006a562199dd8",
+      "seconds": 4.8028125
+    },
+    {
+      "file": "audio/mobile-05-navigate--eddy--noise15.wav",
+      "case_id": "mobile-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "878c35b7f6046dcf7926183ac81000706cfc5188ab0d2242205fd848131081de",
+      "seconds": 4.8028125,
+      "seed": 124356416024891816,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/mobile-05-navigate--tingting--clean.wav",
+      "case_id": "mobile-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3e5fdf7066ee35badbd7d54832d903bb552b48f15cf28770a777d5edb8fc665e",
+      "seconds": 5.0761875
+    },
+    {
+      "file": "audio/mobile-05-navigate--tingting--noise15.wav",
+      "case_id": "mobile-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "b06dbc15589b9b0b6d4b38e08be7f3bd62ae9da261f19b3515583a65c97fea9d",
+      "seconds": 5.0761875,
+      "seed": 7353415656729933052,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/other-food--eddy--clean.wav",
+      "case_id": "other-food",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "1f4295d1f3978d9cb43d4d8bbf077a6e06210a3b382967109488d6df9e980a1b",
+      "seconds": 1.9873125
+    },
+    {
+      "file": "audio/other-food--tingting--clean.wav",
+      "case_id": "other-food",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1a63cb3761c0d837d99c9803a62e782d84ef0afe189392e9f4b2957661cde04e",
+      "seconds": 1.937625
+    },
+    {
+      "file": "audio/other-greeting--eddy--clean.wav",
+      "case_id": "other-greeting",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "8aa0d84c0557d697fa64c250e9d211f3e1d9cd80d391cdeb2ae2a728d1dc1be3",
+      "seconds": 1.8830625
+    },
+    {
+      "file": "audio/other-greeting--tingting--clean.wav",
+      "case_id": "other-greeting",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "93eaf4654c0904b90ddb3df4397ba7b56ceaedba2ddd26807d62d1ce204457ee",
+      "seconds": 1.517
+    },
+    {
+      "file": "audio/other-negated-need--eddy--clean.wav",
+      "case_id": "other-negated-need",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d7437f816f7f0a5ec347d6a8d72141de8a3f8ceccf87c55d70c2ec13aa12b848",
+      "seconds": 3.975875
+    },
+    {
+      "file": "audio/other-negated-need--tingting--clean.wav",
+      "case_id": "other-negated-need",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a817638ab853df0b45cce23bfab3a99a14c57877e150307ea69e9f7d1f346aa5",
+      "seconds": 4.3010625
+    },
+    {
+      "file": "audio/other-weather--eddy--clean.wav",
+      "case_id": "other-weather",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7e8a607fad85e7f71b2de81d8e4cd376e180cf873f3ee5746ed9de1bd0f759bd",
+      "seconds": 2.2241875
+    },
+    {
+      "file": "audio/other-weather--tingting--clean.wav",
+      "case_id": "other-weather",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "635824f15910fbefa6cf915c0e111be69b0eb115d9aeed3eb5ff2f935b1fcdbb",
+      "seconds": 2.2009375
+    },
+    {
+      "file": "audio/phone-01-inquire--eddy--clean.wav",
+      "case_id": "phone-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "ca91e518537df0fadc6b601095c7501855b845825590dfde58f37c9ef60800ab",
+      "seconds": 3.0104375
+    },
+    {
+      "file": "audio/phone-01-inquire--tingting--clean.wav",
+      "case_id": "phone-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "60edf45534a0a0031f8033e557227098316c38852ebf97d441ae577f403c9132",
+      "seconds": 3.16975
+    },
+    {
+      "file": "audio/phone-01-navigate--eddy--clean.wav",
+      "case_id": "phone-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "5ac67b9e24dbfe8f35a904e866c7d8fd40c063d197300495cc0a89722a1beb51",
+      "seconds": 4.1724375
+    },
+    {
+      "file": "audio/phone-01-navigate--tingting--clean.wav",
+      "case_id": "phone-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3b168171cbb447c850e9e62439e5a2c892839590805c352a54a1465010f890a9",
+      "seconds": 4.393875
+    },
+    {
+      "file": "audio/phone-02-inquire--eddy--clean.wav",
+      "case_id": "phone-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f2282b9c1411853bab4a8e08f8ae45d2b6cad3f7ddd5f1e11e92926b4773aa14",
+      "seconds": 3.9065625
+    },
+    {
+      "file": "audio/phone-02-inquire--eddy--noise15.wav",
+      "case_id": "phone-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "340d179195ab4f298cf9b1ac2546e611c9c2acebb23b9b490bff5d15783f6bff",
+      "seconds": 3.9065625,
+      "seed": 9598864831536863523,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-02-inquire--tingting--clean.wav",
+      "case_id": "phone-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5bb55912647c20efc7bd42446476395aa849d7fcfdf7eda469d26f3e76c4b3a3",
+      "seconds": 3.96375
+    },
+    {
+      "file": "audio/phone-02-inquire--tingting--noise15.wav",
+      "case_id": "phone-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "5fe2a934d2f066f34468d96251f63afaa42ff656688f7259c1a280104b9bd506",
+      "seconds": 3.96375,
+      "seed": 16531361069061747691,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-02-navigate--eddy--clean.wav",
+      "case_id": "phone-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7df9a52d9fdffe5287d59c0bb19b504305d0bfe66a9d4651eacb2034b08b601f",
+      "seconds": 3.2648125
+    },
+    {
+      "file": "audio/phone-02-navigate--eddy--noise15.wav",
+      "case_id": "phone-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "12f223a2a425fe99686675c68c36f512681be6116fd99c594fb1a9517ff5b068",
+      "seconds": 3.2648125,
+      "seed": 17920290853907525269,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-02-navigate--tingting--clean.wav",
+      "case_id": "phone-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1fe91b25d3583dcfb220d3f4645be245ff61ff38a7272d1f1271c0516ecf4cd5",
+      "seconds": 3.4531875
+    },
+    {
+      "file": "audio/phone-02-navigate--tingting--noise15.wav",
+      "case_id": "phone-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "f127d32d1b0ded9abca0406407c9cd9613c0d75d875a265a052ca35cd5fbcace",
+      "seconds": 3.4531875,
+      "seed": 6980158121988216332,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-03-inquire--eddy--clean.wav",
+      "case_id": "phone-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "2b4fa80d96bfb272eefd05fa0e935d48c9e05d97f24807b09cc69607a8238631",
+      "seconds": 4.681375
+    },
+    {
+      "file": "audio/phone-03-inquire--tingting--clean.wav",
+      "case_id": "phone-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ecdb93ba868065e3acd8a9c3635f8c968d9f1061d3bfbffbac6e16bced51b948",
+      "seconds": 4.8116875
+    },
+    {
+      "file": "audio/phone-03-navigate--eddy--clean.wav",
+      "case_id": "phone-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "05c1d2e10b8c0acfacb5571372a5901539736f75a33150dd34db0a2e9756cde9",
+      "seconds": 4.530875
+    },
+    {
+      "file": "audio/phone-03-navigate--tingting--clean.wav",
+      "case_id": "phone-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "4e68509f5e1cdeeda8ea254a008fe36acc57603afc33fb1eb0765ffaa3d44724",
+      "seconds": 4.6958125
+    },
+    {
+      "file": "audio/phone-04-inquire--eddy--clean.wav",
+      "case_id": "phone-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "627f6f612efbec3c377c70be2f442f02036fd3270971624bf14cb2c3845d601e",
+      "seconds": 5.0225
+    },
+    {
+      "file": "audio/phone-04-inquire--tingting--clean.wav",
+      "case_id": "phone-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "89bb8016d9158222548d9e7da32b7ea7aa1c46e75140206d4c6e1f6ca10399dc",
+      "seconds": 5.2735625
+    },
+    {
+      "file": "audio/phone-04-navigate--eddy--clean.wav",
+      "case_id": "phone-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c4b1a3f5111afe998d9221e48ee27e4ed8ef8f144b79c5c79f00342b8f3cd0a0",
+      "seconds": 4.4675
+    },
+    {
+      "file": "audio/phone-04-navigate--tingting--clean.wav",
+      "case_id": "phone-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "92d87161a30e90a6c76de9366f311edcf3d12a20aacc710650d96099c96accd4",
+      "seconds": 4.5885625
+    },
+    {
+      "file": "audio/phone-05-inquire--eddy--clean.wav",
+      "case_id": "phone-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "774ac454a429cfc23f8855d218ba5fd1dc0d6d919fea3ce2c833a748666a2e4f",
+      "seconds": 4.721875
+    },
+    {
+      "file": "audio/phone-05-inquire--eddy--noise15.wav",
+      "case_id": "phone-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "e4e8ded5125dae542b255d2ebb805fe216e347589e413dd3bb3dec46d3d293ba",
+      "seconds": 4.721875,
+      "seed": 12429247004051191978,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-05-inquire--tingting--clean.wav",
+      "case_id": "phone-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "67bc75326572fd7f53005797212cae3e3132d20ccd77719019c7393fa002cc8b",
+      "seconds": 4.9020625
+    },
+    {
+      "file": "audio/phone-05-inquire--tingting--noise15.wav",
+      "case_id": "phone-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "e26a4c2a1a8582fd3617d67c775c6c64fe66708e164ed33c9c4043c864955718",
+      "seconds": 4.9020625,
+      "seed": 8760657974461190193,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-05-navigate--eddy--clean.wav",
+      "case_id": "phone-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c70c55bac3e5b413f66710dcccb11aa9edd57ef16a4fd123a74dd1b4efb56684",
+      "seconds": 4.6409375
+    },
+    {
+      "file": "audio/phone-05-navigate--eddy--noise15.wav",
+      "case_id": "phone-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "16c5ef4f33894655b76c1fc3573fc1dee4cf61f95a18ae10293d669e69860a27",
+      "seconds": 4.6409375,
+      "seed": 15736813357179887250,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/phone-05-navigate--tingting--clean.wav",
+      "case_id": "phone-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1a37e9bc23135d0f0fcb28a2053a699034bdb69444ee98ca435e1097e78c85c8",
+      "seconds": 4.855625
+    },
+    {
+      "file": "audio/phone-05-navigate--tingting--noise15.wav",
+      "case_id": "phone-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "734168e37a496d7a0e4f19e5a09fe9ebd178e676a0b6eb2169edd6b37722bf81",
+      "seconds": 4.855625,
+      "seed": 14225034278651530414,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/pin-01-inquire--eddy--clean.wav",
+      "case_id": "pin-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d11389dc375d5660a1433883cf0ef535bdd04a85177786938bd473d99f7f5acc",
+      "seconds": 3.051125
+    },
+    {
+      "file": "audio/pin-01-inquire--tingting--clean.wav",
+      "case_id": "pin-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "cb705da01f26919ad10a3477cc6536cfdf424d2da22f2e925f089a469e281412",
+      "seconds": 2.9178125
+    },
+    {
+      "file": "audio/pin-01-navigate--eddy--clean.wav",
+      "case_id": "pin-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "a62c195171db886b656be683da4d05cc5b4385b492950eb56fec166b7b5cb21a",
+      "seconds": 4.022125
+    },
+    {
+      "file": "audio/pin-01-navigate--tingting--clean.wav",
+      "case_id": "pin-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7067ec95f2f97726cf2fe16f17d8d5f42d4ad891d80f06c4ac3681738a218085",
+      "seconds": 4.034
+    },
+    {
+      "file": "audio/pin-02-inquire--eddy--clean.wav",
+      "case_id": "pin-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "85e77b54a565bc9a3d66fdc929d128c4dbd89a465f5ce0453dc3cdf61b547b4d",
+      "seconds": 2.721375
+    },
+    {
+      "file": "audio/pin-02-inquire--eddy--noise15.wav",
+      "case_id": "pin-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "684b74ffc7a9422f8debb2bc7031ab853420d0fe60e32276b5cb2876dcf097a5",
+      "seconds": 2.721375,
+      "seed": 9308370026391978097,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/pin-02-inquire--tingting--clean.wav",
+      "case_id": "pin-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "b9fb099d6ccfa257a27d533225796df3b29a4bf604d40dc2f2cc8c8cb528dbdc",
+      "seconds": 2.736625
+    },
+    {
+      "file": "audio/pin-02-inquire--tingting--noise15.wav",
+      "case_id": "pin-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "01ed317847a43d39f4e81d6f63b0b7802c7f9052bcd40537d0c6ca22a7c4e60f",
+      "seconds": 2.736625,
+      "seed": 6169989538275446298,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/pin-02-navigate--eddy--clean.wav",
+      "case_id": "pin-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "9a9cce50d14c03a9ea36a85993a8ac2342bedc6204e0a4de25eb28cf5e1af8d5",
+      "seconds": 3.259
+    },
+    {
+      "file": "audio/pin-02-navigate--eddy--noise15.wav",
+      "case_id": "pin-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c038b6fbbf4a10ffb5e3cc3c41db7978c2af37bed739b6760ab70dfbed9265ab",
+      "seconds": 3.259,
+      "seed": 4618993204339217885,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/pin-02-navigate--tingting--clean.wav",
+      "case_id": "pin-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "4ee5bddd66464f6a8735b7895914109971155a0e0f024fb7b257afff4f7f52d5",
+      "seconds": 3.1765625
+    },
+    {
+      "file": "audio/pin-02-navigate--tingting--noise15.wav",
+      "case_id": "pin-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "5ca7bf5fe883b67278d75260b42dea225b30764bec08fe8fc22c90639ca33d83",
+      "seconds": 3.1765625,
+      "seed": 8065654491669719396,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/pin-03-inquire--eddy--clean.wav",
+      "case_id": "pin-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d66b0dff60786c6747ac8915ffb2add2e81a8444e74a49bc26093f6ebbf506c7",
+      "seconds": 3.6695
+    },
+    {
+      "file": "audio/pin-03-inquire--tingting--clean.wav",
+      "case_id": "pin-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d0f36dae9210c6c78d2c9c3c36ae00071c4c3c40dbf10766ff137a8ddd41717a",
+      "seconds": 3.793125
+    },
+    {
+      "file": "audio/pin-03-navigate--eddy--clean.wav",
+      "case_id": "pin-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f35516504977591796663891cf8399955499b1d81b28808065fafd828d8594b6",
+      "seconds": 4.08575
+    },
+    {
+      "file": "audio/pin-03-navigate--tingting--clean.wav",
+      "case_id": "pin-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "f3eeeaea46acb49a944e47a3e518192bba46e7561dec4e94cb04d954a0d590e3",
+      "seconds": 4.01475
+    },
+    {
+      "file": "audio/pin-04-inquire--eddy--clean.wav",
+      "case_id": "pin-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "17460adfcf29a03c4ee177376d5b29f071e02256e308014134ed1311f6d37cd9",
+      "seconds": 4.3403125
+    },
+    {
+      "file": "audio/pin-04-inquire--tingting--clean.wav",
+      "case_id": "pin-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "51855d4cc52d3c465cd3dd3a4247332e7cb44e387ebdc535336366959b0617aa",
+      "seconds": 4.437625
+    },
+    {
+      "file": "audio/pin-04-navigate--eddy--clean.wav",
+      "case_id": "pin-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "0dc70e8c555a6452c9b7cb48f24fda8140cd42bd500c449ee67d7fbcf4aaa29c",
+      "seconds": 4.022125
+    },
+    {
+      "file": "audio/pin-04-navigate--tingting--clean.wav",
+      "case_id": "pin-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "25a6156bd09e29dec11c2af5d1650efd5eef5d69cd075b82d89ec7223c8d2fbc",
+      "seconds": 4.045625
+    },
+    {
+      "file": "audio/pin-05-inquire--eddy--clean.wav",
+      "case_id": "pin-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "be342b8058d98dd959fc94e0e4b3a1c240fcededbf47ace2a9dac3ee1c11d10e",
+      "seconds": 5.2766875
+    },
+    {
+      "file": "audio/pin-05-inquire--tingting--clean.wav",
+      "case_id": "pin-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "17ae406f876a04b845d3d78d55dc4ac34cac5e98d6bbb3be7cf7c82a1823132c",
+      "seconds": 5.562
+    },
+    {
+      "file": "audio/pin-05-navigate--eddy--clean.wav",
+      "case_id": "pin-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "6ce2cbb7c14230ea3c497e2d93f6d4f2799c6d91ec447eb095df2b50db4e194e",
+      "seconds": 4.9415625
+    },
+    {
+      "file": "audio/pin-05-navigate--tingting--clean.wav",
+      "case_id": "pin-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5bab65a77eba8c5de30753982bb6606742e63f7d08d382626c7e28621eccbe84",
+      "seconds": 5.064625
+    },
+    {
+      "file": "audio/replace-01-inquire--eddy--clean.wav",
+      "case_id": "replace-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "55422137cecabdc0e4f3abf470d92dd57df0c0f54265f50d07c14f77e801a7f8",
+      "seconds": 2.9354375
+    },
+    {
+      "file": "audio/replace-01-inquire--tingting--clean.wav",
+      "case_id": "replace-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3bde5e93d87e99d5f84b3132511bdf6649ffbde25bff94b4430558a43a7b9412",
+      "seconds": 2.96575
+    },
+    {
+      "file": "audio/replace-01-navigate--eddy--clean.wav",
+      "case_id": "replace-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "6991af860ba1307760b002d372154c09e8d7ef6928556051fd93aef2b87d994c",
+      "seconds": 4.762125
+    },
+    {
+      "file": "audio/replace-01-navigate--tingting--clean.wav",
+      "case_id": "replace-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a093b4a7edf041d71e172065ca306d9313b15d516f2ec3c6cef3a27d0dbb160e",
+      "seconds": 4.5796875
+    },
+    {
+      "file": "audio/replace-02-inquire--eddy--clean.wav",
+      "case_id": "replace-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "e9dd35c55089215e4def64ea2cb981453f094003520463fb11ef85764c07743c",
+      "seconds": 2.964375
+    },
+    {
+      "file": "audio/replace-02-inquire--tingting--clean.wav",
+      "case_id": "replace-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a59dfe1fb6f00367280ea6d59b3df5a4ec9315238a5772fcea9fdc0205a4df67",
+      "seconds": 2.7890625
+    },
+    {
+      "file": "audio/replace-02-navigate--eddy--clean.wav",
+      "case_id": "replace-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "88cea2446603be2a71313942d7f47fad61032cc5647e4f107ae9d703275bb319",
+      "seconds": 3.2936875
+    },
+    {
+      "file": "audio/replace-02-navigate--tingting--clean.wav",
+      "case_id": "replace-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7a8ec2d409be5bc4d12ab3f36289924b3769df3ad265a923a799be8f539f010b",
+      "seconds": 2.9908125
+    },
+    {
+      "file": "audio/replace-03-inquire--eddy--clean.wav",
+      "case_id": "replace-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f22956558e635a5e3ef5437fce2ccc30a52faa6d4a96dec7fe98737ede0aa1f7",
+      "seconds": 2.363125
+    },
+    {
+      "file": "audio/replace-03-inquire--tingting--clean.wav",
+      "case_id": "replace-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "fdd89555c181a3c08fbe6fc9994e7ed7b98d684dddcf5160be108a54a8b9ae66",
+      "seconds": 2.220125
+    },
+    {
+      "file": "audio/replace-03-navigate--eddy--clean.wav",
+      "case_id": "replace-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "8b21df77694f9687b0285add33a2ec1b45df9f0a908e3cd2a96929334316060c",
+      "seconds": 3.3573125
+    },
+    {
+      "file": "audio/replace-03-navigate--tingting--clean.wav",
+      "case_id": "replace-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "31f73207fa0393f711b2895b2fd0ec37d29db23e033cab89aa99f48335911dce",
+      "seconds": 3.2833125
+    },
+    {
+      "file": "audio/replace-04-inquire--eddy--clean.wav",
+      "case_id": "replace-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "59332c7cc09c7169d53b9c8805fa261cf597dd32ef841aa69959acb637b7b487",
+      "seconds": 4.2649375
+    },
+    {
+      "file": "audio/replace-04-inquire--tingting--clean.wav",
+      "case_id": "replace-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1ba4a626c3d73994eb16b2b81fa7a9fe494acb507b603a2590b64d75af9e36a2",
+      "seconds": 4.2894375
+    },
+    {
+      "file": "audio/replace-04-navigate--eddy--clean.wav",
+      "case_id": "replace-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "09a8c1bb1552f699a60f5c743fe4f93577391e2294d3886d6169ba93dc7e288b",
+      "seconds": 5.1034375
+    },
+    {
+      "file": "audio/replace-04-navigate--tingting--clean.wav",
+      "case_id": "replace-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a793e5c0991f278f1479b168743d00e95a535488f84d5621a3ae6173f9d71b18",
+      "seconds": 5.145875
+    },
+    {
+      "file": "audio/replace-05-inquire--eddy--clean.wav",
+      "case_id": "replace-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "41d4a6fccb39682bdf791fdd266c582e4ed6200b17b8e8c18cab13fc88767f8d",
+      "seconds": 4.1090625
+    },
+    {
+      "file": "audio/replace-05-inquire--eddy--noise15.wav",
+      "case_id": "replace-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "3717325cb8d73c1e3c753b21b8517ca17a9deda11c5f527266af4488c0b55908",
+      "seconds": 4.1090625,
+      "seed": 1488278228862128102,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/replace-05-inquire--tingting--clean.wav",
+      "case_id": "replace-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "69206d5c20ce88b8c265d05a8eaf2e05ec233f53aae0093475ab1f0ed7279cb3",
+      "seconds": 4.2635
+    },
+    {
+      "file": "audio/replace-05-inquire--tingting--noise15.wav",
+      "case_id": "replace-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "9a677219ab35b456ceab05148a2e19f86c4a12b3602e008dd5fd9b8dc96f8327",
+      "seconds": 4.2635,
+      "seed": 850027465157090269,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/replace-05-navigate--eddy--clean.wav",
+      "case_id": "replace-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7c70bea7411bde5be56748d0085d1945ca8ae92ab1d325bd9955fca837e65eef",
+      "seconds": 4.23625
+    },
+    {
+      "file": "audio/replace-05-navigate--eddy--noise15.wav",
+      "case_id": "replace-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "9bef8dcb0dfb11fea1577ec9c819a2913576fa5fc4abd0ab94155e3794158525",
+      "seconds": 4.23625,
+      "seed": 11308144973325510371,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/replace-05-navigate--tingting--clean.wav",
+      "case_id": "replace-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5b1dfaef60ccd33ea922ea0b6a0c1f046361e7018e178b3129d776a8bbf74c45",
+      "seconds": 4.275125
+    },
+    {
+      "file": "audio/replace-05-navigate--tingting--noise15.wav",
+      "case_id": "replace-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "b0c3cadf75d67a8f425e020f1624411deb4354c49a86d76af76482cd5e659475",
+      "seconds": 4.275125,
+      "seed": 13950365728993230748,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-01-inquire--eddy--clean.wav",
+      "case_id": "statement-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fdfacbaf9c67ec29fda5cc3032fa455c97e0b6261666e4e5d72d47bb82cc4ead",
+      "seconds": 2.860125
+    },
+    {
+      "file": "audio/statement-01-inquire--tingting--clean.wav",
+      "case_id": "statement-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "922aaf7fa32e4d496d760bb2812c51e8e73e2704f2adb0dd88cf90a1fe0952f6",
+      "seconds": 2.8510625
+    },
+    {
+      "file": "audio/statement-01-navigate--eddy--clean.wav",
+      "case_id": "statement-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "ae24c6858834b8f3a68365e0a00f331e1f4617e67fcf5a13eeae6be5b0c86dca",
+      "seconds": 3.999
+    },
+    {
+      "file": "audio/statement-01-navigate--tingting--clean.wav",
+      "case_id": "statement-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7a551e27ae3ac55eea7c2c937166384f6a3b68b6a8711c962b5c294ea7528079",
+      "seconds": 4.0108125
+    },
+    {
+      "file": "audio/statement-02-inquire--eddy--clean.wav",
+      "case_id": "statement-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "6fb364a7ad0d71a673cc9900d2938969719f3d07275400f84ea028c1fcfc9f77",
+      "seconds": 3.6348125
+    },
+    {
+      "file": "audio/statement-02-inquire--tingting--clean.wav",
+      "case_id": "statement-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5ba43c78a9b680e389d3a2d95119cc157daa0acffeeb382dcd10a81ebd8cd05d",
+      "seconds": 3.715625
+    },
+    {
+      "file": "audio/statement-02-navigate--eddy--clean.wav",
+      "case_id": "statement-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "728d69641f5007458426eeb10849c140c9de3f9c56c0bdc4d1fb71da0940d978",
+      "seconds": 2.865875
+    },
+    {
+      "file": "audio/statement-02-navigate--tingting--clean.wav",
+      "case_id": "statement-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "cc247906d7f0a288edf1ba3b54a268d2f9225fc2f522d9b15f3e8a6de64e44d4",
+      "seconds": 2.7121875
+    },
+    {
+      "file": "audio/statement-03-inquire--eddy--clean.wav",
+      "case_id": "statement-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "028aab6c7550287334411b3ae15661f23764a20a3e93da100f05c6c604bdc1dd",
+      "seconds": 3.2245
+    },
+    {
+      "file": "audio/statement-03-inquire--tingting--clean.wav",
+      "case_id": "statement-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d33e0a29d527907b9f166f7f94586199dd703ec70ca453f67bd7bdba0f330be0",
+      "seconds": 3.12825
+    },
+    {
+      "file": "audio/statement-03-navigate--eddy--clean.wav",
+      "case_id": "statement-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "52074f3c0c155a9a700d4a83f4800a39da1bafcda50bf78895f4495ec93bcf46",
+      "seconds": 3.7330625
+    },
+    {
+      "file": "audio/statement-03-navigate--tingting--clean.wav",
+      "case_id": "statement-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "4c420582f6578224ee57ccae17a073e884221ea656947e73c95f833172f7ea17",
+      "seconds": 3.650375
+    },
+    {
+      "file": "audio/statement-04-inquire--eddy--clean.wav",
+      "case_id": "statement-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "27dfceb397c60abcb2eacb91587f7163fd7bc2b00e3cd5a8fb97df0021d374bb",
+      "seconds": 4.138
+    },
+    {
+      "file": "audio/statement-04-inquire--eddy--noise15.wav",
+      "case_id": "statement-04-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "ca71d0a27e46c2d4f47192389299d64300ea4ac95fffb4ba67e03744154f7c70",
+      "seconds": 4.138,
+      "seed": 12305957781054813323,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-04-inquire--tingting--clean.wav",
+      "case_id": "statement-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "bb89f84f9def04be13c963826f4b2ad2757e66b4eaa505c1f5c2282baf30ac59",
+      "seconds": 4.4735
+    },
+    {
+      "file": "audio/statement-04-inquire--tingting--noise15.wav",
+      "case_id": "statement-04-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "de72cb817dfbf622270a650ca4787bef3311840772b56c81c2b5f43471e2bdc0",
+      "seconds": 4.4735,
+      "seed": 4999852135786656250,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-04-navigate--eddy--clean.wav",
+      "case_id": "statement-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c342244f936226f8dcb4756542d9691a69576dc675f40e25185bb28cfec4a71a",
+      "seconds": 3.77375
+    },
+    {
+      "file": "audio/statement-04-navigate--eddy--noise15.wav",
+      "case_id": "statement-04-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "29c4f69a764f725d920340f83c7e026881503b369f8c4e0c3d741db939e3b424",
+      "seconds": 3.77375,
+      "seed": 18291127719921363004,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-04-navigate--tingting--clean.wav",
+      "case_id": "statement-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "40e8536f1262a89f32e70b23deebb30769b4e30f5514182ad5434695051d92f0",
+      "seconds": 3.7294375
+    },
+    {
+      "file": "audio/statement-04-navigate--tingting--noise15.wav",
+      "case_id": "statement-04-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "17228ba229710701d56e57639490d93b0cf17eaa3c2a70078c841585691d7e5f",
+      "seconds": 3.7294375,
+      "seed": 12741425434843496197,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-05-inquire--eddy--clean.wav",
+      "case_id": "statement-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "4d666855958e09a23e7972e71660adbe9699a425a5925eb5f369d66e67fc8383",
+      "seconds": 4.1321875
+    },
+    {
+      "file": "audio/statement-05-inquire--eddy--noise15.wav",
+      "case_id": "statement-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "e2751b46c54780271218b3c001b5f359de1e8bcefd8bde95df8b4d7ee982cdc7",
+      "seconds": 4.1321875,
+      "seed": 3765927928474106248,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-05-inquire--tingting--clean.wav",
+      "case_id": "statement-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "15248a0b5ca52008149736eec5522ca3cbd08468a315057feb4492f766abcc19",
+      "seconds": 4.5073125
+    },
+    {
+      "file": "audio/statement-05-inquire--tingting--noise15.wav",
+      "case_id": "statement-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "818c30f0d27ea1281298c9e5da5bbab268dd5316811b226b8ddf0a4f5948a50e",
+      "seconds": 4.5073125,
+      "seed": 12552037579351710293,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-05-navigate--eddy--clean.wav",
+      "case_id": "statement-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7a64b74efa9d4e6c4d967f96c6692117c05f1c5609fc1bb7f3a962b9695a5f8d",
+      "seconds": 4.5484375
+    },
+    {
+      "file": "audio/statement-05-navigate--eddy--noise15.wav",
+      "case_id": "statement-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c7094a9d074c7eab431b2e8d2b9c22baf7777221d7af7ed3a02d887b388f7bc1",
+      "seconds": 4.5484375,
+      "seed": 5513518757013074672,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/statement-05-navigate--tingting--clean.wav",
+      "case_id": "statement-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "b877d982640e87197ca53f201490cc7a7b7bbde4cf0a24fff047fc86cc6c7114",
+      "seconds": 4.646625
+    },
+    {
+      "file": "audio/statement-05-navigate--tingting--noise15.wav",
+      "case_id": "statement-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "0a30bb532dbb175844c333ac0b5c6cacc4b9769717a1b4ca1dabc659df11c78f",
+      "seconds": 4.646625,
+      "seed": 10506059435629352079,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-01-inquire--eddy--clean.wav",
+      "case_id": "transfer-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "15768af286a0c1885e131e632ae2ed90cee4c73f0c9930c0cbdd7409cfb6abf2",
+      "seconds": 3.045125
+    },
+    {
+      "file": "audio/transfer-01-inquire--tingting--clean.wav",
+      "case_id": "transfer-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a97de5c4c01449c4054a0b2d3776f2da51d43ecff65e8534ca2ee3d474d42496",
+      "seconds": 2.9265625
+    },
+    {
+      "file": "audio/transfer-01-navigate--eddy--clean.wav",
+      "case_id": "transfer-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "6640b3bd55d42217ca433a90b7f85fda7c55a4f1caf0a87e29f89e7516b0535c",
+      "seconds": 3.3861875
+    },
+    {
+      "file": "audio/transfer-01-navigate--tingting--clean.wav",
+      "case_id": "transfer-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "c386c2d495b310be6559cdc4377cbd1d21985312ae113efd1508729ee1dab9f9",
+      "seconds": 3.3025625
+    },
+    {
+      "file": "audio/transfer-02-inquire--eddy--clean.wav",
+      "case_id": "transfer-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c7aafa4ee35e22bee59e07b5b6580c01a5228a15fb7fadf1799d3c066d317fc4",
+      "seconds": 2.5595
+    },
+    {
+      "file": "audio/transfer-02-inquire--eddy--noise15.wav",
+      "case_id": "transfer-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "b807dbd9e390c4c087ca151dd1f14d187ad19072e47b54d7c81bb243c8dbee16",
+      "seconds": 2.5595,
+      "seed": 3181460981266164365,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-02-inquire--tingting--clean.wav",
+      "case_id": "transfer-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "9af3bfdbd2cfe500983df5fb8c3e3d69430e2fdfea06e77d343fd4322422382c",
+      "seconds": 2.454
+    },
+    {
+      "file": "audio/transfer-02-inquire--tingting--noise15.wav",
+      "case_id": "transfer-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "ad6d46706c179aeb9a5f4aa2177c478d43ef5ed78235b704ccc7d8fdf1f61e0c",
+      "seconds": 2.454,
+      "seed": 11175260337215987978,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-02-navigate--eddy--clean.wav",
+      "case_id": "transfer-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "5786c56777e64d7d3e4ae5a322776c61b32fe448668f4beb1f77101236945988",
+      "seconds": 2.8543125
+    },
+    {
+      "file": "audio/transfer-02-navigate--eddy--noise15.wav",
+      "case_id": "transfer-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "d6c342f54d2ba5a4a09ae28fbf53ccb58e336a25876d953564aababdbc0963ee",
+      "seconds": 2.8543125,
+      "seed": 15097101648191521227,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-02-navigate--tingting--clean.wav",
+      "case_id": "transfer-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "cecef5c2dc020ff0824a56d2f82299d909e4c8aaa6f20b03b33d206574794119",
+      "seconds": 2.72375
+    },
+    {
+      "file": "audio/transfer-02-navigate--tingting--noise15.wav",
+      "case_id": "transfer-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "2d797d29c83cf037af88bf501e9402f78cff8f501c844e516d2bc616355b04ee",
+      "seconds": 2.72375,
+      "seed": 18071804547691182787,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-03-inquire--eddy--clean.wav",
+      "case_id": "transfer-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "ff902b2fb8ba7f06b93dd1b51009b106f5449b4702e3b9a55fc23522a0245c13",
+      "seconds": 3.80825
+    },
+    {
+      "file": "audio/transfer-03-inquire--tingting--clean.wav",
+      "case_id": "transfer-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "85117dcea78fd3dd7b5407691a09a83ea11f45c0f310068b740326666d155f0f",
+      "seconds": 3.6685625
+    },
+    {
+      "file": "audio/transfer-03-navigate--eddy--clean.wav",
+      "case_id": "transfer-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "2c68d8aa704dbb60113067085e77e0d00a19c9cc5116d99641d6374f7e600613",
+      "seconds": 3.3225
+    },
+    {
+      "file": "audio/transfer-03-navigate--tingting--clean.wav",
+      "case_id": "transfer-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "8d1a8a3a429d9975e8234f426e8c08aaa70102a09cf5c2638c56711b972409c3",
+      "seconds": 3.2341875
+    },
+    {
+      "file": "audio/transfer-04-inquire--eddy--clean.wav",
+      "case_id": "transfer-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "87e136fb976ae7763efa57c094d76f75d1f42f2bd0e736f493c43c57ca61543a",
+      "seconds": 4.4961875
+    },
+    {
+      "file": "audio/transfer-04-inquire--tingting--clean.wav",
+      "case_id": "transfer-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "e251dd775a77e72777dcbaeafe6b92eaac9c8dbab58d317fc6c97d24f14c2fc6",
+      "seconds": 4.3939375
+    },
+    {
+      "file": "audio/transfer-04-navigate--eddy--clean.wav",
+      "case_id": "transfer-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "3261d835822ba2bc6a39355ae1475799fe3ee2692ed9c7d4d6a1bb5111907436",
+      "seconds": 4.8199375
+    },
+    {
+      "file": "audio/transfer-04-navigate--tingting--clean.wav",
+      "case_id": "transfer-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "78a7bdbd005adffa2fd5dc6757bb693b9f3f70397c65a91ebaa437e76d3d68cd",
+      "seconds": 4.6609375
+    },
+    {
+      "file": "audio/transfer-05-inquire--eddy--clean.wav",
+      "case_id": "transfer-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "5966d1727f4ab17d7057b079ebc37f708c020021dcdeb86fe9b5dba06aa43e23",
+      "seconds": 4.23625
+    },
+    {
+      "file": "audio/transfer-05-inquire--eddy--noise15.wav",
+      "case_id": "transfer-05-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "d390729c0d784cf2b14f4edcbfbce23bee623df67f6e2296fdfedc5396b34c24",
+      "seconds": 4.23625,
+      "seed": 11259140435582073018,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-05-inquire--tingting--clean.wav",
+      "case_id": "transfer-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "238c2919410d6188c67caa2b042209d0a0f8f2d3280d2eca2dd72eba629655bc",
+      "seconds": 4.2286875
+    },
+    {
+      "file": "audio/transfer-05-inquire--tingting--noise15.wav",
+      "case_id": "transfer-05-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "89ac5481700688b7f7f41216454f0eee33debdc14667f1f283482edb494cba71",
+      "seconds": 4.2286875,
+      "seed": 16266911768655458486,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-05-navigate--eddy--clean.wav",
+      "case_id": "transfer-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "de6ce3e01451e979fad9122645a0f917ad59ec04b734a5ce761a91b1b00c9069",
+      "seconds": 4.1090625
+    },
+    {
+      "file": "audio/transfer-05-navigate--eddy--noise15.wav",
+      "case_id": "transfer-05-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "25b2715b38c9681ca8196f970635f1ec36b507a1bcf0c94e5239bdaf2e81ea28",
+      "seconds": 4.1090625,
+      "seed": 9430357267716654690,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/transfer-05-navigate--tingting--clean.wav",
+      "case_id": "transfer-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ea723d298b999818aa0620a3b6ec33969534834d3a6f45d09eef01adc12f9c14",
+      "seconds": 4.2635
+    },
+    {
+      "file": "audio/transfer-05-navigate--tingting--noise15.wav",
+      "case_id": "transfer-05-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "fe82aa1ad45fd3376bd89b19023e17cd5d336a11a682c3063145633af1da02bf",
+      "seconds": 4.2635,
+      "seed": 18427206255199267296,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/withdraw-01-inquire--eddy--clean.wav",
+      "case_id": "withdraw-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "d93513a08c20643b707a888014e303cc163351d868265a8db95f2f55a3113db3",
+      "seconds": 3.137625
+    },
+    {
+      "file": "audio/withdraw-01-inquire--tingting--clean.wav",
+      "case_id": "withdraw-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a71b221815bb92490c87e9e39128eef08df285b147828a8ca5808505b23fd010",
+      "seconds": 3.0733125
+    },
+    {
+      "file": "audio/withdraw-01-navigate--eddy--clean.wav",
+      "case_id": "withdraw-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "51de1203609deb095eb2acefd5feee50b571d8140a7ed21eae71471e4091274e",
+      "seconds": 3.744625
+    },
+    {
+      "file": "audio/withdraw-01-navigate--tingting--clean.wav",
+      "case_id": "withdraw-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "bec590822527adc27ef2f65be8fffd24999a809331270cf63eeb0dfbaa08bd7c",
+      "seconds": 3.6624375
+    },
+    {
+      "file": "audio/withdraw-02-inquire--eddy--clean.wav",
+      "case_id": "withdraw-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c4fc02c1bd1d16487eff0ef6f3fe20872122a45bc18d0cb17aac87871d0c48f6",
+      "seconds": 2.582625
+    },
+    {
+      "file": "audio/withdraw-02-inquire--eddy--noise15.wav",
+      "case_id": "withdraw-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "23ff1da49a66a8ad90ad7e572e73b604e8b6e19f5d34673f47337403b1cfb925",
+      "seconds": 2.582625,
+      "seed": 1505699179439361643,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/withdraw-02-inquire--tingting--clean.wav",
+      "case_id": "withdraw-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ff4f98ac88e7671cefe5b8c605478f42084788974daa0300f44d655c4882c187",
+      "seconds": 2.446375
+    },
+    {
+      "file": "audio/withdraw-02-inquire--tingting--noise15.wav",
+      "case_id": "withdraw-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "5aac0954c48ceccacb738695844e536171ecdf5bfd74e40b75bbf701ae9b8efd",
+      "seconds": 2.446375,
+      "seed": 16552286904634483859,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/withdraw-02-navigate--eddy--clean.wav",
+      "case_id": "withdraw-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "66b9cea5d2edf41e1e588e0f6b7c9b42a751267a3fd90fb57bab52b88917cf44",
+      "seconds": 2.519
+    },
+    {
+      "file": "audio/withdraw-02-navigate--eddy--noise15.wav",
+      "case_id": "withdraw-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "85c6751b467819ade938a8b9c38127f3891d0e970d390673b7b0ca3ffe5cf408",
+      "seconds": 2.519,
+      "seed": 9898891579757364305,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/withdraw-02-navigate--tingting--clean.wav",
+      "case_id": "withdraw-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "34b674efca6c7e5c92080a7030fc6e8d3bceb8f4c3ea1c6dd714e8c3eeef89e1",
+      "seconds": 2.282625
+    },
+    {
+      "file": "audio/withdraw-02-navigate--tingting--noise15.wav",
+      "case_id": "withdraw-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "3eb1989e9937d95a0f6ca9cf6392216d91cacc8a8392f2a7a4a5a6f6477e62b8",
+      "seconds": 2.282625,
+      "seed": 9040509785526282017,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/withdraw-03-inquire--eddy--clean.wav",
+      "case_id": "withdraw-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7cf37e54ef544d828c81fe33759362f8a6003878684ab58a50465726b6f5d45c",
+      "seconds": 3.12025
+    },
+    {
+      "file": "audio/withdraw-03-inquire--tingting--clean.wav",
+      "case_id": "withdraw-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "6a3940cde3a0de8baa0ba752ad0216db73127f0a3c927d593ec3cecbea249e17",
+      "seconds": 3.174875
+    },
+    {
+      "file": "audio/withdraw-03-navigate--eddy--clean.wav",
+      "case_id": "withdraw-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f1c4a5ef0670fa49b25b40c07aa36b40a27c70f4adef3d16953cf70990eb304c",
+      "seconds": 4.2360625
+    },
+    {
+      "file": "audio/withdraw-03-navigate--tingting--clean.wav",
+      "case_id": "withdraw-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "083cb75a7a313169fdf5ca053537a28eeb60e7fce033783efc73754ff8539833",
+      "seconds": 3.9915625
+    },
+    {
+      "file": "audio/withdraw-04-inquire--eddy--clean.wav",
+      "case_id": "withdraw-04-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "60399439eaeca9ba6ec2ad6b509f4c9eea303ee255f22466835de5a9e4a9a477",
+      "seconds": 4.4268125
+    },
+    {
+      "file": "audio/withdraw-04-inquire--tingting--clean.wav",
+      "case_id": "withdraw-04-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "e6100c2310f94dc2390f5eb83a72d89ddd343718454bbb291546466348ec2ce9",
+      "seconds": 4.6029375
+    },
+    {
+      "file": "audio/withdraw-04-navigate--eddy--clean.wav",
+      "case_id": "withdraw-04-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "dbc0022bea57b7aa45cf8c3fefd102aec6fd70490097174bcb646adb1f5b838b",
+      "seconds": 3.3861875
+    },
+    {
+      "file": "audio/withdraw-04-navigate--tingting--clean.wav",
+      "case_id": "withdraw-04-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "7d5c297a82613152497f62ba744e49aae82a218dd52bcf4f4fe3db7ee63948ce",
+      "seconds": 3.26775
+    },
+    {
+      "file": "audio/withdraw-05-inquire--eddy--clean.wav",
+      "case_id": "withdraw-05-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "894145e035f3cd09e3b834707273f209df5f6df1c7a4cea7330d660bfcb08a2d",
+      "seconds": 3.7390625
+    },
+    {
+      "file": "audio/withdraw-05-inquire--tingting--clean.wav",
+      "case_id": "withdraw-05-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "1dcfce96c89852a0f19f12b5b8b3c8f6727eac06f904b59c314457e0100033cc",
+      "seconds": 3.6598125
+    },
+    {
+      "file": "audio/withdraw-05-navigate--eddy--clean.wav",
+      "case_id": "withdraw-05-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "e21f8c3687591bb1a4fdc00326130fef2789b25ac94e01e08a5697c4ae9fd31c",
+      "seconds": 4.687
+    },
+    {
+      "file": "audio/withdraw-05-navigate--tingting--clean.wav",
+      "case_id": "withdraw-05-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "acb91003e14e230dc26779c6257b16753a542ad4842f5640e7d0b984f0fe7bdc",
+      "seconds": 4.79575
+    }
+  ]
+}

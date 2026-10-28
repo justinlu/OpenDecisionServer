@@ -1,0 +1,2648 @@
+{
+  "post_hoc_responses_audited": 324,
+  "post_hoc_request_errors": 0,
+  "text_core_original_six_labels": {
+    "requests": 100,
+    "unique_semantic_cases": 100,
+    "request_errors": 0,
+    "joint_correct": 96,
+    "joint_accuracy": 0.96,
+    "mode": {
+      "correct": 99,
+      "accuracy": 0.99,
+      "macro_f1": 0.98999899989999,
+      "confusion": {
+        "inquire": {
+          "inquire": 50
+        },
+        "navigate": {
+          "navigate": 49,
+          "inquire": 1
+        }
+      },
+      "per_class": {
+        "inquire": {
+          "support": 50,
+          "precision": 0.9803921568627451,
+          "recall": 1.0,
+          "f1": 0.99009900990099
+        },
+        "navigate": {
+          "support": 50,
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1": 0.98989898989899
+        }
+      }
+    },
+    "function": {
+      "correct": 97,
+      "accuracy": 0.97,
+      "macro_f1": 0.9842105263157895,
+      "confusion": {
+        "pin": {
+          "pin": 10
+        },
+        "phone": {
+          "phone": 10
+        },
+        "withdraw": {
+          "withdraw": 9,
+          "unknown": 1
+        },
+        "statement": {
+          "statement": 9,
+          "unknown": 1
+        },
+        "loss": {
+          "loss": 10
+        },
+        "mobile": {
+          "mobile": 10
+        },
+        "replace": {
+          "replace": 10
+        },
+        "deposit": {
+          "deposit": 10
+        },
+        "balance": {
+          "balance": 9,
+          "unknown": 1
+        },
+        "transfer": {
+          "transfer": 10
+        }
+      },
+      "per_class": {
+        "balance": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "deposit": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "loss": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "mobile": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "phone": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "pin": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "replace": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "statement": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        },
+        "transfer": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "withdraw": {
+          "support": 10,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526316
+        }
+      }
+    },
+    "inquiry_to_navigation": {
+      "count": 0,
+      "denominator": 50,
+      "rate": 0.0
+    },
+    "non_navigation_open": {
+      "count": 0,
+      "denominator": 50,
+      "rate": 0.0
+    },
+    "missed_navigation": {
+      "count": 1,
+      "denominator": 50,
+      "rate": 0.02
+    },
+    "paired_mode_all_correct": {
+      "pairs": 50,
+      "correct": 49
+    },
+    "latency_ms": {
+      "p50": 287.31258300000206,
+      "p95": 309.8103329999944,
+      "p99": 313.3682090000001,
+      "max": 316.79895899999974
+    }
+  },
+  "clean_core_original_six_labels": {
+    "requests": 200,
+    "unique_semantic_cases": 100,
+    "request_errors": 0,
+    "joint_correct": 79,
+    "joint_accuracy": 0.395,
+    "mode": {
+      "correct": 156,
+      "accuracy": 0.78,
+      "macro_f1": 0.8456894469934798,
+      "confusion": {
+        "navigate": {
+          "navigate": 64,
+          "inquire": 10,
+          "cancel": 25,
+          "human": 1
+        },
+        "inquire": {
+          "inquire": 92,
+          "cancel": 7,
+          "clarify": 1
+        }
+      },
+      "per_class": {
+        "inquire": {
+          "support": 100,
+          "precision": 0.9019607843137255,
+          "recall": 0.92,
+          "f1": 0.9108910891089109
+        },
+        "navigate": {
+          "support": 100,
+          "precision": 1.0,
+          "recall": 0.64,
+          "f1": 0.7804878048780487
+        }
+      }
+    },
+    "function": {
+      "correct": 91,
+      "accuracy": 0.455,
+      "macro_f1": 0.5353398888693006,
+      "confusion": {
+        "mobile": {
+          "mobile": 14,
+          "unknown": 4,
+          "phone": 1,
+          "pin": 1
+        },
+        "phone": {
+          "phone": 18,
+          "unknown": 2
+        },
+        "statement": {
+          "pin": 2,
+          "unknown": 17,
+          "statement": 1
+        },
+        "transfer": {
+          "unknown": 14,
+          "transfer": 4,
+          "deposit": 1,
+          "replace": 1
+        },
+        "pin": {
+          "pin": 11,
+          "replace": 1,
+          "phone": 1,
+          "unknown": 5,
+          "mobile": 1,
+          "loss": 1
+        },
+        "replace": {
+          "unknown": 6,
+          "replace": 13,
+          "pin": 1
+        },
+        "loss": {
+          "unknown": 6,
+          "loss": 12,
+          "pin": 1,
+          "replace": 1
+        },
+        "deposit": {
+          "deposit": 9,
+          "unknown": 9,
+          "pin": 1,
+          "balance": 1
+        },
+        "withdraw": {
+          "deposit": 4,
+          "unknown": 12,
+          "withdraw": 2,
+          "pin": 2
+        },
+        "balance": {
+          "balance": 7,
+          "unknown": 13
+        }
+      },
+      "per_class": {
+        "balance": {
+          "support": 20,
+          "precision": 0.875,
+          "recall": 0.35,
+          "f1": 0.4999999999999999
+        },
+        "deposit": {
+          "support": 20,
+          "precision": 0.6428571428571429,
+          "recall": 0.45,
+          "f1": 0.5294117647058824
+        },
+        "loss": {
+          "support": 20,
+          "precision": 0.9230769230769231,
+          "recall": 0.6,
+          "f1": 0.7272727272727274
+        },
+        "mobile": {
+          "support": 20,
+          "precision": 0.9333333333333333,
+          "recall": 0.7,
+          "f1": 0.8
+        },
+        "phone": {
+          "support": 20,
+          "precision": 0.9,
+          "recall": 0.9,
+          "f1": 0.9
+        },
+        "pin": {
+          "support": 20,
+          "precision": 0.5789473684210527,
+          "recall": 0.55,
+          "f1": 0.5641025641025641
+        },
+        "replace": {
+          "support": 20,
+          "precision": 0.8125,
+          "recall": 0.65,
+          "f1": 0.7222222222222223
+        },
+        "statement": {
+          "support": 20,
+          "precision": 1.0,
+          "recall": 0.05,
+          "f1": 0.09523809523809523
+        },
+        "transfer": {
+          "support": 20,
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1": 0.33333333333333337
+        },
+        "withdraw": {
+          "support": 20,
+          "precision": 1.0,
+          "recall": 0.1,
+          "f1": 0.18181818181818182
+        }
+      }
+    },
+    "inquiry_to_navigation": {
+      "count": 0,
+      "denominator": 100,
+      "rate": 0.0
+    },
+    "non_navigation_open": {
+      "count": 0,
+      "denominator": 100,
+      "rate": 0.0
+    },
+    "missed_navigation": {
+      "count": 36,
+      "denominator": 100,
+      "rate": 0.36
+    },
+    "paired_mode_all_correct": {
+      "pairs": 50,
+      "correct": 18
+    },
+    "latency_ms": {
+      "p50": 399.82383300001345,
+      "p95": 432.8459580000015,
+      "p99": 459.0955409999964,
+      "max": 469.8564580000024
+    }
+  },
+  "navigation_readout": {
+    "text": {
+      "expected_navigation": 55,
+      "correct_mode_and_destination": 54,
+      "missed_mode": 1,
+      "selected_mode_but_unknown_destination": 0,
+      "selected_mode_but_wrong_known_destination": 0
+    },
+    "clean": {
+      "expected_navigation": 110,
+      "correct_mode_and_destination": 45,
+      "missed_mode": 40,
+      "selected_mode_but_unknown_destination": 17,
+      "selected_mode_but_wrong_known_destination": 8
+    },
+    "noise15": {
+      "expected_navigation": 32,
+      "correct_mode_and_destination": 11,
+      "missed_mode": 11,
+      "selected_mode_but_unknown_destination": 6,
+      "selected_mode_but_wrong_known_destination": 4
+    }
+  },
+  "clean_by_tag": {
+    "direct_procedure": {
+      "requests": 40,
+      "unique_semantic_cases": 20,
+      "request_errors": 0,
+      "joint_correct": 18,
+      "joint_accuracy": 0.45,
+      "mode": {
+        "correct": 36,
+        "accuracy": 0.9,
+        "macro_f1": 0.9344594594594595,
+        "confusion": {
+          "navigate": {
+            "navigate": 17,
+            "cancel": 2,
+            "inquire": 1
+          },
+          "inquire": {
+            "inquire": 19,
+            "clarify": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 20,
+            "precision": 0.95,
+            "recall": 0.95,
+            "f1": 0.9500000000000001
+          },
+          "navigate": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.85,
+            "f1": 0.9189189189189189
+          }
+        }
+      },
+      "function": {
+        "correct": 19,
+        "accuracy": 0.475,
+        "macro_f1": 0.551904761904762,
+        "confusion": {
+          "mobile": {
+            "mobile": 3,
+            "unknown": 1
+          },
+          "phone": {
+            "phone": 3,
+            "unknown": 1
+          },
+          "pin": {
+            "pin": 2,
+            "unknown": 2
+          },
+          "loss": {
+            "unknown": 2,
+            "loss": 2
+          },
+          "deposit": {
+            "unknown": 2,
+            "deposit": 2
+          },
+          "balance": {
+            "unknown": 3,
+            "balance": 1
+          },
+          "statement": {
+            "unknown": 4
+          },
+          "withdraw": {
+            "pin": 1,
+            "deposit": 2,
+            "unknown": 1
+          },
+          "replace": {
+            "replace": 4
+          },
+          "transfer": {
+            "transfer": 2,
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          "loss": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "mobile": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "phone": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "pin": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "replace": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "statement": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "withdraw": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 3,
+        "denominator": 20,
+        "rate": 0.15
+      },
+      "paired_mode_all_correct": {
+        "pairs": 10,
+        "correct": 7
+      },
+      "latency_ms": {
+        "p50": 398.95566700000273,
+        "p95": 431.1643329999981,
+        "p99": 446.6181670000253,
+        "max": 446.6181670000253
+      }
+    },
+    "core": {
+      "requests": 200,
+      "unique_semantic_cases": 100,
+      "request_errors": 0,
+      "joint_correct": 79,
+      "joint_accuracy": 0.395,
+      "mode": {
+        "correct": 156,
+        "accuracy": 0.78,
+        "macro_f1": 0.8456894469934798,
+        "confusion": {
+          "navigate": {
+            "navigate": 64,
+            "inquire": 10,
+            "cancel": 25,
+            "human": 1
+          },
+          "inquire": {
+            "inquire": 92,
+            "cancel": 7,
+            "clarify": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 100,
+            "precision": 0.9019607843137255,
+            "recall": 0.92,
+            "f1": 0.9108910891089109
+          },
+          "navigate": {
+            "support": 100,
+            "precision": 1.0,
+            "recall": 0.64,
+            "f1": 0.7804878048780487
+          }
+        }
+      },
+      "function": {
+        "correct": 91,
+        "accuracy": 0.455,
+        "macro_f1": 0.5353398888693006,
+        "confusion": {
+          "mobile": {
+            "mobile": 14,
+            "unknown": 4,
+            "phone": 1,
+            "pin": 1
+          },
+          "phone": {
+            "phone": 18,
+            "unknown": 2
+          },
+          "statement": {
+            "pin": 2,
+            "unknown": 17,
+            "statement": 1
+          },
+          "transfer": {
+            "unknown": 14,
+            "transfer": 4,
+            "deposit": 1,
+            "replace": 1
+          },
+          "pin": {
+            "pin": 11,
+            "replace": 1,
+            "phone": 1,
+            "unknown": 5,
+            "mobile": 1,
+            "loss": 1
+          },
+          "replace": {
+            "unknown": 6,
+            "replace": 13,
+            "pin": 1
+          },
+          "loss": {
+            "unknown": 6,
+            "loss": 12,
+            "pin": 1,
+            "replace": 1
+          },
+          "deposit": {
+            "deposit": 9,
+            "unknown": 9,
+            "pin": 1,
+            "balance": 1
+          },
+          "withdraw": {
+            "deposit": 4,
+            "unknown": 12,
+            "withdraw": 2,
+            "pin": 2
+          },
+          "balance": {
+            "balance": 7,
+            "unknown": 13
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 20,
+            "precision": 0.875,
+            "recall": 0.35,
+            "f1": 0.4999999999999999
+          },
+          "deposit": {
+            "support": 20,
+            "precision": 0.6428571428571429,
+            "recall": 0.45,
+            "f1": 0.5294117647058824
+          },
+          "loss": {
+            "support": 20,
+            "precision": 0.9230769230769231,
+            "recall": 0.6,
+            "f1": 0.7272727272727274
+          },
+          "mobile": {
+            "support": 20,
+            "precision": 0.9333333333333333,
+            "recall": 0.7,
+            "f1": 0.8
+          },
+          "phone": {
+            "support": 20,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "pin": {
+            "support": 20,
+            "precision": 0.5789473684210527,
+            "recall": 0.55,
+            "f1": 0.5641025641025641
+          },
+          "replace": {
+            "support": 20,
+            "precision": 0.8125,
+            "recall": 0.65,
+            "f1": 0.7222222222222223
+          },
+          "statement": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.05,
+            "f1": 0.09523809523809523
+          },
+          "transfer": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.33333333333333337
+          },
+          "withdraw": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.1,
+            "f1": 0.18181818181818182
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 100,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 100,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 36,
+        "denominator": 100,
+        "rate": 0.36
+      },
+      "paired_mode_all_correct": {
+        "pairs": 50,
+        "correct": 18
+      },
+      "latency_ms": {
+        "p50": 399.82383300001345,
+        "p95": 432.8459580000015,
+        "p99": 459.0955409999964,
+        "max": 469.8564580000024
+      }
+    },
+    "negation": {
+      "requests": 56,
+      "unique_semantic_cases": 28,
+      "request_errors": 0,
+      "joint_correct": 22,
+      "joint_accuracy": 0.39285714285714285,
+      "mode": {
+        "correct": 43,
+        "accuracy": 0.7678571428571429,
+        "macro_f1": 0.5807246397701448,
+        "confusion": {
+          "navigate": {
+            "inquire": 1,
+            "cancel": 6,
+            "navigate": 13
+          },
+          "inquire": {
+            "inquire": 24,
+            "cancel": 2
+          },
+          "cancel": {
+            "inquire": 1,
+            "cancel": 3
+          },
+          "human": {
+            "cancel": 1,
+            "human": 3
+          },
+          "other": {
+            "cancel": 1,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 4,
+            "precision": 0.23076923076923078,
+            "recall": 0.75,
+            "f1": 0.3529411764705882
+          },
+          "human": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "inquire": {
+            "support": 26,
+            "precision": 0.8888888888888888,
+            "recall": 0.9230769230769231,
+            "f1": 0.9056603773584906
+          },
+          "navigate": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.65,
+            "f1": 0.787878787878788
+          },
+          "other": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "function": {
+        "correct": 27,
+        "accuracy": 0.48214285714285715,
+        "macro_f1": 0.4819523040526175,
+        "confusion": {
+          "statement": {
+            "pin": 2,
+            "unknown": 2
+          },
+          "loss": {
+            "unknown": 3,
+            "loss": 5
+          },
+          "mobile": {
+            "mobile": 4
+          },
+          "balance": {
+            "balance": 2,
+            "unknown": 4
+          },
+          "replace": {
+            "replace": 3,
+            "pin": 1
+          },
+          "withdraw": {
+            "unknown": 6
+          },
+          "unknown": {
+            "unknown": 4
+          },
+          "pin": {
+            "pin": 3,
+            "loss": 1
+          },
+          "transfer": {
+            "unknown": 6,
+            "deposit": 1,
+            "replace": 1
+          },
+          "deposit": {
+            "deposit": 2,
+            "pin": 1,
+            "balance": 1
+          },
+          "phone": {
+            "phone": 4
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 6,
+            "precision": 0.6666666666666666,
+            "recall": 0.3333333333333333,
+            "f1": 0.4444444444444444
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "loss": {
+            "support": 8,
+            "precision": 0.8333333333333334,
+            "recall": 0.625,
+            "f1": 0.7142857142857143
+          },
+          "mobile": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "phone": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "pin": {
+            "support": 4,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          "replace": {
+            "support": 4,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "statement": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "unknown": {
+            "support": 4,
+            "precision": 0.16,
+            "recall": 1.0,
+            "f1": 0.2758620689655173
+          },
+          "withdraw": {
+            "support": 6,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 26,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 36,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 7,
+        "denominator": 20,
+        "rate": 0.35
+      },
+      "paired_mode_all_correct": {
+        "pairs": 10,
+        "correct": 4
+      },
+      "latency_ms": {
+        "p50": 404.60279099999497,
+        "p95": 442.1344579999982,
+        "p99": 460.0201249999998,
+        "max": 460.0201249999998
+      }
+    },
+    "modal_policy": {
+      "requests": 40,
+      "unique_semantic_cases": 20,
+      "request_errors": 0,
+      "joint_correct": 15,
+      "joint_accuracy": 0.375,
+      "mode": {
+        "correct": 27,
+        "accuracy": 0.675,
+        "macro_f1": 0.7380952380952381,
+        "confusion": {
+          "inquire": {
+            "inquire": 17,
+            "cancel": 3
+          },
+          "navigate": {
+            "navigate": 10,
+            "inquire": 5,
+            "cancel": 5
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 20,
+            "precision": 0.7727272727272727,
+            "recall": 0.85,
+            "f1": 0.8095238095238095
+          },
+          "navigate": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 16,
+        "accuracy": 0.4,
+        "macro_f1": 0.5266666666666667,
+        "confusion": {
+          "transfer": {
+            "unknown": 4
+          },
+          "statement": {
+            "unknown": 3,
+            "statement": 1
+          },
+          "phone": {
+            "phone": 4
+          },
+          "mobile": {
+            "unknown": 2,
+            "mobile": 2
+          },
+          "loss": {
+            "loss": 2,
+            "unknown": 2
+          },
+          "replace": {
+            "replace": 1,
+            "unknown": 3
+          },
+          "deposit": {
+            "unknown": 3,
+            "deposit": 1
+          },
+          "withdraw": {
+            "unknown": 3,
+            "withdraw": 1
+          },
+          "balance": {
+            "unknown": 2,
+            "balance": 2
+          },
+          "pin": {
+            "unknown": 2,
+            "pin": 2
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "loss": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "mobile": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "phone": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "pin": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "replace": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "statement": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "transfer": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "withdraw": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 10,
+        "denominator": 20,
+        "rate": 0.5
+      },
+      "paired_mode_all_correct": {
+        "pairs": 10,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 382.48495799999205,
+        "p95": 422.98941600000717,
+        "p99": 469.8564580000024,
+        "max": 469.8564580000024
+      }
+    },
+    "self_correction": {
+      "requests": 40,
+      "unique_semantic_cases": 20,
+      "request_errors": 0,
+      "joint_correct": 16,
+      "joint_accuracy": 0.4,
+      "mode": {
+        "correct": 31,
+        "accuracy": 0.775,
+        "macro_f1": 0.85,
+        "confusion": {
+          "inquire": {
+            "inquire": 19,
+            "cancel": 1
+          },
+          "navigate": {
+            "navigate": 12,
+            "cancel": 6,
+            "inquire": 1,
+            "human": 1
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 20,
+            "precision": 0.95,
+            "recall": 0.95,
+            "f1": 0.9500000000000001
+          },
+          "navigate": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          }
+        }
+      },
+      "function": {
+        "correct": 20,
+        "accuracy": 0.5,
+        "macro_f1": 0.5588095238095238,
+        "confusion": {
+          "replace": {
+            "unknown": 1,
+            "replace": 3
+          },
+          "mobile": {
+            "phone": 1,
+            "pin": 1,
+            "mobile": 2
+          },
+          "deposit": {
+            "deposit": 2,
+            "unknown": 2
+          },
+          "loss": {
+            "loss": 2,
+            "pin": 1,
+            "replace": 1
+          },
+          "transfer": {
+            "unknown": 2,
+            "transfer": 2
+          },
+          "phone": {
+            "phone": 4
+          },
+          "statement": {
+            "unknown": 4
+          },
+          "balance": {
+            "unknown": 3,
+            "balance": 1
+          },
+          "withdraw": {
+            "withdraw": 1,
+            "unknown": 2,
+            "deposit": 1
+          },
+          "pin": {
+            "phone": 1,
+            "pin": 3
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "loss": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "mobile": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "phone": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "pin": {
+            "support": 4,
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6666666666666665
+          },
+          "replace": {
+            "support": 4,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "statement": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "withdraw": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 8,
+        "denominator": 20,
+        "rate": 0.4
+      },
+      "paired_mode_all_correct": {
+        "pairs": 10,
+        "correct": 4
+      },
+      "latency_ms": {
+        "p50": 415.6223750000265,
+        "p95": 458.5287079999887,
+        "p99": 465.77929199999346,
+        "max": 465.77929199999346
+      }
+    },
+    "human": {
+      "requests": 8,
+      "unique_semantic_cases": 4,
+      "request_errors": 0,
+      "joint_correct": 2,
+      "joint_accuracy": 0.25,
+      "mode": {
+        "correct": 7,
+        "accuracy": 0.875,
+        "macro_f1": 0.9333333333333333,
+        "confusion": {
+          "human": {
+            "human": 7,
+            "cancel": 1
+          }
+        },
+        "per_class": {
+          "human": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          }
+        }
+      },
+      "function": {
+        "correct": 3,
+        "accuracy": 0.375,
+        "macro_f1": 0.2777777777777778,
+        "confusion": {
+          "statement": {
+            "unknown": 2
+          },
+          "unknown": {
+            "unknown": 2
+          },
+          "loss": {
+            "loss": 1,
+            "unknown": 1
+          },
+          "transfer": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "loss": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "statement": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "unknown": {
+            "support": 2,
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444445
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 392.2120409999934,
+        "p95": 460.0201249999998,
+        "p99": 460.0201249999998,
+        "max": 460.0201249999998
+      }
+    },
+    "context": {
+      "requests": 24,
+      "unique_semantic_cases": 12,
+      "request_errors": 0,
+      "joint_correct": 8,
+      "joint_accuracy": 0.3333333333333333,
+      "mode": {
+        "correct": 18,
+        "accuracy": 0.75,
+        "macro_f1": 0.8025793650793651,
+        "confusion": {
+          "human": {
+            "human": 2
+          },
+          "navigate": {
+            "navigate": 6,
+            "cancel": 2,
+            "clarify": 2
+          },
+          "inquire": {
+            "cancel": 1,
+            "inquire": 8,
+            "clarify": 1
+          },
+          "cancel": {
+            "cancel": 2
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 2,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285715
+          },
+          "human": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "inquire": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1": 0.888888888888889
+          },
+          "navigate": {
+            "support": 10,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          }
+        }
+      },
+      "function": {
+        "correct": 10,
+        "accuracy": 0.4166666666666667,
+        "macro_f1": 0.5795918367346938,
+        "confusion": {
+          "statement": {
+            "unknown": 5,
+            "mobile": 1
+          },
+          "replace": {
+            "replace": 2
+          },
+          "balance": {
+            "balance": 3,
+            "unknown": 1
+          },
+          "transfer": {
+            "unknown": 3,
+            "pin": 1
+          },
+          "loss": {
+            "unknown": 3,
+            "loss": 1
+          },
+          "mobile": {
+            "mobile": 2
+          },
+          "phone": {
+            "phone": 2
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "loss": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "mobile": {
+            "support": 2,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          "phone": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "replace": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "statement": {
+            "support": 6,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 10,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 4,
+        "denominator": 10,
+        "rate": 0.4
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 397.7617500000008,
+        "p95": 445.3244999999981,
+        "p99": 891.841707999994,
+        "max": 891.841707999994
+      }
+    },
+    "reference": {
+      "requests": 6,
+      "unique_semantic_cases": 3,
+      "request_errors": 0,
+      "joint_correct": 1,
+      "joint_accuracy": 0.16666666666666666,
+      "mode": {
+        "correct": 4,
+        "accuracy": 0.6666666666666666,
+        "macro_f1": 0.7619047619047619,
+        "confusion": {
+          "navigate": {
+            "navigate": 1,
+            "clarify": 1
+          },
+          "inquire": {
+            "clarify": 1,
+            "inquire": 3
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "navigate": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.5,
+        "confusion": {
+          "statement": {
+            "mobile": 1,
+            "unknown": 3
+          },
+          "phone": {
+            "phone": 2
+          }
+        },
+        "per_class": {
+          "phone": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "statement": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 4,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 4,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 395.3446249999999,
+        "p95": 439.86029199999166,
+        "p99": 439.86029199999166,
+        "max": 439.86029199999166
+      }
+    },
+    "confirmation": {
+      "requests": 4,
+      "unique_semantic_cases": 2,
+      "request_errors": 0,
+      "joint_correct": 1,
+      "joint_accuracy": 0.25,
+      "mode": {
+        "correct": 2,
+        "accuracy": 0.5,
+        "macro_f1": 0.6666666666666666,
+        "confusion": {
+          "navigate": {
+            "cancel": 2,
+            "navigate": 2
+          }
+        },
+        "per_class": {
+          "navigate": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 0.5,
+        "macro_f1": 0.5,
+        "confusion": {
+          "replace": {
+            "replace": 2
+          },
+          "loss": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "loss": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "replace": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "missed_navigation": {
+        "count": 2,
+        "denominator": 4,
+        "rate": 0.5
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 382.74266700000226,
+        "p95": 397.7617500000008,
+        "p99": 397.7617500000008,
+        "max": 397.7617500000008
+      }
+    },
+    "ellipsis": {
+      "requests": 4,
+      "unique_semantic_cases": 2,
+      "request_errors": 0,
+      "joint_correct": 2,
+      "joint_accuracy": 0.5,
+      "mode": {
+        "correct": 3,
+        "accuracy": 0.75,
+        "macro_f1": 0.8571428571428571,
+        "confusion": {
+          "navigate": {
+            "navigate": 3,
+            "clarify": 1
+          }
+        },
+        "per_class": {
+          "navigate": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 0.5,
+        "macro_f1": 0.5,
+        "confusion": {
+          "balance": {
+            "balance": 2
+          },
+          "transfer": {
+            "unknown": 1,
+            "pin": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "missed_navigation": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 370.75812500000893,
+        "p95": 891.841707999994,
+        "p99": 891.841707999994,
+        "max": 891.841707999994
+      }
+    },
+    "polite_prefix": {
+      "requests": 40,
+      "unique_semantic_cases": 20,
+      "request_errors": 0,
+      "joint_correct": 12,
+      "joint_accuracy": 0.3,
+      "mode": {
+        "correct": 30,
+        "accuracy": 0.75,
+        "macro_f1": 0.825,
+        "confusion": {
+          "navigate": {
+            "navigate": 12,
+            "cancel": 6,
+            "inquire": 2
+          },
+          "inquire": {
+            "inquire": 18,
+            "cancel": 2
+          }
+        },
+        "per_class": {
+          "inquire": {
+            "support": 20,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          "navigate": {
+            "support": 20,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.7499999999999999
+          }
+        }
+      },
+      "function": {
+        "correct": 16,
+        "accuracy": 0.4,
+        "macro_f1": 0.4607142857142857,
+        "confusion": {
+          "pin": {
+            "replace": 1,
+            "pin": 1,
+            "unknown": 1,
+            "mobile": 1
+          },
+          "loss": {
+            "unknown": 1,
+            "loss": 3
+          },
+          "withdraw": {
+            "deposit": 1,
+            "unknown": 2,
+            "pin": 1
+          },
+          "balance": {
+            "balance": 2,
+            "unknown": 2
+          },
+          "replace": {
+            "replace": 2,
+            "unknown": 2
+          },
+          "phone": {
+            "phone": 3,
+            "unknown": 1
+          },
+          "transfer": {
+            "unknown": 4
+          },
+          "mobile": {
+            "mobile": 3,
+            "unknown": 1
+          },
+          "deposit": {
+            "deposit": 2,
+            "unknown": 2
+          },
+          "statement": {
+            "unknown": 4
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "deposit": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "loss": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "mobile": {
+            "support": 4,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          },
+          "phone": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          },
+          "pin": {
+            "support": 4,
+            "precision": 0.5,
+            "recall": 0.25,
+            "f1": 0.3333333333333333
+          },
+          "replace": {
+            "support": 4,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285715
+          },
+          "statement": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "withdraw": {
+            "support": 4,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 20,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 8,
+        "denominator": 20,
+        "rate": 0.4
+      },
+      "paired_mode_all_correct": {
+        "pairs": 10,
+        "correct": 3
+      },
+      "latency_ms": {
+        "p50": 392.4941669999953,
+        "p95": 431.1950409999952,
+        "p99": 440.7037500000115,
+        "max": 440.7037500000115
+      }
+    },
+    "cancel": {
+      "requests": 8,
+      "unique_semantic_cases": 4,
+      "request_errors": 0,
+      "joint_correct": 4,
+      "joint_accuracy": 0.5,
+      "mode": {
+        "correct": 7,
+        "accuracy": 0.875,
+        "macro_f1": 0.9333333333333333,
+        "confusion": {
+          "cancel": {
+            "cancel": 7,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "cancel": {
+            "support": 8,
+            "precision": 1.0,
+            "recall": 0.875,
+            "f1": 0.9333333333333333
+          }
+        }
+      },
+      "function": {
+        "correct": 4,
+        "accuracy": 0.5,
+        "macro_f1": 0.375,
+        "confusion": {
+          "unknown": {
+            "unknown": 2
+          },
+          "withdraw": {
+            "unknown": 2
+          },
+          "transfer": {
+            "unknown": 2
+          },
+          "mobile": {
+            "mobile": 2
+          }
+        },
+        "per_class": {
+          "mobile": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "unknown": {
+            "support": 2,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "withdraw": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 379.93879199999725,
+        "p95": 399.0969999999976,
+        "p99": 399.0969999999976,
+        "max": 399.0969999999976
+      }
+    },
+    "out_of_domain": {
+      "requests": 6,
+      "unique_semantic_cases": 3,
+      "request_errors": 0,
+      "joint_correct": 0,
+      "joint_accuracy": 0.0,
+      "mode": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "confusion": {
+          "other": {
+            "inquire": 4,
+            "cancel": 2
+          }
+        },
+        "per_class": {
+          "other": {
+            "support": 6,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "function": {
+        "correct": 5,
+        "accuracy": 0.8333333333333334,
+        "macro_f1": 0.9090909090909091,
+        "confusion": {
+          "unknown": {
+            "pin": 1,
+            "unknown": 5
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 368.3542499999817,
+        "p95": 393.0879159999989,
+        "p99": 393.0879159999989,
+        "max": 393.0879159999989
+      }
+    },
+    "ambiguous": {
+      "requests": 12,
+      "unique_semantic_cases": 6,
+      "request_errors": 0,
+      "joint_correct": 1,
+      "joint_accuracy": 0.08333333333333333,
+      "mode": {
+        "correct": 4,
+        "accuracy": 0.3333333333333333,
+        "macro_f1": 0.5,
+        "confusion": {
+          "clarify": {
+            "clarify": 4,
+            "cancel": 3,
+            "inquire": 3,
+            "other": 1,
+            "navigate": 1
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 12,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          }
+        }
+      },
+      "function": {
+        "correct": 7,
+        "accuracy": 0.5833333333333334,
+        "macro_f1": 0.45751633986928103,
+        "confusion": {
+          "balance": {
+            "unknown": 2
+          },
+          "unknown": {
+            "pin": 1,
+            "unknown": 6,
+            "withdraw": 1
+          },
+          "transfer": {
+            "unknown": 1,
+            "transfer": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "unknown": {
+            "support": 8,
+            "precision": 0.6666666666666666,
+            "recall": 0.75,
+            "f1": 0.7058823529411765
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 12,
+        "rate": 0.08333333333333333
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 344.4305000000014,
+        "p95": 904.893125000001,
+        "p99": 904.893125000001,
+        "max": 904.893125000001
+      }
+    },
+    "bare_function": {
+      "requests": 4,
+      "unique_semantic_cases": 2,
+      "request_errors": 0,
+      "joint_correct": 0,
+      "joint_accuracy": 0.0,
+      "mode": {
+        "correct": 2,
+        "accuracy": 0.5,
+        "macro_f1": 0.6666666666666666,
+        "confusion": {
+          "clarify": {
+            "clarify": 2,
+            "cancel": 1,
+            "navigate": 1
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 1,
+        "accuracy": 0.25,
+        "macro_f1": 0.3333333333333333,
+        "confusion": {
+          "balance": {
+            "unknown": 2
+          },
+          "transfer": {
+            "unknown": 1,
+            "transfer": 1
+          }
+        },
+        "per_class": {
+          "balance": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "transfer": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 322.3327919999974,
+        "p95": 904.893125000001,
+        "p99": 904.893125000001,
+        "max": 904.893125000001
+      }
+    },
+    "multiple_targets": {
+      "requests": 4,
+      "unique_semantic_cases": 2,
+      "request_errors": 0,
+      "joint_correct": 0,
+      "joint_accuracy": 0.0,
+      "mode": {
+        "correct": 1,
+        "accuracy": 0.25,
+        "macro_f1": 0.4,
+        "confusion": {
+          "clarify": {
+            "clarify": 1,
+            "inquire": 1,
+            "cancel": 1,
+            "other": 1
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 0.5,
+        "macro_f1": 0.6666666666666666,
+        "confusion": {
+          "unknown": {
+            "pin": 1,
+            "withdraw": 1,
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 4,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 4,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 424.16129200000796,
+        "p95": 446.4674590000186,
+        "p99": 446.4674590000186,
+        "max": 446.4674590000186
+      }
+    },
+    "missing_context": {
+      "requests": 2,
+      "unique_semantic_cases": 1,
+      "request_errors": 0,
+      "joint_correct": 0,
+      "joint_accuracy": 0.0,
+      "mode": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "confusion": {
+          "clarify": {
+            "cancel": 1,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "unknown": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 303.9180829999992,
+        "p95": 343.07062499999574,
+        "p99": 343.07062499999574,
+        "max": 343.07062499999574
+      }
+    },
+    "missing_reference": {
+      "requests": 2,
+      "unique_semantic_cases": 1,
+      "request_errors": 0,
+      "joint_correct": 1,
+      "joint_accuracy": 0.5,
+      "mode": {
+        "correct": 1,
+        "accuracy": 0.5,
+        "macro_f1": 0.6666666666666666,
+        "confusion": {
+          "clarify": {
+            "clarify": 1,
+            "inquire": 1
+          }
+        },
+        "per_class": {
+          "clarify": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "unknown": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 341.4292919999866,
+        "p95": 344.4305000000014,
+        "p99": 344.4305000000014,
+        "max": 344.4305000000014
+      }
+    },
+    "social": {
+      "requests": 2,
+      "unique_semantic_cases": 1,
+      "request_errors": 0,
+      "joint_correct": 2,
+      "joint_accuracy": 1.0,
+      "mode": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "other": {
+            "other": 2
+          }
+        },
+        "per_class": {
+          "other": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "function": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "unknown": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "unknown": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 343.4744160000065,
+        "p95": 375.86350000000834,
+        "p99": 375.86350000000834,
+        "max": 375.86350000000834
+      }
+    },
+    "failure": {
+      "requests": 2,
+      "unique_semantic_cases": 1,
+      "request_errors": 0,
+      "joint_correct": 0,
+      "joint_accuracy": 0.0,
+      "mode": {
+        "correct": 2,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "confusion": {
+          "human": {
+            "human": 2
+          }
+        },
+        "per_class": {
+          "human": {
+            "support": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        }
+      },
+      "function": {
+        "correct": 0,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "confusion": {
+          "transfer": {
+            "unknown": 2
+          }
+        },
+        "per_class": {
+          "transfer": {
+            "support": 2,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        }
+      },
+      "inquiry_to_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "non_navigation_open": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "missed_navigation": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "paired_mode_all_correct": {
+        "pairs": 0,
+        "correct": 0
+      },
+      "latency_ms": {
+        "p50": 384.1108339999977,
+        "p95": 390.3411659999989,
+        "p99": 390.3411659999989,
+        "max": 390.3411659999989
+      }
+    }
+  }
+}

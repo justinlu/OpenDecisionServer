@@ -115,6 +115,8 @@ The [Chinese, English, numeric and pinyin evaluation suite](tests/evaluation/REA
 
 For voice assistants, the [Apple Silicon latency comparison](tests/evaluation/results/2026-10-27-voice-latency/README.md) measures Julia CPU and Chinese Decision 2B Metal against a 100 ms p95 budget across history lengths, question counts and concurrency.
 
+The [banking audio intent dataset](tests/evaluation/datasets/banking-audio-v1/README.md) contains 128 Mandarin semantic cases and 324 frozen synthetic WAV files for kiosk navigation versus inquiry, with an [offline listening page](tests/evaluation/datasets/banking-audio-v1/index.html). The [d1-Omni evaluation report](tests/evaluation/results/2026-10-28-banking-audio-v1/README.md) separates text, direct audio, synthetic noise and post-hoc diagnostics; these results do not establish production speech accuracy.
+
 ## Configuration
 
 `ods -h` lists all flags. Select `-engine julia|chinese-decision`; the default is Julia. Julia options include `-model`, `-tokenizer`, `-ort-lib`, `-ort-threads`, `-max-runs`, `-max-waiting`, `-max-length` and `-head-length`. Native options are described above. Shared options include `-http`, `-max-questions` and `-log-requests`. Structured request logging omits state, instructions, and criteria.
