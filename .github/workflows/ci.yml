@@ -27,11 +27,13 @@ jobs:
       - name: Official Julia ONNX parity
         run: ODS_PARITY=1 go test ./internal/engine/julia -run TestOfficialONNXParity -v -count=1
       - name: Build Linux container
-        run: docker build --platform linux/amd64 -t ods-ci .
+        uses: docker/setup-buildx-action@v3
+      - name: Build image with layer cache
+        run: docker buildx build --platform linux/amd64 -t ods-ci --load --cache-from type=gha --cache-to type=gha,mode=max .
       - name: Container HTTP smoke test
         run: |
           docker run -d --name ods-ci -p 18080:8080 ods-ci
-          for i in $(seq 1 90); do
+          for i in $(seq 1 300); do
             if curl -fsS http://127.0.0.1:18080/health/ready; then break; fi
             sleep 1
           done

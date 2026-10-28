@@ -169,15 +169,27 @@ make build
 
 Linux 将 `-ort-lib` 换为 `.so` 路径。普通 `make build` 不包含 Metal 支持，运行时必须显式选择 `-engine julia`；省略后会尝试默认 d1 并提示使用原生构建。
 
-### Linux x86-64 容器
+### Linux 容器（d1-2B CPU）
+
+推荐用 Docker Compose 一条命令部署：
 
 ```sh
-./scripts/download-model.sh
-docker build --platform linux/amd64 -t open-decision-server .
+docker compose up --build
+```
+
+或者裸 Docker（支持 linux/amd64 与 linux/arm64）：
+
+```sh
+docker buildx build --platform linux/amd64 -t open-decision-server --load .
 docker run --rm -p 127.0.0.1:8080:8080 open-decision-server
 ```
 
-当前 Dockerfile 显式选择 Julia CPU，并下载固定 ONNX Runtime 库。该镜像没有 d1 / Chinese Metal 支持。
+镜像内含 pinned 的 d1-2B Q8_0 模型（约 1.8GB，构建期下载并校验 SHA-256）与从 pinned llama.cpp 源码编译的 CPU 推理库，首次构建较久。健康检查：
+
+```sh
+curl -fsS http://127.0.0.1:8080/health        # 聚合状态（引擎、模型、就绪）
+curl -fsS http://127.0.0.1:8080/health/ready  # 就绪探针
+```
 
 ## 调用当前 d1 服务
 
