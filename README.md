@@ -105,7 +105,7 @@ The Docker build downloads the pinned Linux x86-64 ONNX Runtime CPU archive and 
 
 ## API
 
-`POST /v1/systemone` takes `state` and named `questions`; the current d1 service does not require `model`. The older Julia/Chinese parsers still accept their explicit model fields as described in their sections. Supported types are `noul`, `choice`, and `score`. The response contains `model`, `answers`, and `usage`. `GET /v1/models` lists accepted model names; `GET /health/live` and `GET /health/ready` serve health checks. `GET /metrics` exposes the active inference runs, queue depth, total runs, and maximum observed overlapping `Session.Run` calls in Prometheus text format.
+`POST /v1/systemone` takes `state` and named `questions`; the current d1 service does not require `model`. The older Julia/Chinese parsers still require an explicit model field as described in their sections. Supported types are `noul`, `choice`, and `score`. The response contains `model`, `answers`, and `usage`. `GET /v1/models` lists accepted model names; `GET /health/live` and `GET /health/ready` serve health checks. `GET /metrics` exposes the active inference runs, queue depth, total runs, and maximum observed overlapping `Session.Run` calls in Prometheus text format.
 
 The initial aliases `jev-latest`, `jev-1.13.0`, and `typesafe/jev-1.13` all resolve to `julia-1`. A response identifies the actual model as `julia-1`. `usage.input_tokens` counts encoded inputs; `usage.output_tokens` is zero because Julia does not generate tokens.
 
