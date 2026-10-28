@@ -1,0 +1,30 @@
+{
+  "d1-2B-Q8_0.gguf": {
+    "gguf_version": 3,
+    "tensors": 287,
+    "metadata": {
+      "general.architecture": "lfm3",
+      "general.name": "D1 2B",
+      "lfm3.decision.type": "lfm3-d1",
+      "lfm3.decision.temperature.noul": 1.3373984098434448,
+      "lfm3.decision.temperature.choice": 1.3373984098434448,
+      "lfm3.decision.temperature.score": 1.3373984098434448,
+      "general.quantization_version": 2,
+      "general.file_type": 7
+    }
+  },
+  "d1-Omni-2B-Q8_0.gguf": {
+    "gguf_version": 3,
+    "tensors": 287,
+    "metadata": {
+      "general.architecture": "lfm3",
+      "general.name": "D1 Omni 2B",
+      "lfm3.decision.type": "lfm3-d1-omni",
+      "lfm3.decision.temperature.noul": 3.3829832077026367,
+      "lfm3.decision.temperature.choice": 3.3829832077026367,
+      "lfm3.decision.temperature.score": 3.3829832077026367,
+      "general.quantization_version": 2,
+      "general.file_type": 7
+    }
+  }
+}

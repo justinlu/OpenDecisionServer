@@ -1,0 +1,135 @@
+{
+  "files": {
+    "blue-en.wav": {
+      "sha256": "d6c64e329dd900a06024a64b086aa9919a744563d98de7e1044f7699b0f38943",
+      "bytes": 144470,
+      "seconds": 4.3866875,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "cats.jpg": {
+      "sha256": "dea9e7ef97386345f7cff32f9055da4982da5471c48d575146c796ab4563b04e",
+      "bytes": 173131
+    },
+    "red-zh.wav": {
+      "sha256": "707761c93aaf168500afb03eb531ca79f50d8e16117222d03896893beb6c9976",
+      "bytes": 178206,
+      "seconds": 5.4409375,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "refund-en.wav": {
+      "sha256": "c075ef998af386e8a2bf576f5f475b282e153712c5f57c304d5dc4e4e28976d9",
+      "bytes": 116482,
+      "seconds": 3.5120625,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "refund-zh.wav": {
+      "sha256": "454071f89dcbccadbf4868893c583608ed8d3b2d9fd168af3006cc4abd7e2972",
+      "bytes": 147302,
+      "seconds": 4.4751875,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "shipping-en.wav": {
+      "sha256": "278242c85635312e044dda554cf2082470389e1769b2208861345a458b09b3e3",
+      "bytes": 125876,
+      "seconds": 3.805625,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "shipping-zh.wav": {
+      "sha256": "c340e9de4af62a5349e2af64f467fcfa642dae0ee09ed7ce9f255684b53dd3aa",
+      "bytes": 132070,
+      "seconds": 3.9991875,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "silence.wav": {
+      "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "bytes": 64044,
+      "seconds": 2.0,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "spoken-question.wav": {
+      "sha256": "942474c3a7d295a7d698ecdc4099b61f3eff6f5d95dbc137145123863db32a4e",
+      "bytes": 68640,
+      "seconds": 2.017,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "technical-en.wav": {
+      "sha256": "c49cbc38d387f5e31970759e25514df3c4a0d7bfa02af656b41ff1f5d74deeac",
+      "bytes": 114910,
+      "seconds": 3.4629375,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "technical-zh.wav": {
+      "sha256": "15c1cc12ebecadb80daf834e7a26dc1a7f7a40a1c12315f1c53e12dbc73d8470",
+      "bytes": 165920,
+      "seconds": 5.057,
+      "sample_rate": 16000,
+      "channels": 1
+    },
+    "tone.wav": {
+      "sha256": "4ffb72be5d0dab0c7012497cdf2c371920715aefacd64eb0c7a85355f057440f",
+      "bytes": 64044,
+      "seconds": 2.0,
+      "sample_rate": 16000,
+      "channels": 1
+    }
+  },
+  "speech": {
+    "refund-zh.wav": {
+      "voice": "Tingting (Chinese (China mainland))",
+      "rate": 190,
+      "transcript": "我的银行卡被重复扣款了，请退还多收的钱。"
+    },
+    "shipping-zh.wav": {
+      "voice": "Tingting (Chinese (China mainland))",
+      "rate": 190,
+      "transcript": "我不是要退款，我只想查询包裹到哪里了。"
+    },
+    "technical-zh.wav": {
+      "voice": "Tingting (Chinese (China mainland))",
+      "rate": 190,
+      "transcript": "钱没有问题，但是应用程序打不开，一启动就闪退。"
+    },
+    "refund-en.wav": {
+      "voice": "Samantha (English (US))",
+      "rate": 190,
+      "transcript": "My card was charged twice. Please refund the extra charge."
+    },
+    "shipping-en.wav": {
+      "voice": "Samantha (English (US))",
+      "rate": 190,
+      "transcript": "I do not want a refund. I just want to know where my parcel is."
+    },
+    "technical-en.wav": {
+      "voice": "Samantha (English (US))",
+      "rate": 190,
+      "transcript": "The payment is fine, but the app crashes every time I open it."
+    },
+    "red-zh.wav": {
+      "voice": "Tingting (Chinese (China mainland))",
+      "rate": 190,
+      "transcript": "如果照片里是猫，请选红色；如果是狗，请选蓝色。"
+    },
+    "blue-en.wav": {
+      "voice": "Samantha (English (US))",
+      "rate": 190,
+      "transcript": "If the picture shows cats, choose blue. If it shows dogs, choose red."
+    },
+    "spoken-question.wav": {
+      "voice": "Samantha (English (US))",
+      "rate": 190,
+      "transcript": "Are the animals in the picture cats?"
+    }
+  },
+  "warning": "Synthetic macOS TTS; two voices, six scripts. No real-speaker accuracy claim.",
+  "image_source": "http://images.cocodataset.org/val2017/000000039769.jpg",
+  "fixtures_sha256": "d8f58fa2d9a9a8f07148654ad413498b6d6ec8b38096df368dcd41927c30038c"
+}

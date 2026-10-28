@@ -1,0 +1,58 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "architecture": "arm64",
+  "python": "3.9.6",
+  "llama_source_revision": "d05706b4f32a545814856e98ca518292585443b9",
+  "baseline_commit": "c5be4b997036fdf3d607ecbd4180a85b5b70ab68",
+  "parameters": {
+    "gpu_layers": 99,
+    "context": 8192,
+    "batch": 8192,
+    "ubatch": 8192,
+    "parallel_slots": 1,
+    "threads": 4,
+    "threads_batch": 4,
+    "cache_ram": 0
+  },
+  "notes": [
+    "Existing ods-metal service at port 18083 is retained and not load-tested concurrently.",
+    "Both candidates run sequentially; no change to production defaults."
+  ],
+  "sha256": {
+    "tests/evaluation/custom.jsonl": "be5a6ef1f8b83b973dbeb9bd9a8e4da349e3bb62d35aaaa05a7f3d81b82beac4",
+    "tests/evaluation/toksuite.jsonl": "4347d2b4607dedbc906936f7dbf525116507994957c0c43cd5053aa9d4b86f50",
+    "tests/evaluation/voice-performance.jsonl": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32",
+    "tests/evaluation/liquid-d1-models.json": "3066057883b16d65fbb4d55314de73d41b0f81ab856ed2ac59b53bb45ece4233",
+    "tests/evaluation/liquid-d1-media.json": "d8f58fa2d9a9a8f07148654ad413498b6d6ec8b38096df368dcd41927c30038c",
+    "dist/liquid-d1/build/bin/llama-server": "88c457824dd3b5d7a98066132c73b7f77a52d22e59a29a02e2e1736ed2c275cd"
+  },
+  "hardware": {
+    "chip": "Apple M6",
+    "memory_bytes": 17179869184,
+    "logical_cpus": 12
+  },
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+  "cpu_model_selection": "Both Q8_0 language weights; F16 media encoders/projectors; one Metal server at a time.",
+  "tooling_commit": "d1e5bac",
+  "evaluation_code_sha256": {
+    "tests/evaluation/evaluate.py": "f8a8337e98391b9645ef324dda04e5c6fc54a7386233abed27f3528c3b2fa8eb",
+    "tests/evaluation/benchmark_latency.py": "bae6486707f041cde29389bfd88652a115148eca76109292b2bbb8c4b26417b5",
+    "tests/evaluation/liquid_d1_media.py": "f406699a1c7700d63eedc93d3074c55b3a079113b0babb95683369066569f214",
+    "tests/evaluation/audit_liquid_d1.py": "4f84840e5c747282fdc135f08802ba59b07076bb1aff0bc3b291bb81de584391",
+    "scripts/run-liquid-d1.sh": "38c3276d53f1539c31a8d8065abf50474a180c76d4d1e6f81ab963f008af587a",
+    "scripts/prepare-liquid-d1.sh": "26b6d3905861ce1e20b8ec0ebba9fb81aab4ab067d873d2c3d0b578e86a6ff96"
+  },
+  "binary_sha256_by_run": {
+    "omni": "88c457824dd3b5d7a98066132c73b7f77a52d22e59a29a02e2e1736ed2c275cd",
+    "d1": "88c457824dd3b5d7a98066132c73b7f77a52d22e59a29a02e2e1736ed2c275cd"
+  },
+  "binary_note": "The setup script was replayed between models. Source and flags stay pinned; the archive build can regenerate embedded build metadata from its enclosing checkout.",
+  "verification": {
+    "python_unit_tests": 22,
+    "go_command": "make test",
+    "raw_accuracy_rows": 1978,
+    "raw_latency_rows": 2880,
+    "media_requests": 379,
+    "media_judgments": 423
+  }
+}

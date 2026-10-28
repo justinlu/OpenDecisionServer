@@ -60,14 +60,14 @@ def main():
                                       accuracy_errors=summary['overall']['errors'],
                                       peak_sampled_rss_mib=max(row['rss_kib'] for row in resources)/1024,
                                       accuracy_rows_verified=len(records), latency_rows_verified=len(samples))
-    for model, path in [
-        ('julia-1-historical', ROOT/'results/2026-10-27/predictions.jsonl'),
-        ('chinese-decision-2b-historical', ROOT/'results/2026-10-27-ods-native/accuracy/predictions.jsonl')]:
-        records = read_rows(path)
+    for model, paths in [
+        ('julia-1-historical', [ROOT/'results/2026-10-27/custom/predictions.jsonl', ROOT/'results/2026-10-27/toksuite/predictions.jsonl']),
+        ('chinese-decision-2b-historical', [ROOT/'results/2026-10-27-ods-native/accuracy/predictions.jsonl'])]:
+        records = [row for path in paths for row in read_rows(path)]
         assert {row['id'] for row in records} == {row['id'] for row in frozen}
         all_predictions[model] = {row['id']: row for row in records}
         report['models'][model] = dict(accuracy=summarize(records)['breakdowns'], historical=True,
-                                      predictions_path=str(path.relative_to(ROOT)))
+                                      predictions_paths=[str(path.relative_to(ROOT)) for path in paths])
     for candidate in ['d1-omni-2b', 'd1-2b']:
         for baseline in ['julia-1-historical', 'chinese-decision-2b-historical']:
             pairs = {}
@@ -82,6 +82,31 @@ def main():
             original = read_rows(initial)
             final = all_predictions['d1-omni-2b' if prefix == 'omni' else 'd1-2b']
             report[prefix+'_accuracy_repeat'] = dict(rows=len(original), changed_predictions=sum(row['predicted'] != final[row['id']]['predicted'] for row in original))
+    media = {case['id']: case for case in json.loads((ROOT/'liquid-d1-media.json').read_text())}
+    report['media'] = {}
+    for directory, model, count in [('omni-media', 'd1-omni-2b', 18),
+                                    ('omni-media-repeated', 'd1-omni-2b', 360),
+                                    ('d1-media', 'd1-2b', 1)]:
+        records = read_rows(args.results/directory/'predictions.jsonl')
+        assert len(records) == count
+        groups = defaultdict(list)
+        for row in records:
+            case = media[row['id']]
+            assert row['expected'] == case['expected'] and row['group'] == case['group']
+            assert row['error'] is None and row['response']['model'] == model
+            assert row['response']['usage']['output_tokens'] == 0
+            for key, expected in case['expected'].items():
+                result = grade({'request': {'questions': {'decision': case['request']['questions'][key]}}, 'expected': expected},
+                               dict(row['response'], answers={'decision': row['response']['answers'][key]}), 'median')
+                assert row['results'][key] == result
+            assert row['correct'] == sum(r['correct'] for r in row['results'].values())
+            groups[row['group']].append(row)
+        summary = {key: dict(questions=sum(len(r['expected']) for r in rs), correct=sum(r['correct'] for r in rs),
+                             request_errors=sum(r['error'] is not None for r in rs),
+                             latencies_ms=[r['latency_ms'] for r in rs]) for key, rs in groups.items()}
+        assert summary == json.loads((args.results/directory/'summary.json').read_text())
+        report['media'][directory] = dict(requests_verified=count, judgments=sum(len(r['expected']) for r in records),
+                                         correct=sum(r['correct'] for r in records))
     (args.results/'comparison.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     print('Verified 1,978 accuracy rows and 2,880 latency rows against raw responses and fixed fixtures.')
 

@@ -1,0 +1,32 @@
+test_checked_in_custom_file_matches_fixed_seeds (test_evaluation.DatasetTests) ... ok
+test_complete_paired_coverage_and_reproducibility (test_evaluation.DatasetTests) ... ok
+test_external_conversion_preserves_authors_answer_and_choices (test_evaluation.DatasetTests) ... ok
+test_external_snapshot_matches_pinned_manifest (test_evaluation.DatasetTests) ... ok
+test_task_and_domain_coverage (test_evaluation.DatasetTests) ... ok
+test_errors_stay_in_denominator_and_pairing_is_not_success (test_evaluation.ScoringTests) ... ok
+test_http_malformed_response_preserves_all_rows_and_summary (test_evaluation.ScoringTests) ... ok
+test_macro_f1_includes_all_declared_candidate_labels (test_evaluation.ScoringTests) ... ok
+test_median_score_tie_uses_first_level_reaching_half (test_evaluation.ScoringTests) ... ok
+test_native_median_score_is_validated_without_changing_argmax_grading (test_evaluation.ScoringTests) ... ok
+test_noul_tie_uses_false_first (test_evaluation.ScoringTests) ... ok
+test_null_answer_is_a_validation_error (test_evaluation.ScoringTests) ... ok
+test_rejects_bad_probability_and_mismatched_choice (test_evaluation.ScoringTests) ... ok
+test_score_uses_argmax_not_rounded_expected_index (test_evaluation.ScoringTests) ... ok
+test_truncated_http_error_body_keeps_partial_body_and_continues (test_evaluation.ScoringTests) ... ok
+test_truncated_http_response_is_counted_as_an_error (test_evaluation.ScoringTests) ... ok
+test_errors_cannot_make_budget_pass_and_stay_in_miss_rate (test_latency.LatencyTests) ... ok
+test_latency_checks_accept_native_median_score_explicitly (test_latency.LatencyTests) ... ok
+test_multidecision_response_validates_every_question_and_model (test_latency.LatencyTests) ... ok
+test_nearest_rank_tail_includes_slowest_sample (test_latency.LatencyTests) ... ok
+test_audio_requests_do_not_leak_transcripts_or_labels (test_liquid_d1_media.MediaTests) ... ok
+test_truncated_media_http_response_is_recorded_and_later_cases_continue (test_liquid_d1_media.MediaTests) ... custom: 0/2 (0.00%); errors=2
+custom: 0/2 (0.00%); errors=2
+custom: 0/1 (0.00%); errors=1
+cats-image 0 / 3 IncompleteRead: IncompleteRead(7 bytes read, 9 more expected)
+cats-image 0 / 3 IncompleteRead: IncompleteRead(7 bytes read, 9 more expected)
+ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.043s
+
+OK

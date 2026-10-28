@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-28T01:04:12.407560+00:00",
+  "url": "http://127.0.0.1:18084/v1/systemone",
+  "model": "d1-omni-2b",
+  "samples_per_group": 120,
+  "clients": [
+    1,
+    4
+  ],
+  "warmup": 6,
+  "timeout": 120.0,
+  "budget_ms": 100.0,
+  "quantiles": "nearest rank of successful requests",
+  "score_readout": "median",
+  "workload": "closed loop; one persistent HTTP connection per worker; not open-loop production traffic",
+  "fixtures_sha256": "378423b367da93cd2234ced5bffb12e09576bcd26d8146f2f2746cdfb4864f32",
+  "script_sha256": "5aa1abb912d89b0af52cb9b23e4a275ed0564e23c31b8ffcb7d0bccac77a7130"
+}

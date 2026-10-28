@@ -1,0 +1,13 @@
+{
+  "started_at": "2026-10-28T01:16:37.706919+00:00",
+  "url": "http://127.0.0.1:18084/v1/systemone",
+  "requested_model": "d1-2b",
+  "datasets": {
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/tests/evaluation/custom.jsonl": "be5a6ef1f8b83b973dbeb9bd9a8e4da349e3bb62d35aaaa05a7f3d81b82beac4",
+    "/Volumes/ExtHD/GitHub/OpenDecisionServer/tests/evaluation/toksuite.jsonl": "4347d2b4607dedbc906936f7dbf525116507994957c0c43cd5053aa9d4b86f50"
+  },
+  "scoring": "argmax probabilities; noul >0.5; errors count as incorrect",
+  "score_readout": "median",
+  "script_sha256": "f8a8337e98391b9645ef324dda04e5c6fc54a7386233abed27f3528c3b2fa8eb",
+  "warning": "Variants are correlated; overall pooling is descriptive only. Interpret source-specific results."
+}

@@ -1,0 +1,10 @@
+{
+  "image": {
+    "questions": 3,
+    "correct": 3,
+    "request_errors": 0,
+    "latencies_ms": [
+      676.882834
+    ]
+  }
+}

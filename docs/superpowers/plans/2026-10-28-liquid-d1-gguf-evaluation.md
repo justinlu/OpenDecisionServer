@@ -14,10 +14,10 @@ User-authorized experiment: build and run native llama.cpp first; do not integra
 
 ## Tasks
 
-- [ ] Build the pinned server and verify both model bundles.
-- [ ] Run text and multimedia smoke checks; establish actual upstream response semantics.
-- [ ] Run both complete accuracy suites and the fixed latency matrix sequentially.
-- [ ] Audit saved predictions and measurements; publish a reproducible report with limits and model-selection advice.
+- [x] Build the pinned server and verify both model bundles.
+- [x] Run text and multimedia smoke checks; establish actual upstream response semantics.
+- [x] Run both complete accuracy suites and the fixed latency matrix sequentially.
+- [x] Audit saved predictions and measurements; publish a reproducible report with limits and model-selection advice.
 - [ ] Commit and push this experiment, merge into main, verify remote containment and remove the fully merged task branch.
 
 ## Review focus
