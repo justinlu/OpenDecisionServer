@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import plistlib
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -33,9 +34,31 @@ class LocalD1DeploymentTests(unittest.TestCase):
         def command(*args,**kwargs):
             calls.append(args)
             if 'bootstrap' in args and str(args[-1]).endswith(deploy.LABELS[0]+'.plist'):raise RuntimeError('first job failed')
+            return SimpleNamespace(stdout='',returncode=0)
         with patch.object(deploy,'command',side_effect=command),patch.object(deploy,'wait_original',return_value={'recovered':True},create=True):
             deploy.restore(self.release)
         self.assertTrue(any('bootstrap' in args and deploy.LABELS[1] in str(args) for args in calls))
         self.assertTrue(json.loads((self.release/'rollback-report.json').read_text())['command_errors'])
+
+
+class LaunchdDrainTests(unittest.TestCase):
+    def test_bootout_waits_for_old_process_to_exit(self):
+        from types import SimpleNamespace
+        def command(*args,**kwargs):return SimpleNamespace(stdout='\n pid = 42\n',returncode=0)
+        with patch.object(deploy,'command',side_effect=command),patch.object(deploy.os,'kill',side_effect=[None,None,ProcessLookupError]) as alive,patch.object(deploy.time,'sleep'):
+            deploy.stop_job('app.example')
+            self.assertEqual(alive.call_count,3)
+
+class InterruptedDrainTests(unittest.TestCase):
+    def test_recovery_remembers_pid_after_job_is_unregistered(self):
+        present=SimpleNamespace(stdout='\n pid = 43\n',returncode=0)
+        absent=SimpleNamespace(stdout='',returncode=3)
+        with patch.object(deploy,'command',return_value=present),patch.object(deploy.os,'kill',side_effect=KeyboardInterrupt):
+            with self.assertRaises(KeyboardInterrupt):deploy.stop_job('app.interrupted')
+        self.assertEqual(deploy.DRAINING['app.interrupted'],43)
+        with patch.object(deploy,'command',return_value=absent),patch.object(deploy.os,'kill',side_effect=[None,ProcessLookupError]) as alive,patch.object(deploy.time,'sleep'):
+            deploy.stop_job('app.interrupted')
+            self.assertEqual(alive.call_count,2)
+        self.assertNotIn('app.interrupted',deploy.DRAINING)
 
 if __name__=='__main__':unittest.main()

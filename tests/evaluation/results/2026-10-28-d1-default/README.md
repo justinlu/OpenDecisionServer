@@ -59,4 +59,6 @@ Go队列取消／Stop／Close回归和真实Metal A/B/A通过。原生错误回�
 python3 tests/evaluation/results/2026-10-28-d1-default/audit.py
 ```
 
-Go全套／race／vet、Python44项及无GPU的C++后端错误回归通过。真实native测试需一次只启动一个d1实例，按 `internal/engine/d1/native_integration_test.go` 的环境开关运行。部署脚本回归仅使用临时目录与模拟命令，不改本机服务。
+Go全套／race／vet、Python46项及无GPU的C++后端错误回归通过。真实native测试需一次只启动一个d1实例，按 `internal/engine/d1/native_integration_test.go` 的环境开关运行。部署脚本回归仅使用临时目录与模拟命令，不改本机服务。
+
+首次激活因launchd退出竞态未通过，原配置已自动还原、原两服务经直接bootstrap恢复并核验。`first-activation-failure.json`保留失败与恢复身份。无模型3秒延迟退出探针复现：bootout约0.004秒即返回，立即bootstrap退出5，等PID退出后成功。部署工具已增加PID退出等待、跨中断保留PID及登记清理短重试，四项部署回归通过。最终成功激活另见activation.json，不将首次失败当成功。

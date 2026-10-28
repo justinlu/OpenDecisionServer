@@ -1,0 +1,52 @@
+{
+  "failed_release": "/Users/justinlu/Library/Application Support/VoiceAI/decision/releases/20261028T063637Z-60b88a6d",
+  "automatic_rollback_report": {
+    "recovered": false,
+    "verification_error": "<urlopen error [Errno 61] Connection refused>",
+    "command_errors": [
+      "Command '('launchctl', 'bootstrap', 'gui/501', '/Users/justinlu/Library/LaunchAgents/app.powermobile.voiceai.decision.plist')' returned non-zero exit status 5.",
+      "Command '('launchctl', 'bootstrap', 'gui/501', '/Users/justinlu/Library/LaunchAgents/app.powermobile.voiceai.decision-chinese.plist')' returned non-zero exit status 5."
+    ]
+  },
+  "manual_recovery_verified": {
+    "8080": {
+      "models": [
+        {
+          "description": "Local Julia-1 ONNX CPU decision model",
+          "name": "julia-1",
+          "release_date": "2026-09-25"
+        },
+        {
+          "description": "Local alias for Julia-1",
+          "name": "jev-latest",
+          "release_date": "2026-09-25"
+        },
+        {
+          "description": "Local alias for Julia-1",
+          "name": "jev-1.13.0",
+          "release_date": "2026-09-25"
+        },
+        {
+          "description": "Local alias for Julia-1",
+          "name": "typesafe/jev-1.13",
+          "release_date": "2026-09-25"
+        }
+      ]
+    },
+    "18083": {
+      "models": [
+        {
+          "description": "Local Chinese Decision 2B Q8_0 Metal decision model",
+          "name": "chinese-decision-2b"
+        }
+      ]
+    }
+  },
+  "root_cause": "launchctl bootout returns before old PID exits; immediate same-label bootstrap returns5.",
+  "controlled_reproduction": {
+    "bootout_elapsed_seconds": 0.004,
+    "immediate_bootstrap_exit": 5,
+    "after_old_process_drain_bootstrap_exit": 0
+  },
+  "fix": "Remember job PIDs across interruption, wait until each process exits before bootstrap, and briefly retry launchd registration cleanup."
+}

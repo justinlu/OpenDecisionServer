@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import plistlib
+import re
 import shutil
 import signal
 import subprocess
@@ -19,6 +20,7 @@ AGENTS=HOME_DIR/'Library/LaunchAgents'
 BASE=HOME_DIR/'Library/Application Support/VoiceAI/decision'
 LABELS=['app.powermobile.voiceai.decision','app.powermobile.voiceai.decision-chinese']
 DOMAIN=f'gui/{os.getuid()}'
+DRAINING={}
 
 
 def command(*args,check=True):return subprocess.run(args,check=check,capture_output=True,text=True)
@@ -30,6 +32,33 @@ def digest(path):
 
 def write_plist(path,data):
     temp=path.with_suffix('.plist.tmp');temp.write_bytes(plistlib.dumps(data));temp.chmod(0o644);os.replace(temp,path)
+
+
+def stop_job(label):
+    state=command('launchctl','print',DOMAIN+'/'+label,check=False)
+    if state.returncode==0:
+        match=re.search(r'^\s*pid = (\d+)\s*$',state.stdout,re.MULTILINE)
+        if match:DRAINING[label]=int(match.group(1))
+        command('launchctl','bootout',DOMAIN+'/'+label)
+    if label in DRAINING:
+        pid=DRAINING[label];deadline=time.monotonic()+60
+        while True:
+            try:os.kill(pid,0)
+            except ProcessLookupError:
+                del DRAINING[label]
+                return
+            if time.monotonic()>=deadline:raise RuntimeError(f'Old {label} process {pid} is still draining')
+            time.sleep(.25)
+
+
+def bootstrap(path):
+    # launchd can briefly retain the removed registration after the PID exits.
+    for attempt in range(40):
+        try:return command('launchctl','bootstrap',DOMAIN,str(path))
+        except subprocess.CalledProcessError as error:
+            if error.returncode!=5 or attempt==39:
+                raise RuntimeError('launchd bootstrap failed: '+str(error.stderr)) from error
+            time.sleep(.25)
 
 def stage():
     if command('git','-C',str(ROOT),'status','--porcelain').stdout.strip():raise RuntimeError('Commit the release sources before staging')
@@ -66,12 +95,12 @@ def restore(release):
     def attempt(action):
         try:action()
         except Exception as error:errors.append(str(error))
-    for label in LABELS:attempt(lambda:command('launchctl','bootout',DOMAIN+'/'+label,check=False))
+    for label in LABELS:attempt(lambda:stop_job(label))
     for label in LABELS:
         path=AGENTS/(label+'.plist')
         attempt(lambda:write_plist(path,plistlib.loads((release/'rollback'/path.name).read_bytes())))
         attempt(lambda:command('launchctl','enable',DOMAIN+'/'+label))
-        attempt(lambda:command('launchctl','bootstrap',DOMAIN,str(path)))
+        attempt(lambda:bootstrap(path))
     expected=json.loads((release/'rollback/state.json').read_text())
     try:report=wait_original(expected)
     except Exception as error:report=dict(recovered=False,verification_error=str(error))
@@ -140,13 +169,13 @@ def activate(release):
         name=label+'.plist'
         assert (AGENTS/name).read_bytes()==(release/'rollback'/name).read_bytes(),'Managed configuration changed after staging'
     try:
-        for label in LABELS:command('launchctl','bootout',DOMAIN+'/'+label)
+        for label in LABELS:stop_job(label)
         command('launchctl','disable',DOMAIN+'/'+LABELS[1])
         target=AGENTS/(LABELS[0]+'.plist');write_plist(target,plistlib.loads((release/'launchd.plist').read_bytes()))
-        command('launchctl','enable',DOMAIN+'/'+LABELS[0]);command('launchctl','bootstrap',DOMAIN,str(target))
+        command('launchctl','enable',DOMAIN+'/'+LABELS[0]);bootstrap(target)
         first=wait_ready()
         # Verify a managed restart from the self-contained release, not the checkout.
-        command('launchctl','bootout',DOMAIN+'/'+LABELS[0]);command('launchctl','bootstrap',DOMAIN,str(target))
+        stop_job(LABELS[0]);bootstrap(target)
         second=wait_ready(first['8080']['pid'])
         libraries=command('lsof','-p',str(second['8080']['pid'])).stdout
         assert str(release/'native/lib/libods_d1.dylib') in libraries
