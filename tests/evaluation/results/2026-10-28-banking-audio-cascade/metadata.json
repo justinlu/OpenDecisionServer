@@ -1,0 +1,10 @@
+{
+  "post_hoc": true,
+  "model": "d1-omni-2b",
+  "url": "http://127.0.0.1:18084/v1/systemone",
+  "runner_sha256": "82a7ed3a4c4878acfdaec65153fcc0a2a4dc5770d46b8ada26e02623099917ff",
+  "dataset_manifest_sha256": "252c27dda3b7ce326d5f22a8597f0acd5161bc215d57a874ff84d6b178478afe",
+  "dispatch_rule": "Only predicted navigate and no gate error calls stage two",
+  "oracle_rule": "After actual routing, missed true-navigation cases get a separate business-only diagnostic; never affects route score",
+  "timing": "route_elapsed_ms includes request construction and actual stages, excludes later oracle diagnosis"
+}
