@@ -1,0 +1,8 @@
+{
+  "model": "d1-2b",
+  "url": "http://127.0.0.1:18085/v1/systemone",
+  "runner_sha256": "6c2673cd30181420525c7dd09798b1efde2fcf068d13b45190222e441ab03b25",
+  "dataset_sha256": "00bbab05ae994b6364ef55960fb04d7dd94a6e38fdd1c496d6a0a532673c6de2",
+  "purpose": "Post-hoc direct authored text, no ASR; previously seen semantic cases.",
+  "timing": "One sequential warmup excluded. Per-request HTTP latency; actual two-stage wall time includes body preparation. Domain diagnostics excluded."
+}

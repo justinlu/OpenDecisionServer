@@ -1,0 +1,88 @@
+{
+  "gate": {
+    "type": "choice",
+    "instructions": "只区分最新用户现在是要进入、打开、办理或执行查询功能，还是只咨询业务规则、费用、含义、步骤。礼貌问句不等于咨询，以真正诉求为准。",
+    "criteria": {
+      "navigate": "用户要求现在打开、进入、开始办理或执行某个银行功能；查询余额、明细也是办理导航。礼貌问句如能帮我打开以及咨询一下后接办理要求，也属于此类。",
+      "inquire": "用户只询问业务规则、条件、费用、含义或怎么操作，没有要求当前进入办理。"
+    }
+  },
+  "business": {
+    "type": "choice",
+    "instructions": "当前处于银行自助机具的办理分支。只识别用户希望进入的具体办理业务，不再输出咨询或办理类别。以当前诉求为准，忽略已否定的目标；无法确定唯一办理业务时选unknown。只选择业务，不执行交易。",
+    "criteria": {
+      "withdraw": "现金取款",
+      "deposit": "现金存款",
+      "transfer": "转账汇款",
+      "balance": "查询银行卡余额",
+      "statement": "查询交易明细或打印银行流水",
+      "pin": "修改或重置银行卡取款密码",
+      "loss": "银行卡挂失",
+      "replace": "补办或更换银行卡",
+      "phone": "修改银行预留手机号",
+      "mobile": "开通或签约手机银行",
+      "credit_repay": "信用卡还款",
+      "credit_bill": "信用卡账单查询",
+      "credit_limit": "信用卡可用额度查询",
+      "credit_installment": "信用卡账单分期申请",
+      "credit_apply": "申请信用卡",
+      "unknown": "无法确定唯一的办理业务，或不在以上候选功能内"
+    }
+  },
+  "legacy_business": {
+    "type": "choice",
+    "instructions": "当前处于银行自助机具的办理分支。只识别用户希望进入的具体办理业务，不再输出咨询或办理类别。以当前诉求为准，忽略已否定的目标；无法确定唯一办理业务时选unknown。只选择业务，不执行交易。",
+    "criteria": {
+      "withdraw": "现金取款",
+      "deposit": "现金存款",
+      "transfer": "转账汇款",
+      "balance": "查询银行卡余额",
+      "statement": "查询交易明细或打印银行流水",
+      "pin": "修改或重置银行卡取款密码",
+      "loss": "银行卡挂失",
+      "replace": "补办或更换银行卡",
+      "phone": "修改银行预留手机号",
+      "mobile": "开通或签约手机银行",
+      "unknown": "无法确定唯一的办理业务，或不在以上候选功能内"
+    }
+  },
+  "domain": {
+    "type": "choice",
+    "instructions": "只识别当前希望办理的业务域，按主要功能归类，忽略被否定的目标。通用现金操作或卡片管理不因提及信用卡而改变业务域。不确定唯一业务域则选unknown。",
+    "criteria": {
+      "cash": "现金存款或取款，不包括取款密码修改",
+      "account": "转账汇款、银行卡余额查询、交易明细查询或流水打印；不包括信用卡专属账单和额度查询",
+      "card": "银行卡取款密码修改或重置、挂失、补卡或换卡，包括这类通用卡片管理",
+      "digital": "银行预留手机号修改，手机银行开通或签约",
+      "credit": "信用卡专属的还款、账单查询、可用额度查询、账单分期申请或信用卡申请",
+      "unknown": "无法确定唯一业务域，或不属于以上业务域"
+    }
+  },
+  "domains": {
+    "cash": [
+      "withdraw",
+      "deposit"
+    ],
+    "account": [
+      "transfer",
+      "balance",
+      "statement"
+    ],
+    "card": [
+      "pin",
+      "loss",
+      "replace"
+    ],
+    "digital": [
+      "phone",
+      "mobile"
+    ],
+    "credit": [
+      "credit_repay",
+      "credit_bill",
+      "credit_limit",
+      "credit_installment",
+      "credit_apply"
+    ]
+  }
+}

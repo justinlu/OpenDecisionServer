@@ -1,0 +1,15 @@
+{
+  "cases_sha256": "00bbab05ae994b6364ef55960fb04d7dd94a6e38fdd1c496d6a0a532673c6de2",
+  "semantic_cases": 158,
+  "sources": {
+    "legacy": {
+      "cases.jsonl": "0097dee503017e5bb16bc00169af7394eabe88834303b5bd298422e6891d3c6c",
+      "task.json": "bf2a7d8666707c73b22e7a9bfe294170cc874ffbe591e6ea723e35a0688f1cd8"
+    },
+    "credit": {
+      "cases.jsonl": "6fce1537859a1c561c4136161ea24f33dd0f39a80114d81c0902716e92a62d05",
+      "task.json": "16de8a79fdd6a2a92465a36bd703be29fc74a50318aea49201f9d93f3a5837db"
+    }
+  },
+  "method": "Exact authored text and history copied from frozen audio semantic cases; no ASR, no rewriting, no voice duplication."
+}

@@ -1,0 +1,81 @@
+{
+  "mode": {
+    "cases": 128,
+    "prior_omni_text_correct": 125,
+    "current_d1_text_correct": 125,
+    "winner_disagreements": 2
+  },
+  "function": {
+    "cases": 128,
+    "prior_omni_text_correct": 120,
+    "current_d1_text_correct": 120,
+    "winner_disagreements": 6
+  },
+  "legacy_two_stage": {
+    "semantic_cases": 100,
+    "d1_text": {
+      "cases": 100,
+      "gate_correct": 100,
+      "route_correct": 100,
+      "navigation_cases": 50,
+      "navigation_correct": 50,
+      "consultation_cases": 50,
+      "consultation_misgated": 0,
+      "missed_navigation": 0,
+      "latency_ms": {
+        "p50": 134.65379200000882,
+        "p95": 243.11345899999992,
+        "p99": 254.2259169999994
+      }
+    },
+    "prior_omni_text": {
+      "cases": 100,
+      "gate_correct": 100,
+      "gate_accuracy": 1.0,
+      "routing_correct": 100,
+      "routing_accuracy": 1.0,
+      "navigation_cases": 50,
+      "correct_navigation": 50,
+      "consultation_cases": 50,
+      "consultation_misgated": 0,
+      "consultation_entered_known_business": 0,
+      "missed_navigation": 0,
+      "business_calls": 50,
+      "business_label_correct_on_dispatched": 50,
+      "oracle_navigation_business_correct": 50,
+      "oracle_navigation_business_accuracy": 1.0,
+      "gate_errors": 0,
+      "business_errors": 0,
+      "oracle_errors": 0,
+      "route_latency_ms": {
+        "p50": 174.72500000000002,
+        "p95": 272.72766699999806
+      }
+    },
+    "prior_omni_audio": {
+      "cases": 200,
+      "gate_correct": 174,
+      "gate_accuracy": 0.87,
+      "routing_correct": 135,
+      "routing_accuracy": 0.675,
+      "navigation_cases": 100,
+      "correct_navigation": 43,
+      "consultation_cases": 100,
+      "consultation_misgated": 8,
+      "consultation_entered_known_business": 3,
+      "missed_navigation": 18,
+      "business_calls": 90,
+      "business_label_correct_on_dispatched": 44,
+      "oracle_navigation_business_correct": 48,
+      "oracle_navigation_business_accuracy": 0.48,
+      "gate_errors": 0,
+      "business_errors": 0,
+      "oracle_errors": 0,
+      "route_latency_ms": {
+        "p50": 153.35291699999942,
+        "p95": 312.0630410000018
+      }
+    },
+    "caveat": "Same frozen core semantics and routing rubric. Audio has two TTS voices (200 recordings), text has 100 semantic cases. Different model, modality, and run time: not an isolated causal comparison or speed ranking."
+  }
+}

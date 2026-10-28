@@ -1,0 +1,9 @@
+llama-ser 66867 justinlu  txt    REG               1,28      60096            30397635 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libggml.0.27.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28      58776            30397598 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libggml-blas.0.27.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28     991024            30397601 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libggml-cpu.0.27.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28    1608592            30397661 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libmtmd.0.7.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28     754376            30397583 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libggml-base.0.27.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28    6900264            30397704 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libllama-server-impl.dylib
+llama-ser 66867 justinlu  txt    REG               1,28    5386040            30397660 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libllama-common.0.7.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28    3745712            30397641 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libllama.0.7.0.dylib
+llama-ser 66867 justinlu  txt    REG               1,28    5604504            30397607 /Volumes/ExtHD/GitHub/OpenDecisionServer/dist/liquid-d1/build/bin/libggml-metal.0.27.0.dylib

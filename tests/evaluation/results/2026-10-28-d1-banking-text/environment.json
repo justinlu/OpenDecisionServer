@@ -1,0 +1,94 @@
+{
+  "pid": 66867,
+  "command": "dist/liquid-d1/build/bin/llama-server --model dist/liquid-d1/models/d1-2B-Q8_0.gguf --mmproj dist/liquid-d1/models/mmproj-d1-2B-F16.gguf --alias d1-2b --host 127.0.0.1 --port 18085 --n-gpu-layers 99 --ctx-size 8192 --batch-size 8192 --ubatch-size 8192 --parallel 1 --threads 4 --threads-batch 4 --cache-ram 0 --no-context-shift --metrics --no-webui",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "processor": "arm64",
+  "hardware": "      Model Name: Mac mini\n      Model Identifier: Mac18,5\n      Chip: Apple M6\n      Total Number of Cores: 12 (2 Super, 4 Performance, and 6 Efficiency)\n      Memory: 16 GB",
+  "models": {
+    "models": [
+      {
+        "name": "d1-2b",
+        "model": "d1-2b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion",
+          "multimodal"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "d1-2b",
+        "aliases": [
+          "d1-2b"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1793165347,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 128000,
+          "n_ctx": 8192,
+          "n_ctx_train": 128000,
+          "n_embd": 2048,
+          "n_params": 1728801600,
+          "size": 1837991168,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "llama_cpp": {
+    "revision": "d05706b4f32a545814856e98ca518292585443b9",
+    "archive_sha256": "65b13ebdf4e03cefe58f27096e9af698dc3d41ec6f63f6cd9b4a32ce02e525cf"
+  },
+  "model": {
+    "id": "d1-2b",
+    "repository": "LiquidAI/d1-2B-GGUF",
+    "revision": "63be75e6586882defeb706ed4bda812d90256a6d",
+    "files": [
+      {
+        "name": "d1-2B-Q8_0.gguf",
+        "sha256": "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c",
+        "size": 1846240576
+      },
+      {
+        "name": "mmproj-d1-2B-F16.gguf",
+        "sha256": "c54d0c0cc66c7e5b6b516204cab556e41d1da9e9cd970245a57d7b509af68ab3",
+        "size": 378995744
+      }
+    ]
+  },
+  "files_verified": true,
+  "warning": "Other existing services remain resident; sequential experimental HTTP endpoint, not production cgo latency."
+}

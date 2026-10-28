@@ -76,3 +76,5 @@ python3 tests/evaluation/benchmark_latency.py \
 `--score-readout median` 只校验上游返回的中位等级，准确率仍使用等级概率的 argmax；默认 `mean` 保持旧服务的期望分数校验。新运行保存原始 HTTP 响应体和状态，错误仍计入分母。上游 llama.cpp 当前逐题执行 d1 请求，不能把结果当成 Transformers 的 16 问打包性能。
 
 `liquid-d1-media.json` 是在观察模型输出前固定的小型多模态诊断。录音通过 macOS `say` 生成，原始音频直接送入模型，评测端不进行 ASR，也不发送转录文本作为音频状态。六条合成录音不能代表真实说话人、口音、噪声或长语音的准确率。`liquid_d1_media.py --prepare` 准备录音；还需将上游示例图片放在 `dist/liquid-d1/media/cats.jpg`。实际测试、复现命令和限制见 [实验报告](results/2026-10-28-liquid-d1-gguf/README.md)。
+
+直接复用银行音频用例的原始文字、以纯文本 d1-2B 评估的158条数据集见 [banking-text-v1](datasets/banking-text-v1/README.md)，完整结果见 [文字决策评估](results/2026-10-28-d1-banking-text/README.md)。此流程不调用ASR；区分核心130条真实两阶段路由与包含边界情况的完整158条评估。

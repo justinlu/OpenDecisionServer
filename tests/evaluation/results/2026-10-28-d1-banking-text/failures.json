@@ -1,0 +1,134 @@
+[
+  {
+    "id": "legacy/human-context::full-function",
+    "expected": "statement",
+    "predicted": "unknown",
+    "error": null,
+    "text": "这一步我不会，帮我叫工作人员。",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "正在为您介绍流水打印。"
+      }
+    ]
+  },
+  {
+    "id": "legacy/clarify-bare-balance::full-mode",
+    "expected": "clarify",
+    "predicted": "navigate",
+    "error": null,
+    "text": "余额。",
+    "history": []
+  },
+  {
+    "id": "legacy/pin-04-inquire::full-mode",
+    "expected": "inquire",
+    "predicted": "human",
+    "error": null,
+    "text": "不要替我修改，我只想问忘记取款密码该怎么办。",
+    "history": []
+  },
+  {
+    "id": "credit/credit_bill-01-inquire::full-function",
+    "expected": "credit_bill",
+    "predicted": "credit_repay",
+    "error": null,
+    "text": "信用卡账单日和还款日有什么区别？",
+    "history": []
+  },
+  {
+    "id": "legacy/loss-04-navigate::full-function",
+    "expected": "loss",
+    "predicted": "unknown",
+    "error": null,
+    "text": "我不只是咨询，我现在确定要挂失，打开办理。",
+    "history": []
+  },
+  {
+    "id": "legacy/ctx-transfer-cost::full-function",
+    "expected": "transfer",
+    "predicted": "unknown",
+    "error": null,
+    "text": "先不办，我只想知道收不收费。",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "您是否要进入转账办理？"
+      }
+    ]
+  },
+  {
+    "id": "legacy/clarify-bare-transfer::full-mode",
+    "expected": "clarify",
+    "predicted": "navigate",
+    "error": null,
+    "text": "转账。",
+    "history": []
+  },
+  {
+    "id": "legacy/clarify-two-actions::full-function",
+    "expected": "unknown",
+    "predicted": "pin",
+    "error": null,
+    "text": "我想转账又想先改密码，先弄哪个我还没想好。",
+    "history": []
+  },
+  {
+    "id": "legacy/mobile-03-inquire::full-function",
+    "expected": "mobile",
+    "predicted": "unknown",
+    "error": null,
+    "text": "手机银行和网上银行有什么区别？",
+    "history": []
+  },
+  {
+    "id": "legacy/ctx-phone-policy::full-function",
+    "expected": "phone",
+    "predicted": "unknown",
+    "error": null,
+    "text": "先等等，我想知道还要不要原来的号码能收短信。",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "是否进入预留手机号修改？"
+      }
+    ]
+  },
+  {
+    "id": "legacy/balance-04-inquire::full-function",
+    "expected": "balance",
+    "predicted": "unknown",
+    "error": null,
+    "text": "先别查我的余额，我只想知道不插卡能不能查。",
+    "history": []
+  },
+  {
+    "id": "legacy/cancel-context::full-function",
+    "expected": "mobile",
+    "predicted": "unknown",
+    "error": null,
+    "text": "我不办了，返回首页。",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "是否进入手机银行开通？"
+      }
+    ]
+  },
+  {
+    "id": "legacy/balance-04-navigate::domain-leaf",
+    "expected": "balance",
+    "predicted": "unknown",
+    "error": null,
+    "text": "不是问余额怎么查，我要现在查，请打开。",
+    "history": []
+  },
+  {
+    "id": "credit/credit_installment-02-inquire::full-function",
+    "expected": "credit_installment",
+    "predicted": "credit_repay",
+    "error": null,
+    "text": "信用卡账单分期后能不能提前还清？",
+    "history": []
+  }
+]
