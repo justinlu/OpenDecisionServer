@@ -1,0 +1,42 @@
+{
+  "llama_cpp": {
+    "revision": "d05706b4f32a545814856e98ca518292585443b9",
+    "archive_sha256": "65b13ebdf4e03cefe58f27096e9af698dc3d41ec6f63f6cd9b4a32ce02e525cf"
+  },
+  "models": [
+    {
+      "id": "d1-omni-2b",
+      "repository": "LiquidAI/d1-Omni-2B-GGUF",
+      "revision": "807fea1af72ebaef653404f64a4bec8e5afeedea",
+      "files": [
+        {
+          "name": "d1-Omni-2B-Q8_0.gguf",
+          "sha256": "aedf1a7c341b4281979423dbc39e9c3d3ad1da8834156c8e75af5399ca3b0861",
+          "size": 1846241184
+        },
+        {
+          "name": "mmproj-d1-Omni-2B-F16.gguf",
+          "sha256": "b22f8d7d5538dbc09897b214e940240be5fe0aee429ec55c83bd9fdd62d8af62",
+          "size": 609956896
+        }
+      ]
+    },
+    {
+      "id": "d1-2b",
+      "repository": "LiquidAI/d1-2B-GGUF",
+      "revision": "63be75e6586882defeb706ed4bda812d90256a6d",
+      "files": [
+        {
+          "name": "d1-2B-Q8_0.gguf",
+          "sha256": "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c",
+          "size": 1846240576
+        },
+        {
+          "name": "mmproj-d1-2B-F16.gguf",
+          "sha256": "c54d0c0cc66c7e5b6b516204cab556e41d1da9e9cd970245a57d7b509af68ab3",
+          "size": 378995744
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,17 @@ from benchmark_latency import percentile, metrics, validate_response
 
 
 class LatencyTests(unittest.TestCase):
+    def test_latency_checks_accept_native_median_score_explicitly(self):
+        body = {'questions': {'s': {'type': 'score', 'criteria': ['low', 'middle', 'high']}}}
+        response = {'model': 'd1-2b', 'usage': {'input_tokens': 10}, 'answers': {
+            's': {'type': 'score', 'score': 1., 'probabilities': {'0': .45, '1': .4, '2': .15}}}}
+        try:
+            validate_response(body, response, 'd1-2b', score_readout='median')
+        except (TypeError, ValueError) as error:
+            self.fail(str(error))
+        with self.assertRaises(ValueError):
+            validate_response(body, response, 'd1-2b')
+
     def test_nearest_rank_tail_includes_slowest_sample(self):
         self.assertEqual(percentile(list(range(1, 101)), .95), 95)
         self.assertEqual(percentile([10, 20, 999], .99), 999)

@@ -20,7 +20,9 @@ def number(value):
     return float(value)
 
 
-def grade(row, response):
+def grade(row, response, score_readout='mean'):
+    if score_readout not in ('mean', 'median'):
+        raise ValueError('Unknown score readout')
     question = row['request']['questions']['decision']
     kind = question['type']
     if not isinstance(response, dict) or not isinstance(response.get('answers'), dict):
@@ -52,8 +54,16 @@ def grade(row, response):
             predicted = selected
         else:
             score = number(answer['score'])
-            if abs(score-sum(i*probs[k] for i,k in enumerate(keys))) > 1e-4:
-                raise ValueError('Score disagrees with expected rubric index')
+            expected_score = sum(i*probs[k] for i,k in enumerate(keys))
+            if score_readout == 'median':
+                mass, expected_score = 0., len(keys)-1
+                for i, key in enumerate(keys):
+                    mass += probs[key]
+                    if mass >= .5:
+                        expected_score = i
+                        break
+            if abs(score-expected_score) > 1e-4:
+                raise ValueError('Score disagrees with '+score_readout+' rubric index')
     return dict(predicted=predicted, correct=predicted == row['expected'], probabilities=probs,
                 returned_model=response['model'], error=None)
 
@@ -140,6 +150,8 @@ def main():
     parser.add_argument('--output', type=Path, required=True, help='New directory; existing output is never overwritten')
     parser.add_argument('--timeout', type=float, default=30.)
     parser.add_argument('--model', default='julia-1')
+    parser.add_argument('--score-readout', choices=['mean', 'median'], default='mean',
+                        help='Validate the server score readout; classification always uses probability argmax')
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error('--timeout must be positive')
@@ -148,6 +160,8 @@ def main():
     metadata = dict(started_at=datetime.now(timezone.utc).isoformat(), url=args.url, requested_model=args.model,
                     datasets={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in args.dataset},
                     scoring='argmax probabilities; noul >0.5; errors count as incorrect',
+                    score_readout=args.score_readout,
+                    script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                     warning='Variants are correlated; overall pooling is descriptive only. Interpret source-specific results.')
     (args.output/'metadata.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n')
     records = []
@@ -156,13 +170,27 @@ def main():
             request = dict(row['request'], model=args.model)
             req = urllib.request.Request(args.url, data=json.dumps(request,ensure_ascii=False).encode(), headers={'Content-Type':'application/json'})
             started = time.monotonic()
+            raw, status = b'', None
             try:
                 with urllib.request.urlopen(req, timeout=args.timeout) as response:
-                    payload = json.load(response)
-                result = grade(row, payload)
+                    status = getattr(response, 'status', 200)
+                    raw = response.read()
+                payload = json.loads(raw)
+                result = grade(row, payload, args.score_readout)
             except (urllib.error.URLError, http.client.HTTPException, OSError, ValueError, KeyError, TypeError, IndexError) as error:
+                if isinstance(error, urllib.error.HTTPError):
+                    status = error.code
+                    try:
+                        raw = error.read()
+                    except http.client.IncompleteRead as truncated:
+                        raw = truncated.partial
+                    except (OSError, http.client.HTTPException):
+                        pass
+                elif isinstance(error, http.client.IncompleteRead):
+                    raw = error.partial
                 result = dict(predicted=None, correct=False, error=type(error).__name__+': '+str(error))
-            record = dict(row, **result, latency_ms=(time.monotonic()-started)*1000)
+            record = dict(row, **result, latency_ms=(time.monotonic()-started)*1000,
+                          http_status=status, response_body=raw.decode('utf-8', errors='replace'))
             records.append(record)
             stream.write(json.dumps(record,ensure_ascii=False,allow_nan=False)+'\n')
             stream.flush()

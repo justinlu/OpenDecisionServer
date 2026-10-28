@@ -56,3 +56,23 @@ Chinese Decision 2B Q8_0 的同集 GPU 实测及与 Julia 的逐条比较见 [�
 Go/cgo 直接调用 llama.cpp 的一致性与真正多序列批推理验证见 [原生接入验证](results/2026-10-27-native-validation/README.md)，接入方案见 [设计](../../docs/superpowers/specs/2026-10-27-llama-backend-design.md)。串行结果复现 Python；本次批处理没有提速，且未过概率一致性门槛。
 
 ODS 正式串行后端的 989 条 HTTP 准确率、24 条结构化契约、1,440 条延迟观测和部署方式见 [原生后端验收](results/2026-10-27-ods-native/README.md)。
+
+## Liquid d1 原生 GGUF 实验
+
+`bash scripts/prepare-liquid-d1.sh` 下载固定提交的 llama.cpp、两个官方 Q8_0 模型和 F16 多模态编码器，校验 SHA-256 并构建独立 Metal 服务器。文件保存在忽略的 `dist/liquid-d1/`，不替换 ODS 使用的 SDK。完整版本及哈希见 `liquid-d1-models.json`。
+
+```sh
+bash scripts/run-liquid-d1.sh d1-omni-2b 18084
+# 在另一个终端执行；d1-2b 使用相同命令替换模型名，两个模型逐个测量：
+python3 tests/evaluation/evaluate.py \
+  --url http://127.0.0.1:18084/v1/systemone --model d1-omni-2b \
+  --score-readout median --timeout 120 --output /tmp/d1-omni-accuracy
+python3 tests/evaluation/benchmark_latency.py \
+  --url http://127.0.0.1:18084/v1/systemone --model d1-omni-2b \
+  --score-readout median --samples 120 --clients 1 4 --warmup 6 \
+  --timeout 120 --output /tmp/d1-omni-latency
+```
+
+`--score-readout median` 只校验上游返回的中位等级，准确率仍使用等级概率的 argmax；默认 `mean` 保持旧服务的期望分数校验。新运行保存原始 HTTP 响应体和状态，错误仍计入分母。上游 llama.cpp 当前逐题执行 d1 请求，不能把结果当成 Transformers 的 16 问打包性能。
+
+`liquid-d1-media.json` 是在观察模型输出前固定的小型多模态诊断。录音通过 macOS `say` 生成，原始音频直接送入模型，评测端不进行 ASR，也不发送转录文本作为音频状态。六条合成录音不能代表真实说话人、口音、噪声或长语音的准确率。`liquid_d1_media.py --prepare` 准备录音；还需将上游示例图片放在 `dist/liquid-d1/media/cats.jpg`。实际测试、复现命令和限制见 [实验报告](results/2026-10-28-liquid-d1-gguf/README.md)。
