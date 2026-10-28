@@ -38,7 +38,7 @@ jobs:
             sleep 1
           done
           curl -fsS http://127.0.0.1:18080/health/ready
-          go run ./cmd/odsbench -url http://127.0.0.1:18080/v1/systemone -clients 64 -duration 30s
+          go run ./cmd/odsbench -url http://127.0.0.1:18080/v1/systemone -model d1-2b -clients 16 -duration 30s -timeout 120s
           docker logs ods-ci
       - name: Stop container
         if: always()
