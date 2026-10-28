@@ -1,4 +1,4 @@
-//go:build llama && darwin && arm64 && cgo
+//go:build llama && cgo && ((darwin && arm64) || linux)
 
 package d1
 

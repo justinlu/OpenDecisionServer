@@ -44,11 +44,16 @@ extern "C" void * ods_d1_open(const char * model, int threads, char ** error) {
         auto r = std::make_unique<runtime>();
         llama_log_set(backend_log,r.get());r->logger_installed=true;
         llama_backend_init(); r->initialized = true;
+        auto mp = llama_model_default_params();
+#if defined(__APPLE__)
         auto gpu = ggml_backend_dev_by_type(GGML_BACKEND_DEVICE_TYPE_GPU);
         if (!gpu || !llama_supports_gpu_offload()) throw std::runtime_error("Metal GPU unavailable");
         r->gpu = ggml_backend_dev_description(gpu);
-        auto mp = llama_model_default_params();
         ggml_backend_dev_t devices[] = {gpu,nullptr}; mp.devices=devices; mp.n_gpu_layers=99;
+#else
+        r->gpu = "cpu";
+        mp.n_gpu_layers = 0;
+#endif
         r->model = llama_model_load_from_file(model,mp);
         if (!r->model) throw std::runtime_error("d1 model load failed");
         r->decision.init(r->model);
