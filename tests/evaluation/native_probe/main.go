@@ -235,6 +235,7 @@ func main() {
 	output := flag.String("output", "", "output directory (must not exist)")
 	samples := flag.Int("samples", 120, "measured iterations per native latency group")
 	ubatch := flag.Int("ubatch", 512, "physical microbatch size for multi-sequence context")
+	serialOnly := flag.Bool("serial-only", false, "validate the production serial path without the experimental multi-sequence path")
 	flag.Parse()
 	if *samples < 1 || *ubatch < 4 || *referencePath == "" || *modelPath == "" || *output == "" {
 		panic("invalid flags")
@@ -288,6 +289,7 @@ func main() {
 	if ctx == nil {
 		panic("serial context failed")
 	}
+	summary["serial_context"] = map[string]any{"n_ctx": int(C.llama_n_ctx(ctx)), "n_ctx_seq": int(C.llama_n_ctx_seq(ctx)), "n_batch": int(C.llama_n_batch(ctx)), "n_ubatch": int(C.llama_n_ubatch(ctx)), "n_seq_max": int(C.llama_n_seq_max(ctx))}
 	serial := map[string][]float64{}
 	serialLogits := map[string][]float32{}
 	oldMax, oldMismatch, oldCount := 0., 0, 0
@@ -312,8 +314,12 @@ func main() {
 	summary["python_winner_mismatches"] = oldMismatch
 	// A/B/A explicitly exercises hybrid memory clearing between unrelated jobs.
 	first := ref.Rows[0]
-	run(ctx, []row{ref.Rows[len(ref.Rows)-1]}, ref)
-	again, _ := run(ctx, []row{first}, ref)
+	between, betweenLogits := run(ctx, []row{ref.Rows[len(ref.Rows)-1]}, ref)
+	again, againLogits := run(ctx, []row{first}, ref)
+	if *serialOnly {
+		must(enc.Encode(map[string]any{"phase": "aba-between", "id": ref.Rows[len(ref.Rows)-1].ID, "probabilities": between[0], "logits": betweenLogits[0]}))
+		must(enc.Encode(map[string]any{"phase": "aba-repeat", "id": first.ID, "probabilities": again[0], "logits": againLogits[0]}))
+	}
 	summary["serial_aba_max_probability_delta"] = delta(serial[first.ID], again[0])
 	// Latency is synchronous native completion + result copy/softmax. Prompts and
 	// token IDs are prepared outside the timer; HTTP and scheduling are absent.
@@ -370,6 +376,16 @@ func main() {
 	}
 	bench(ctx, "serial", false)
 	C.llama_free(ctx)
+	if *serialOnly {
+		summary["serial_only"] = true
+		summary["latency"] = latency
+		summary["parity_pass"] = oldMismatch == 0 && oldMax <= 1e-4 && summary["serial_aba_max_probability_delta"].(float64) <= 1e-4
+		data, err = json.MarshalIndent(summary, "", "  ")
+		must(err)
+		must(os.WriteFile(*output+"/summary.json", append(data, '\n'), 0644))
+		fmt.Println(string(data))
+		return
+	}
 	ctx = C.probe_context(model, 4, C.int(*ubatch))
 	if ctx == nil {
 		panic("batch context failed")

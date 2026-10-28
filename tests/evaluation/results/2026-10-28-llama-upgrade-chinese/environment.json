@@ -1,0 +1,138 @@
+{
+  "source_commit": "a03d14575e149283f8134498736c6a711887b612",
+  "new_llama_commit": "d05706b4f32a545814856e98ca518292585443b9",
+  "temperature": 1.074872374534607,
+  "probability_tolerance": 0.0001,
+  "required_winner_agreement": 1.0,
+  "reference_sha256": "9aa12ee4507bd2314758e1aedd07cfeb074c42ea64851980b4caa4233a5c85b6",
+  "artifacts": {
+    "dist/chinese-decision-2b-q8/chinese-decision-2b-Q8_0.gguf": {
+      "bytes": 2012012800,
+      "sha256": "4f902f73781f87cc8388617bc7e2e99eb14fdeb8551f7ebb48ffbde69394cc02"
+    },
+    "dist/llama_cpp_python-0.3.36.tar.gz": {
+      "bytes": 76589250,
+      "sha256": "832db0699007f1be95a7e41ef12e88926b02ba836461e36a36372db2760c1a2e"
+    },
+    "dist/liquid-d1/source.tar.gz": {
+      "bytes": 38656870,
+      "sha256": "65b13ebdf4e03cefe58f27096e9af698dc3d41ec6f63f6cd9b4a32ce02e525cf"
+    },
+    "lib/darwin-arm64/llama/include/llama.h": {
+      "bytes": 89978,
+      "sha256": "d5cf9203bea63b575e76cba4881f29cfd1b611451578b01582b75b72ecbb04bc"
+    },
+    "dist/liquid-d1/source/include/llama.h": {
+      "bytes": 90962,
+      "sha256": "c0854771d3760a41642c4e59429c5b3b9fc774887c59d37eeadc4527681732cd"
+    },
+    "tests/evaluation/native_probe/main.go": {
+      "bytes": 15977,
+      "sha256": "300330eca984d0a1f5b11ae33798d63a9ff5cbed2b7412bdf661dfd1be55100d"
+    },
+    "dist/llama-upgrade-compat/probe-old": {
+      "bytes": 4071842,
+      "sha256": "9f39d731ba893f7e5118c5ddcb6ae68f02493df13571ba8c7b24b5ba3fc4d86e"
+    },
+    "dist/llama-upgrade-compat/probe-new": {
+      "bytes": 4071842,
+      "sha256": "cfdfde9bc5844a0b4fc8237ebad0681db97d06de19a2d11eac17dfd06a0c9c02"
+    },
+    "lib/darwin-arm64/llama/lib/libggml-blas.0.25.3.dylib": {
+      "bytes": 58776,
+      "sha256": "a94a678102d117a2e00b937803dbb429a768cd065e2099d3b4dda9a59bbbb208"
+    },
+    "lib/darwin-arm64/llama/lib/libggml.0.25.3.dylib": {
+      "bytes": 60224,
+      "sha256": "edc02c0a9703b45be768f09cfa6e6307b06e277bd87fc3ccbc7cf339c1fa75b5"
+    },
+    "lib/darwin-arm64/llama/lib/libggml-cpu.0.25.3.dylib": {
+      "bytes": 1007200,
+      "sha256": "1181bb989582a589c605b0350c6a63549aa12a23fb90f6d7005313213b48fb1e"
+    },
+    "lib/darwin-arm64/llama/lib/libllama.0.5.0.dylib": {
+      "bytes": 3332944,
+      "sha256": "a3d0f830e3db79be2799fefe381c27a08ec217df7c7a8a522f48918be03018bb"
+    },
+    "lib/darwin-arm64/llama/lib/libggml-metal.0.25.3.dylib": {
+      "bytes": 5289464,
+      "sha256": "b5b24204f80942d3ca04397736ddc0609b73ae4002c3801d528e393baa7167ab"
+    },
+    "lib/darwin-arm64/llama/lib/libggml-base.0.25.3.dylib": {
+      "bytes": 736408,
+      "sha256": "30ef02b6ca3edf5554f4ec7fedd62d5571aee2690ca274a1afb11ed9de895f89"
+    },
+    "dist/liquid-d1/build/bin/libggml-cpu.0.27.0.dylib": {
+      "bytes": 991024,
+      "sha256": "08849325b7d90eeb6a1cc464489a0e3cf197be2fc0ceefee11963183bcc3f5a8"
+    },
+    "dist/liquid-d1/build/bin/libggml.0.27.0.dylib": {
+      "bytes": 60096,
+      "sha256": "dae8fd07861afec92073def3e082b8ac179892a0ab40a48bf69700ac1736bee0"
+    },
+    "dist/liquid-d1/build/bin/libggml-metal.0.27.0.dylib": {
+      "bytes": 5604504,
+      "sha256": "a9ebcba61ce3c65adc4e4f8df43deff11a6d4df63a2fbd47e082dd95db119283"
+    },
+    "dist/liquid-d1/build/bin/libggml-blas.0.27.0.dylib": {
+      "bytes": 58776,
+      "sha256": "bcc00766065929e3e8e3efbc45c2acb1ae1e2f3a28c4ea4a715c5b25c46340c1"
+    },
+    "dist/liquid-d1/build/bin/libggml-base.0.27.0.dylib": {
+      "bytes": 754376,
+      "sha256": "401b8ebfb185c6604427012265068b9521acba0935aed5c59a878dd8b3e54fd0"
+    },
+    "dist/liquid-d1/build/bin/libllama.0.7.0.dylib": {
+      "bytes": 3745712,
+      "sha256": "8ef89d805e2b13276f14876c89526475e5c700819adc11d04d194921b324b526"
+    }
+  },
+  "context": {
+    "n_ctx": 16384,
+    "sequences": 1,
+    "n_batch": 512,
+    "n_ubatch": 512,
+    "threads": 4,
+    "threads_batch": 4,
+    "flash_attention": false
+  },
+  "commands": [
+    [
+      "dist/llama-upgrade-compat/probe-new",
+      "-serial-only",
+      "-reference",
+      "dist/llama-upgrade-compat/reference.json",
+      "-model",
+      "dist/chinese-decision-2b-q8/chinese-decision-2b-Q8_0.gguf",
+      "-output",
+      "tests/evaluation/results/2026-10-28-llama-upgrade-chinese/new",
+      "-samples",
+      "120"
+    ],
+    [
+      "dist/llama-upgrade-compat/probe-old",
+      "-serial-only",
+      "-reference",
+      "dist/llama-upgrade-compat/reference.json",
+      "-model",
+      "dist/chinese-decision-2b-q8/chinese-decision-2b-Q8_0.gguf",
+      "-output",
+      "tests/evaluation/results/2026-10-28-llama-upgrade-chinese/old",
+      "-samples",
+      "120"
+    ]
+  ],
+  "deployment_decision": "User confirmed unified Go+cgo, single process; mixed HTTP sidecar design withdrawn.",
+  "host": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "chip": "Apple M6",
+    "memory_bytes": 17179869184,
+    "logical_cpus": 12
+  },
+  "verification": {
+    "go_tests": "make test passed",
+    "python_tests": 22,
+    "independent_review": "No blocking findings; audit recomputed in temporary copy, outputs matched byte-for-byte.",
+    "migration_gate_pass": false
+  }
+}
