@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-const BridgeSHA256 = "ba062f71247cb7f163e428dc2efd03b631dd03b5c169d913ebba5f11ac712ac7"
+const BridgeSHA256 = "56956b4c95f6753423d01028b73673752e8df025f2c5d99112fc99ed75a4f9cc"
 
 const ModelSHA256 = "073313d92b53b0ac8193db6e906cb3c78a98183d244b15b7b8f5426115c6738c"
 const SourceSHA256 = "65b13ebdf4e03cefe58f27096e9af698dc3d41ec6f63f6cd9b4a32ce02e525cf"
@@ -64,7 +64,16 @@ func verifySDK(path string) error {
 			return fmt.Errorf("d1 SDK library hash mismatch: %s", fields[1])
 		}
 	}
-	for _, name := range []string{"libods_d1.dylib", "libllama.dylib", "libggml.dylib", "libggml-base.dylib", "libggml-metal.dylib"} {
+	var required []string
+	switch filepath.Ext(path) {
+	case ".dylib":
+		required = []string{"libods_d1.dylib", "libllama.dylib", "libggml.dylib", "libggml-base.dylib", "libggml-metal.dylib"}
+	case ".so":
+		required = []string{"libods_d1.so", "libllama.so", "libggml.so", "libggml-base.so", "libggml-cpu.so", "libllama-common.so", "libmtmd.so"}
+	default:
+		return fmt.Errorf("d1 SDK unsupported bridge library: %s", filepath.Base(path))
+	}
+	for _, name := range required {
 		if !seen[name] {
 			return fmt.Errorf("d1 SDK manifest missing %s", name)
 		}

@@ -46,6 +46,7 @@ func (s *Server) Handler() http.Handler {
 		}
 		writeJSON(w, 200, map[string]string{"status": "ready"})
 	})
+	mux.HandleFunc("GET /health", s.health)
 	mux.HandleFunc("GET /v1/models", func(w http.ResponseWriter, r *http.Request) {
 		models := []map[string]string{}
 		if s.isReady() {
@@ -57,6 +58,15 @@ func (s *Server) Handler() http.Handler {
 	mux.HandleFunc("GET /metrics", s.metrics)
 	mux.HandleFunc("POST /v1/systemone", s.systemOne)
 	return mux
+}
+
+func (s *Server) health(w http.ResponseWriter, _ *http.Request) {
+	if !s.isReady() {
+		writeJSON(w, 503, map[string]any{"status": "unavailable", "ready": false})
+		return
+	}
+	model := s.Service.ModelInfo()
+	writeJSON(w, 200, map[string]any{"status": "ok", "ready": true, "engine": model.ID, "model": model.Listings()[0]})
 }
 
 func (s *Server) metrics(w http.ResponseWriter, _ *http.Request) {

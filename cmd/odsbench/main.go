@@ -15,10 +15,18 @@ import (
 	"time"
 )
 
-var requests = [][]byte{
-	[]byte(`{"model":"jev-latest","state":"Please help with my refund.","questions":{"urgent":{"type":"noul","instructions":"Does this need immediate attention?"}}}`),
-	[]byte(`{"model":"jev-latest","state":{"message":"Payment failed twice","customer":"enterprise"},"questions":{"route":{"type":"choice","instructions":"Which team?","criteria":{"billing":"Payments and invoices","support":"Account help","sales":"Purchases"}},"urgency":{"type":"score","instructions":"How urgent?","criteria":["Can wait","Needs attention","Blocking"]}}}`),
-	[]byte(`{"model":"jev-latest","state":"A customer reports that the account password reset link expired. They are unable to sign in and have a time-sensitive meeting. The customer has contacted support twice and is requesting immediate assistance.","questions":{"interrupt":{"type":"noul","instructions":"Should the voice agent interrupt its current speech?","criteria":{"false":"Continue speaking","true":"Stop speaking and listen"}},"route":{"type":"choice","instructions":"Choose the best action","criteria":{"reset":"Send a fresh reset link","billing":"Investigate charges","human":"Escalate to a support agent","ignore":"No action required"}}}}`),
+var requestTemplates = []string{
+	`{"model":%q,"state":"Please help with my refund.","questions":{"urgent":{"type":"noul","instructions":"Does this need immediate attention?"}}}`,
+	`{"model":%q,"state":{"message":"Payment failed twice","customer":"enterprise"},"questions":{"route":{"type":"choice","instructions":"Which team?","criteria":{"billing":"Payments and invoices","support":"Account help","sales":"Purchases"}},"urgency":{"type":"score","instructions":"How urgent?","criteria":["Can wait","Needs attention","Blocking"]}}}`,
+	`{"model":%q,"state":"A customer reports that the account password reset link expired. They are unable to sign in and have a time-sensitive meeting. The customer has contacted support twice and is requesting immediate assistance.","questions":{"interrupt":{"type":"noul","instructions":"Should the voice agent interrupt its current speech?","criteria":{"false":"Continue speaking","true":"Stop speaking and listen"}},"route":{"type":"choice","instructions":"Choose the best action","criteria":{"reset":"Send a fresh reset link","billing":"Investigate charges","human":"Escalate to a support agent","ignore":"No action required"}}}}`,
+}
+
+func requestBodies(model string) [][]byte {
+	out := make([][]byte, len(requestTemplates))
+	for i, tmpl := range requestTemplates {
+		out[i] = []byte(fmt.Sprintf(tmpl, model))
+	}
+	return out
 }
 
 type sample struct {
@@ -32,11 +40,18 @@ func main() {
 	clients := flag.Int("clients", 64, "concurrent clients")
 	duration := flag.Duration("duration", 10*time.Minute, "load duration")
 	timeout := flag.Duration("timeout", 30*time.Second, "per request timeout")
+	model := flag.String("model", "jev-latest", "request model name")
+	expectModel := flag.String("expect-model", "", "expected response model (default: same as -model)")
 	flag.Parse()
 	if *clients < 1 || *duration <= 0 {
 		fmt.Fprintln(os.Stderr, "invalid load settings")
 		os.Exit(2)
 	}
+	expect := *expectModel
+	if expect == "" {
+		expect = *model
+	}
+	requests := requestBodies(*model)
 	transport := &http.Transport{MaxIdleConns: *clients, MaxIdleConnsPerHost: *clients, MaxConnsPerHost: *clients}
 	client := &http.Client{Transport: transport, Timeout: *timeout}
 	ctx, cancel := context.WithTimeout(context.Background(), *duration)
@@ -68,7 +83,7 @@ func main() {
 					if readErr != nil {
 						s.err = readErr
 					} else if resp.StatusCode == 200 {
-						s.err = validate(body, data)
+						s.err = validate(body, data, expect)
 					}
 				}
 				if ctx.Err() != nil {
@@ -119,7 +134,7 @@ func sum(counts map[int]int) int {
 	return n
 }
 
-func validate(request, response []byte) error {
+func validate(request, response []byte, expectModel string) error {
 	var asked struct {
 		Questions map[string]json.RawMessage `json:"questions"`
 	}
@@ -138,7 +153,7 @@ func validate(request, response []byte) error {
 	if err := json.Unmarshal(response, &answered); err != nil {
 		return err
 	}
-	if answered.Model != "julia-1" || len(answered.Answers) != len(asked.Questions) || answered.Usage.InputTokens < 1 {
+	if answered.Model != expectModel || len(answered.Answers) != len(asked.Questions) || answered.Usage.InputTokens < 1 {
 		return fmt.Errorf("invalid response: %s", response)
 	}
 	for key, question := range asked.Questions {

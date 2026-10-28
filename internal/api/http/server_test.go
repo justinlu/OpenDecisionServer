@@ -158,3 +158,40 @@ func TestChineseTiesPreserveCandidateWireOrder(t *testing.T) {
 		t.Fatalf("choice %s, probabilities %s", q.Choice, q.Probabilities)
 	}
 }
+
+func TestHealthAggregatedEndpoint(t *testing.T) {
+	api := &Server{Service: &decision.Service{Engine: fixedEngine{}, Admission: decision.NewAdmission(4, 128)}, MaxQuestions: 64}
+	api.SetReady(true)
+	handler := api.Handler()
+	w := httptest.NewRecorder()
+	handler.ServeHTTP(w, httptest.NewRequest("GET", "/health", nil))
+	if w.Code != 200 {
+		t.Fatalf("status %d: %s", w.Code, w.Body.String())
+	}
+	var body map[string]any
+	if err := json.Unmarshal(w.Body.Bytes(), &body); err != nil {
+		t.Fatal(err)
+	}
+	if body["status"] != "ok" || body["ready"] != true || body["engine"] != "julia-1" {
+		t.Fatalf("body: %v", body)
+	}
+	if _, ok := body["model"].(map[string]any)["name"]; !ok {
+		t.Fatalf("model: %v", body["model"])
+	}
+	api.SetReady(false)
+	w = httptest.NewRecorder()
+	handler.ServeHTTP(w, httptest.NewRequest("GET", "/health", nil))
+	if w.Code != 503 {
+		t.Fatalf("status %d", w.Code)
+	}
+	body = map[string]any{}
+	if err := json.Unmarshal(w.Body.Bytes(), &body); err != nil {
+		t.Fatal(err)
+	}
+	if body["status"] != "unavailable" || body["ready"] != false {
+		t.Fatalf("body: %v", body)
+	}
+	if _, present := body["engine"]; present {
+		t.Fatalf("engine must be omitted when unavailable: %v", body)
+	}
+}
