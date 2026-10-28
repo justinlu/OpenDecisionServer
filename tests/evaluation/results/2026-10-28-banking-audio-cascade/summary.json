@@ -1,0 +1,112 @@
+{
+  "text": {
+    "cases": 100,
+    "gate_correct": 100,
+    "gate_accuracy": 1.0,
+    "routing_correct": 100,
+    "routing_accuracy": 1.0,
+    "navigation_cases": 50,
+    "correct_navigation": 50,
+    "consultation_cases": 50,
+    "consultation_misgated": 0,
+    "consultation_entered_known_business": 0,
+    "missed_navigation": 0,
+    "business_calls": 50,
+    "business_label_correct_on_dispatched": 50,
+    "oracle_navigation_business_correct": 50,
+    "oracle_navigation_business_accuracy": 1.0,
+    "gate_errors": 0,
+    "business_errors": 0,
+    "oracle_errors": 0,
+    "route_latency_ms": {
+      "p50": 174.72500000000002,
+      "p95": 272.72766699999806
+    }
+  },
+  "audio": {
+    "cases": 200,
+    "gate_correct": 174,
+    "gate_accuracy": 0.87,
+    "routing_correct": 135,
+    "routing_accuracy": 0.675,
+    "navigation_cases": 100,
+    "correct_navigation": 43,
+    "consultation_cases": 100,
+    "consultation_misgated": 8,
+    "consultation_entered_known_business": 3,
+    "missed_navigation": 18,
+    "business_calls": 90,
+    "business_label_correct_on_dispatched": 44,
+    "oracle_navigation_business_correct": 48,
+    "oracle_navigation_business_accuracy": 0.48,
+    "gate_errors": 0,
+    "business_errors": 0,
+    "oracle_errors": 0,
+    "route_latency_ms": {
+      "p50": 153.35291699999942,
+      "p95": 312.0630410000018
+    }
+  },
+  "audio_by_voice": {
+    "tingting": {
+      "cases": 100,
+      "gate_correct": 94,
+      "gate_accuracy": 0.94,
+      "routing_correct": 80,
+      "routing_accuracy": 0.8,
+      "navigation_cases": 50,
+      "correct_navigation": 32,
+      "consultation_cases": 50,
+      "consultation_misgated": 2,
+      "consultation_entered_known_business": 1,
+      "missed_navigation": 4,
+      "business_calls": 48,
+      "business_label_correct_on_dispatched": 33,
+      "oracle_navigation_business_correct": 36,
+      "oracle_navigation_business_accuracy": 0.72,
+      "gate_errors": 0,
+      "business_errors": 0,
+      "oracle_errors": 0,
+      "route_latency_ms": {
+        "p50": 181.0292500000017,
+        "p95": 316.5279580000018
+      }
+    },
+    "eddy": {
+      "cases": 100,
+      "gate_correct": 80,
+      "gate_accuracy": 0.8,
+      "routing_correct": 55,
+      "routing_accuracy": 0.55,
+      "navigation_cases": 50,
+      "correct_navigation": 11,
+      "consultation_cases": 50,
+      "consultation_misgated": 6,
+      "consultation_entered_known_business": 2,
+      "missed_navigation": 14,
+      "business_calls": 42,
+      "business_label_correct_on_dispatched": 11,
+      "oracle_navigation_business_correct": 12,
+      "oracle_navigation_business_accuracy": 0.24,
+      "gate_errors": 0,
+      "business_errors": 0,
+      "oracle_errors": 0,
+      "route_latency_ms": {
+        "p50": 146.94941700000186,
+        "p95": 311.4922500000006
+      }
+    }
+  },
+  "previous_setting_same_routing_rubric": {
+    "text": {
+      "cases": 100,
+      "correct": 99,
+      "accuracy": 0.99
+    },
+    "clean": {
+      "cases": 200,
+      "correct": 134,
+      "accuracy": 0.67
+    }
+  }
+}

@@ -128,3 +128,5 @@ The [banking audio intent dataset](tests/evaluation/datasets/banking-audio-v1/RE
 - [Official ONNX Runtime Go binding](https://github.com/microsoft/onnxruntime/tree/main/go)
 
 Licensed under Apache-2.0. Julia-1 model assets and ONNX Runtime retain their upstream licenses.
+
+The [two-stage banking routing experiment](tests/evaluation/results/2026-10-28-banking-audio-cascade/README.md) evaluates consultation versus handling first, then business selection only on the handling branch, with separate oracle diagnostics and a fair routing baseline.

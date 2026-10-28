@@ -1,0 +1,70 @@
+{
+  "pid": 55172,
+  "command": "dist/liquid-d1/build/bin/llama-server --model dist/liquid-d1/models/d1-Omni-2B-Q8_0.gguf --mmproj dist/liquid-d1/models/mmproj-d1-Omni-2B-F16.gguf --alias d1-omni-2b --host 127.0.0.1 --port 18084 --n-gpu-layers 99 --ctx-size 8192 --batch-size 8192 --ubatch-size 8192 --parallel 1 --threads 4 --threads-batch 4 --cache-ram 0 --no-context-shift --metrics --no-webui",
+  "models": {
+    "models": [
+      {
+        "name": "d1-omni-2b",
+        "model": "d1-omni-2b",
+        "modified_at": "",
+        "size": "",
+        "digest": "",
+        "type": "model",
+        "description": "",
+        "tags": [
+          ""
+        ],
+        "capabilities": [
+          "completion",
+          "multimodal"
+        ],
+        "parameters": "",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "",
+          "families": [
+            ""
+          ],
+          "parameter_size": "",
+          "quantization_level": ""
+        }
+      }
+    ],
+    "object": "list",
+    "data": [
+      {
+        "id": "d1-omni-2b",
+        "aliases": [
+          "d1-omni-2b"
+        ],
+        "tags": [],
+        "object": "model",
+        "architecture": {
+          "input_modalities": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output_modalities": [
+            "decisions"
+          ]
+        },
+        "created": 1793159625,
+        "owned_by": "llamacpp",
+        "meta": {
+          "vocab_type": 2,
+          "n_vocab": 128000,
+          "n_ctx": 8192,
+          "n_ctx_train": 128000,
+          "n_embd": 2048,
+          "n_params": 1728801600,
+          "size": 1837991168,
+          "ftype": "Q8_0"
+        }
+      }
+    ]
+  },
+  "same_server_as": "../2026-10-28-banking-audio-v1/environment.json"
+}
