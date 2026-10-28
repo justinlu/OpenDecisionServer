@@ -1,0 +1,511 @@
+{
+  "files": 84,
+  "seconds": 318.1155624999999,
+  "clipped_files": 0,
+  "entries": [
+    {
+      "file": "audio/credit_repay-01-navigate--eddy--clean.wav",
+      "seconds": 4.114625,
+      "rms": 2643.914945434375,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-01-navigate--tingting--clean.wav",
+      "seconds": 4.034,
+      "rms": 4089.9811825684033,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-01-inquire--eddy--clean.wav",
+      "seconds": 3.1089375,
+      "rms": 2618.8108891233774,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-01-inquire--tingting--clean.wav",
+      "seconds": 2.9874375,
+      "rms": 4073.7653034905675,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--eddy--clean.wav",
+      "seconds": 3.2011875,
+      "rms": 2740.1071718749026,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--eddy--noise15.wav",
+      "seconds": 3.2011875,
+      "rms": 2780.1815749801726,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--tingting--clean.wav",
+      "seconds": 2.8515,
+      "rms": 4496.447720702479,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--tingting--noise15.wav",
+      "seconds": 2.8515,
+      "rms": 4573.5042110891,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--eddy--clean.wav",
+      "seconds": 3.1320625,
+      "rms": 2614.421254808688,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--eddy--noise15.wav",
+      "seconds": 3.1320625,
+      "rms": 2656.6340415996274,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--tingting--clean.wav",
+      "seconds": 3.0455,
+      "rms": 3988.9007921112216,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--tingting--noise15.wav",
+      "seconds": 3.0455,
+      "rms": 4049.066186705415,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-03-navigate--eddy--clean.wav",
+      "seconds": 5.479,
+      "rms": 2531.7010537040596,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-03-navigate--tingting--clean.wav",
+      "seconds": 5.404,
+      "rms": 3792.6187401207935,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-03-inquire--eddy--clean.wav",
+      "seconds": 5.1439375,
+      "rms": 2640.459195462127,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_repay-03-inquire--tingting--clean.wav",
+      "seconds": 5.263,
+      "rms": 4042.867837969343,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-01-navigate--eddy--clean.wav",
+      "seconds": 3.750625,
+      "rms": 2736.080487052247,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-01-navigate--tingting--clean.wav",
+      "seconds": 3.869,
+      "rms": 4085.435575757027,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-01-inquire--eddy--clean.wav",
+      "seconds": 3.421125,
+      "rms": 2705.7711867796556,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-01-inquire--tingting--clean.wav",
+      "seconds": 3.3009375,
+      "rms": 4158.2225075897695,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--eddy--clean.wav",
+      "seconds": 3.25325,
+      "rms": 2842.7846853653964,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--eddy--noise15.wav",
+      "seconds": 3.25325,
+      "rms": 2882.418875761767,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--tingting--clean.wav",
+      "seconds": 3.1280625,
+      "rms": 4225.772316429638,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--tingting--noise15.wav",
+      "seconds": 3.1280625,
+      "rms": 4296.79648555322,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--eddy--clean.wav",
+      "seconds": 3.1205,
+      "rms": 2704.3142608311487,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--eddy--noise15.wav",
+      "seconds": 3.1205,
+      "rms": 2745.6344540305126,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--tingting--clean.wav",
+      "seconds": 3.219625,
+      "rms": 4190.925772954461,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--tingting--noise15.wav",
+      "seconds": 3.219625,
+      "rms": 4259.256498295758,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-03-navigate--eddy--clean.wav",
+      "seconds": 3.9125,
+      "rms": 2745.9793522099867,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-03-navigate--tingting--clean.wav",
+      "seconds": 4.0080625,
+      "rms": 4200.6744988683395,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-03-inquire--eddy--clean.wav",
+      "seconds": 5.1439375,
+      "rms": 2764.627375335115,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_bill-03-inquire--tingting--clean.wav",
+      "seconds": 5.4139375,
+      "rms": 4008.264363210622,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-01-navigate--eddy--clean.wav",
+      "seconds": 4.253375,
+      "rms": 3039.027815005734,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-01-navigate--tingting--clean.wav",
+      "seconds": 4.452,
+      "rms": 4058.4355570823795,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-01-inquire--eddy--clean.wav",
+      "seconds": 3.4326875,
+      "rms": 3015.6409621286757,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-01-inquire--tingting--clean.wav",
+      "seconds": 3.4866875,
+      "rms": 4211.293129125577,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-02-navigate--eddy--clean.wav",
+      "seconds": 3.0393125,
+      "rms": 3019.292595542708,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-02-navigate--tingting--clean.wav",
+      "seconds": 2.8515,
+      "rms": 4416.528114645482,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-02-inquire--eddy--clean.wav",
+      "seconds": 3.213,
+      "rms": 2877.223013128036,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-02-inquire--tingting--clean.wav",
+      "seconds": 3.0223125,
+      "rms": 4238.6765251922925,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--eddy--clean.wav",
+      "seconds": 4.1321875,
+      "rms": 2923.3504188578104,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--eddy--noise15.wav",
+      "seconds": 4.1321875,
+      "rms": 2966.9749302231453,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--tingting--clean.wav",
+      "seconds": 4.2054375,
+      "rms": 4090.9970222800443,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--tingting--noise15.wav",
+      "seconds": 4.2054375,
+      "rms": 4153.572310415256,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--eddy--clean.wav",
+      "seconds": 4.953125,
+      "rms": 2866.477338547051,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--eddy--noise15.wav",
+      "seconds": 4.953125,
+      "rms": 2914.4712963047396,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--tingting--clean.wav",
+      "seconds": 5.2619375,
+      "rms": 4034.6875049683586,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--tingting--noise15.wav",
+      "seconds": 5.2619375,
+      "rms": 4097.857389148738,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-01-navigate--eddy--clean.wav",
+      "seconds": 4.4961875,
+      "rms": 2544.383129403921,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-01-navigate--tingting--clean.wav",
+      "seconds": 4.3474375,
+      "rms": 4015.4660890009395,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-01-inquire--eddy--clean.wav",
+      "seconds": 3.62925,
+      "rms": 2465.553781909434,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-01-inquire--tingting--clean.wav",
+      "seconds": 3.6840625,
+      "rms": 4160.065278545227,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--eddy--clean.wav",
+      "seconds": 3.692625,
+      "rms": 2633.3880064835703,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--eddy--noise15.wav",
+      "seconds": 3.692625,
+      "rms": 2670.7357279521884,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--tingting--clean.wav",
+      "seconds": 3.604125,
+      "rms": 4319.980769359959,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--tingting--noise15.wav",
+      "seconds": 3.604125,
+      "rms": 4386.214106170579,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--eddy--clean.wav",
+      "seconds": 3.6408125,
+      "rms": 2423.5374581802644,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--eddy--noise15.wav",
+      "seconds": 3.6408125,
+      "rms": 2461.251966506331,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--tingting--clean.wav",
+      "seconds": 3.60275,
+      "rms": 4149.829990828434,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--tingting--noise15.wav",
+      "seconds": 3.60275,
+      "rms": 4216.754605930231,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-03-navigate--eddy--clean.wav",
+      "seconds": 5.3865,
+      "rms": 2427.706606895415,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-03-navigate--tingting--clean.wav",
+      "seconds": 5.3808125,
+      "rms": 3881.7058600932287,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-03-inquire--eddy--clean.wav",
+      "seconds": 4.924,
+      "rms": 2565.16423736528,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_installment-03-inquire--tingting--clean.wav",
+      "seconds": 4.9860625,
+      "rms": 3953.644677849838,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-01-navigate--eddy--clean.wav",
+      "seconds": 4.7274375,
+      "rms": 2708.728272595364,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-01-navigate--tingting--clean.wav",
+      "seconds": 4.4751875,
+      "rms": 4142.397790611769,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-01-inquire--eddy--clean.wav",
+      "seconds": 3.109,
+      "rms": 2583.4189337859457,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-01-inquire--tingting--clean.wav",
+      "seconds": 3.021625,
+      "rms": 4111.654993096705,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--eddy--clean.wav",
+      "seconds": 3.3399375,
+      "rms": 2669.9747925477564,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--eddy--noise15.wav",
+      "seconds": 3.3399375,
+      "rms": 2714.674773776572,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--tingting--clean.wav",
+      "seconds": 3.014,
+      "rms": 4472.519622856127,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--tingting--noise15.wav",
+      "seconds": 3.014,
+      "rms": 4544.054386900515,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--eddy--clean.wav",
+      "seconds": 3.24775,
+      "rms": 2606.6924088123255,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--eddy--noise15.wav",
+      "seconds": 3.24775,
+      "rms": 2652.0097462983713,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--tingting--clean.wav",
+      "seconds": 3.149375,
+      "rms": 4333.1007110998735,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--tingting--noise15.wav",
+      "seconds": 3.149375,
+      "rms": 4401.430630564765,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-03-navigate--eddy--clean.wav",
+      "seconds": 5.2075,
+      "rms": 2422.869655453791,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-03-navigate--tingting--clean.wav",
+      "seconds": 5.1690625,
+      "rms": 3968.155075156425,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-03-inquire--eddy--clean.wav",
+      "seconds": 4.8664375,
+      "rms": 2591.0090970020174,
+      "clipped": 0
+    },
+    {
+      "file": "audio/credit_apply-03-inquire--tingting--clean.wav",
+      "seconds": 5.0075625,
+      "rms": 3984.666195205138,
+      "clipped": 0
+    },
+    {
+      "file": "audio/control-silence.wav",
+      "seconds": 2.0,
+      "rms": 0.0,
+      "clipped": 0
+    },
+    {
+      "file": "audio/control-tone.wav",
+      "seconds": 2.0,
+      "rms": 2121.2683847170306,
+      "clipped": 0
+    },
+    {
+      "file": "audio/control-noise.wav",
+      "seconds": 2.0,
+      "rms": 1491.312292558973,
+      "clipped": 0
+    },
+    {
+      "file": "audio/control-clicks.wav",
+      "seconds": 2.0,
+      "rms": 337.5486451054129,
+      "clipped": 0
+    }
+  ]
+}

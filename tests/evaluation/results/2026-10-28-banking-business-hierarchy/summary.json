@@ -1,0 +1,322 @@
+{
+  "legacy/text": {
+    "route_cases": 100,
+    "route_correct": 97,
+    "navigation_cases": 50,
+    "navigation_correct": 47,
+    "consultation_cases": 50,
+    "consultation_misgated": 0,
+    "consultation_known_leaf": 0,
+    "gate_correct": 100,
+    "business_study_cases": 50,
+    "diagnostics": {
+      "flat11": {
+        "cases": 50,
+        "correct": 50,
+        "accuracy": 1.0
+      },
+      "flat16": {
+        "cases": 50,
+        "correct": 49,
+        "accuracy": 0.98
+      },
+      "domain": {
+        "cases": 50,
+        "correct": 47,
+        "accuracy": 0.94
+      },
+      "tree": {
+        "cases": 50,
+        "correct": 47,
+        "accuracy": 0.94
+      },
+      "oracle_domain_leaf": {
+        "cases": 50,
+        "correct": 50,
+        "accuracy": 1.0
+      },
+      "oracle3": {
+        "cases": 50,
+        "correct": 50,
+        "accuracy": 1.0
+      },
+      "oracle5": {
+        "cases": 50,
+        "correct": 50,
+        "accuracy": 1.0
+      }
+    },
+    "route_accuracy": 0.97,
+    "route_latency_ms": {
+      "p50": 106.09170800000811,
+      "p95": 320.21783400000106
+    }
+  },
+  "legacy/audio": {
+    "route_cases": 200,
+    "route_correct": 126,
+    "navigation_cases": 100,
+    "navigation_correct": 34,
+    "consultation_cases": 100,
+    "consultation_misgated": 8,
+    "consultation_known_leaf": 3,
+    "gate_correct": 174,
+    "business_study_cases": 100,
+    "diagnostics": {
+      "flat11": {
+        "cases": 100,
+        "correct": 48,
+        "accuracy": 0.48
+      },
+      "flat16": {
+        "cases": 100,
+        "correct": 42,
+        "accuracy": 0.42
+      },
+      "domain": {
+        "cases": 100,
+        "correct": 45,
+        "accuracy": 0.45
+      },
+      "tree": {
+        "cases": 100,
+        "correct": 34,
+        "accuracy": 0.34
+      },
+      "oracle_domain_leaf": {
+        "cases": 100,
+        "correct": 57,
+        "accuracy": 0.57
+      },
+      "oracle3": {
+        "cases": 100,
+        "correct": 60,
+        "accuracy": 0.6
+      },
+      "oracle5": {
+        "cases": 100,
+        "correct": 53,
+        "accuracy": 0.53
+      }
+    },
+    "route_accuracy": 0.63,
+    "route_latency_ms": {
+      "p50": 145.28220799999758,
+      "p95": 482.871375000002
+    }
+  },
+  "credit/text": {
+    "route_cases": 30,
+    "route_correct": 29,
+    "navigation_cases": 15,
+    "navigation_correct": 14,
+    "consultation_cases": 15,
+    "consultation_misgated": 0,
+    "consultation_known_leaf": 0,
+    "gate_correct": 29,
+    "business_study_cases": 15,
+    "diagnostics": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "flat16": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "domain": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "tree": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "oracle_domain_leaf": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "oracle3": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      },
+      "oracle5": {
+        "cases": 15,
+        "correct": 15,
+        "accuracy": 1.0
+      }
+    },
+    "route_accuracy": 0.9666666666666667,
+    "route_latency_ms": {
+      "p50": 105.6650000000019,
+      "p95": 326.01445799999954
+    }
+  },
+  "credit/audio": {
+    "route_cases": 60,
+    "route_correct": 41,
+    "navigation_cases": 30,
+    "navigation_correct": 14,
+    "consultation_cases": 30,
+    "consultation_misgated": 3,
+    "consultation_known_leaf": 3,
+    "gate_correct": 56,
+    "business_study_cases": 30,
+    "diagnostics": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "flat16": {
+        "cases": 30,
+        "correct": 15,
+        "accuracy": 0.5
+      },
+      "domain": {
+        "cases": 30,
+        "correct": 19,
+        "accuracy": 0.6333333333333333
+      },
+      "tree": {
+        "cases": 30,
+        "correct": 14,
+        "accuracy": 0.4666666666666667
+      },
+      "oracle_domain_leaf": {
+        "cases": 30,
+        "correct": 18,
+        "accuracy": 0.6
+      },
+      "oracle3": {
+        "cases": 30,
+        "correct": 23,
+        "accuracy": 0.7666666666666667
+      },
+      "oracle5": {
+        "cases": 30,
+        "correct": 23,
+        "accuracy": 0.7666666666666667
+      }
+    },
+    "route_accuracy": 0.6833333333333333,
+    "route_latency_ms": {
+      "p50": 393.14862500000913,
+      "p95": 499.10224999999997
+    }
+  },
+  "all/text": {
+    "route_cases": 130,
+    "route_correct": 126,
+    "navigation_cases": 65,
+    "navigation_correct": 61,
+    "consultation_cases": 65,
+    "consultation_misgated": 0,
+    "consultation_known_leaf": 0,
+    "gate_correct": 129,
+    "business_study_cases": 65,
+    "diagnostics": {
+      "flat11": {
+        "cases": 50,
+        "correct": 50,
+        "accuracy": 1.0
+      },
+      "flat16": {
+        "cases": 65,
+        "correct": 64,
+        "accuracy": 0.9846153846153847
+      },
+      "domain": {
+        "cases": 65,
+        "correct": 62,
+        "accuracy": 0.9538461538461539
+      },
+      "tree": {
+        "cases": 65,
+        "correct": 62,
+        "accuracy": 0.9538461538461539
+      },
+      "oracle_domain_leaf": {
+        "cases": 65,
+        "correct": 65,
+        "accuracy": 1.0
+      },
+      "oracle3": {
+        "cases": 65,
+        "correct": 65,
+        "accuracy": 1.0
+      },
+      "oracle5": {
+        "cases": 65,
+        "correct": 65,
+        "accuracy": 1.0
+      }
+    },
+    "route_accuracy": 0.9692307692307692,
+    "route_latency_ms": {
+      "p50": 106.09170800000811,
+      "p95": 321.4815000000044
+    }
+  },
+  "all/audio": {
+    "route_cases": 260,
+    "route_correct": 167,
+    "navigation_cases": 130,
+    "navigation_correct": 48,
+    "consultation_cases": 130,
+    "consultation_misgated": 11,
+    "consultation_known_leaf": 6,
+    "gate_correct": 230,
+    "business_study_cases": 130,
+    "diagnostics": {
+      "flat11": {
+        "cases": 100,
+        "correct": 48,
+        "accuracy": 0.48
+      },
+      "flat16": {
+        "cases": 130,
+        "correct": 57,
+        "accuracy": 0.43846153846153846
+      },
+      "domain": {
+        "cases": 130,
+        "correct": 64,
+        "accuracy": 0.49230769230769234
+      },
+      "tree": {
+        "cases": 130,
+        "correct": 48,
+        "accuracy": 0.36923076923076925
+      },
+      "oracle_domain_leaf": {
+        "cases": 130,
+        "correct": 75,
+        "accuracy": 0.5769230769230769
+      },
+      "oracle3": {
+        "cases": 130,
+        "correct": 83,
+        "accuracy": 0.6384615384615384
+      },
+      "oracle5": {
+        "cases": 130,
+        "correct": 76,
+        "accuracy": 0.5846153846153846
+      }
+    },
+    "route_accuracy": 0.6423076923076924,
+    "route_latency_ms": {
+      "p50": 148.03458400000125,
+      "p95": 486.09066700000267
+    }
+  },
+  "inference_requests": 1589,
+  "errors": 0
+}

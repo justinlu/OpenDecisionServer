@@ -1,0 +1,739 @@
+{
+  "version": "banking-credit-audio-v1",
+  "inputs": {
+    "cases.jsonl": "6fce1537859a1c561c4136161ea24f33dd0f39a80114d81c0902716e92a62d05",
+    "task.json": "16de8a79fdd6a2a92465a36bd703be29fc74a50318aea49201f9d93f3a5837db"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "voices": [
+    {
+      "id": "tingting",
+      "name": "Tingting (Chinese (China mainland))",
+      "rate": 190
+    },
+    {
+      "id": "eddy",
+      "name": "Eddy (Chinese (China mainland))",
+      "rate": 175
+    }
+  ],
+  "sample_rate": 16000,
+  "channels": 1,
+  "bits": 16,
+  "generator_sha256": "064725814f43e8a2c23dd70090c6b5c792b37c1d868687b38b99ac2ff496bb1a",
+  "warning": "Synthetic TTS and synthetic noise; no real-speaker or real-ATM accuracy claim.",
+  "audio": [
+    {
+      "file": "audio/control-clicks.wav",
+      "case_id": "control-clicks",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "adaafe5b0c33aa22aafe43d7dbbedac01aa3c8856056cfa355a4def9f4139a6b",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-noise.wav",
+      "case_id": "control-noise",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "afb422f9ee67462e1d646a8742b9348e56e5884e8c4f52e3328f09e7275e9a4d",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-silence.wav",
+      "case_id": "control-silence",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "20eaebffe1816e0ffa6f7f854f5ef4ea80d5349faaf0ce1fec1b713e7fde58fa",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/control-tone.wav",
+      "case_id": "control-tone",
+      "voice": "none",
+      "condition": "control",
+      "sha256": "a59cf4129fe7e8529890311ee4b942b054cc8be72be03f51efdcf04a6e2b8cd6",
+      "seconds": 2.0
+    },
+    {
+      "file": "audio/credit_apply-01-inquire--eddy--clean.wav",
+      "case_id": "credit_apply-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "29e678e1e4f7ac2bce9dce594e4b1bf014eb65a3f18a49b477d87c1b1c261410",
+      "seconds": 3.109
+    },
+    {
+      "file": "audio/credit_apply-01-inquire--tingting--clean.wav",
+      "case_id": "credit_apply-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "371a015c5a00cbe4b5687c1f9fac0145d5f869e91df366a8a0ad4d5e8e135e77",
+      "seconds": 3.021625
+    },
+    {
+      "file": "audio/credit_apply-01-navigate--eddy--clean.wav",
+      "case_id": "credit_apply-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b564d99caeae38877528cd5b5ee57573ccafcc81a32076b921764fa7c3c5a6a0",
+      "seconds": 4.7274375
+    },
+    {
+      "file": "audio/credit_apply-01-navigate--tingting--clean.wav",
+      "case_id": "credit_apply-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "6d267b19dae7275c44d0badc5303d9cecff6b62098a63ed68f587f625dc11b2c",
+      "seconds": 4.4751875
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--eddy--clean.wav",
+      "case_id": "credit_apply-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "75fe1650333ceda287151a4bac2846f7b7612eaa882ea414de873b7f3d82a024",
+      "seconds": 3.24775
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--eddy--noise15.wav",
+      "case_id": "credit_apply-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "639995952a1bb2e6fba937e0e504cab294c1ae7d26c6e6556ec923261409f153",
+      "seconds": 3.24775,
+      "seed": 14076032658159180925,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--tingting--clean.wav",
+      "case_id": "credit_apply-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "8929b2f6e811cbccfe3e2dda526ec1f849955a2d26d07ea1b8d346eb769d9ebe",
+      "seconds": 3.149375
+    },
+    {
+      "file": "audio/credit_apply-02-inquire--tingting--noise15.wav",
+      "case_id": "credit_apply-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "0bfa3456816e0bee848d567f7ecb5d8de48b99a566b28fd6a78bcf62365dbbe0",
+      "seconds": 3.149375,
+      "seed": 12818118036607456065,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--eddy--clean.wav",
+      "case_id": "credit_apply-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "4dd1a6f4d45437fba491ec6d2a0317acabd1077b5f3a5deb60f3d3c133f8477a",
+      "seconds": 3.3399375
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--eddy--noise15.wav",
+      "case_id": "credit_apply-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "2690c8d119f68037f84e2f214bf65e7144c6cf6a69cb950c44e8a1fe5ecebe31",
+      "seconds": 3.3399375,
+      "seed": 14676027329220024028,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--tingting--clean.wav",
+      "case_id": "credit_apply-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "f7b9dd6974e1b660c1d230526ec36ded8a5a4268b8091ad48ee9943499026507",
+      "seconds": 3.014
+    },
+    {
+      "file": "audio/credit_apply-02-navigate--tingting--noise15.wav",
+      "case_id": "credit_apply-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "8e7861814dec42efd0380ef89d553a06653328c4c6049599a5358eb456e890d6",
+      "seconds": 3.014,
+      "seed": 8160032538683391642,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_apply-03-inquire--eddy--clean.wav",
+      "case_id": "credit_apply-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7c4c78b7a5fe76c543afeccb3f4bce577ecd84cf2009057ed9c8de43eb552054",
+      "seconds": 4.8664375
+    },
+    {
+      "file": "audio/credit_apply-03-inquire--tingting--clean.wav",
+      "case_id": "credit_apply-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "ec41ab1576deb8478811e3268434c94257564f7d39eb9868ddeb15a6a115d728",
+      "seconds": 5.0075625
+    },
+    {
+      "file": "audio/credit_apply-03-navigate--eddy--clean.wav",
+      "case_id": "credit_apply-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "be17e7828400adf00a5eb6e63acf53f998743c41a8bf76bb3df975924401357d",
+      "seconds": 5.2075
+    },
+    {
+      "file": "audio/credit_apply-03-navigate--tingting--clean.wav",
+      "case_id": "credit_apply-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "bc85d663e0432f202f3b003366123924de632041b164e31504853a475452af20",
+      "seconds": 5.1690625
+    },
+    {
+      "file": "audio/credit_bill-01-inquire--eddy--clean.wav",
+      "case_id": "credit_bill-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "f2a9148e998b38187061be9b6314f4d0078f79e2b39d91f539c412f751d940b8",
+      "seconds": 3.421125
+    },
+    {
+      "file": "audio/credit_bill-01-inquire--tingting--clean.wav",
+      "case_id": "credit_bill-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "019766e835ec1f2cad1fa7983638a20ea6d5b12a6b6d78556aaf238e9f294b36",
+      "seconds": 3.3009375
+    },
+    {
+      "file": "audio/credit_bill-01-navigate--eddy--clean.wav",
+      "case_id": "credit_bill-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "11f3e609b69164d32f2e1f9aea1a9949c6552a91d98b108ee7598754d39ed706",
+      "seconds": 3.750625
+    },
+    {
+      "file": "audio/credit_bill-01-navigate--tingting--clean.wav",
+      "case_id": "credit_bill-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "e1528c26d1f7d0a4f7424155af2ca472bd16de477ef1e20009653a1ef23f1912",
+      "seconds": 3.869
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--eddy--clean.wav",
+      "case_id": "credit_bill-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "e45d9302bfd3acac16b50a18a265ac020d1dae2a76a7901e6ace64bf81f63b8c",
+      "seconds": 3.1205
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--eddy--noise15.wav",
+      "case_id": "credit_bill-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "84cb0431d530db461493f193857b441bee7396660eab159d05119b9cc55f8f6b",
+      "seconds": 3.1205,
+      "seed": 8543156029496642611,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--tingting--clean.wav",
+      "case_id": "credit_bill-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3202a5d025074e3dead61d7c4d7049254ed84bac4aef205f4368068c0c357f0d",
+      "seconds": 3.219625
+    },
+    {
+      "file": "audio/credit_bill-02-inquire--tingting--noise15.wav",
+      "case_id": "credit_bill-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "f4e905164d4f3903cb308b5b8dc45d2ebbd18a5dd8069b39655e6a16729f7664",
+      "seconds": 3.219625,
+      "seed": 6619182561656575865,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--eddy--clean.wav",
+      "case_id": "credit_bill-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "20a1ef25ebcbe46cb395aadc35264d0b9aa3f0555d76189ef47788d743b7403e",
+      "seconds": 3.25325
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--eddy--noise15.wav",
+      "case_id": "credit_bill-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "e7c06fe071e163e33a22b296151b0a792cd9ea9ebc4d1d56380fa6f05f554471",
+      "seconds": 3.25325,
+      "seed": 655080496235450011,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--tingting--clean.wav",
+      "case_id": "credit_bill-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "12163bb0e8b13fe944903196b79ff2b0a068097fb7ac9203f19140918ae72bf3",
+      "seconds": 3.1280625
+    },
+    {
+      "file": "audio/credit_bill-02-navigate--tingting--noise15.wav",
+      "case_id": "credit_bill-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "de3ea5bbfcc64253771242514aa01bd681ac0f57538a1f05261953887b6ba809",
+      "seconds": 3.1280625,
+      "seed": 7653576130620935543,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_bill-03-inquire--eddy--clean.wav",
+      "case_id": "credit_bill-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "255f4ad0903cf726c5ac2f6e43720c1d7d2f6363b0f002686b3c93ff8442579f",
+      "seconds": 5.1439375
+    },
+    {
+      "file": "audio/credit_bill-03-inquire--tingting--clean.wav",
+      "case_id": "credit_bill-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a3cb95d01c7283a08952adc74789725af6b2f71967b17cf08d04d80b8914cecc",
+      "seconds": 5.4139375
+    },
+    {
+      "file": "audio/credit_bill-03-navigate--eddy--clean.wav",
+      "case_id": "credit_bill-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "96911b15a89df23e57e03869d3315ebd5a747e27d3c1aee7258cdcc402fa0466",
+      "seconds": 3.9125
+    },
+    {
+      "file": "audio/credit_bill-03-navigate--tingting--clean.wav",
+      "case_id": "credit_bill-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3d79ee58b9a78979c2d83af7d78d4cc39627e71ba36cebe66af73a03ef3c11aa",
+      "seconds": 4.0080625
+    },
+    {
+      "file": "audio/credit_installment-01-inquire--eddy--clean.wav",
+      "case_id": "credit_installment-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "50f30ecf246db696d9d147f55afa171b4c1e82da7e93dc065a177230bee232a6",
+      "seconds": 3.62925
+    },
+    {
+      "file": "audio/credit_installment-01-inquire--tingting--clean.wav",
+      "case_id": "credit_installment-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "40a99d3cf5fd41caf5ba2a722b3c4df71e31ad4b41347f65914c1c4d915399af",
+      "seconds": 3.6840625
+    },
+    {
+      "file": "audio/credit_installment-01-navigate--eddy--clean.wav",
+      "case_id": "credit_installment-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "26e2bb7e2f792cf9ed01d29a8db2947b563054e2a0ebde4af880942f15cef774",
+      "seconds": 4.4961875
+    },
+    {
+      "file": "audio/credit_installment-01-navigate--tingting--clean.wav",
+      "case_id": "credit_installment-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a191e34ed32b0ea4afa20f622921f7813778c681dfc9e7b1b63b2c44568ffdcb",
+      "seconds": 4.3474375
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--eddy--clean.wav",
+      "case_id": "credit_installment-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "b1fa89bd8b49963c99bb15d5c0a6730f2a2f30352432352845a7c8e82f895a3c",
+      "seconds": 3.6408125
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--eddy--noise15.wav",
+      "case_id": "credit_installment-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "5dd42dad29b6447a9dd0975f1d0abe03aa1314f85064fee463d1652e19d6e7ab",
+      "seconds": 3.6408125,
+      "seed": 1215382881194152583,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--tingting--clean.wav",
+      "case_id": "credit_installment-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3b50f5c4f74744c41f3951319a56f94fa70315b8d226c3fa69867374ceae66a9",
+      "seconds": 3.60275
+    },
+    {
+      "file": "audio/credit_installment-02-inquire--tingting--noise15.wav",
+      "case_id": "credit_installment-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "3abaae6806691637035c7efc5350e6980ad69587c7d13cde152d8bfe85df9607",
+      "seconds": 3.60275,
+      "seed": 10781109877093889034,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--eddy--clean.wav",
+      "case_id": "credit_installment-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "3dce8000e96ca6edb84db8fdcc4176c8c47652728ed2c52295246fa9595c03ed",
+      "seconds": 3.692625
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--eddy--noise15.wav",
+      "case_id": "credit_installment-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "c57a1207da3df16df89500894046db1570a86df0ec6cd0ee91db4691cfad62da",
+      "seconds": 3.692625,
+      "seed": 12913293745863566228,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--tingting--clean.wav",
+      "case_id": "credit_installment-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "5699e7c3f6ed0eb5d2d81be44043d67b39572597be37fe7e90942caa48b18b3a",
+      "seconds": 3.604125
+    },
+    {
+      "file": "audio/credit_installment-02-navigate--tingting--noise15.wav",
+      "case_id": "credit_installment-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "1f3b6485c9c5bfa06f1543aaa8cceeb0e5c192958e8bb4048477f0138348a668",
+      "seconds": 3.604125,
+      "seed": 6645677137749411889,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_installment-03-inquire--eddy--clean.wav",
+      "case_id": "credit_installment-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "c74f7cdd3d7d5b9ff31184249572660dff8ca461e5cd0b58c15506d78ce3b303",
+      "seconds": 4.924
+    },
+    {
+      "file": "audio/credit_installment-03-inquire--tingting--clean.wav",
+      "case_id": "credit_installment-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "43c2d1ce2274fca088fe6420ba94f3c8dd7aad32c8e679e53ee62e5f767a4725",
+      "seconds": 4.9860625
+    },
+    {
+      "file": "audio/credit_installment-03-navigate--eddy--clean.wav",
+      "case_id": "credit_installment-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "7a7bde98b1e3eddc5f698b59b89aba4250b0dcd7108f60370384436516960e4f",
+      "seconds": 5.3865
+    },
+    {
+      "file": "audio/credit_installment-03-navigate--tingting--clean.wav",
+      "case_id": "credit_installment-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "c242d8e06c4bd317c0957e80324737d7cc979d379489c1e803709d8bee0a67d6",
+      "seconds": 5.3808125
+    },
+    {
+      "file": "audio/credit_limit-01-inquire--eddy--clean.wav",
+      "case_id": "credit_limit-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "a10c5993956a6a7c1a671ff340e1116ecc91f1836f663b81b37b75b348aa2435",
+      "seconds": 3.4326875
+    },
+    {
+      "file": "audio/credit_limit-01-inquire--tingting--clean.wav",
+      "case_id": "credit_limit-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "fc0a50522a5342585d74d151da372fab60ac3e0165916ffa63a9fa87bffdb96b",
+      "seconds": 3.4866875
+    },
+    {
+      "file": "audio/credit_limit-01-navigate--eddy--clean.wav",
+      "case_id": "credit_limit-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "1370aac57de1dac672463c7bee4c84611e68923388400f9a52508cc73fa2ad03",
+      "seconds": 4.253375
+    },
+    {
+      "file": "audio/credit_limit-01-navigate--tingting--clean.wav",
+      "case_id": "credit_limit-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "3ecd3164912b1fa62ad058296fb8783d0a116baa56d52853a9f2f59d6d45085a",
+      "seconds": 4.452
+    },
+    {
+      "file": "audio/credit_limit-02-inquire--eddy--clean.wav",
+      "case_id": "credit_limit-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "5225cfeee15bf7970c15caa124c64f510d891beeb279d3087f0f31ff8197b586",
+      "seconds": 3.213
+    },
+    {
+      "file": "audio/credit_limit-02-inquire--tingting--clean.wav",
+      "case_id": "credit_limit-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "985791e9c1e311a00718cea8dcc79a2e267e3d1fbfecabde8afd2215a98a8fbb",
+      "seconds": 3.0223125
+    },
+    {
+      "file": "audio/credit_limit-02-navigate--eddy--clean.wav",
+      "case_id": "credit_limit-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "bbe31f82da803962a7c8730650d3a15676c8e7c4ebc307216502ef4b6883eef4",
+      "seconds": 3.0393125
+    },
+    {
+      "file": "audio/credit_limit-02-navigate--tingting--clean.wav",
+      "case_id": "credit_limit-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "daa8ac7c946076830b40569983a47e4f07dc1de307a678dd92cf21989d932b3e",
+      "seconds": 2.8515
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--eddy--clean.wav",
+      "case_id": "credit_limit-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "526446e37fdc798d14061ab56667e5ae311286acf549aa85818ef59d6801933f",
+      "seconds": 4.953125
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--eddy--noise15.wav",
+      "case_id": "credit_limit-03-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "76f64af6cd14825a99045b6cd38d9da457c3a7fba89f49b731e21f0039b472df",
+      "seconds": 4.953125,
+      "seed": 13225989796113131108,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--tingting--clean.wav",
+      "case_id": "credit_limit-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "af43e18e4351aa3f09b90e05ebb0654ce68499664d0e47b8d5bb62456b9a5d50",
+      "seconds": 5.2619375
+    },
+    {
+      "file": "audio/credit_limit-03-inquire--tingting--noise15.wav",
+      "case_id": "credit_limit-03-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "68cf4b78bd10271008d75051fd36cbf3e3edae97407656eba109958c28354fd3",
+      "seconds": 5.2619375,
+      "seed": 9396051605046556811,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--eddy--clean.wav",
+      "case_id": "credit_limit-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "1f73f963a9a00a0ed6c204f1d2f2d379f960416deca842d6688bfa5ff27f467f",
+      "seconds": 4.1321875
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--eddy--noise15.wav",
+      "case_id": "credit_limit-03-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "8f0b6f503532fa0308584e6095aa53a7ebfcc619ae39626a07f10febc13ef176",
+      "seconds": 4.1321875,
+      "seed": 12827316414500265540,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--tingting--clean.wav",
+      "case_id": "credit_limit-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "257eb6f3c00e83aea1ba693097e73a6fe1cd61cbe20476dbd71f94a6122c699f",
+      "seconds": 4.2054375
+    },
+    {
+      "file": "audio/credit_limit-03-navigate--tingting--noise15.wav",
+      "case_id": "credit_limit-03-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "8bb472c80e17b38776750a7087d4ff3327c5d2af9b510955d54aa2ef11ab9796",
+      "seconds": 4.2054375,
+      "seed": 17602361614967385431,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_repay-01-inquire--eddy--clean.wav",
+      "case_id": "credit_repay-01-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "011434c199c5f49ada9b25b43f30e0ac0ccf256af190cfd5e1f33ae09c03ff3f",
+      "seconds": 3.1089375
+    },
+    {
+      "file": "audio/credit_repay-01-inquire--tingting--clean.wav",
+      "case_id": "credit_repay-01-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "c65bb1af8f5931faed82dfe3a785a706aae034a2ff31fbc3796cfd4436501496",
+      "seconds": 2.9874375
+    },
+    {
+      "file": "audio/credit_repay-01-navigate--eddy--clean.wav",
+      "case_id": "credit_repay-01-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "af7464f4ed59ba0acc7e8c98dfe6ca079991da61d480b20996b1c406686a4938",
+      "seconds": 4.114625
+    },
+    {
+      "file": "audio/credit_repay-01-navigate--tingting--clean.wav",
+      "case_id": "credit_repay-01-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "a598c3bdb1aabb7b2b4778808107b638643261ed431817ab65c3e8ab86bc9acb",
+      "seconds": 4.034
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--eddy--clean.wav",
+      "case_id": "credit_repay-02-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "a6a24baed6ff6224356efd063e5824cda75136032bfa279ccd92a6b326fff5ae",
+      "seconds": 3.1320625
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--eddy--noise15.wav",
+      "case_id": "credit_repay-02-inquire",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "9391ad31ab4fe671b191e2dcbe6a131702b283897a681a52dc86f4cc3ce5fcda",
+      "seconds": 3.1320625,
+      "seed": 8543776765646759380,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--tingting--clean.wav",
+      "case_id": "credit_repay-02-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "268a72a16c59d5eb625ef172828ef7dbcb0fbc95de7391db87135008f05ded85",
+      "seconds": 3.0455
+    },
+    {
+      "file": "audio/credit_repay-02-inquire--tingting--noise15.wav",
+      "case_id": "credit_repay-02-inquire",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "a0c9bbbf7e8f89777a114d679246eaadf7f1a300de3e44ecdb181745da5d32d1",
+      "seconds": 3.0455,
+      "seed": 9788836119643878140,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--eddy--clean.wav",
+      "case_id": "credit_repay-02-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "fd26e1a772df2b7268c2bd1b34100e24481e92cb5d510e9f9472c11227750a3a",
+      "seconds": 3.2011875
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--eddy--noise15.wav",
+      "case_id": "credit_repay-02-navigate",
+      "voice": "eddy",
+      "condition": "noise15",
+      "sha256": "423550476516cb3a4c7ede66ca6274992cb960fe04e7948ea8d6938d1ee188f3",
+      "seconds": 3.2011875,
+      "seed": 8904131733889622780,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--tingting--clean.wav",
+      "case_id": "credit_repay-02-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "393ff16ab02ba3b06516c9452487bb828631dd6fb691d83cdbd8682d2f8c9eaa",
+      "seconds": 2.8515
+    },
+    {
+      "file": "audio/credit_repay-02-navigate--tingting--noise15.wav",
+      "case_id": "credit_repay-02-navigate",
+      "voice": "tingting",
+      "condition": "noise15",
+      "sha256": "380b14ddbc97bbedec1b3f6a3b8dfb6760ee619cdfb88e7895da0701b170f609",
+      "seconds": 2.8515,
+      "seed": 9696099110275945711,
+      "snr_db": 15
+    },
+    {
+      "file": "audio/credit_repay-03-inquire--eddy--clean.wav",
+      "case_id": "credit_repay-03-inquire",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "86a1490abe9f9ee0949af1d0bb84a32cffc4f97e107c32f609ffd000fe15eddb",
+      "seconds": 5.1439375
+    },
+    {
+      "file": "audio/credit_repay-03-inquire--tingting--clean.wav",
+      "case_id": "credit_repay-03-inquire",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "2927067feafbe9833a8a8b61041f8e0876d7ed91de315ffbb811395ef01b31d4",
+      "seconds": 5.263
+    },
+    {
+      "file": "audio/credit_repay-03-navigate--eddy--clean.wav",
+      "case_id": "credit_repay-03-navigate",
+      "voice": "eddy",
+      "condition": "clean",
+      "sha256": "baad4f048b7397f60ec225108b6dbed4d4ae50a9ea43354b1e4af3630bb05a8a",
+      "seconds": 5.479
+    },
+    {
+      "file": "audio/credit_repay-03-navigate--tingting--clean.wav",
+      "case_id": "credit_repay-03-navigate",
+      "voice": "tingting",
+      "condition": "clean",
+      "sha256": "d9dd1f702c23ded137bc03b09889e7eb81bfb81aefe434a0cfde1d26ebff88bd",
+      "seconds": 5.404
+    }
+  ]
+}

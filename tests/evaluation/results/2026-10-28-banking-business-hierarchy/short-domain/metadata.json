@@ -1,0 +1,5 @@
+{
+  "post_hoc": true,
+  "runner_sha256": "1d632e044e60f45cf8757dd8c4f57760c1fb0e307226fdac15ce936c454e5964",
+  "warning": "Only domain is freshly inferred. Leaf and first gate are replayed from existing identical-input measurements; no live routing latency claim."
+}
