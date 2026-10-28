@@ -1,0 +1,661 @@
+{
+  "legacy/text/all": {
+    "routes": 100,
+    "navigation": 50,
+    "coarse_page_correct": 97,
+    "flat16_fixed_gate_replay_correct": 99,
+    "navigation_failures": {
+      "gate": 0,
+      "domain": 3,
+      "leaf": 0,
+      "success": 47
+    },
+    "domain_confusion": {
+      "cash": {
+        "cash": 9,
+        "unknown": 1
+      },
+      "digital": {
+        "digital": 10
+      },
+      "card": {
+        "card": 15
+      },
+      "account": {
+        "account": 13,
+        "unknown": 1,
+        "credit": 1
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 50
+      },
+      "flat16": {
+        "cases": 50,
+        "correct": 49
+      },
+      "domain": {
+        "cases": 50,
+        "correct": 47
+      },
+      "oracle_domain_leaf": {
+        "cases": 50,
+        "correct": 50
+      },
+      "oracle3": {
+        "cases": 50,
+        "correct": 50
+      },
+      "oracle5": {
+        "cases": 50,
+        "correct": 50
+      }
+    }
+  },
+  "legacy/audio/all": {
+    "routes": 200,
+    "navigation": 100,
+    "coarse_page_correct": 132,
+    "flat16_fixed_gate_replay_correct": 132,
+    "navigation_failures": {
+      "gate": 18,
+      "domain": 42,
+      "leaf": 6,
+      "success": 34
+    },
+    "domain_confusion": {
+      "card": {
+        "card": 27,
+        "credit": 3
+      },
+      "account": {
+        "card": 14,
+        "credit": 10,
+        "unknown": 6
+      },
+      "cash": {
+        "unknown": 6,
+        "credit": 5,
+        "cash": 6,
+        "card": 3
+      },
+      "digital": {
+        "card": 6,
+        "digital": 12,
+        "unknown": 1,
+        "credit": 1
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 100,
+        "correct": 48
+      },
+      "flat16": {
+        "cases": 100,
+        "correct": 42
+      },
+      "domain": {
+        "cases": 100,
+        "correct": 45
+      },
+      "oracle_domain_leaf": {
+        "cases": 100,
+        "correct": 57
+      },
+      "oracle3": {
+        "cases": 100,
+        "correct": 60
+      },
+      "oracle5": {
+        "cases": 100,
+        "correct": 53
+      }
+    }
+  },
+  "legacy/audio/tingting": {
+    "routes": 100,
+    "navigation": 50,
+    "coarse_page_correct": 72,
+    "flat16_fixed_gate_replay_correct": 78,
+    "navigation_failures": {
+      "gate": 4,
+      "domain": 22,
+      "leaf": 0,
+      "success": 24
+    },
+    "domain_confusion": {
+      "cash": {
+        "unknown": 6,
+        "cash": 2,
+        "card": 1,
+        "credit": 1
+      },
+      "card": {
+        "card": 14,
+        "credit": 1
+      },
+      "account": {
+        "credit": 6,
+        "card": 4,
+        "unknown": 5
+      },
+      "digital": {
+        "card": 2,
+        "digital": 8
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 36
+      },
+      "flat16": {
+        "cases": 50,
+        "correct": 31
+      },
+      "domain": {
+        "cases": 50,
+        "correct": 24
+      },
+      "oracle_domain_leaf": {
+        "cases": 50,
+        "correct": 40
+      },
+      "oracle3": {
+        "cases": 50,
+        "correct": 38
+      },
+      "oracle5": {
+        "cases": 50,
+        "correct": 35
+      }
+    }
+  },
+  "legacy/audio/eddy": {
+    "routes": 100,
+    "navigation": 50,
+    "coarse_page_correct": 60,
+    "flat16_fixed_gate_replay_correct": 54,
+    "navigation_failures": {
+      "gate": 14,
+      "domain": 20,
+      "leaf": 6,
+      "success": 10
+    },
+    "domain_confusion": {
+      "card": {
+        "card": 13,
+        "credit": 2
+      },
+      "account": {
+        "card": 10,
+        "credit": 4,
+        "unknown": 1
+      },
+      "cash": {
+        "credit": 4,
+        "cash": 4,
+        "card": 2
+      },
+      "digital": {
+        "digital": 4,
+        "card": 4,
+        "unknown": 1,
+        "credit": 1
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 12
+      },
+      "flat16": {
+        "cases": 50,
+        "correct": 11
+      },
+      "domain": {
+        "cases": 50,
+        "correct": 21
+      },
+      "oracle_domain_leaf": {
+        "cases": 50,
+        "correct": 17
+      },
+      "oracle3": {
+        "cases": 50,
+        "correct": 22
+      },
+      "oracle5": {
+        "cases": 50,
+        "correct": 18
+      }
+    }
+  },
+  "credit/text/all": {
+    "routes": 30,
+    "navigation": 15,
+    "coarse_page_correct": 29,
+    "flat16_fixed_gate_replay_correct": 29,
+    "navigation_failures": {
+      "gate": 1,
+      "domain": 0,
+      "leaf": 0,
+      "success": 14
+    },
+    "domain_confusion": {
+      "credit": {
+        "credit": 15
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0
+      },
+      "flat16": {
+        "cases": 15,
+        "correct": 15
+      },
+      "domain": {
+        "cases": 15,
+        "correct": 15
+      },
+      "oracle_domain_leaf": {
+        "cases": 15,
+        "correct": 15
+      },
+      "oracle3": {
+        "cases": 15,
+        "correct": 15
+      },
+      "oracle5": {
+        "cases": 15,
+        "correct": 15
+      }
+    }
+  },
+  "credit/audio/all": {
+    "routes": 60,
+    "navigation": 30,
+    "coarse_page_correct": 46,
+    "flat16_fixed_gate_replay_correct": 42,
+    "navigation_failures": {
+      "gate": 1,
+      "domain": 10,
+      "leaf": 5,
+      "success": 14
+    },
+    "domain_confusion": {
+      "credit": {
+        "credit": 19,
+        "card": 11
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0
+      },
+      "flat16": {
+        "cases": 30,
+        "correct": 15
+      },
+      "domain": {
+        "cases": 30,
+        "correct": 19
+      },
+      "oracle_domain_leaf": {
+        "cases": 30,
+        "correct": 18
+      },
+      "oracle3": {
+        "cases": 30,
+        "correct": 23
+      },
+      "oracle5": {
+        "cases": 30,
+        "correct": 23
+      }
+    }
+  },
+  "credit/audio/tingting": {
+    "routes": 30,
+    "navigation": 15,
+    "coarse_page_correct": 30,
+    "flat16_fixed_gate_replay_correct": 26,
+    "navigation_failures": {
+      "gate": 0,
+      "domain": 0,
+      "leaf": 3,
+      "success": 12
+    },
+    "domain_confusion": {
+      "credit": {
+        "credit": 15
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0
+      },
+      "flat16": {
+        "cases": 15,
+        "correct": 11
+      },
+      "domain": {
+        "cases": 15,
+        "correct": 15
+      },
+      "oracle_domain_leaf": {
+        "cases": 15,
+        "correct": 12
+      },
+      "oracle3": {
+        "cases": 15,
+        "correct": 12
+      },
+      "oracle5": {
+        "cases": 15,
+        "correct": 13
+      }
+    }
+  },
+  "credit/audio/eddy": {
+    "routes": 30,
+    "navigation": 15,
+    "coarse_page_correct": 16,
+    "flat16_fixed_gate_replay_correct": 16,
+    "navigation_failures": {
+      "gate": 1,
+      "domain": 10,
+      "leaf": 2,
+      "success": 2
+    },
+    "domain_confusion": {
+      "credit": {
+        "card": 11,
+        "credit": 4
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 0,
+        "correct": 0
+      },
+      "flat16": {
+        "cases": 15,
+        "correct": 4
+      },
+      "domain": {
+        "cases": 15,
+        "correct": 4
+      },
+      "oracle_domain_leaf": {
+        "cases": 15,
+        "correct": 6
+      },
+      "oracle3": {
+        "cases": 15,
+        "correct": 11
+      },
+      "oracle5": {
+        "cases": 15,
+        "correct": 10
+      }
+    }
+  },
+  "all/text/all": {
+    "routes": 130,
+    "navigation": 65,
+    "coarse_page_correct": 126,
+    "flat16_fixed_gate_replay_correct": 128,
+    "navigation_failures": {
+      "gate": 1,
+      "domain": 3,
+      "leaf": 0,
+      "success": 61
+    },
+    "domain_confusion": {
+      "cash": {
+        "cash": 9,
+        "unknown": 1
+      },
+      "digital": {
+        "digital": 10
+      },
+      "credit": {
+        "credit": 15
+      },
+      "card": {
+        "card": 15
+      },
+      "account": {
+        "account": 13,
+        "unknown": 1,
+        "credit": 1
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 50
+      },
+      "flat16": {
+        "cases": 65,
+        "correct": 64
+      },
+      "domain": {
+        "cases": 65,
+        "correct": 62
+      },
+      "oracle_domain_leaf": {
+        "cases": 65,
+        "correct": 65
+      },
+      "oracle3": {
+        "cases": 65,
+        "correct": 65
+      },
+      "oracle5": {
+        "cases": 65,
+        "correct": 65
+      }
+    }
+  },
+  "all/audio/all": {
+    "routes": 260,
+    "navigation": 130,
+    "coarse_page_correct": 178,
+    "flat16_fixed_gate_replay_correct": 174,
+    "navigation_failures": {
+      "gate": 19,
+      "domain": 52,
+      "leaf": 11,
+      "success": 48
+    },
+    "domain_confusion": {
+      "card": {
+        "card": 27,
+        "credit": 3
+      },
+      "account": {
+        "card": 14,
+        "credit": 10,
+        "unknown": 6
+      },
+      "cash": {
+        "unknown": 6,
+        "credit": 5,
+        "cash": 6,
+        "card": 3
+      },
+      "digital": {
+        "card": 6,
+        "digital": 12,
+        "unknown": 1,
+        "credit": 1
+      },
+      "credit": {
+        "credit": 19,
+        "card": 11
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 100,
+        "correct": 48
+      },
+      "flat16": {
+        "cases": 130,
+        "correct": 57
+      },
+      "domain": {
+        "cases": 130,
+        "correct": 64
+      },
+      "oracle_domain_leaf": {
+        "cases": 130,
+        "correct": 75
+      },
+      "oracle3": {
+        "cases": 130,
+        "correct": 83
+      },
+      "oracle5": {
+        "cases": 130,
+        "correct": 76
+      }
+    }
+  },
+  "all/audio/tingting": {
+    "routes": 130,
+    "navigation": 65,
+    "coarse_page_correct": 102,
+    "flat16_fixed_gate_replay_correct": 104,
+    "navigation_failures": {
+      "gate": 4,
+      "domain": 22,
+      "leaf": 3,
+      "success": 36
+    },
+    "domain_confusion": {
+      "cash": {
+        "unknown": 6,
+        "cash": 2,
+        "card": 1,
+        "credit": 1
+      },
+      "card": {
+        "card": 14,
+        "credit": 1
+      },
+      "account": {
+        "credit": 6,
+        "card": 4,
+        "unknown": 5
+      },
+      "digital": {
+        "card": 2,
+        "digital": 8
+      },
+      "credit": {
+        "credit": 15
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 36
+      },
+      "flat16": {
+        "cases": 65,
+        "correct": 42
+      },
+      "domain": {
+        "cases": 65,
+        "correct": 39
+      },
+      "oracle_domain_leaf": {
+        "cases": 65,
+        "correct": 52
+      },
+      "oracle3": {
+        "cases": 65,
+        "correct": 50
+      },
+      "oracle5": {
+        "cases": 65,
+        "correct": 48
+      }
+    }
+  },
+  "all/audio/eddy": {
+    "routes": 130,
+    "navigation": 65,
+    "coarse_page_correct": 76,
+    "flat16_fixed_gate_replay_correct": 70,
+    "navigation_failures": {
+      "gate": 15,
+      "domain": 30,
+      "leaf": 8,
+      "success": 12
+    },
+    "domain_confusion": {
+      "card": {
+        "card": 13,
+        "credit": 2
+      },
+      "account": {
+        "card": 10,
+        "credit": 4,
+        "unknown": 1
+      },
+      "credit": {
+        "card": 11,
+        "credit": 4
+      },
+      "cash": {
+        "credit": 4,
+        "cash": 4,
+        "card": 2
+      },
+      "digital": {
+        "digital": 4,
+        "card": 4,
+        "unknown": 1,
+        "credit": 1
+      }
+    },
+    "business_study": {
+      "flat11": {
+        "cases": 50,
+        "correct": 12
+      },
+      "flat16": {
+        "cases": 65,
+        "correct": 15
+      },
+      "domain": {
+        "cases": 65,
+        "correct": 25
+      },
+      "oracle_domain_leaf": {
+        "cases": 65,
+        "correct": 23
+      },
+      "oracle3": {
+        "cases": 65,
+        "correct": 33
+      },
+      "oracle5": {
+        "cases": 65,
+        "correct": 28
+      }
+    }
+  },
+  "warning": "Flat16 fixed-gate replay combines actual first-gate predictions with separately measured flat decisions. No replay latency or independent validation claim."
+}

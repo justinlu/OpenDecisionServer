@@ -1,0 +1,44 @@
+{
+  "legacy/text": {
+    "domain_cases": 50,
+    "domain_correct": 50,
+    "cached_leaf_tree_correct": 50,
+    "full_gate_and_leaf_replay_cases": 100,
+    "full_gate_and_leaf_replay_correct": 100
+  },
+  "legacy/audio": {
+    "domain_cases": 100,
+    "domain_correct": 54,
+    "cached_leaf_tree_correct": 46,
+    "full_gate_and_leaf_replay_cases": 200,
+    "full_gate_and_leaf_replay_correct": 136
+  },
+  "credit/text": {
+    "domain_cases": 15,
+    "domain_correct": 15,
+    "cached_leaf_tree_correct": 15,
+    "full_gate_and_leaf_replay_cases": 30,
+    "full_gate_and_leaf_replay_correct": 29
+  },
+  "credit/audio": {
+    "domain_cases": 30,
+    "domain_correct": 16,
+    "cached_leaf_tree_correct": 13,
+    "full_gate_and_leaf_replay_cases": 60,
+    "full_gate_and_leaf_replay_correct": 40
+  },
+  "all/text": {
+    "domain_cases": 65,
+    "domain_correct": 65,
+    "cached_leaf_tree_correct": 65,
+    "full_gate_and_leaf_replay_cases": 130,
+    "full_gate_and_leaf_replay_correct": 129
+  },
+  "all/audio": {
+    "domain_cases": 130,
+    "domain_correct": 70,
+    "cached_leaf_tree_correct": 59,
+    "full_gate_and_leaf_replay_cases": 260,
+    "full_gate_and_leaf_replay_correct": 176
+  }
+}
